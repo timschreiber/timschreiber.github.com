@@ -1,32 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<meta content="en-au" http-equiv="Content-Language" />
-		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Blog Feed" />
 		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Blog Feed" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<title>{{ page.title }}</title>
-		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="/css/layout.css" />
 		<link rel="shortcut icon" href="/img/favicon.ico" />
 	</head>
 	<body>
-		<div id="container">
-			<div id="side">
-				<a href="/" id="home" title="home" alt="home"><img src="/img/logo.png" alt="Site Name" /></a>
-				<div id="hometext"><a href="/" >Site Name</a></div>
-				<div class="section">
-					<ul>
-						<li><a href="/about.html">about</a></li>
-						<li><a href="/rss.xml"><img src="/img/25.png" /> feed</a></li>
+	
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Timothy P. Schreiber</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">Home</a></li>
+						<li><a href="/blog/">Blog</a></li>
+						<li><a href="/resume.html">R&eacute;sum&eacute;</a></li>
+						<li><a href="/contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
-			<div id="content">
-				{{content}}
-			</div>
-
+		</nav>
+		<div class="container">
+			{{content}}
 		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	</body>
 </html>

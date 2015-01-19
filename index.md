@@ -3,48 +3,5 @@ layout : layout
 title : Timothy P. Schreiber
 ---
 
-<ul class="posts">
-    {% for post in site.posts  limit:5 %}
-		<li>
-			<div class="idea">
-				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-				<div class="postdate">{{ post.date | date: "%e %B, %Y"  }}
-					<ul>
-					{% for tag in post.tags %}
-						<li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-					{% endfor %}
-					</ul>
-				</div>
-				
-				{{ post.description }}
-				
-				<p><a href="{{ post.url }}">Read more &gt;</a></p>
-				
-			</div>
-		</li>
-    {% endfor %}
-</ul>
+<h1>Hello World!</h1>
 
-<h3>OLDER</h3>
-<ul class="postArchive">
-{% for post in site.posts offset:5 %}
-	<li>
-		<span class="olderpostdate"> {{ post.date | date: "%d %b"  }} </span> <a class="postlink" href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-{% endfor %}
-</ul>
-
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-    var links = document.getElementsByTagName('a');
-    var query = '?';
-    for(var i = 0; i < links.length; i++) {
-    if(links[i].href.indexOf('#disqus_thread') >= 0) {
-        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-    }
-    }
-    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/DISQUS_NAME/get_num_replies.js' + query + '"></' + 'script>');
-})();
-//]]>
-</script>

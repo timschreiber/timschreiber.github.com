@@ -2,37 +2,72 @@
 layout: layout
 ---
 
-<div class="entry-container">
-	<div class='entry'>
-		<h1> {{page.title}} </h1>
-		<span class="postdate">{{ page.date | date: "%e %B, %Y"  }}
-			{% for tag in page.tags %}
-				<li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-			{% endfor %}
-		</span>
-		{{ content }}
+<ol class="breadcrumb">
+	<li><a href="/">Home</a></li>
+	<li><a href="/blog/">Blog</a></li>
+	<li>{{page.title}}</li>
+</ol>
+
+<div class="row">
+	<div class="col-xs-12 col-md-8 col-lg-9">
+		<article>
+			<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+			<h6>{{ page.date | date : "%d-%b-%Y" }}</h6>
+			{{ content }}
+		</article>
+
+		<div id="page-navigation" class="well clearfix"> 
+			<div class="pull-left"> {% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr; {{page.previous.title}}</a> {% endif %} </div> 
+			<div class="pull-right"> {% if page.next.url %} <a href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &rarr; </a> {% endif %} </div> 
+		</div> 
+
+		{% if page.comments == true %}
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'NAME'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+		{% endif %}
 	</div>
+	
+	<div class="col-xs-12 col-md-4 col-lg-3">
+		<div id="recent-posts" class="panel panel-default">
+			<div class="panel-heading clearfix">
+				<h3 class="pull-left panel-title">Recent Posts</h3>
+				<h6 class="pull-right panel-title"><a href="archive.html">See All</a></h6>
+			</div>
+			<div class="panel-body">
+				<dl>
+				{% for post in site.posts limit:10 %}
+					<dt>{{ post.date | date : "%d-%b-%Y"  }}</dt>
+					<dd><a class="postlink" href="{{ post.url }}">{{ post.title }}</a></dd>
+				{% endfor %}
+				</dl>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Meta</h3>
+			</div>
+			<div class="panel-body">
+				<dl>
+					<dt>Feed</dt>
+					<dd><a href="rss.xml">RSS</a> | <a href="atom.xml">Atom</a></dd>
+				</dl>
+			</div>
+		</div>
+		
+	</div>
+
 </div>
-<div id="page-navigation"> 
-	<div class="left"> {% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr; {{page.previous.title}}</a> {% endif %} </div> 
-	<div class="right"> {% if page.next.url %} <a href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &rarr; </a> {% endif %} </div> 
-	<div class="clear">&nbsp;</div>
-</div> 
 
 
-{% if page.comments == true %}
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'NAME'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-{% endif %}

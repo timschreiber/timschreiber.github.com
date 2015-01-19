@@ -1,7 +1,7 @@
 --- 
-layout: post
 title: "Fixing Stuff Requires Change, and Change Is Hard"
-author: "Tim"
+date: 2014-12-09
+layout: post
 comments: true
 description: "Once upon a time, there was a software developer. Let's call him &ndash; oh, I don't know &ndash; &quot;Jim.&quot; Jim was brought on as a consultant at a large organization &ndash; let's call it &quot;Gub Mints&quot; &ndash; to lead other..."
 ---
