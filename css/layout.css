@@ -1,6 +1,15 @@
 body {
-	padding-top: 70px;
+	padding-top: 50px;
 	font-family: 'Roboto', sans-serif;
+	background-color:#f0f0f0;
+}
+
+div#main-container {
+	background-color:#fff;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding-top:20px;
+	padding-bottom:10px;
 }
 
 .post-list-item {
@@ -64,4 +73,83 @@ body {
 
 #page-navigation .pull-right {
 	margin-left: 20px;
-}  
+}
+
+footer {
+	border-top: 1px solid #999;
+	background-color: #ccc;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+footer h2 {
+	margin-top:0;
+}
+
+#home-jumbotron {
+	background-color:#fff;
+	border-radius: 0;
+	border:0;
+	border-bottom:1px solid #ccc;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin-bottom:0;
+}
+
+#home-jumbotron h1 {
+	margin:0;
+}
+
+#home-jumbotron h2 {
+	margin:30px 0;
+}
+
+#home-jumbotron h4 {
+	margin:30px 0;
+}
+
+#home-jumbotron button {
+	margin:0;
+}
+
+.jumbotron-column {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+#profile-picture {
+	width: 100%;
+	max-width: 320px;
+}
+
+#home-features-wrapper {
+	padding:50px;
+}
+
+.home-feature-panel {
+	margin-bottom:0;
+}
+
+.home-feature-panel .panel-body {
+	background-color:#fff;
+}
+
+.home-feature-panel .fa.fa-2x {
+	margin-right:10px;
+}
+
+.home-feature-panel h3 {
+	margin-top:0;
+}
+
+.home-feature-panel h4.connect {
+	margin:21px 0;
+}
+
+.home-feature-panel h4.connect:first-child {
+	margin-top: 0;
+}
+
+.home-feature-panel h4.connect:last-child {
+	margin-bottom:0;
+}
