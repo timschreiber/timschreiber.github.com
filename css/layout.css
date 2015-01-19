@@ -53,3 +53,15 @@ body {
 #older-posts dl dd, #recent-posts dl dd {
 	font-weight:700;
 }
+
+#page-navigation {
+	margin-top:25px;
+}
+
+#page-navigation .pull-left {
+	margin-right: 20px;
+}
+
+#page-navigation .pull-right {
+	margin-left: 20px;
+}

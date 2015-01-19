@@ -17,8 +17,8 @@ layout: layout
 		</article>
 
 		<div id="page-navigation" class="well clearfix"> 
-			<div class="pull-left"> {% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr; {{page.previous.title}}</a> {% endif %} </div> 
-			<div class="pull-right"> {% if page.next.url %} <a href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &rarr; </a> {% endif %} </div> 
+			<div class="pull-left"> {% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><span class="glyphicon glyphicon-circle-arrow-left"></span> {{page.previous.title}}</a> {% endif %} </div> 
+			<div class="pull-right"> {% if page.next.url %} <a href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} <span class="glyphicon glyphicon-circle-arrow-right"></span></a> {% endif %} </div> 
 		</div> 
 
 		{% if page.comments == true %}
@@ -47,7 +47,7 @@ layout: layout
 			</div>
 			<div class="panel-body">
 				<dl>
-				{% for post in site.posts limit:10 %}
+				{% for post in site.posts limit:5 %}
 					<dt>{{ post.date | date : "%d-%b-%Y"  }}</dt>
 					<dd><a class="postlink" href="{{ post.url }}">{{ post.title }}</a></dd>
 				{% endfor %}
