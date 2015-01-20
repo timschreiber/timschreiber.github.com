@@ -34,7 +34,7 @@ title : "Blog"
 	<div id="older-posts" class="panel panel-default">
 		<div class="panel-heading clearfix">
 			<h3 class="pull-left panel-title">Older Posts</h3>
-			<h6 class="pull-right panel-title"><a href="/archive.html">See All</a></h6>
+			<h6 class="pull-right panel-title"><a href="/blog/archive/">See All</a></h6>
 		</div>
 		<div class="panel-body">
 			<dl>
