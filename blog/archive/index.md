@@ -1,6 +1,6 @@
 --- 
-title: "All Posts"
-layout: blog
+layout : blog
+title : "All Posts"
 ---
 
 <ol class="breadcrumb">

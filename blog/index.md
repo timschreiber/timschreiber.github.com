@@ -1,6 +1,6 @@
 ---
 layout : blog
-title : "Blog - Timothy P. Schreiber"
+title : "Blog"
 ---
 
 <ol class="breadcrumb">
