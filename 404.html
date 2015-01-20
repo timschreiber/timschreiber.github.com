@@ -3,3 +3,26 @@ layout : page
 ---
 
 <h1>Not Found</h1>
+
+<div class="col-xs-12 col-md-8 col-lg-9">
+	<dl>
+		{% for post in site.posts %}
+			<dt><small style="font-weight:normal;">{{ post.date | date : "%d-%b-%Y"  }}</small></dt>
+			<dd style="margin-bottom: 10px; font-weight:600;"><a class="postlink" href="{{ post.url }}">{{ post.title }}</a></dd>
+		{% endfor %}
+	</dl>
+</div>
+
+<div class="col-xs-12 col-md-4 col-lg-3">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Meta</h3>
+		</div>
+		<div class="panel-body">
+			<dl>
+				<dt>Feed</dt>
+				<dd><a href="rss.xml">RSS</a> | <a href="atom.xml">Atom</a></dd>
+			</dl>
+		</div>
+	</div>
+</div>
