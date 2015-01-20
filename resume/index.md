@@ -8,6 +8,8 @@ title : R&eacute;sum&eacute;
 	<li>{{page.title}}</li>
 </ol>
 
+<h1>R&eacute;sum&eacute;</h1>
+
 <div id="res-content" class="col-xs-12 col-md-9">
 
 	<div id="res-summary" class="res-section">
