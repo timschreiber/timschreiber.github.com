@@ -3,6 +3,12 @@ layout : page
 title : "All Posts"
 ---
 
+<ol class="breadcrumb">
+	<li><a href="/">Home</a></li>
+	<li><a href="/blog/">Blog</a></li>
+	<li>{{page.title}}</li>
+</ol>
+
 <div class="col-xs-12 col-md-8 col-lg-9">
 	<dl>
 		{% for post in site.posts %}
