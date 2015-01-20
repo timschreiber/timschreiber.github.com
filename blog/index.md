@@ -53,7 +53,7 @@ title : "Blog"
 		<div class="panel-body">
 			<dl>
 				<dt>Feed</dt>
-				<dd><a href="rss.xml">RSS</a> | <a href="atom.xml">Atom</a></dd>
+				<dd><a href="/blog/rss.xml">RSS</a> | <a href="/blog/atom.xml">Atom</a></dd>
 			</dl>
 		</div>
 	</div>

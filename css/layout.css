@@ -123,11 +123,13 @@ footer h2 {
 }
 
 #home-features-wrapper {
-	padding:50px;
+	padding-top:25px;
+	padding-bottom:25px;
 }
 
 .home-feature-panel {
-	margin-bottom:0;
+	margin-top:25px;
+	margin-bottom:25px;
 }
 
 .home-feature-panel .panel-body {
