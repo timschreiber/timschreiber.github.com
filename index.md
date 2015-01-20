@@ -12,7 +12,7 @@ title : Timothy P. Schreiber
 			<h1>Hi, I'm Tim.</h1>
 			<h2>And I write code.</h2>
 			<h4>Enterprise applications, websites, open source. I like to help others write code, and sometimes I write about writing code. I'm a husband, father, backyard pitmaster, amateur songwriter, and novice gardener. Oh, and I have a cat.</h4>
-			<button class="btn btn-lg btn-info">Hey, what's this button do?</button>
+			<a href="/contact/" class="btn btn-lg btn-info">Hey, what's this button do?</a>
 		</div>
 	</div>
 </div>
