@@ -1,6 +1,6 @@
 ---
 layout : layout
-title : Timothy P. Schreiber
+title : "Senior .NET Developer/Architect - Lexington, KY - C#, ASP.NET MVC, WCF, Entity Framework, SQL Server, Agile, Object-Oriented Design, SOLID, Design Patterns"
 ---
 
 <div id="home-jumbotron" class="jumbotron">
@@ -11,7 +11,7 @@ title : Timothy P. Schreiber
 		<div class="col-xs-12 col-md-6 col-md-pull-6 jumbotron-column text-center">
 			<h1>Hi, I'm Tim.</h1>
 			<h2>And I write code.</h2>
-			<h4>Enterprise applications, websites, open source. I like to help others write code, and sometimes I write about writing code. I'm a husband, father, backyard pitmaster, amateur songwriter, and novice gardener. Oh, and I have a cat.</h4>
+			<h4>Enterprise applications, websites, open source &ndash; you name it. I like to help others write code, and sometimes I write about writing code. I'm a husband, father, backyard pitmaster, amateur songwriter, and novice gardener. Oh, and I have a cat.</h4>
 			<a href="/contact/" class="btn btn-lg btn-info">Hey, what's this button do?</a>
 		</div>
 	</div>
