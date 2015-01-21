@@ -17,7 +17,7 @@ title : "Blog"
 					<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 					<h6>{{ post.date | date : "%d-%b-%Y" }}</h6>
 					{{ post.content }}
-					{% if page.comments == true %}
+					{% if post.comments == true %}
 						<p><a href="{{ post.url }}">Comments &gt;</a></p>
 					{% endif %}
 				{% else %}
