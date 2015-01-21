@@ -246,3 +246,11 @@ footer h2 {
         width:255px;
     }
 }
+
+article img {
+	width: 100%;
+	max-width: 480px;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
