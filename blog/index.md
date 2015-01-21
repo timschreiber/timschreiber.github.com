@@ -13,12 +13,16 @@ title : "Blog"
 	<div class="post-list">
 		{% for post in site.posts  limit:5 %}
 			<div class="post-list-item">
-				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-				<h6>{{ post.date | date : "%d-%b-%Y" }}</h6>
-				
 				{% if forloop.first and post.layout == "post" %}
+					<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+					<h6>{{ post.date | date : "%d-%b-%Y" }}</h6>
 					{{ post.content }}
+					{% if page.comments == true %}
+						<p><a href="{{ post.url }}">Comments &gt;</a></p>
+					{% endif %}
 				{% else %}
+					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					<h6>{{ post.date | date : "%d-%b-%Y" }}</h6>
 					<p>{{ post.description }}</p>
 					<p><a href="{{ post.url }}">Read more &gt;</a></p>
 				{% endif %}
