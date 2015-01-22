@@ -54,6 +54,23 @@ title : "Blog"
 	
 	<div class="panel panel-default">
 		<div class="panel-heading">
+			<h3 class="panel-title">Tags</h3>
+		</div>
+		<div class="panel-body">
+			{% capture tags %}
+				{% for tag in site.tags %}
+					{{ tag[0] }}
+				{% endfor %}
+			{% endcapture %}
+			{% assign sortedtags = tags | split:' ' | sort %}
+			{% for tag in sortedtags %}
+				<a href="/blog/tags/#{{ tag }}" class="badge">{{ tag }}</a>
+			{% endfor %}
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
 			<h3 class="panel-title">Meta</h3>
 		</div>
 		<div class="panel-body">
