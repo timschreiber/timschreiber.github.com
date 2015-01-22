@@ -258,3 +258,7 @@ article img {
 	font-weight: normal;
 	text-align: left;
 }
+
+.collapse-top-margin {
+	margin-top:0;
+}
