@@ -8,6 +8,6 @@ function handleTag() {
 	var idx = url.indexOf("#");
 	if (idx > -1) {
 		var tag = url.substring(idx + 1);
-		$(".tag-list-item").not("[id='" + tag + "']").hide();
+		$(".tag-list-item").not("h3[id='" + tag + "']").hide();
 	}
 }
