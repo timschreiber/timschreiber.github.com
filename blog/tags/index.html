@@ -19,13 +19,15 @@ title : "Tags"
 	{% endcapture %}
 	{% assign sortedtags = tags | split:' ' | sort %}
 	{% for tag in sortedtags %}
-		<h3 id="{{ tag }}" class="tag-list-item">{{ tag }}</h3>
-		<dl class="dl-horizontal tag-posts-list">
-			{% for post in site.tags[tag] %}
-				<dt>{{ post.date : "%d-%b-%Y" }}</dt>
-				<dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
-			{% endfor %}
-		</dl>
+		<div class="tag-list-item">
+			<h3 id="{{ tag }}">{{ tag }}</h3>
+			<dl class="dl-horizontal tag-posts-list">
+				{% for post in site.tags[tag] %}
+					<dt>{{ post.date : "%d-%b-%Y" }}</dt>
+					<dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
+				{% endfor %}
+			</dl>
+		</div>
 	{% endfor %}
 </div>
 

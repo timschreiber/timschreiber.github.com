@@ -11,7 +11,7 @@ function handleTag() {
 	if (idx > -1) {
 		var tag = url.substring(idx + 1);
 		console.log(tag);
-		var el = $("h3.tag-list-item[id!=' + tag + ']");
+		var el = $("div.tag-list-item[id!='" + tag + "']");
 		console.log(el);
 		el.hide();
 	}
