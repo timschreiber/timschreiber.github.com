@@ -16,14 +16,22 @@ title : "Blog"
 				<article>
 					{% if forloop.first and post.layout == "post" %}
 						<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-						<h6>{{ post.date | date : "%d-%b-%Y" }}</h6>
+						<h5><strong>{{ page.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
+							{% for tag in page.tags %}
+								<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
+							{% endfor %}
+						</h5>
 						{{ post.content }}
 						{% if post.comments == true %}
 							<p><a href="{{ post.url }}">Comments &gt;</a></p>
 						{% endif %}
 					{% else %}
 						<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-						<h6>{{ post.date | date : "%d-%b-%Y" }}</h6>
+						<h5><strong>{{ page.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
+							{% for tag in page.tags %}
+								<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
+							{% endfor %}
+						</h5>
 						<p>{{ post.description }}</p>
 						<p><a href="{{ post.url }}">Read more &gt;</a></p>
 					{% endif %}
@@ -64,7 +72,7 @@ title : "Blog"
 			{% endcapture %}
 			{% assign sortedtags = tags | split:' ' | sort %}
 			{% for tag in sortedtags %}
-				<a href="/blog/tags/#{{ tag }}" class="badge">{{ tag }}</a>
+				<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
 			{% endfor %}
 		</div>
 	</div>

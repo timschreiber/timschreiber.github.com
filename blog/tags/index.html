@@ -20,11 +20,16 @@ title : "Tags"
 	{% assign sortedtags = tags | split:' ' | sort %}
 	{% for tag in sortedtags %}
 		<div id="{{ tag }}" class="tag-list-item">
-			<h3>{{ tag }}</h3>
+			<h2>{{ tag }}</h2>
 			<dl class="dl-horizontal tag-posts-list">
 				{% for post in site.tags[tag] %}
-					<dt>{{ post.date | date : "%d-%b-%Y" }}</dt>
-					<dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
+					<div class="post-list-item">
+						<article>
+							<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+							<h5><strong>{{ post.date | date : "%d-%b-%Y" }}</strong></h5>
+							<p>{{ post.description }}</p>
+						</article>
+					</div>
 				{% endfor %}
 			</dl>
 		</div>

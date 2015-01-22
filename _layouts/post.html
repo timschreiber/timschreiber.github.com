@@ -69,7 +69,7 @@ layout: blog
 				{% endcapture %}
 				{% assign sortedtags = tags | split:' ' | sort %}
 				{% for tag in sortedtags %}
-					<a href="/blog/tags/#{{ tag }}" class="badge">{{ tag }}</a>
+					<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
 				{% endfor %}
 			</div>
 		</div>
