@@ -262,3 +262,8 @@ article img {
 .collapse-top-margin {
 	margin-top:0;
 }
+
+.post-body.tags {
+	word-spacing: 10px;
+	line-height: 20px;
+}

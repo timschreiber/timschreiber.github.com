@@ -65,7 +65,7 @@ title : "Blog"
 			<h3 class="panel-title pull-left">Tags</h3>
 			<h6 class="pull-right panel-title"><a href="/blog/tags/">See All</a></h6>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body tags">
 			{% capture tags %}
 				{% for tag in site.tags %}
 					{{ tag[0] }}
