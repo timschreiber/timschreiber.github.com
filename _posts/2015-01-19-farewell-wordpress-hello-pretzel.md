@@ -5,10 +5,10 @@ layout: post
 comments: true
 description: "For the past couple years, I've been running this website using WordPress on GoDaddy hosting. But since it's such a simplistic site, I've begun questioning why. Is dealing with the plug-ins and updates really worth the few pages and handful of posts I have up..."
 tags:
-- "This Site"
-- Pretzel
-- Jekyll
-- GitHub
+- this-site
+- pretzel
+- jekyll
+- github
 ---
 
 For the past couple years, I've been running this website using WordPress on GoDaddy hosting. But since it's such a simplistic site, I've begun questioning why. Is dealing with the plug-ins and updates really worth the few pages and handful of posts I have up there? Why does theming have to be such a royal pain in the ass?

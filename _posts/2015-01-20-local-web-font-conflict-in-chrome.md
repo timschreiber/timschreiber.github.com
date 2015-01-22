@@ -5,9 +5,9 @@ author: "Tim"
 comments: true
 description: "Well, you're reading this, which means you're looking at my newer, leaner, better personal site/blog. I spent a couple nights learning Pretzel/Jekyll, putting the layout together, and converting my old WordPress posts. So when..."
 tags:
-- Fonts
-- UI
-- Chrome
+- fonts
+- ui
+- chrome
 ---
 
 Well, you're reading this, which means you're looking at my newer, leaner, better personal site/blog. I spent a couple nights learning Pretzel/Jekyll, putting the layout together, and converting my old WordPress posts. So when everything came together last night, I was excited to push it to GitHub and point my timschreiber.com domain at it. Everything came together sometime around midnight last night.

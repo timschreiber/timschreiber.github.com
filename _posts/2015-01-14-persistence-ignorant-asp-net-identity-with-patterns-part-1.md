@@ -5,9 +5,9 @@ layout: post
 comments: true
 description: "This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: http://www.asp.net/identity. ASP.NET Identity is the successor to ASP.NET Simple Membership, which..."
 tags:
-- "ASP.NET"
-- "MVC 5"
-- "Patterns"
+- asp-net
+- mvc-5
+- patterns
 ---
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
