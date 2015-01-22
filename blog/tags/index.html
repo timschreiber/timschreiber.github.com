@@ -23,7 +23,7 @@ title : "Tags"
 			<h3>{{ tag }}</h3>
 			<dl class="dl-horizontal tag-posts-list">
 				{% for post in site.tags[tag] %}
-					<dt>{{ post.date : "%d-%b-%Y" }}</dt>
+					<dt>{{ post.date | date : "%d-%b-%Y" }}</dt>
 					<dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
 				{% endfor %}
 			</dl>
@@ -32,6 +32,20 @@ title : "Tags"
 </div>
 
 <div class="col-xs-12 col-md-4 col-lg-3">
+	<div id="recent-posts" class="panel panel-default">
+		<div class="panel-heading clearfix">
+			<h3 class="pull-left panel-title">Recent Posts</h3>
+			<h6 class="pull-right panel-title"><a href="/blog/archive/">See All</a></h6>
+		</div>
+		<div class="panel-body">
+			<dl>
+			{% for post in site.posts limit:5 %}
+				<dt>{{ post.date | date : "%d-%b-%Y"  }}</dt>
+				<dd><a class="postlink" href="{{ post.url }}">{{ post.title }}</a></dd>
+			{% endfor %}
+			</dl>
+		</div>
+	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">Meta</h3>
