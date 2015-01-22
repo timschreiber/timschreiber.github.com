@@ -11,7 +11,11 @@ layout: blog
 	<div class="col-xs-12 col-md-8 col-lg-9">
 		<article>
 			<h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
-			<h6>{{ page.date | date : "%d-%b-%Y" }}</h6>
+			<h5>{{ page.date | date : "%d-%b-%Y" }}
+				{% for tag in page.tags %}
+					<span class="badge">{{ tag }}</span>
+				{% endfor %}
+			</h5>
 			{{ content }}
 		</article>
 

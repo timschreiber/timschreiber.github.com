@@ -253,3 +253,8 @@ article img {
         width:255px;
     }
 }
+
+.tag-posts-list dt {
+	font-weight: normal;
+	text-align: left;
+}
