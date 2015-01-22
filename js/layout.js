@@ -9,6 +9,7 @@ function handleTag() {
 	var idx = url.indexOf("#");
 	console.log(idx);
 	if (idx > -1) {
+		var tag = url.substring(idx + 1);
 		var el = $("div#" + tag + ".tag-list-item");
 		var others = el.siblings("div.tag-list-item");
 		el.show();
