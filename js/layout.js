@@ -5,9 +5,14 @@ $(function(){
 
 function handleTag() {
 	var url = document.URL;
+	console.log(url);
 	var idx = url.indexOf("#");
+	console.log(idx);
 	if (idx > -1) {
 		var tag = url.substring(idx + 1);
-		$(".tag-list-item").not("h3[id='" + tag + "']").hide();
+		console.log(tag);
+		var el = $("h3.tag-list-item[id!=' + tag + ']");
+		console.log(el);
+		el.hide();
 	}
 }
