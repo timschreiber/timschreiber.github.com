@@ -40,7 +40,7 @@ title : "Blog"
 		{% endfor %}
 	</div>
 	<div id="all-posts" class="well text-center">
-		<a href="archive.html">All Posts</a>
+		<a href="/blog/archive/">All Posts</a>
 	</div>
 </div>
 

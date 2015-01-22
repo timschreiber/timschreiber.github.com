@@ -33,7 +33,7 @@ div#main-container {
 	border-top: none;
 }
 
-.post-list-item:first-child h2, article h2 {
+.post-list-item:first-child h1, article h1 {
 	margin-top:0;
 }
 
