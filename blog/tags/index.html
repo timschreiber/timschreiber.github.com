@@ -1,0 +1,43 @@
+---
+layout : page
+title : "Tags"
+---
+
+<ol class="breadcrumb">
+	<li><a href="/">Home</a></li>
+	<li><a href="/blog/">Blog</a></li>
+	<li>{{page.title}}</li>
+</ol>
+
+<h1>{{ page.title }}</h1>
+
+<div class="col-xs-12 col-md-8 col-lg-9">
+	{% capture tags %}
+		{% for tag in site.tags %}
+			{{ tag[0] }}
+		{% endfor %}
+	{% endcapture %}
+	{% assign sortedtags = tags | split:' ' | sort %}
+	{% for tag in sortedtags %}
+		<h3 id="{{ tag }}">{{ tag }}</h3>
+		<ul>
+			{% for post in site.tags[tag] %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endfor %}
+</div>
+
+<div class="col-xs-12 col-md-4 col-lg-3">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Meta</h3>
+		</div>
+		<div class="panel-body">
+			<dl>
+				<dt>Feed</dt>
+				<dd><a href="rss.xml">RSS</a> | <a href="atom.xml">Atom</a></dd>
+			</dl>
+		</div>
+	</div>
+</div>

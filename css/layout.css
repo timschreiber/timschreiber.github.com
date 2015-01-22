@@ -174,3 +174,82 @@ article img {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/* Résumé */
+
+.res-content {
+    padding-bottom: 30px;
+}
+
+.res-section {
+    padding-bottom: 20px;
+}
+
+.res-section h3 {
+    margin-top:0;
+}
+
+#res-skills dt, dd {
+    margin-bottom:10px;
+}
+
+#res-highlights ul li {
+    margin:10px inherit;
+}
+
+#res-emp .clients {
+    padding-left: 40px;
+}
+
+#res-emp .clients ul {
+    list-style-type: circle;
+}
+
+.employer {
+    margin-bottom:20px;
+}
+
+.employer:last-child {
+    margin-bottom:0;
+}
+
+.employer h4 {
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.affix {
+    top:80px;
+}
+
+#res-nav-list li.active {
+    font-weight:bold;
+}
+
+#res-nav-list li.active.no-change {
+    font-weight:normal;
+}
+
+#res-nav-list li li {
+    display: none;
+}
+
+#res-nav-list li.active li {
+    display:block;
+    font-weight:normal;
+}
+
+#res-nav-list li.active li.active {
+    font-weight:bold;
+}
+
+@media (min-width: 992px) {
+    .affix {
+        width:205px;
+    }
+}
+@media (min-width: 1200px) {
+    .affix {
+        width:255px;
+    }
+}
