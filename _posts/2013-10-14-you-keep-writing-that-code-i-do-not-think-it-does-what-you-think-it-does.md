@@ -4,6 +4,11 @@ title: "You Keep Writing That Code. I Do Not Think It Does What You Think It Doe
 author: "Tim"
 comments: true
 description: "Dear unknown previous programmer, Good for you that you used a StringBuilder. Bad for you that you completely missed the point of using a StringBuilder. Worse for you that you're concatenating SQL like this. StringBuilder NDCRecord = new StringBuilder(&quot;Insert into [NDCData] (NDCNumber, NDCDrugName, NDCStrength, NDCFormCode, NDCDEAClass, NDCMeasure, NDCTherapeuticCode, NDCPreviousNDC, NDCGenericCode, NDCGenericName, NDCMDDBTransactionCode, NDCMDDBItemStatusFlag) &quot; + &quot; values ( &quot;      + &quot;'&quot; + lsNDC_Num + &quot;' , &quot;      + &quot;'&quot; + lsNDC_Drug_Name + &quot;', &quot;..."
+tags:
+- code
+- c-sharp
+- sql
+- work
 ---
 
 Dear unknown previous programmer,

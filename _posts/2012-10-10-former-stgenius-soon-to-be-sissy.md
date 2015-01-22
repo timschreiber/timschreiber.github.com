@@ -4,6 +4,8 @@ title: "Former STGenius, Soon-to-Be SISsy"
 author: "Tim"
 comments: true
 description: "Back in August, I wrote a post announcing my job hunt in Kentucky &mdash; I had actually been sending out r&eacute;sum&eacute;s since mid-June. Well, over the past couple of months, I've maintained a dialog with a company in Lexington which..."
+tags:
+- work
 ---
 
 Back in August, I wrote a post announcing my job hunt in Kentucky &mdash; I had actually been sending out r&eacute;sum&eacute;s since mid-June. Well, over the past couple of months, I've maintained a dialog with a company in Lexington which ultimately led to a trip out there this past week, and my acceptance of their job offer.

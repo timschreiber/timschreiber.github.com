@@ -4,6 +4,10 @@ date: 2014-12-09
 layout: post
 comments: true
 description: "Once upon a time, there was a software developer. Let's call him &ndash; oh, I don't know &ndash; &quot;Jim.&quot; Jim was brought on as a consultant at a large organization &ndash; let's call it &quot;Gub Mints&quot; &ndash; to lead other..."
+tags:
+- work
+- management
+- rants
 ---
 
 Once upon a time, there was a software developer. Let's call him &ndash; oh, I don't know &ndash; &quot;Jim.&quot; Jim was brought on as a consultant at a large organization &ndash; let's call it &quot;Gub Mints&quot; &ndash; to lead other developers and improve a flailing enterprise application called &ndash; hmmm &ndash; &quot;Crapster.&quot; Don't ask me why Gub Mints needs has an application called Crapster, but they do.

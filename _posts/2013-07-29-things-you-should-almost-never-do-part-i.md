@@ -4,6 +4,9 @@ title: "Things You Should (Almost) Never Do, Part I"
 author: "Tim"
 comments: true
 description: "As I mentioned before, I've been thinking a lot about the point , if it even exists, at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over. Of course..."
+tags:
+- work
+- practices
 ---
 
 As I mentioned before, I've been thinking a lot about the point , if it even exists, at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over. Of course, required reading for anyone considering refactor vs. rewrite is Joel Spolsky's &quot;[Things You Should Never Do, Part I][1]&quot; article, in which he posits the single worst strategic mistake you can make on a software project is to rewrite the code from scratch. If you haven't read the article, stop and read it now. You'll be glad you did.

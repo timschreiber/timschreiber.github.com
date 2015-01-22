@@ -4,6 +4,9 @@ title: "Beware the StackOverlords"
 author: "Tim"
 comments: true
 description: "or, Why StackOverflow Sucks. This probably isn't the best written post I've ever done, but it's what's been on my mind. Also dammit Jim, I'm a coder &ndash; not a writer. I used to think StackOverflow was awesome. Used to..."
+tags:
+- stack-overflow
+- rants
 ---
 
 ###or, Why StackOverflow Sucks###

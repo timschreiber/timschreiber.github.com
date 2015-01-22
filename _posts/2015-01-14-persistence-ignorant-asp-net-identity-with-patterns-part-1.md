@@ -8,6 +8,7 @@ tags:
 - asp-net
 - mvc-5
 - patterns
+- architecture
 ---
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######

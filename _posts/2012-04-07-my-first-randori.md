@@ -4,6 +4,9 @@ title: "My First Randori"
 author: "Tim"
 comments: true
 description: "In the second meeting of the Utah Software Craftsmanship group that I attended, Mike Clement presented on Randori: Group Practice. Randori is a term used in Japanese martial arts to describe free-style practice. The term literally means &quot;chaos taking&quot; or..."
+tags:
+- code-practice
+- software-craftsmanship
 ---
 
 In the second meeting of the Utah Software Craftsmanship group that I attended, [Mike Clement][1] presented on Randori: Group Practice. Randori is a term used in Japanese martial arts to describe free-style practice. The term literally means “chaos taking” or “grasping freedom,” implying a freedom from the structured practice of kata. Randori may be contrasted with kata, as two potentially complementary types of training.

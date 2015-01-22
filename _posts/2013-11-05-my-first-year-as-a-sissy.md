@@ -4,6 +4,9 @@ title: "My First Year as a SISsy"
 author: "Tim"
 comments: true
 description: "or, Why Pluralsight Is Awesome No great big post here or anything. Just a status report that I've passed my first year as a SISsy (a.k.a. SIS employee), and as is common in the consulting world, I am coming up..."
+tags:
+- work
+- learning
 ---
 
 ###or, Why Pluralsight Is Awesome###

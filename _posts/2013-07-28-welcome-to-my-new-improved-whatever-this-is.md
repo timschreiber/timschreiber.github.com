@@ -4,6 +4,8 @@ title: "Welcome to my New, Improved Whatever-This-Is"
 author: "Tim"
 comments: true
 description: "Welcome to the brand spankin' new timschreiber.com. I've been using WordPress for some side projects lately and decided it was a great time to consolidate my blog and r&eacute;sum&eacute; sites into one. Not a lot has changed in terms of..."
+tags:
+- this-site
 ---
 
 Welcome to the brand spankin' new timschreiber.com. I've been using WordPress for some side projects lately and decided it was a great time to consolidate my blog and r&eacute;sum&eacute; sites into one. Not a lot has changed in terms of content, except for my new homepage. You should go check it out if you haven't already. Other than that, there's my blog and my r&eacute;sum&eacute;, and that's pretty much it.

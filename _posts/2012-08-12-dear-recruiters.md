@@ -4,6 +4,9 @@ title: "Dear Recruiters"
 author: "Tim"
 comments: true
 description: "You will be much more successful if you simply put a little effort into your job and stop pissing people off. Here are some ideas: If you are recruiting candidates who reside in the United States for positions located in..."
+tags:
+- work
+- rants
 ---
 
 You will be much more successful if you simply put a little effort into your job and stop pissing people off. Here are some ideas
