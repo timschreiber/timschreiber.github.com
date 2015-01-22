@@ -13,7 +13,7 @@ layout: blog
 			<h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
 			<h5>{{ page.date | date : "%d-%b-%Y" }}
 				{% for tag in page.tags %}
-					<span class="badge">{{ tag }}</span>
+					<a href="/blog/tags/?tag={{ tag }}" class="badge alert-info">{{ tag }}</a>
 				{% endfor %}
 			</h5>
 			{{ content }}
