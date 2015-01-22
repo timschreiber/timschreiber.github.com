@@ -16,8 +16,8 @@ title : "Blog"
 				<article>
 					{% if forloop.first and post.layout == "post" %}
 						<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-						<h5><strong>{{ page.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
-							{% for tag in page.tags %}
+						<h5><strong>{{ post.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
+							{% for tag in post.tags %}
 								<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
 							{% endfor %}
 						</h5>
@@ -27,8 +27,8 @@ title : "Blog"
 						{% endif %}
 					{% else %}
 						<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-						<h5><strong>{{ page.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
-							{% for tag in page.tags %}
+						<h5><strong>{{ post.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
+							{% for tag in post.tags %}
 								<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
 							{% endfor %}
 						</h5>
