@@ -61,8 +61,9 @@ title : "Blog"
 	</div>
 	
 	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title">Tags</h3>
+		<div class="panel-heading clearfix">
+			<h3 class="panel-title pull-left">Tags</h3>
+			<h6 class="pull-right panel-title"><a href="/blog/tags/">See All</a></h6>
 		</div>
 		<div class="panel-body">
 			{% capture tags %}
