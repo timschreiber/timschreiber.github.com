@@ -12,6 +12,8 @@ tags:
 ---
 
 * [Part 1][2]
+* **Part 2**
+* [Part 3][3]
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
@@ -29,11 +31,11 @@ So instead of running it, let's go in and delete stuff. The first thing we need 
 
     Uninstall-Package Microsoft.AspNet.Identity.EntityFramework
 
-Since we don't want to couple the Presentation Layer to SQL Server, let's go ahead and delete the `App_Data` folder, too. We'll worry about persistence in Part 3.
+Since we don't want to couple the Presentation Layer to SQL Server, let's go ahead and delete the `App_Data` folder, too. We'll worry about persistence in [Part 3][3].
 
 ####The Domain Layer####
 
-The next thing we need to do is create a class library for our Domain Layer. Our application domain is made up of our entity classes, interfaces for our repositories, and our Unit of Work interface. Our Data Layer (which we'll code in Part 3) will implement these interfaces to allow our entities to be persisted to a data store. The Domain Layer forms the core of our entire, well-layered, loosely-coupled application architecture.
+The next thing we need to do is create a class library for our Domain Layer. Our application domain is made up of our entity classes, interfaces for our repositories, and our Unit of Work interface. Our Data Layer (which we'll code in [Part 3][3]) will implement these interfaces to allow our entities to be persisted to a data store. The Domain Layer forms the core of our entire, well-layered, loosely-coupled application architecture.
 
 So let's add a Class Library project to the solution. I called mine `Mvc5IdentityExample.Domain`. Once the project has been created, let's add two folders: `Entities` and `Repositories`.
 
@@ -278,9 +280,9 @@ Another important design pattern we're following is the Unit of Work pattern, wh
 1. Maintains an in-memory collection of changes, and
 2. Sends the changes as a single transaction to the data store.
 
-Our `IUnitOfWork` interface defines the methods that we'll implement in the Data Layer in Part 3. Because we may need to use more than one repository to in a single Unit of Work transaction, it's important that we design our `IUnitOfWork` interface to ensure all our repositories are using the same transaction during any given transaction scope. So, we're putting the getters for our repositories in there as well.
+Our `IUnitOfWork` interface defines the methods that we'll implement in the Data Layer in [Part 3][3]. Because we may need to use more than one repository to in a single Unit of Work transaction, it's important that we design our `IUnitOfWork` interface to ensure all our repositories are using the same transaction during any given transaction scope. So, we're putting the getters for our repositories in there as well.
 
-Once again, we're not including anything that might couple this interface to any specific persistence mechanism. Those are implementation details that we'll tackle in Part 3.
+Once again, we're not including anything that might couple this interface to any specific persistence mechanism. Those are implementation details that we'll tackle in [Part 3][3].
 
 ######IUnitOfWork.cs######
 
@@ -309,10 +311,11 @@ Once again, we're not including anything that might couple this interface to any
 
 ###Next Steps###
 
-In this part, we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In Part 3, we'll move on to the Data Layer, in which we'll code our implementation of the repository and Unit of Work interfaces.
+In this part, we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In [Part 3][3], we'll move on to the Data Layer, in which we'll code our implementation of the repository and Unit of Work interfaces.
 
 Until next time, happy coding!
 
 
 [1]: http://www.asp.net/identity
 [2]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/
+[3]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-3/

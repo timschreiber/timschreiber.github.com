@@ -13,6 +13,7 @@ tags:
 
 * [Part 1][2]
 * [Part 2][3]
+* **Part 3**
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
@@ -254,7 +255,7 @@ With our Entity Framework entity configurations and DbContext out of the way, we
 
 2. You'll notice the constructor is marked with the `internal` access modifier. That's because the only class that should ever instantiate a repository will be our Unit of Work class. No need to potentially couple Entity Framework to other layers by putting our `ApplicationDbContext` dependency in a public constructor. 
     
-You'll recall from Part 2 that we're following the generic repository pattern. So, we'll code the generic repository implementation first, and then move on to the entity-specific repositories. So let's start by creating the following class in the `Repositories` folder:
+You'll recall from [Part 2][3] that we're following the generic repository pattern. So, we'll code the generic repository implementation first, and then move on to the entity-specific repositories. So let's start by creating the following class in the `Repositories` folder:
 
 ######Repository.cs######
 
@@ -457,7 +458,7 @@ The entity-specific repository classes extend the generic repository class and i
     
 ####Unit of Work####
 
-The last piece of our Data Layer is the Unit of Work implementation. As I pointed out in Part 2, the Unit of Work pattern does two important things:
+The last piece of our Data Layer is the Unit of Work implementation. As I pointed out in [Part 2][3], the Unit of Work pattern does two important things:
 
 1. Maintains an in-memory collection of changes, and
 2. Sends the changes as a single transaction to the data store.
