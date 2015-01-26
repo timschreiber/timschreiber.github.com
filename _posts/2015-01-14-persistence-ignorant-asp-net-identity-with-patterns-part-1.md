@@ -121,3 +121,4 @@ Until next time, happy coding!
 [8]: http://en.wikipedia.org/wiki/Dependency_injection
 [9]: https://unity.codeplex.com/
 [10]: https://www.nuget.org/packages/Unity.Mvc5/
+[11]: /2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/
