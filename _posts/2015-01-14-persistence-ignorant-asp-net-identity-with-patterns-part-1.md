@@ -15,6 +15,8 @@ tags:
 
 ASP.NET Identity is the successor to ASP.NET Simple Membership, which itself was a short-lived successor to the venerable ASP.NET Membership introduced with .NET 2.0. Microsoft's [Introduction to ASP.NET Identity][2] article says this new identity management framework is the result of developer feedback and solves a long list of problems including flexible schema, external logins, testability, and support for different persistence mechanisms &mdash; going as far to say they're &quot;easy to plug in.&quot;
 
+* [Part 2][11]
+
 ###The Problem###
 
 What they neglect to say is all that testability and persistence ignorance flies right out the window when you create a new ASP.NET Web Application using the MVC template and &quot;Individual User Accounts&quot; authentication. What you get is a single-layered application, tightly coupled to Entity Framework, that:
