@@ -11,9 +11,9 @@ tags:
 - architecture
 ---
 
-######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
-
 * [Part 1][2]
+
+######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
 In [Part 1][2], I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for &quot;Individual User Accounts&quot; authentication, and then laid out the requirements for a better implementation. In this part, we'll create the Visual Studio Solution, break the dependencies on Entity Framework, and start coding our Domain Layer.
 

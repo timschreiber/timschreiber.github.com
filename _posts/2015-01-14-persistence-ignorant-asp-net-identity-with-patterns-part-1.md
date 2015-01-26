@@ -11,11 +11,11 @@ tags:
 - architecture
 ---
 
+* [Part 2][11]
+
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
 ASP.NET Identity is the successor to ASP.NET Simple Membership, which itself was a short-lived successor to the venerable ASP.NET Membership introduced with .NET 2.0. Microsoft's [Introduction to ASP.NET Identity][2] article says this new identity management framework is the result of developer feedback and solves a long list of problems including flexible schema, external logins, testability, and support for different persistence mechanisms &mdash; going as far to say they're &quot;easy to plug in.&quot;
-
-* [Part 2][11]
 
 ###The Problem###
 
