@@ -88,7 +88,7 @@ For the purposes of this application, I am going to use persistence ignorance wi
 
 #####**Proper Layering**#####
 
-The concept of &quot;proper layering&quot; is highly subjective. At the very least, that means presentation is isolated from data access by an intermediate core logic layer. I'll cover the layering of this application in Part 2 when we set up the Visual Studio Solution.
+The concept of &quot;proper layering&quot; is highly subjective. At the very least, that means presentation is isolated from data access by an intermediate core logic layer. I'll cover the layering of this application in [Part 2][11] when we set up the Visual Studio Solution.
 
 #####**Patterns**#####
 
@@ -106,7 +106,7 @@ I will be writing two different data layers and expect that I should be able to 
 
 ###Next Steps###
 
-In this part, I've identified the initial, high-level, function and technical requirements for persistence-ignorant, properly-layered ASP.NET MVC 5 web application with ASP.NET Identity. I spent time on some of the patterns I'll be using and provided plenty of links for those who want to learn more. In Part 2, I'll fire up Visual Studio and start putting the solution together.
+In this part, I've identified the initial, high-level, function and technical requirements for persistence-ignorant, properly-layered ASP.NET MVC 5 web application with ASP.NET Identity. I spent time on some of the patterns I'll be using and provided plenty of links for those who want to learn more. In [Part 2][11], I'll fire up Visual Studio and start putting the solution together.
 
 Until next time, happy coding!
 
