@@ -3,7 +3,7 @@ title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 3)"
 date: 2015-01-26
 layout: post
 comments: true
-description: "In this part, we’ll move on to the Data Layer, in which we’ll code our implementation of the repository and Unit of Work interfaces. Let's jump right in. The Data Layer For now, we’ll be using Entity Framework as the persistence mechanism in our Data Layer. Since..."
+description: "In this part, we'll move on to the Data Layer, in which we'll code our implementation of the repository and Unit of Work interfaces. Let's jump right in. The Data Layer For now, we'll be using Entity Framework as the persistence mechanism in our Data Layer. Since..."
 tags:
 - asp-net
 - mvc-5
@@ -16,15 +16,15 @@ tags:
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
-In [Part 1][2], I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for “Individual User Accounts” authentication, and then laid out the requirements for a better implementation. In [Part 2][3], we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In this part, we’ll move on to the Data Layer, in which we’ll code our implementation of the repository and Unit of Work interfaces.
+In [Part 1][2], I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for &quot;Individual User Accounts&quot; authentication, and then laid out the requirements for a better implementation. In [Part 2][3], we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In this part, we'll move on to the Data Layer, in which we'll code our implementation of the repository and Unit of Work interfaces.
 
-Let’s jump right in.
+Let's jump right in.
 
 ###The Data Layer###
 
-For now, we’ll be using Entity Framework as the persistence mechanism in our Data Layer. Since we’re designing this with persistence-ignorant in mind, however, we could just as easily use NHibernate or plain SQL with little or no modification to our Domain and other layers. The first thing we need to do is add another class library to the solution. I called mine `Mvc5IdentityExample.Data.EntityFramework`. One the project has been created, let’s add two folders: `Configuration` and `Repositories`.
+For now, we'll be using Entity Framework as the persistence mechanism in our Data Layer. Since we're designing this with persistence-ignorant in mind, however, we could just as easily use NHibernate or plain SQL with little or no modification to our Domain and other layers. The first thing we need to do is add another class library to the solution. I called mine `Mvc5IdentityExample.Data.EntityFramework`. One the project has been created, let's add two folders: `Configuration` and `Repositories`.
 
-Next we’ll need to add a reference to the latest EntityFramework package. To do this, launch the Package Manager Console and run the following command:
+Next we'll need to add a reference to the latest EntityFramework package. To do this, launch the Package Manager Console and run the following command:
 
     Install-Package EntityFramework
 
@@ -32,9 +32,9 @@ Next we’ll need to add a reference to the latest EntityFramework package. To d
 
 #####**Entity Configuration**#####
 
-The first pieces of code this we’re going to write in this layer are the mapping classes that tell Entity Framework which entities map to which database tables, which properties map to which columns, and how all the relationships work. A lot of people like to rely on configuration by convention, which is fine, but I prefer to see more of the mappings in my code &ndash; call it a sort of self-documentation, if you will. Since these configurations don’t need to be visible outside the Data Layer, we can make them `internal`.
+The first pieces of code this we're going to write in this layer are the mapping classes that tell Entity Framework which entities map to which database tables, which properties map to which columns, and how all the relationships work. A lot of people like to rely on configuration by convention, which is fine, but I prefer to see more of the mappings in my code &ndash; call it a sort of self-documentation, if you will. Since these configurations don't need to be visible outside the Data Layer, we can make them `internal`.
 
-We have four entities, so we’ll need four configuration classes:
+We have four entities, so we'll need four configuration classes:
 
 ######ClaimConfiguration.cs######
 
@@ -250,11 +250,11 @@ The next piece in our Entity Framework Data Layer is the DbContext. Nothing out 
 
 With our Entity Framework entity configurations and DbContext out of the way, we move on to implementing the repository interfaces we defined in the Data Layer. As we dive into the code, I want you to notice a couple things about the classes:
  
-1. You’ll notice there’s no default constructor. That’s because we’re following the Dependency Injection pattern by providing the repository with the `ApplicationDbContext` it needs in the constructor. This ensures that all our repositories will use the same DbContext per transaction scope.
+1. You'll notice there's no default constructor. That's because we're following the Dependency Injection pattern by providing the repository with the `ApplicationDbContext` it needs in the constructor. This ensures that all our repositories will use the same DbContext per transaction scope.
 
-2. You’ll notice the constructor is marked with the `internal` access modifier. That’s because the only class that should ever instantiate a repository will be our Unit of Work class. No need to potentially couple Entity Framework to other layers by putting our `ApplicationDbContext` dependency in a public constructor. 
+2. You'll notice the constructor is marked with the `internal` access modifier. That's because the only class that should ever instantiate a repository will be our Unit of Work class. No need to potentially couple Entity Framework to other layers by putting our `ApplicationDbContext` dependency in a public constructor. 
     
-You'll recall from Part 2 that we’re following the generic repository pattern. So, we’ll code the generic repository implementation first, and then move on to the entity-specific repositories. So let’s start by creating the following class in the `Repositories` folder:
+You'll recall from Part 2 that we're following the generic repository pattern. So, we'll code the generic repository implementation first, and then move on to the entity-specific repositories. So let's start by creating the following class in the `Repositories` folder:
 
 ######Repository.cs######
 
@@ -350,7 +350,7 @@ You'll recall from Part 2 that we’re following the generic repository pattern.
         }
     }
 
-The entity-specific repository classes extend the generic repository class and implement the entity-specific repository interfaces from the Domain Layer. Let’s add the following three classes to the `Repositories` folder:
+The entity-specific repository classes extend the generic repository class and implement the entity-specific repository interfaces from the Domain Layer. Let's add the following three classes to the `Repositories` folder:
 
 ######ExternalLoginRepository.cs######
 
@@ -462,9 +462,9 @@ The last piece of our Data Layer is the Unit of Work implementation. As I pointe
 1. Maintains an in-memory collection of changes, and
 2. Sends the changes as a single transaction to the data store.
 
-Because we're using Entity Framework, we can leverage the DbContext to manage the in-memory collection of changes. But since all of our changes are made through the repositories, we need to make sure all the repositories are using the same DbContext. That’s why the Unit of Work interface in the the Domain Layer defines getters for the repositories, as well as methods to commit any changes as a single transaction.
+Because we're using Entity Framework, we can leverage the DbContext to manage the in-memory collection of changes. But since all of our changes are made through the repositories, we need to make sure all the repositories are using the same DbContext. That's why the Unit of Work interface in the the Domain Layer defines getters for the repositories, as well as methods to commit any changes as a single transaction.
 
-The Unit of Work class is really the only publicly available class in the Data Layer, because it’s where all the Data Layer rubber meets the road:
+The Unit of Work class is really the only publicly available class in the Data Layer, because it's where all the Data Layer rubber meets the road:
 
 ######UnitOfWork.cs######
 
@@ -537,7 +537,7 @@ The Unit of Work class is really the only publicly available class in the Data L
 
 ####The Database####
 
-I guess I could spend the time to write the code to generate the database from Entity Framework, but that is not the focus of this tutorial. In order to help things along, I’m including a SQL script that will create all the tables we’ll need (Note: you’ll need to create a user and assign `db_datareader` and `db_datawriter` permissions).
+I guess I could spend the time to write the code to generate the database from Entity Framework, but that is not the focus of this tutorial. In order to help things along, I'm including a SQL script that will create all the tables we'll need (Note: you'll need to create a user and assign `db_datareader` and `db_datawriter` permissions).
 
 ######Tables.sql######
 
@@ -661,7 +661,7 @@ I guess I could spend the time to write the code to generate the database from E
 
 ###Next Steps###
 
-We are so close to having a working application that uses design patterns and better practices for ASP.NET Identity! In this part, we created our Data Layer using Entity Framework. We defined our entity mappings, coded the DbContext, and implemented the interfaces for the repositories and Unit of Work that we defined in the Domain Layer. In Part 4, we’ll move on to the Presentation Layer, where we’ll focus on getting our Domain and Data Layers to work with ASP.NET Identity with custom IdentityUser, IdentityRole, UserStore, and RoleStore classes.
+We are so close to having a working application that uses design patterns and better practices for ASP.NET Identity! In this part, we created our Data Layer using Entity Framework. We defined our entity mappings, coded the DbContext, and implemented the interfaces for the repositories and Unit of Work that we defined in the Domain Layer. In Part 4, we'll move on to the Presentation Layer, where we'll focus on getting our Domain and Data Layers to work with ASP.NET Identity with custom IdentityUser, IdentityRole, UserStore, and RoleStore classes.
 
 Until then, happy coding!
     
