@@ -318,4 +318,4 @@ Until next time, happy coding!
 
 [1]: http://www.asp.net/identity
 [2]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/
-[3]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-3/
+[3]: /2015/01/26/persistence-ignorant-asp-net-identity-with-patterns-part-3/

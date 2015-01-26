@@ -126,4 +126,4 @@ Until next time, happy coding!
 [9]: https://unity.codeplex.com/
 [10]: https://www.nuget.org/packages/Unity.Mvc5/
 [11]: /2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/
-[12]: /2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-3/
+[12]: /2015/01/26/persistence-ignorant-asp-net-identity-with-patterns-part-3/

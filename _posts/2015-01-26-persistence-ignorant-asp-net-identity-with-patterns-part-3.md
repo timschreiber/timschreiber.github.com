@@ -673,4 +673,4 @@ Until then, happy coding!
 
 [1]: http://www.asp.net/identity
 [2]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/
-[3]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-2/
+[3]: /2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/
