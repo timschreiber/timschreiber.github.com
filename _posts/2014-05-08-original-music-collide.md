@@ -1,5 +1,5 @@
 ---
-title: Collide
+title: "Original Music: Collide"
 date: 2014-05-08
 layout: post
 comments: true
@@ -15,3 +15,25 @@ You know on my homepage where I mention I'm an an amateur songwriter? Well, that
 <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="//www.youtube.com/embed/o34h-n7Rswk"></iframe>
 </div>
+
+I am the sun and you are the moon
+I will go down and you will writhe soon
+The stars in the sky watch over tonight
+As bodies in motion collide
+
+Collide
+Collide
+Collide
+Collide
+
+No longer bound by space and time
+I'm only yours and you're only mine
+There's nothing in sight but the black of night
+As we descend and collide
+
+Collide
+Collide
+Collide
+Collide
+
+Copyright &copy 2013 Tim Schreiber. All rights reserved.
