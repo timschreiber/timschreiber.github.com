@@ -38,4 +38,4 @@ Collide<br/>
 Collide<br/>
 Collide</p>
 
-<p>Copyright &copy 2013 Tim Schreiber. All rights reserved.</p>
+<p>Copyright &copy; 2013 Tim Schreiber. All rights reserved.</p>
