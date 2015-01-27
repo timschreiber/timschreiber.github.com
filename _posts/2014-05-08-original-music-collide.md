@@ -16,24 +16,24 @@ You know on my homepage where I mention I'm an an amateur songwriter? Well, that
     <iframe class="embed-responsive-item" src="//www.youtube.com/embed/o34h-n7Rswk"></iframe>
 </div>
 
-I am the sun and you are the moon
-I will go down and you will writhe soon
-The stars in the sky watch over tonight
-As bodies in motion collide
+<p>I am the sun and you are the moon<br/>
+I will go down and you will writhe soon<br/>
+The stars in the sky watch over tonight<br/>
+As bodies in motion collide</p>
 
-Collide
-Collide
-Collide
-Collide
+<p>Collide<br/>
+Collide<br/>
+Collide<br/>
+Collide</p>
 
-No longer bound by space and time
-I'm only yours and you're only mine
-There's nothing in sight but the black of night
-As we descend and collide
+<p>No longer bound by space and time<br/>
+I'm only yours and you're only mine<br/>
+There's nothing in sight but the black of night<br/>
+As we descend and collide</p>
 
-Collide
-Collide
-Collide
-Collide
+<p>Collide<br/>
+Collide<br/>
+Collide<br/>
+Collide</p>
 
-Copyright &copy 2013 Tim Schreiber. All rights reserved.
+<p>Copyright &copy 2013 Tim Schreiber. All rights reserved.</p>
