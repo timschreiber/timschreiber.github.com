@@ -1,5 +1,6 @@
 --- 
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 2)"
+permalink: "http://timschreiber.com/2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/"
 date: 2015-01-25
 layout: post
 comments: true

@@ -1,6 +1,8 @@
 ---
 layout : blog
 title : "Blog"
+permalink : "http://timschreiber.com/blog/"
+description : "Timothy P. Schreiber's personal blog, dealing primarily with software development, but also dabbling in songwriting, food, and gardening from time to time."
 ---
 
 <ol class="breadcrumb">

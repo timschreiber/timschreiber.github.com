@@ -11,7 +11,7 @@ layout: nil
   
   {% for post in site.posts %}
   <url>
-    <loc>http://domain{{ post.url }}</loc>
+    <loc>http://timschreiber.com{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
@@ -21,7 +21,7 @@ layout: nil
   {% for page in site.pages %}
 	{% if page.url %}
 	<url>
-		<loc>http://domain{{ page.url }}</loc>
+		<loc>http://timschreiber.com{{ page.url }}</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.00</priority>
 	</url>

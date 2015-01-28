@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>{{ page.title }} | Timothy P. Schreiber</title>
+
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Blog Feed" />
-		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Blog Feed" />
-		<title>{{ page.title }} | Timothy P. Schreiber</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+       <meta name="description" content="{{ page.description }}" />        
+       <meta name="og:title" content="{{ page.title }}"/>
+       <meta name="og:site_name" content="Timothy P. Schreiber"/>
+       <meta name="og:url" content="{{ page.permalink }}"/>
+       <meta name="og:description" content="{{ page.description }}"/>
+       {% if page.image %}
+           <meta name="og:image" content="{{ page.image }}"/>
+       {% else %}
+           <meta name="og:image" content="http://timschreiber.com/img/timothy-p-schreiber.jpg"/>
+       {% endif %}
+       
+       <link rel="canonical" href="{{ page.permalink }}"/>
+       <link rel="alternate" type="application/atom+xml" title="Atom | Timothy P. Schreiber" href="http://timschreiber.com/blog/atom.xml" />
+       <link rel="alternate" type="application/rss+xml" title="Rss | Timothy P. Schreiber" href="http://timschreiber.com/blog/rss.xml" />
+		
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
 		<link href="//fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />

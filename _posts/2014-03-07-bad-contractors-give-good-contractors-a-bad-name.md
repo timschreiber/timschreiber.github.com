@@ -1,6 +1,8 @@
 --- 
 title: "Bad Contractors Give Good Contractors A Bad Name"
+permalink: "http://timschreiber.com/2014/03/07/bad-contractors-give-good-contractors-a-bad-name"
 date: 2014-03-07
+image : "http://timschreiber.com/img/consulting-demotivator.jpg"
 layout: post
 comments: true
 description: "Having spent the better part of a decade in software consulting, it's fair to say that although many of us are quite talented and actually give a shit about what we do, there are also those who have tarnished our..."
