@@ -28,10 +28,15 @@ The first thing to do is to launch Visual Studio 2013 and create a new ASP.NET W
 
 ####Break the Coupling####
 
-So instead of running it, let's go in and delete stuff. The first thing we need to get rid of is the reference to `Microsoft.AspNet.Identity.EntityFramework`. To do this, launch the Package Manager Console and run the following command:
+So instead of running it, let's go in and delete stuff. The first thing we need to get rid of is the reference to `Microsoft.AspNet.Identity.EntityFramework`. To do this, launch the Package Manager Console and run the following commands:
 
     Uninstall-Package Microsoft.AspNet.Identity.EntityFramework
+    Uninstall-Package EntityFramework
 
+You may have to restart Visual Studio to complete the uninstall of EntityFramework. Now, let's just make sure all our packages are up-to-date. Go back to the Package Manager Console and run the following command:
+
+    Update-Package
+    
 Since we don't want to couple the Presentation Layer to SQL Server, let's go ahead and delete the `App_Data` folder, too. We'll worry about persistence in [Part 3][3].
 
 ####The Domain Layer####
