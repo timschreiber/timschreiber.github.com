@@ -1,6 +1,8 @@
 ---
 layout : layout
 title : "Senior .NET Developer/Architect - Lexington, KY - C#, ASP.NET MVC, WCF, Entity Framework, SQL Server, Agile, Object-Oriented Design, SOLID, Design Patterns"
+canonical : "http://timschreiber.com/"
+description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Architect in the Lexington, KY area. Enterprise applications, websites, open source - you name it. C#, ASP.NET MVC, WCF, Entity Framework, SQL Server, Agile, Object-Oriented Design, SOLID, Design Patterns."
 ---
 
 <div id="home-jumbotron" class="jumbotron">
