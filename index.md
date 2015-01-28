@@ -8,7 +8,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 <div id="home-jumbotron" class="jumbotron">
 	<div class="container">
 		<div class="col-xs-12 col-md-6 col-md-push-6 jumbotron-column text-center">
-			<img id="profile-picture" src="/img/timothy-p-schreiber.jpg" alt="Timothy P. Schreiber" class="img-circle"/>
+			<img id="profile-picture" src="/img/timothy-p-schreiber-2.jpg" alt="Timothy P. Schreiber" class="img-circle"/>
 		</div>
 		<div class="col-xs-12 col-md-6 col-md-pull-6 jumbotron-column text-center">
 			<h1>Hi, I'm Tim.</h1>
