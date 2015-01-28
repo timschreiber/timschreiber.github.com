@@ -539,12 +539,44 @@ The Unit of Work class is really the only publicly available class in the Data L
 
 ####The Database####
 
-I guess I could spend the time to write the code to generate the database from Entity Framework, but that is not the focus of this tutorial. In order to help things along, I'm including a SQL script that will create all the tables we'll need (Note: you'll need to create a user and assign `db_datareader` and `db_datawriter` permissions).
+I guess I could spend the time to write the code to generate the database from Entity Framework, but that is not the focus of this tutorial. So in order to help things along, I've included a SQL script that will create the database, complete with all the tables, the login, the user, and permissions necessary to run the application.
 
-######Tables.sql######
+######CreateDatabase.sql######
 
-    USE [aspnet-WebApplication1-20150102113510]
+    USE [master]
     GO
+
+    SET NOCOUNT ON
+    GO
+
+    IF EXISTS (SELECT 1 FROM sys.databases WHERE [Name] = 'Mvc5IdentityExample')
+    BEGIN
+        ALTER DATABASE Mvc5IdentityExample SET SINGLE_USER
+        DROP DATABASE Mvc5IdentityExample
+    END
+
+    CREATE DATABASE Mvc5IdentityExample
+    GO
+
+    IF NOT EXISTS (SELECT * FROM sys.server_principals WHERE [name] = 'Mvc5IdentityExampleUser')
+    BEGIN
+        CREATE LOGIN [Mvc5IdentityExampleUser] WITH PASSWORD = N'Password123', DEFAULT_DATABASE = [Mvc5IdentityExample],
+            DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION = OFF, CHECK_POLICY = OFF
+        
+        ALTER LOGIN [Mvc5IdentityExampleUser] ENABLE
+    END
+    GO
+
+    USE [Mvc5IdentityExample]
+    GO
+
+    CREATE USER [Mvc5IdentityExampleUser] FOR LOGIN [Mvc5IdentityExampleUser]
+    GO
+
+    EXEC sp_addrolemember N'db_datareader', N'Mvc5IdentityExampleUser'
+    EXEC sp_addrolemember N'db_datawriter', N'Mvc5IdentityExampleUser'
+    GO
+
     /****** Object:  Table [dbo].[Claim]    Script Date: 1/12/2015 11:14:30 PM ******/
     SET ANSI_NULLS ON
     GO
