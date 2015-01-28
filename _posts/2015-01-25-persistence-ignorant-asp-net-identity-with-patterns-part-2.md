@@ -92,6 +92,7 @@ With the project and folders created, we're ready to start coding. We'll start w
                 get { return _roles ?? (_roles = new List<Role>()); }
                 set { _roles = value; }
             }
+            #endregion
         }
     }
 
@@ -206,8 +207,7 @@ Next up are the repositories. We're not implementing anything here, just creatin
 
             List<TEntity> PageAll(int skip, int take);
             Task<List<TEntity>> PageAllAsync(int skip, int take);
-            Task<List<TEntity>> PageAllAsync(CancellationToken cancellationToken,
-                int skip, int take);
+            Task<List<TEntity>> PageAllAsync(CancellationToken cancellationToken, int skip, int take);
 
             TEntity FindById(object id);
             Task<TEntity> FindByIdAsync(object id);
@@ -233,13 +233,11 @@ You may have seen some generic repository examples that expose IQueryables, IEnu
         {
             User FindByUserName(string username);
             Task<User> FindByUserNameAsync(string username);
-            Task<User> FindByUserNameAsync(CancellationToken cancellationToken,
-                string username);
+            Task<User> FindByUserNameAsync(CancellationToken cancellationToken, string username);
 
             User FindByEmail(string email);
             Task<User> FindByEmailAsync(string email);
-            Task<User> FindByEmailAsync(CancellationToken cancellationToken,
-                string email);
+            Task<User> FindByEmailAsync(CancellationToken cancellationToken, string email);
         }
     }
 
@@ -255,8 +253,7 @@ You may have seen some generic repository examples that expose IQueryables, IEnu
         {
             Role FindByName(string roleName);
             Task<Role> FindByNameAsync(string roleName);
-            Task<Role> FindByNameAsync(CancellationToken cancellationToken,
-                string roleName);
+            Task<Role> FindByNameAsync(CancellationToken cancellationToken, string roleName);
         }
     }
 
@@ -271,11 +268,8 @@ You may have seen some generic repository examples that expose IQueryables, IEnu
         public interface IExternalLoginRepository : IRepository<ExternalLogin>
         {
             ExternalLogin GetByProviderAndKey(string loginProvider, string providerKey);
-            Task<ExternalLogin> GetByProviderAndKeyAsync(string loginProvider,
-                string providerKey);
-            Task<ExternalLogin> GetByProviderAndKeyAsync(
-                CancellationToken cancellationToken, string loginProvider,
-                string providerKey);
+            Task<ExternalLogin> GetByProviderAndKeyAsync(string loginProvider, string providerKey);
+            Task<ExternalLogin> GetByProviderAndKeyAsync(CancellationToken cancellationToken, string loginProvider, string providerKey);
         }
     }
     

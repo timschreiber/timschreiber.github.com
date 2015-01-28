@@ -82,7 +82,7 @@ We have four entities, so we'll need four configuration classes:
             }
         }
     }
-
+    
 ######ExternalLoginConfiguration.cs######
 
     using Mvc5IdentityExample.Domain.Entities;
@@ -198,7 +198,8 @@ We have four entities, so we'll need four configuration classes:
 
                 HasMany(x => x.Roles)
                     .WithMany(x => x.Users)
-                    .Map(x => {
+                    .Map(x =>
+                    {
                         x.ToTable("UserRole");
                         x.MapLeftKey("UserId");
                         x.MapRightKey("RoleId");
@@ -221,16 +222,16 @@ The next piece in our Entity Framework Data Layer is the DbContext. Nothing out 
 
 ######ApplicationDbContext.cs######
 
-    using Mvc5IdentityExample.Data.Configuration;
+    using Mvc5IdentityExample.Data.EntityFramework.Configuration;
     using Mvc5IdentityExample.Domain.Entities;
     using System.Data.Entity;
 
-    namespace Mvc5IdentityExample.Data
+    namespace Mvc5IdentityExample.Data.EntityFramework
     {
         internal class ApplicationDbContext : DbContext
         {
             internal ApplicationDbContext(string nameOrConnectionString)
-                :base(nameOrConnectionString)
+                : base(nameOrConnectionString)
             {
             }
 
@@ -313,7 +314,7 @@ You'll recall from [Part 2][3] that we're following the generic repository patte
             {
                 return Set.Skip(skip).Take(take).ToListAsync(cancellationToken);
             }
-            
+
             public TEntity FindById(object id)
             {
                 return Set.Find(id);
@@ -363,7 +364,7 @@ The entity-specific repository classes extend the generic repository class and i
     using System.Threading;
     using System.Threading.Tasks;
 
-    namespace Mvc5IdentityExample.Data.Repositories
+    namespace Mvc5IdentityExample.Data.EntityFramework.Repositories
     {
         internal class ExternalLoginRepository : Repository<ExternalLogin>, IExternalLoginRepository
         {
@@ -397,7 +398,7 @@ The entity-specific repository classes extend the generic repository class and i
     using System.Linq;
     using System.Threading.Tasks;
 
-    namespace Mvc5IdentityExample.Data.Repositories
+    namespace Mvc5IdentityExample.Data.EntityFramework.Repositories
     {
         internal class RoleRepository : Repository<Role>, IRoleRepository
         {
@@ -431,7 +432,7 @@ The entity-specific repository classes extend the generic repository class and i
     using System.Linq;
     using System.Threading.Tasks;
 
-    namespace Mvc5IdentityExample.Data.Repositories
+    namespace Mvc5IdentityExample.Data.EntityFramework.Repositories
     {
         internal class UserRepository : Repository<User>, IUserRepository
         {
@@ -455,8 +456,8 @@ The entity-specific repository classes extend the generic repository class and i
                 return Set.FirstOrDefaultAsync(x => x.UserName == username, cancellationToken);
             }
         }
-    }
-    
+    }    
+
 ####Unit of Work####
 
 The last piece of our Data Layer is the Unit of Work implementation. As I pointed out in [Part 2][3], the Unit of Work pattern does two important things:
@@ -470,12 +471,12 @@ The Unit of Work class is really the only publicly available class in the Data L
 
 ######UnitOfWork.cs######
 
-    using Mvc5IdentityExample.Data.Repositories;
+    using Mvc5IdentityExample.Data.EntityFramework.Repositories;
     using Mvc5IdentityExample.Domain;
     using Mvc5IdentityExample.Domain.Repositories;
     using System.Threading.Tasks;
 
-    namespace Mvc5IdentityExample.Data
+    namespace Mvc5IdentityExample.Data.EntityFramework
     {
         public class UnitOfWork : IUnitOfWork
         {
@@ -698,10 +699,6 @@ I guess I could spend the time to write the code to generate the database from E
 We are so close to having a working application that uses design patterns and better practices for ASP.NET Identity! In this part, we created our Data Layer using Entity Framework. We defined our entity mappings, coded the DbContext, and implemented the interfaces for the repositories and Unit of Work that we defined in the Domain Layer. In Part 4, we'll move on to the Presentation Layer, where we'll focus on getting our Domain and Data Layers to work with ASP.NET Identity with custom IdentityUser, IdentityRole, UserStore, and RoleStore classes.
 
 Until then, happy coding!
-    
-    
-    
-    
     
 
 [1]: http://www.asp.net/identity
