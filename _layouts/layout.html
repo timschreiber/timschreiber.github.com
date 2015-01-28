@@ -9,7 +9,7 @@
        <meta name="description" content="{{ page.description }}" />        
        <meta name="og:title" content="{{ page.title }}"/>
        <meta name="og:site_name" content="Timothy P. Schreiber"/>
-       <meta name="og:url" content="{{ page.permalink }}"/>
+       <meta name="og:url" content="{{ page.canonical }}"/>
        <meta name="og:description" content="{{ page.description }}"/>
        {% if page.image %}
            <meta name="og:image" content="{{ page.image }}"/>
@@ -17,7 +17,7 @@
            <meta name="og:image" content="http://timschreiber.com/img/timothy-p-schreiber.jpg"/>
        {% endif %}
        
-       <link rel="canonical" href="{{ page.permalink }}"/>
+       <link rel="canonical" href="{{ page.canonical }}"/>
        <link rel="alternate" type="application/atom+xml" title="Atom | Timothy P. Schreiber" href="http://timschreiber.com/blog/atom.xml" />
        <link rel="alternate" type="application/rss+xml" title="Rss | Timothy P. Schreiber" href="http://timschreiber.com/blog/rss.xml" />
 		

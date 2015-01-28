@@ -1,6 +1,6 @@
 --- 
 layout: post
-permalink: "http://timschreiber.com/2013/11/05/my-first-year-as-a-sissy"
+canonical: "http://timschreiber.com/2013/11/05/my-first-year-as-a-sissy"
 title: "My First Year as a SISsy"
 author: "Tim"
 comments: true

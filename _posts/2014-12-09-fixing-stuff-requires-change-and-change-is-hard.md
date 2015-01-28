@@ -1,6 +1,6 @@
 --- 
 title: "Fixing Stuff Requires Change, and Change Is Hard"
-permalink: "http://timschreiber.com/2014/12/09/fixing-stuff-requires-change-and-change-is-hard"
+canonical: "http://timschreiber.com/2014/12/09/fixing-stuff-requires-change-and-change-is-hard"
 date: 2014-12-09
 layout: post
 comments: true

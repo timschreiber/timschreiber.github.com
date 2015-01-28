@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: "My First Randori"
-permalink: "http://timschreiber.com/2012/04/07/my-first-randori"
+canonical: "http://timschreiber.com/2012/04/07/my-first-randori"
 author: "Tim"
 comments: true
 description: "In the second meeting of the Utah Software Craftsmanship group that I attended, Mike Clement presented on Randori: Group Practice. Randori is a term used in Japanese martial arts to describe free-style practice. The term literally means &quot;chaos taking&quot; or..."

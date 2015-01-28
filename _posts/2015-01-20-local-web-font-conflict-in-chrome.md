@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: "Local/Web Font Conflict in Chrome"
-permalink: "http://timschreiber.com/2015/01/20/local-web-font-conflict-in-chrome"
+canonical: "http://timschreiber.com/2015/01/20/local-web-font-conflict-in-chrome"
 author: "Tim"
 image: "http://timschreiber.com/img/bold-blog.png"
 comments: true

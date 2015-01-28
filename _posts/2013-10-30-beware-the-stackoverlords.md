@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: "Beware the StackOverlords"
-permalink: "http://timschreiber.com/2013/10/30/beware-the-stackoverlords"
+canonical: "http://timschreiber.com/2013/10/30/beware-the-stackoverlords"
 author: "Tim"
 comments: true
 description: "or, Why StackOverflow Sucks. This probably isn't the best written post I've ever done, but it's what's been on my mind. Also dammit Jim, I'm a coder &ndash; not a writer. I used to think StackOverflow was awesome. Used to..."
