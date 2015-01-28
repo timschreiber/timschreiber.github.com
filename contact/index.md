@@ -1,7 +1,7 @@
 ---
 layout : page
 title : Contact
-permalink : "http://timschreiber.com/contact/"
+canonical : "http://timschreiber.com/contact/"
 description : "Use this form to contact Timothy P. Schreiber."
 ---
 

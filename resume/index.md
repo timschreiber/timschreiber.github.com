@@ -1,7 +1,7 @@
 ---
 layout : page
 title : R&eacute;sum&eacute;
-permalink : "http://timschreiber.com/resume/"
+canonical : "http://timschreiber.com/resume/"
 description : "Senior .NET Developer/Architect with expertise in enterprise application development using C#, ASP.NET (MVC & Web Forms), WCF, Entity Framework, SQL... Server, Agile, and more. Proficient in object-oriented design and application architecture. Excellent direct-hire or contract candidate for organizations seeking a technically proficient, team-oriented, creative software professional with strong interpersonal skills."
 ---
 
