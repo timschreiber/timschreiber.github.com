@@ -1,6 +1,6 @@
 --- 
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 1)"
-canonical: "http://timschreiber.com/2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1"
+canonical: "http://timschreiber.com/2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/"
 date: 2015-01-14
 layout: post
 comments: true

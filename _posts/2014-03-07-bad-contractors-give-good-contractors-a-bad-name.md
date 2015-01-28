@@ -1,6 +1,6 @@
 --- 
 title: "Bad Contractors Give Good Contractors A Bad Name"
-canonical: "http://timschreiber.com/2014/03/07/bad-contractors-give-good-contractors-a-bad-name"
+canonical: "http://timschreiber.com/2014/03/07/bad-contractors-give-good-contractors-a-bad-name/"
 date: 2014-03-07
 image : "http://timschreiber.com/img/consulting-demotivator.jpg"
 layout: post

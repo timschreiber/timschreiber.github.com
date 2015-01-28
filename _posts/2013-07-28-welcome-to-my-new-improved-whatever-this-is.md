@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: "Welcome to my New, Improved Whatever-This-Is"
-canonical: "http://timschreiber.com/2013/07/28/welcome-to-my-new-improved-whatever-this-is"
+canonical: "http://timschreiber.com/2013/07/28/welcome-to-my-new-improved-whatever-this-is/"
 author: "Tim"
 comments: true
 description: "Welcome to the brand spankin' new timschreiber.com. I've been using WordPress for some side projects lately and decided it was a great time to consolidate my blog and r&eacute;sum&eacute; sites into one. Not a lot has changed in terms of..."

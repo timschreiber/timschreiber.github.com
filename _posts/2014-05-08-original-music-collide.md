@@ -1,6 +1,6 @@
 ---
 title: "Original Music: Collide"
-canonical: "http://timschreiber.com/2014/05/08/original-music-collide"
+canonical: "http://timschreiber.com/2014/05/08/original-music-collide/"
 date: 2014-05-08
 image: "https://img.youtube.com/vi/o34h-n7Rswk/0.jpg"
 layout: post

@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: "Former STGenius, Soon-to-Be SISsy"
-canonical: "http://timschreiber.com/2012/10/10/former-stgenius-soon-to-be-sissy"
+canonical: "http://timschreiber.com/2012/10/10/former-stgenius-soon-to-be-sissy/"
 author: "Tim"
 comments: true
 description: "Back in August, I wrote a post announcing my job hunt in Kentucky &mdash; I had actually been sending out r&eacute;sum&eacute;s since mid-June. Well, over the past couple of months, I've maintained a dialog with a company in Lexington which..."

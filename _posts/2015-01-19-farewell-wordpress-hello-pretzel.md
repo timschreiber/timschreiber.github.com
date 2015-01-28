@@ -1,6 +1,6 @@
 --- 
 title: "Farewell WordPress, Hello Pretzel!"
-canonical: "http://timschreiber.com/2015/01/19/farewell-wordpress-hello-pretzel"
+canonical: "http://timschreiber.com/2015/01/19/farewell-wordpress-hello-pretzel/"
 date: 2015-01-19
 layout: post
 comments: true
