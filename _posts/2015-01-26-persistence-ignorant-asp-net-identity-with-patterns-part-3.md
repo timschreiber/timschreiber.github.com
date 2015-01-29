@@ -15,6 +15,9 @@ tags:
 * [Part 1][2]
 * [Part 2][3]
 * **Part 3**
+* [Part 4][4]
+
+**The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][gh]**
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
@@ -704,3 +707,5 @@ Until then, happy coding!
 [1]: http://www.asp.net/identity
 [2]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/
 [3]: /2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/
+[4]: /2015/01/28/persistence-ignorant-asp-net-identity-with-patterns-part-4/
+[gh]: https://github.com/timschreiber/Mvc5IdentityExample

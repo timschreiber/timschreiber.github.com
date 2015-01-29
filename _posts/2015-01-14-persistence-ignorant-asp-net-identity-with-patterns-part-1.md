@@ -15,6 +15,7 @@ tags:
 * **Part 1**
 * [Part 2][11]
 * [Part 3][12]
+* [Part 4][13]
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
@@ -128,3 +129,4 @@ Until next time, happy coding!
 [10]: https://www.nuget.org/packages/Unity.Mvc5/
 [11]: /2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/
 [12]: /2015/01/26/persistence-ignorant-asp-net-identity-with-patterns-part-3/
+[13]: /2015/01/28/persistence-ignorant-asp-net-identity-with-patterns-part-4/

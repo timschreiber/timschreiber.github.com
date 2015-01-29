@@ -15,6 +15,9 @@ tags:
 * [Part 1][2]
 * **Part 2**
 * [Part 3][3]
+* [Part 4][4]
+
+**The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][gh]**
 
 ######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
 
@@ -37,7 +40,24 @@ You may have to restart Visual Studio to complete the uninstall of EntityFramewo
 
     Update-Package
     
-Since we don't want to couple the Presentation Layer to SQL Server, let's go ahead and delete the `App_Data` folder, too. We'll worry about persistence in [Part 3][3].
+Next, lets delete `IdentityModels.cs` from the `Models` folder. And since we don't want to couple the Presentation Layer to SQL Server, let's just go ahead and delete the `App_Data` folder, too. We'll worry about persistence in [Part 3][3]. Finally, open the `web.config` and remove the following:
+
+    <configSections>
+        <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </configSections>
+
+and
+
+    <entityFramework>
+        <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+            <parameters>
+                <parameter value="v11.0" />
+            </parameters>
+        </defaultConnectionFactory>
+        <providers>
+            <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+        </providers>
+    </entityFramework>
 
 ####The Domain Layer####
 
@@ -319,3 +339,5 @@ Until next time, happy coding!
 [1]: http://www.asp.net/identity
 [2]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/
 [3]: /2015/01/26/persistence-ignorant-asp-net-identity-with-patterns-part-3/
+[4]: /2015/01/28/persistence-ignorant-asp-net-identity-with-patterns-part-4/
+[gh]: https://github.com/timschreiber/Mvc5IdentityExample
