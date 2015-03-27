@@ -26,7 +26,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 				<div class="panel-body">
 					<h3>My Work</h3>
 					<h4>Day Job</h4>
-					<p><a href="http://www.thinksis.com">Software Information Systems</a> &ndash; Lead developer over the eCourts applications for the <a href="http://courts.ky.gov/aoc/Pages/default.aspx">Kentucky Administrative Office of the Courts</a>.</p>
+					<p>I work for a talent/staffing organization in a team lead capacity specializing in process improvement and technical direction.</p>
 					
 					<h4>Side Projects</h4>
 					<p>TinnitusWave &ndash; Audio-based therapy for tinnitus sufferers.</p>
