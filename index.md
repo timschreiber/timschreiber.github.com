@@ -26,7 +26,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 				<div class="panel-body">
 					<h3>My Work</h3>
 					<h4>Day Job</h4>
-					<p>I work for a talent/staffing organization at a client location in a team lead capacity specializing in process improvement and technical direction.</p>
+					<p>I work for a talent/staffing organization at a client location in a team lead capacity specializing in process improvement and technical direction. <a href="/contact">Contact for Current Employer and Project Information</a></p>
 					
 					<h4>Side Projects</h4>
 					<p>TinnitusWave &ndash; Audio-based therapy for tinnitus sufferers.</p>
