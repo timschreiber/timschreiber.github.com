@@ -4,7 +4,7 @@ title: "Beware the StackOverlords"
 canonical: "http://timschreiber.com/2013/10/30/beware-the-stackoverlords/"
 author: "Tim"
 comments: true
-description: "or, Why StackOverflow Sucks. This probably isn't the best written post I've ever done, but it's what's been on my mind. Also dammit Jim, I'm a coder &ndash; not a writer. I used to think StackOverflow was awesome. Used to..."
+description: "or, Why StackOverflow Awful. This probably isn't the best written post I've ever done, but it's what's been on my mind. Also darnit Jim, I'm a coder &ndash; not a writer. I used to think StackOverflow was awesome. Used to..."
 tags:
 - stack-overflow
 - rants
@@ -12,13 +12,13 @@ tags:
 
 ###or, Why StackOverflow Sucks###
 
-######This probably isn't the best written post I've ever done, but it's what's been on my mind. Also dammit Jim, I'm a coder &ndash; not a writer.######
+######This probably isn't the best written post I've ever done, but it's what's been on my mind. Also darnit Jim, I'm a coder &ndash; not a writer.######
 
-I used to think StackOverflow was awesome. Used to. But now, not so much. No, now it's pretty much ruled by the early adopters, many of whom don't bother asking or answering questions anymore, but rather sit on their asses and rack up massive reputation from remedial questions they answered five years ago. And with that massive reputation comes elevated privileges, which they ruthlessly wield against newbie scum to protect their standing as the StackOverlords of the Q&A empire.
+I used to think StackOverflow was awesome. Used to. But now, not so much. No, now it's pretty much ruled by the early adopters, many of whom don't bother asking or answering questions anymore, but rather sit on their butts and rack up massive reputation from remedial questions they answered five years ago. And with that massive reputation comes elevated privileges, which they ruthlessly wield against newbie scum to protect their standing as the StackOverlords of the Q&A empire.
 
 At least it seems like that sometimes. Sure, it's a little dramatized, but it points out some glaring systemic failures the StackOverflow folks are refusing to address:
 
-####Damned if you do, damned if you don't####
+####Darned if you do, darned if you don't####
 
 The gamification of StackOverflow encourages users to build reputation points and earn badges by asking and answering questions. Imagine for a moment that you are a new StackOverflow user. You can't ask questions that have been asked and answered before, any broad or open-ended question, or try to solicit opinions or anything like that &ndash; even if it will help you learn and grow as a programmer. No, if you do, then the StackOverlords will smack you down with down-votes, flags, closing your question, deletion, and all other manner of other moderator nastiness. And we're not talking over a period of time &ndash; it's going to happen in seconds. So, you aren't going to earn any reputation or badges by asking questions.
 
@@ -26,13 +26,13 @@ Okay, so you can get started by answering questions. Nope. Many new users like y
 
 The problem is that reputation is the key to gaining privileges on StackOverflow. Without it, you can basically only ask and answer questions. But as a newbie, you can't really gain reputation by asking and answering questions.
 
-####StackOverlords are assholes####
+####StackOverlords are unnecessarily rude####
 
-Yep, I said it. And I'm not the only one. There are many questions and discussions on meta.stackoverflow.com that point out the problem with rudeness on StackOverflow: [here][1], [here][2], [here][3] and [more][4].  Read the comments on [this blog post][5]. If it's beginning to seem like the StackOverlords are a bunch of old-timers yelling at the newbie kids to stay the hell of their lawn, you wouldn't be too far off.
+There are many questions and discussions on meta.stackoverflow.com that point out the problem with rudeness on StackOverflow: [here][1], [here][2], [here][3] and [more][4].  Read the comments on [this blog post][5]. If it's beginning to seem like the StackOverlords are a bunch of old-timers yelling at the newbie kids to stay the off their lawn, you wouldn't be too far off.
 
 ####StackOverlords are hypocrites####
 
-A StackOverlord once told me that StackOverflow is not a game, that rushing to build reputation is meaningless. Bullshit. If StackOverflow isn't a game, then why they hell did they gamify it with points and badges?  And if reputation is so meaningless, why did Chief-StackOverlord-in-Charge Joel Spolsky say (and I quote), &quot;Spend a few months earning a five digit Stack Overflow reputation, and you'll be getting job offers in the $100K+ range without an interview&quot; (go ahead, [check my source][6])? They obviously think reputation is more than they want you to believe.
+A StackOverlord once told me that StackOverflow is not a game, that rushing to build reputation is meaningless. I don't buy it. If StackOverflow isn't a game, then why they hell did they gamify it with points and badges?  And if reputation is so meaningless, why did Chief-StackOverlord-in-Charge Joel Spolsky say (and I quote), &quot;Spend a few months earning a five digit Stack Overflow reputation, and you'll be getting job offers in the $100K+ range without an interview&quot; (go ahead, [check my source][6])? They obviously think reputation is more than they want you to believe.
 
 ####StackOverlords think StackOverflow is something it's not####
 
