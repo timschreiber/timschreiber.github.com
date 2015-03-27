@@ -74,68 +74,11 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 
 	<div id="res-emp" class="res-section">
 		<h3>Employment</h3>
+
 		<div id="res-emp-sis" class="employer">
 			<div class="clearfix">
-				<h4 class="pull-left">&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;</h4>
+				<h4 class="pull-left"><a href="/contact">Contact for Current Employer and Project Information</a></h4>
 				<h4 class="pull-right">Oct 2012 to Present</h4>
-			</div>
-			<div><strong>Lead Developer/Architect</strong> &mdash; Feb 2014 to Feb 2015</div>
-			<div>
-				<span class="badge alert-info">.NET 4.5</span>
-				<span class="badge alert-info">C#</span>
-				<span class="badge alert-info">WCF</span>
-				<span class="badge alert-info">Windows Services</span>
-				<span class="badge alert-info">&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; SDK</span>
-				<span class="badge alert-info">SQL Server 2012</span>
-				<span class="badge alert-info">Windows Server 2012</span>
-				<span class="badge alert-info">IIS 8</span>
-				<span class="badge alert-info">TFS</span>
-			</div>
-			<ul>
-				<li>Architected and developed an integration middleware system WCF Web Services, Windows Services, and &#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; to integrate &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; with &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588; (&#x2588;&#x2588;&#x2588;) &#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; system. </li>
-				<li>Designed and oversaw creation of a secure network architecture including DMZ, reverse proxy, application servers, and database servers.</li>
-				<li>Planned, set up, and administered &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; instances and subscriptions in &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;.</li>
-			</ul>
-			<div><strong>Software Consultant</strong> &mdash; Oct 2012 to Feb 2014, Feb 2015 to Present</div>
-			<ul>
-				<li>Performed software development consulting for the following clients:</li>
-			</ul>
-			<div class="clients">
-				<div><u>&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; (&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;)</u></div>
-				<div>Senior Developer &mdash; Nov 2014 to Feb 2014</div>
-				<div>
-					<span class="badge alert-info">.NET 4</span>
-					<span class="badge alert-info">C#</span>
-					<span class="badge alert-info">ASP.NET Web Forms</span>
-					<span class="badge alert-info">SiteCore CMS</span>
-					<span class="badge alert-info">SharePoint</span>
-					<span class="badge alert-info">TFS</span>
-				</div>
-				<ul>
-					<li>Fixed broken ASP.NET controls on all &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;.&#x2588;&#x2588;&#x2588; websites, including the home office and all &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; within &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;.</li>
-					<li>Configured SharePoint to crawl all &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;.&#x2588;&#x2588;&#x2588; websites and used SharePoint search XML to power search functionality for all &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;.&#x2588;&#x2588;&#x2588; websites.</li>
-					<li>Initiated the use of TFS for source control and issue tracking and trained team members on how to use it.</li>
-				</ul>
-				<div><u>&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;</u></div>
-				<div>Lead Developer &mdash; Oct 2012 to Nov 2013</div>
-				<div>
-					<span class="badge alert-info">.NET 4</span>
-					<span class="badge alert-info">VB.NET</span>
-					<span class="badge alert-info">C#</span>
-					<span class="badge alert-info">ASP.NET Web Forms</span>
-					<span class="badge alert-info">Web Services</span>
-					<span class="badge alert-info">Windows Services</span>
-					<span class="badge alert-info">SQL Server 2012</span>
-					<span class="badge alert-info">Oracle</span>
-					<span class="badge alert-info">TFS</span>
-				</div>
-				<ul>
-					<li>Led a team of five programmers developing enhancements for the &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; (&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;) &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588; program.</li>
-					<li>Planned and led migration from Oracle to SQL Server which involved all in-house team members, as well as numerous third party contractors.</li>
-					<li>Supported team members by removing roadblocks and mentoring them on principles, patterns, and technologies.</li>
-					<li>Improved collaboration between development team and the business customer by improving communication, formalizing issue tracking, and engaging the stakeholders.</li>
-					<li>Reverse engineered and rebuilt mission-critical software for which source code had been lost.</li>
-				</ul>
 			</div>
 		</div>
 		
