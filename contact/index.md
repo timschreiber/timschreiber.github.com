@@ -10,9 +10,13 @@ description : "Use this form to contact Timothy P. Schreiber."
 	<li>{{page.title}}</li>
 </ol>
 
-<div class="col-xs-12">
-	<h1 class="collapse-top-margin">Contact Form</h1>
-	<p>Use this contact form widget I found on the web until I find time to whip one up and put it on Azure.</p>
-	<script type="text/javascript"> id = 190709; </script>
-	<script type="text/javascript" src="http://kontactr.com/wp.js"></script>
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Contact Form</h3>
+		</div>
+		<div class="panel-body">
+			<iframe src="http://timschreiber.azurewebsites.net/Contact"></iframe>
+		</div>
+	</div>
 </div>
