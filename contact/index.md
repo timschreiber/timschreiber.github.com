@@ -16,7 +16,7 @@ description : "Use this form to contact Timothy P. Schreiber."
 			<h3 class="panel-title">Contact Form</h3>
 		</div>
 		<div class="panel-body">
-			<iframe src="http://timschreiber.azurewebsites.net/Contact"></iframe>
+			<iframe name="contactFrame" src="http://timschreiber.azurewebsites.net/Contact" frameborder="0" scrolling="no" id="contactFrame" onload="resizeIFrame(this)"></iframe>
 		</div>
 	</div>
 </div>
