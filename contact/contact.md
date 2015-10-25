@@ -13,15 +13,21 @@ description : "Use this form to contact Timothy P. Schreiber."
 <h1 class="collapse-top-margin">Contact</h1>
 
 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
-	<div id="errMsgs" class="alert alert-danger">
-		<ul>
+	<div id="errMsgs" class="alert alert-danger clearfix">
+		<ul class="pull-left">
 		</ul>
+		<div class="pull-right">
+			<button class="btn btn-default btn-xs"><span class="fa fa-times"></span></button>
+		</div>
 	</div>
 	
-	<div id="okMsg" class="alert alert-success">
-		<ul>
+	<div id="okMsg" class="alert alert-success clearfix">
+		<ul class="pull-left">
 			<li>Your message has been sent.</li>
 		</ul>
+		<div class="pull-right">
+			<button class="btn btn-default btn-xs"><span class="fa fa-times"></span></button>
+		</div>
 	</div>
 
 	<form id="contactForm">
