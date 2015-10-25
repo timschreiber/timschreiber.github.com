@@ -17,7 +17,7 @@ description : "Use this form to contact Timothy P. Schreiber."
 		<ul class="pull-left">
 		</ul>
 		<div class="pull-right">
-			<button class="btn btn-default btn-xs"><span class="fa fa-times"></span></button>
+			<button class="btn btn-link text-danger"><span class="fa fa-times"></span></button>
 		</div>
 	</div>
 	
@@ -26,7 +26,7 @@ description : "Use this form to contact Timothy P. Schreiber."
 			<li>Your message has been sent.</li>
 		</ul>
 		<div class="pull-right">
-			<button class="btn btn-default btn-xs"><span class="fa fa-times"></span></button>
+			<button class="btn btn-link text-success"><span class="fa fa-times"></span></button>
 		</div>
 	</div>
 
