@@ -1,4 +1,9 @@
 $(function(){
+	$("#contactForm").submit(function(event){
+		alert($(this).attr["action"] + "\n\n" + $(this).attr["method"]);
+		event.preventDefault();
+	});
+	
 	$("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
 	handleTag();
 });
