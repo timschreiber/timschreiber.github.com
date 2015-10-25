@@ -1,6 +1,6 @@
 $(function(){
 	$("#contactForm").submit(function(event){
-		alert($(this).attr["action"] + "\n\n" + $(this).attr["method"]);
+		alert($("#contactForm").attr["action"] + "\n" + $("#contactForm").attr["method"]);
 		event.preventDefault();
 	});
 	
