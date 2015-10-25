@@ -36,7 +36,7 @@ description : "Use this form to contact Timothy P. Schreiber."
           </label>
         </div>
         <p>
-          <button type="submit"><span class="fa fa-paper-plane-o"></span> Send</button>
+          <button type="submit" class="btn btn-primary"><span class="fa fa-paper-plane-o"></span> Send</button>
         </p>
       </form>
 		</div>
