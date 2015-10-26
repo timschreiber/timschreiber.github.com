@@ -1,5 +1,7 @@
 $(function(){
 	$("#contactForm").submit(function(event){
+		event.preventDefault();
+		event.stopPropagation();
 		alert($("#contactForm").attr["action"] + "\n" + $("#contactForm").attr["method"]);
 		$.ajax({
 			url: $("#contactForm").attr["action"],
@@ -18,7 +20,6 @@ $(function(){
 		}).fail(function(data){
 			console.log(data);
 		});
-		return false;
 	});
 	
 	$("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
