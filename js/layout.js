@@ -59,28 +59,11 @@ $(function(){
 				console.log(data);
 				$("#btnSubmit span.fa").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane");
 				$("#btnSubmit").prop("disabled", false);
+			}).always(function(){
+				grecaptcha.reset();
 			});
 		}
 	});
-	
-	// $("#btnSubmit").click(function(){
-		// var valid = true;
-		// if(!$("#Sender").valid()) {
-			// $("#errMsgs > ul").append("<li>Your email address is missing or invalid.</li>");
-			// valid = false;
-		// }
-		// if(!$("#Subject").valid()) {
-			// $("#errMsgs > ul").append("<li>Subject is required.</li>");
-			// valid = false;
-		// }
-		// if(!$("#Message").valid()) {
-			// $("#errMsgs > ul").append("<li>Message is required.</li>");
-			// valid = false;
-		// }
-
-		// if(valid == true) {
-		// }
-	// });
 	
 	$("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
 	handleTag();
@@ -92,6 +75,10 @@ function showContactModal() {
 	$("#formConfirmation").hide();
 	$("#btnSubmit span.fa").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane");
 	$("#btnSubmit").prop("disabled", false).show();
+	$("#sender").val("");
+	$("#subject").val("");
+	$("#message").val("");
+	$("#copySender").prop("checked", false);
 	$("#contactModal").modal("show");
 }
 
