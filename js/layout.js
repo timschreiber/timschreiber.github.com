@@ -38,7 +38,7 @@ $(function(){
 				subject: $("#subject").val(),
 				message: $("#message").val(),
 				copySender: $("#copySender").is(":checked"),
-				reCaptchaResponse: $("#g-recaptcha-response").val() + "foo"
+				reCaptchaResponse: $("#g-recaptcha-response").val()
 			};
 			console.log(data);
 			$.ajax({
