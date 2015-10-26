@@ -38,7 +38,7 @@ $(function(){
 				subject: $("#subject").val(),
 				message: $("#message").val(),
 				copySender: $("#copySender").is(":checked"),
-				reCaptchaResponse: $("#g-recaptcha-response").val()
+				reCaptchaResponse: $("#g-recaptcha-response").val() + "foo"
 			};
 			console.log(data);
 			$.ajax({
@@ -57,6 +57,15 @@ $(function(){
 			}).fail(function(data){
 				console.log("FAIL");
 				console.log(data);
+				if(data.status == 400) {
+					if(data.responseJSON.model.ReCaptchaResponse) {
+						alert(data.responseJSON.model.ReCaptchaResponse.errors[0].errorMessage);
+					} else {
+						alert("The form could not be submitted. Please make sure all required form fields have valid data.");
+					}
+				} else {
+					alert("The form could not be submitted. The server encountered an unexpected error.");
+				}
 				$("#btnSubmit span.fa").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane");
 				$("#btnSubmit").prop("disabled", false);
 			}).always(function(){
