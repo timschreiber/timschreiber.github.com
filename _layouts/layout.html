@@ -27,6 +27,8 @@
 		<link href="//fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="/css/layout.css" />
+		
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body>
 	
@@ -80,7 +82,7 @@
 								<input id="Sender" type="email" class="form-control" placeholder="email@domain.com"/>
 							</div>
 							<div class="form-group">
-								<label>Subject</label>
+								<label>Subject</label>	
 								<input id="Subject" type="text" class="form-control" placeholder="Type subject here..."/>
 							</div>
 							<div class="form-group">
@@ -93,6 +95,7 @@
 								Send a copy of the message to my your email address.
 								</label>
 							</div>
+							<div class="g-recaptcha" data-sitekey="6LcuJ9USAAAAAAJqueLDF2pZeepL7_r0NRlcGGGH"></div>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

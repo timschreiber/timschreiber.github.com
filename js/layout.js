@@ -1,6 +1,23 @@
 $(function(){
 	$("#contactForm").submit(function(event){
 		alert($("#contactForm").attr["action"] + "\n" + $("#contactForm").attr["method"]);
+		$.ajax({
+			url: $("#contactForm").attr["action"],
+			type: $("#contactForm").attr["method"]),
+			dataType: "json",
+			jsonp: false,
+			data: {
+				sender: $("#Sender").val(),
+				subject: $("#Subject").val(),
+				message: $("#Message").val(),
+				copySender: $("#CopySender").is(":checked"),
+				reCaptchaResponse: $("#g-recaptcha-response")
+			}
+		}).done(function(data){
+			console.log(data);
+		}).fail(function(data){
+			console.log(data);
+		});
 		event.preventDefault();
 	});
 	
