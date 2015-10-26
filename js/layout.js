@@ -31,7 +31,8 @@ $(function(){
 			error.insertBefore(element);
 		},
 		submitHandler: function(form) { 
-			$("#btnSubmit span.fa.fa-paper-plane").removeClass("fa-paper-plane").addClass("fa-spinner").addClass("fa-pulse").prop("disabled", true);
+			$("#btnSubmit span.fa").removeClass("fa-paper-plane").addClass("fa-spinner").addClass("fa-pulse");
+			$("#btnSubmit").prop("disabled", true);
 			var data = {
 				sender: $("#sender").val(),
 				subject: $("#subject").val(),
@@ -47,13 +48,17 @@ $(function(){
 				jsonp: false,
 				data: data
 			}).done(function(data){
+				console.log("WIN");
 				console.log(data);
 				$("#contactModalLabel").html("Message Sent");
 				$("#formFields").hide();
 				$("#formConfirmation").show();
 				$("#btnSubmit").hide();
 			}).fail(function(data){
+				console.log("FAIL");
 				console.log(data);
+				$("#btnSubmit span.fa").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane");
+				$("#btnSubmit").prop("disabled", false);
 			});
 		}
 	});
@@ -85,7 +90,8 @@ function showContactModal() {
 	$("#contactModalLabel").html("Contact Form");
 	$("#formFields").show();
 	$("#formConfirmation").hide();
-	$("#btnSubmit").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane").prop("disabled", false).show();
+	$("#btnSubmit span.fa").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane");
+	$("#btnSubmit").prop("disabled", false).show();
 	$("#contactModal").modal("show");
 }
 
