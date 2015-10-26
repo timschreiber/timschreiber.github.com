@@ -31,6 +31,7 @@ $(function(){
 			error.insertBefore(element);
 		},
 		submitHandler: function(form) {
+			$("#btnSubmit span.fa.fa-paper-plane").removeClass("fa-paper-plane").addClass("fa-spinner").addClass("fa-pulse").prop("disabled", true);
 			var data = {
 				sender: $("#Sender").val(),
 				subject: $("#Subject").val(),
@@ -38,6 +39,7 @@ $(function(){
 				copySender: $("#CopySender").is(":checked"),
 				reCaptchaResponse: $("#g-recaptcha-response").val()
 			};
+			console.log(data);
 			$.ajax({
 				url: "http://timschreiber.azurewebsites.net/api/contact",
 				type: "POST",
@@ -46,6 +48,10 @@ $(function(){
 				data: data
 			}).done(function(data){
 				console.log(data);
+				$("#contactModalLabel").html("Message Sent");
+				$("#formFields").hide();
+				$("#formConfirmation").show();
+				$("#btnSubmit").hide();
 			}).fail(function(data){
 				console.log(data);
 			});
@@ -74,6 +80,14 @@ $(function(){
 	$("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
 	handleTag();
 });
+
+function showContactModal() {
+	$("#contactModalLabel").html("Contact Form");
+	$("#formFields").show();
+	$("#formConfirmation").hide();
+	$("#btnSubmit").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane").prop("disabled", false).show();
+	$("#contactModal").modal("show");
+}
 
 function handleTag() {
 	var url = document.URL;
