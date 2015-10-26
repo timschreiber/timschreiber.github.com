@@ -30,7 +30,7 @@ $(function(){
 		errorPlacement: function(error, element) {
 			error.insertBefore(element);
 		},
-		submitHandler: function(form) {
+		submitHandler: function(form) { 
 			$("#btnSubmit span.fa.fa-paper-plane").removeClass("fa-paper-plane").addClass("fa-spinner").addClass("fa-pulse").prop("disabled", true);
 			var data = {
 				sender: $("#sender").val(),
