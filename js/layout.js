@@ -1,17 +1,20 @@
 $(function(){
 	$("#btnSubmit").click(function(){
+		var data = {
+			sender: $("#Sender").val(),
+			subject: $("#Subject").val(),
+			message: $("#Message").val(),
+			copySender: $("#CopySender").is(":checked"),
+			reCaptchaResponse: $("#g-recaptcha-response").val()
+		};
+		console.log(data);
+		
 		$.ajax({
 			url: "http://timschreiber.azurewebsites.net/api/contact",
 			type: "POST",
 			dataType: "json",
 			jsonp: false,
-			data: {
-				sender: $("#Sender").val(),
-				subject: $("#Subject").val(),
-				message: $("#Message").val(),
-				copySender: $("#CopySender").is(":checked"),
-				reCaptchaResponse: $("#g-recaptcha-response")
-			}
+			data: data
 		}).done(function(data){
 			console.log(data);
 		}).fail(function(data){
