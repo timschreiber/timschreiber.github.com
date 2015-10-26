@@ -1,5 +1,9 @@
 $(function(){
 	$("#btnSubmit").click(function(){
+		$("#Sender").validate();
+		$("#Subject").validate();
+		$("#Message").validate();
+		
 		var valid = true;
 		if(!$("#Sender").valid()) {
 			$("#errMsgs > ul").append("<li>Your email address is missing or invalid.</li>");
@@ -13,6 +17,7 @@ $(function(){
 			$("#errMsgs > ul").append("<li>Message is required.</li>");
 			valid = false;
 		}
+
 		if(valid == true) {
 			var data = {
 				sender: $("#Sender").val(),
