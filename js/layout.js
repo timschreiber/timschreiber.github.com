@@ -33,10 +33,10 @@ $(function(){
 		submitHandler: function(form) {
 			$("#btnSubmit span.fa.fa-paper-plane").removeClass("fa-paper-plane").addClass("fa-spinner").addClass("fa-pulse").prop("disabled", true);
 			var data = {
-				sender: $("#Sender").val(),
-				subject: $("#Subject").val(),
-				message: $("#Message").val(),
-				copySender: $("#CopySender").is(":checked"),
+				sender: $("#sender").val(),
+				subject: $("#subject").val(),
+				message: $("#message").val(),
+				copySender: $("#copySender").is(":checked"),
 				reCaptchaResponse: $("#g-recaptcha-response").val()
 			};
 			console.log(data);
