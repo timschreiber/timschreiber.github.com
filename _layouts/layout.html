@@ -76,17 +76,20 @@
 						<h4 class="modal-title" id="contactModalLabel">Contact Form</h4>
 					</div>
 					<div class="modal-body">
+						<div id="errMsgs" class="alert alert-danger">
+							<ul></ul>
+						</div>
 						<div class="form-group">
 							<label>Your Email</label>
-							<input id="Sender" type="email" class="form-control" placeholder="email@domain.com"/>
+							<input id="Sender" type="email" class="form-control" placeholder="email@domain.com" required/>
 						</div>
 						<div class="form-group">
 							<label>Subject</label>	
-							<input id="Subject" type="text" class="form-control" placeholder="Type subject here..."/>
+							<input id="Subject" type="text" class="form-control" placeholder="Type subject here..." required />
 						</div>
 						<div class="form-group">
 							<label>Message</label>
-							<textarea id="Message" class="form-control" placeholder="Type message here..." rows="8"></textarea>
+							<textarea id="Message" class="form-control" placeholder="Type message here..." rows="8" required></textarea>
 						</div>
 						<div class="checkbox">
 							<label>
@@ -105,6 +108,7 @@
 		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="/js/layout.js"></script>
 		<script src="/js/resume.js"></script>
