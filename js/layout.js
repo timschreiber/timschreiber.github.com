@@ -18,10 +18,11 @@ $(function(){
 		}).fail(function(data){
 			console.log(data);
 		});
-		event.preventDefault();
+		return false;
 	});
 	
 	$("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
+	
 	handleTag();
 });
 
