@@ -59,10 +59,11 @@ $(function(){
 				console.log(data);
 				if(data.status == 400) {
 					var response = data.responseJSON;
+					console.log(response);
 					if(response.message) {
 						alert(response.message);
-					} else if(response.model && response.model.ReCaptchaResponse) {
-						alert(response.model.ReCaptchaResponse.errors[0].errorMessage);
+					} else if(response["model.ReCaptchaResponse"] && response["model.ReCaptchaResponse"].errors && response["model.ReCaptchaResponse"].errors.length > 0 && response["model.ReCaptchaResponse"].errors[0].errorMessage) {
+						alert(response["model.ReCaptchaResponse"].errors[0].errorMessage);
 					} else {
 						alert("The form could not be submitted. Please make sure all required form fields have valid data.");
 					}
