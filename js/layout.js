@@ -26,6 +26,10 @@ $(function(){
 		unhighlight: function(element) {
 			$(element).closest(".form-group").removeClass("has-error");
 		},
+		errorClass: "text-danger pull-right",
+		errorPlacement: function(error, element) {
+			error.insertBefore(element);
+		},
 		submitHandler: function(form) {
 			var data = {
 				sender: $("#Sender").val(),
