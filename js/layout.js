@@ -58,8 +58,11 @@ $(function(){
 				console.log("FAIL");
 				console.log(data);
 				if(data.status == 400) {
-					if(data.responseJSON.model.ReCaptchaResponse) {
-						alert(data.responseJSON.model.ReCaptchaResponse.errors[0].errorMessage);
+					var response = data.responseJSON;
+					if(response.message) {
+						alert(response.message);
+					} else if(response.model && response.model.ReCaptchaResponse) {
+						alert(response.model.ReCaptchaResponse.errors[0].errorMessage);
 					} else {
 						alert("The form could not be submitted. Please make sure all required form fields have valid data.");
 					}
