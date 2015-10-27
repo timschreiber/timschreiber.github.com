@@ -276,3 +276,10 @@ article img {
 #contactErrMsgs {
 	display:none;
 }
+
+#contactErrMsgs ul,
+#contactErrMsgs li {
+	margin:0;
+	padding:0;
+	list-item-type:none;
+}
