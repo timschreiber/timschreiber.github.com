@@ -50,7 +50,7 @@ $(function(){
 			}).done(function(data){
 				console.log("WIN");
 				console.log(data);
-				$("#contactErrMsgs ul").remove();
+				$("#contactErrMsgs ul").children("li").remove();
 				$("#contactErrMsgs").hide();
 				$("#contactModalLabel").html("Message Sent");
 				$("#formFields").hide();
@@ -62,7 +62,7 @@ $(function(){
 				if(data.status == 400) {
 					var response = data.responseJSON;
 					console.log(response);
-					$("#contactErrMsgs ul").remove();
+					$("#contactErrMsgs ul").children("li").remove();
 					if(response.message) {
 						$("#contactErrMsgs ul").append("<li>" + response.message + "</li>")
 					} else if(response["model.ReCaptchaResponse"] && response["model.ReCaptchaResponse"].errors && response["model.ReCaptchaResponse"].errors.length > 0 && response["model.ReCaptchaResponse"].errors[0].errorMessage) {
@@ -88,7 +88,7 @@ $(function(){
 });
 
 function showContactModal() {
-	$("#contactErrMsgs ul").remove();
+	$("#contactErrMsgs ul").children("li").remove();
 	$("#contactErrMsgs").hide();
 	$("#contactModalLabel").html("Contact Form");
 	$("#formFields").show();
