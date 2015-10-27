@@ -50,6 +50,8 @@ $(function(){
 			}).done(function(data){
 				console.log("WIN");
 				console.log(data);
+				$("#contactErrMsgs ul").remove();
+				$("#contactErrMsgs").hide();
 				$("#contactModalLabel").html("Message Sent");
 				$("#formFields").hide();
 				$("#formConfirmation").show();
@@ -60,15 +62,18 @@ $(function(){
 				if(data.status == 400) {
 					var response = data.responseJSON;
 					console.log(response);
+					$("#contactErrMsgs ul").remove();
 					if(response.message) {
-						alert(response.message);
+						$("#contactErrMsgs ul").append("<li>" + response.message + "</li>")
 					} else if(response["model.ReCaptchaResponse"] && response["model.ReCaptchaResponse"].errors && response["model.ReCaptchaResponse"].errors.length > 0 && response["model.ReCaptchaResponse"].errors[0].errorMessage) {
-						alert(response["model.ReCaptchaResponse"].errors[0].errorMessage);
+						$("#contactErrMsgs ul").append("<li>" + response["model.ReCaptchaResponse"].errors[0].errorMessage + "</li>");
 					} else {
-						alert("The form could not be submitted. Please make sure all required form fields have valid data.");
+						$("#contactErrMsgs ul").append("<li>The email could not be sent because the form fields are invalid.</li>");
 					}
+					$("#contactErrMsgs").show();
 				} else {
-					alert("The form could not be submitted. The server encountered an unexpected error.");
+					$("#contactErrMsgs ul").append("<li>Your message could not be sent because the server encountered an unexpected error.</li>");
+					$("#contactErrMsgs").show();
 				}
 				$("#btnSubmit span.fa").removeClass("fa-spinner").removeClass("fa-pulse").addClass("fa-paper-plane");
 				$("#btnSubmit").prop("disabled", false);
@@ -83,6 +88,8 @@ $(function(){
 });
 
 function showContactModal() {
+	$("#contactErrMsgs ul").remove();
+	$("#contactErrMsgs").hide();
 	$("#contactModalLabel").html("Contact Form");
 	$("#formFields").show();
 	$("#formConfirmation").hide();

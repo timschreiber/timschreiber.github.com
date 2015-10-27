@@ -272,3 +272,7 @@ article img {
 	width:100%;
 	height:425px;
 }
+
+#contactErrMsgs {
+	display:none;
+}

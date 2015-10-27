@@ -53,7 +53,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 			<div class="panel panel-default home-feature-panel">
 				<div class="panel-body">
 					<h3>Connect with Me</h3>
-					<h4 class="connect"><a href="/contact/"><span class="fa fa-paper-plane-o fa-2x"></span> Contact Form</a>
+					<h4 class="connect"><a href="javascript:showContactModal();"><span class="fa fa-paper-plane-o fa-2x"></span> Contact Form</a>
 					<h4 class="connect"><a href="https://twitter.com/tim_schreiber"><span class="fa fa-twitter fa-2x"></span> @tim_schreiber</a></h4>
 					<h4 class="connect"><a href="https://www.linkedin.com/profile/view?id=12496208"><span class="fa fa-linkedin fa-2x"></span> Linked In</a></h4>
 					<h4 class="connect"><a href="http://stackoverflow.com/users/913261/tim-s"><span class="fa fa-stack-overflow fa-2x"></span> StackOverflow</a> <small>(<a href="2013/10/30/beware-the-stackoverlords/">not used much</a>)</small></h4>
