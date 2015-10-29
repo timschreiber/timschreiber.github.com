@@ -83,6 +83,7 @@ $(function(){
 		}
 	});
 	
+	handleContactUrl();
 	$("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
 	handleTag();
 });
@@ -100,6 +101,26 @@ function showContactModal() {
 	$("#message").val("");
 	$("#copySender").prop("checked", false);
 	$("#contactModal").modal("show");
+}
+
+function handleContactUrl() {
+	var urlVars = getUrlVars();
+	if(urlVars && urlVars.contact)
+	{
+		showContactModal();
+	}
+}
+
+function getUrlVars() {
+	var vars = [], hash;
+	var hashes = window.location.href.slice(window.location.href.indexOf("?") + 1).split("&");
+	for(var i = 0; i < hashes.length; i++)
+	{
+		hash = hashes[i].split("=");
+		vars.push(hash[0]);
+		vars[hash[0]] = hash[1];
+	}
+	return vars;
 }
 
 function handleTag() {
