@@ -14,7 +14,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 			<h1>Hi, I'm Tim.</h1>
 			<h2>And I write code.</h2>
 			<h4>Enterprise applications, websites, open source &ndash; you name it. I like to help others write code, and sometimes I write about writing code. I'm a husband, father, backyard pitmaster, amateur songwriter, and novice gardener. Oh, and I have a cat.</h4>
-			<a href="/contact/" class="btn btn-lg btn-info">Hey, what's this button do?</a>
+			<a href="javascript:showContactModal();" class="btn btn-lg btn-info">Hey, what's this button do?</a>
 		</div>
 	</div>
 </div>
