@@ -77,7 +77,7 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 
 		<div id="res-emp-sis" class="employer">
 			<div class="clearfix">
-				<h4 class="pull-left"><a href="/contact">Contact for Current Employer and Project Information</a></h4>
+				<h4 class="pull-left"><a href="javascript:showContactModal();">Contact for Current Employer and Project Information</a></h4>
 				<h4 class="pull-right">Oct 2012 to Present</h4>
 			</div>
 		</div>
