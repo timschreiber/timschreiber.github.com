@@ -26,10 +26,10 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 				<div class="panel-body">
 					<h3>My Work</h3>
 					<h4>Day Job</h4>
-					<p>I'm a Senior .NET Consultant for a nationally-recognized technology solution provider in Lexington, KY; providing development, architecture, and process leadership for a nine-member Agile team.</p>
+					<p>I'm a Senior .NET Consultant for a nationally-recognized technology solution provider in Lexington, KY. I provide development, architecture, and process leadership for a nine-member Agile team.</p>
 					<h4>Side Projects</h4>
 					<ul>
-						<li>Content management system for powersports dealers</li>
+						<li>Content management system for powersports dealers<br/>&nbsp;</li>
 						<li>"Notched Music Therapy" tinnitus therapy web application.</li>
 					</ul>
 				</div>
