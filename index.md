@@ -26,11 +26,12 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 				<div class="panel-body">
 					<h3>My Work</h3>
 					<h4>Day Job</h4>
-					<p>I work for a talent/staffing organization at a client location in a team lead capacity specializing in process improvement and technical direction. <a href="javascript:showContactModal();">Contact for Current Employer and Project Information</a></p>
+					<p>I'm a Senior .NET Consultant for a nationally-recognized technology solution provider in Lexington, KY; providing development, architecture, and process leadership for a nine-member Agile team.</p>
 					<h4>Side Projects</h4>
-					<p>TinnitusWave &ndash; Audio-based therapy for tinnitus sufferers.</p>
-					<h4>Open Source</h4>
-					<p><a href="http://timschreiber.github.io/Mau/">Mau</a> &ndash; A micro-ORM for .NET designed with patterns in mind.</p>
+					<ul>
+						<li>Content management system for powersports dealers</li>
+						<li>"Notched Music Therapy" tinnitus therapy web application.</li>
+					</ul>
 				</div>
 			</div>
 		</div>
