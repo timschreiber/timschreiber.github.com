@@ -12,9 +12,9 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 		</div>
 		<div class="col-xs-12 col-md-6 col-md-pull-6 jumbotron-column text-center">
 			<h1>Hi, I'm Tim.</h1>
-			<h2>And I write code.</h2>
-			<h4>Enterprise applications, websites, open source &ndash; you name it. I like to help others write code, and sometimes I write about writing code. I'm a husband, father, backyard pitmaster, amateur songwriter, and novice gardener. Oh, and I have a cat.</h4>
-			<a href="javascript:showContactModal();" class="btn btn-lg btn-info">Hey, what's this button do?</a>
+			<h2>And I love to write code.</h2>
+			<h4>Seriously, I can't believe they pay me to do it. I started programming at age eight and sold my first program when I was 13. Over the years, I've funneled that passion into a successful career, crafting beautiful web applications for enterprises, small businesses, and everything in between.</h4>
+			<a href="about" class="btn btn-lg btn-info">Continue reading...</a>
 		</div>
 	</div>
 </div>
