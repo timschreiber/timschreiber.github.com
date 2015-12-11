@@ -12,7 +12,7 @@ description : "I love to write code. Seriously, I can't believe they pay me to d
 
 <div class="col-xs-12">
 
-	<h1>About Me</h1>
+	<h1 class="collapse-top-margin">About Me</h1>
 	<p>I love coding. Seriously, I can't believe they pay me to do it. I started programming at age eight and sold my first program when I was 13. Over the years, I've funneled that passion into a successful career, crafting beautiful web applications for enterprises, small businesses, and everything in between.</p>
 	<p>Today I'm a Senior .NET Consultant for a nationally-recognized technology solution provider in Lexington, KY. I provide development, architecture, and process leadership for a nine-member Agile team. Previously, I was a Senior .NET Consultant for Software Technology Group in Salt Lake City, UT. During my more than six years there, I had the pleasure of working for &mdash; and learning from &mdash; a number of clients in a variety of industries.</p>
 	<p>I also have a few side projects I work on. I am currently building a content management system for power sports dealers (I have a family connection to the industry). Previously, I worked on an audio-based tinnitus therapy website. Earlier in my career, I created a local search and advertising website that focused on sub-metropolitan areas that other companies, like CitySearch, did not serve. My partners and I saw quite a bit of success in a number of markets before we fell victim to the .COM bubble in 2000.</p> 
