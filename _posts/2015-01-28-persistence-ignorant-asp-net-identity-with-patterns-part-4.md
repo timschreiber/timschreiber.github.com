@@ -23,6 +23,8 @@ tags:
 
 In Part 1, I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for “Individual User Accounts” authentication, and then laid out the requirements for a better implementation. In Part 2, we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In Part 3, we defined our entity mappings, coded the DbContext, and implemented the interfaces for the Repositories and Unit of Work that we defined in the Domain Layer. In this part, we’re going to switch our focus to the `Mvc5IdentityExample.Web` project and dive straight into the guts of ASP.NET Identity. Then, we’re going to hook everything up with Unity and finish with a fully functional MVC5 web application with ASP.NET Identity done the “right way.”
 
+<!--more-->
+
 ###ASP.NET Identity Classes###
 
 When we broke the coupling between our Presentation Layer and Entity Framework, we lost the references to the implementations of four classes that make ASP.NET Identity work (that’s a good thing). So now we have to replace them with classes that work with our Entities, Repositories, and Unit of Work. There are two model classes: `IdentityUser` and `IdentityRole`, and two data store classes: `UserStore` and `RoleStore`. You might remember `UserStore` from my rants in [Part 1][2].
