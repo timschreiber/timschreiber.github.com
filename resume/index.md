@@ -77,9 +77,14 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 
 		<div id="res-emp-sis" class="employer">
 			<div class="clearfix">
-				<h4 class="pull-left"><a href="javascript:showContactModal();">Contact for Current Employer and Project Information</a></h4>
+				<h4 class="pull-left">Software Information Systems (SIS, LLC)</h4>
 				<h4 class="pull-right">Oct 2012 to Present</h4>
 			</div>
+			<div><strong>Software Consultant</strong></div>
+			<ul>
+				<li>Developed in-house projects and performed software development consulting for several clients.</li>
+				<li><a href="javascript:showContactModal();">Contact for Details</a></li>
+			</ul>
 		</div>
 		
 		<div id="res-emp-stg" class="employer">
