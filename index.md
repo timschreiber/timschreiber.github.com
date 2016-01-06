@@ -34,6 +34,10 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 						<li>Content management system for powersports dealers<br/>&nbsp;</li>
 						<li>"Notched Music Therapy" tinnitus therapy web application.</li>
 					</ul>
+					<h4>Community</h4>
+					<ul>
+						<li>Authored a <a href="http://timschreiber.com/2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/" target="_blank">popular series of posts</a> on implementing ASP.NET Identity with patterns.</li>
+					</ul>
 				</div>
 			</div>
 		</div>
