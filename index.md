@@ -26,7 +26,9 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 				<div class="panel-body">
 					<h3>My Work</h3>
 					<h4>Day Job</h4>
-					<p>I'm a Senior .NET Engineer for ZirMed in Louisville, KY.</p>
+					<ul>
+						<li><b>Senior .NET Engineer</b> at <b>ZirMed</b> in Louisville, KY.</li>
+					</ul>
 					<h4>Side Projects</h4>
 					<ul>
 						<li>Content management system for powersports dealers<br/>&nbsp;</li>
