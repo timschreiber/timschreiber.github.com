@@ -75,10 +75,18 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 	<div id="res-emp" class="res-section">
 		<h3>Employment</h3>
 
+		<div id="res-emp-zirmed" class="employer">
+			<div class="clearfix">
+				<h4 class="pull-left">ZirMed</h4>
+				<h4 class="pull-right">Jan 2016 to Present</h4>
+			</div>
+			<div><strong>Senior .NET Engineer &mdash; Specialist</strong></div>
+		</div>
+		
 		<div id="res-emp-sis" class="employer">
 			<div class="clearfix">
 				<h4 class="pull-left">Software Information Systems (SIS, LLC)</h4>
-				<h4 class="pull-right">Oct 2012 to Present</h4>
+				<h4 class="pull-right">Oct 2012 to Dec 2015</h4>
 			</div>
 			<div><strong>Software Consultant</strong></div>
 			<ul>
