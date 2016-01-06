@@ -88,7 +88,7 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 				<h4 class="pull-left">Software Information Systems (SIS, LLC)</h4>
 				<h4 class="pull-right">Oct 2012 to Dec 2015</h4>
 			</div>
-			<div><strong>Software Consultant</strong></div>
+			<div><strong>Senior Software Consultant</strong></div>
 			<ul>
 				<li>Developed in-house projects and performed software development consulting for several clients.</li>
 				<li><a href="javascript:showContactModal();">Contact for Details</a></li>
@@ -100,7 +100,7 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 				<h4 class="pull-left">Software Technology Group</h4>
 				<h4 class="pull-right">Jul 2006 to Oct 2012</h4>
 			</div>
-			<div><strong>Software Consultant</strong></div>
+			<div><strong>Senior Software Consultant</strong></div>
 			<ul>
 				<li>Performed software development consulting for the following clients:</li>
 			</ul>
