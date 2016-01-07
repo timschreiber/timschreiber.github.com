@@ -1,5 +1,5 @@
 --- 
-title: "Und Zen I Vas a Zirman"
+title: "Und Zen I Vas a ZirMan"
 canonical: "http://timschreiber.com/2016/01/06/und-zen-i-vas-a-zirman/"
 date: 2016-01-06
 layout: post
