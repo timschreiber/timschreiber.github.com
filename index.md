@@ -31,7 +31,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 					</ul>
 					<h4>Side Projects</h4>
 					<ul>
-						<li>Content management system for powersports dealers<br/>&nbsp;</li>
+						<li>Content management system for powersports dealer websites<br/>&nbsp;</li>
 						<li>"Notched Music Therapy" tinnitus therapy web application.</li>
 					</ul>
 					<h4>Community</h4>
