@@ -91,13 +91,14 @@ $(function(){
             $("#btnPbGenerate").click(function(){
                 var url = "http://timschreiber.azurewebsites.net/api/powerball/" + $("#selPbPlays").val();
                 $.get(url, function(data){
+                    $("#pbResults").empty();
                     for(i = 0; i < data.plays; i++)
                     {
-                        var r = $("<div class=\"row\"></div>");
+                        var r = $("<div class=\"row\" style=\"margin-top:5px;margin-bottom:5px;\"></div>");
                         for(j = 0; j < data.data[i].white.length; j++) {
                             r.append("<div class=\"col-xs-2 text-center\">" + data.data[i].white[j] + "</div>")
                         }
-                        r.append("<div class=\"col-xs-2 text-danger text-center\">" + data.data[i].power + "</div>");
+                        r.append("<div class=\"col-xs-2 text-danger text-center\"><strong>" + data.data[i].power + "</strong></div>");
                         $("#pbResults").append(r);
                     }
                 });
