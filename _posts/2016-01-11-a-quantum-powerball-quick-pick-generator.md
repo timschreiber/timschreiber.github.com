@@ -25,3 +25,5 @@ tags:
 </div>
 
 <div id="pbResults" class="col-xs-12"></div>
+
+<div class="clearfix"></div>
