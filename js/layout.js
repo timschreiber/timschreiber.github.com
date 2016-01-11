@@ -90,7 +90,9 @@ $(function(){
         $(function(){
             $("#btnPbGenerate").click(function(){
                 var url = "http://timschreiber.azurewebsites.net/api/powerball/" + $("#selPbPlays").val();
+                console.log(url);
                 $.get(url, function(data){
+                    console.log(data);
                     for(i = 0; i < data.plays; i++)
                     {
                         var r = $("<div class=\"row\"></div>");
