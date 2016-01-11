@@ -95,6 +95,8 @@ $(function(){
                     console.log(data);
                     for(i = 0; i < data.plays; i++)
                     {
+                    	console.log(data.data[i]);
+                    	console.log(data.data[i].white);
                         var r = $("<div class=\"row\"></div>");
                         for(j = 0; j < data.data[i].white.length; i++) {
                             r.append("<div class=\"col-xs-2 text-center\">" + data.data[i].white[j] + "</div>")
