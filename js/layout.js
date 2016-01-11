@@ -90,19 +90,14 @@ $(function(){
         $(function(){
             $("#btnPbGenerate").click(function(){
                 var url = "http://timschreiber.azurewebsites.net/api/powerball/" + $("#selPbPlays").val();
-                console.log(url);
                 $.get(url, function(data){
-                    console.log(data);
                     for(i = 0; i < data.plays; i++)
                     {
-                    	console.log(data.data[i]);
-                    	console.log(data.data[i].white);
                         var r = $("<div class=\"row\"></div>");
                         for(j = 0; j < data.data[i].white.length; j++) {
-                            console.log(data.data[i].white[j]);
                             r.append("<div class=\"col-xs-2 text-center\">" + data.data[i].white[j] + "</div>")
                         }
-                        r.append("<div class=\"col-xs-2 text-danger text-center\"> + data.data[i].power + </div>");
+                        r.append("<div class=\"col-xs-2 text-danger text-center\">" + data.data[i].power + "</div>");
                         $("#pbResults").append(r);
                     }
                 });
