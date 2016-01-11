@@ -98,9 +98,9 @@ $(function(){
                     	console.log(data.data[i]);
                     	console.log(data.data[i].white);
                         var r = $("<div class=\"row\"></div>");
-                        for(j = 0; j < data.data[i].white.length; i++) {
+                        for(j = 0; j < data.data[i].white.length; j++) {
                             console.log(data.data[i].white[j]);
-                            //r.append("<div class=\"col-xs-2 text-center\">" + data.data[i].white[j] + "</div>")
+                            r.append("<div class=\"col-xs-2 text-center\">" + data.data[i].white[j] + "</div>")
                         }
                         r.append("<div class=\"col-xs-2 text-danger text-center\"> + data.data[i].power + </div>");
                         $("#pbResults").append(r);
