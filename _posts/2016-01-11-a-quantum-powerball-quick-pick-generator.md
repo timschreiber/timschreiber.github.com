@@ -20,10 +20,10 @@ tags:
     </select>
   </div>
   <div>
-    <button id="btnPbGenerate">Generate</button>
+    <button id="btnPbGenerate" class="btn btn-primary">Generate</button>
   </div>
 </div>
 
-<div id="pbResults" class="col-xs-12"></div>
+<div id="pbResults" class="col-xs-12" style="margin-top:20px;"></div>
 
 <div class="clearfix"></div>
