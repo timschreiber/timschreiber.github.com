@@ -37,6 +37,6 @@ So with the next Powerball drawing just around the corner, I quickly created my 
   </div>
 </div>
 
-<div id="pbResults" class="col-xs-12" style="margin-top:20px;"></div>
+<div id="pbResults" class="col-xs-12"></div>
 
 <div class="clearfix"></div>
