@@ -289,10 +289,23 @@ article img {
 	border-radius: 50%;
 	width: 36px;
 	height: 36px;
-	padding: 8px;
-	background: #fff;
+	padding: 3px;
 	border: 2px solid #666;
-	color: #666;
 	text-align: center;
-	font: 32px Arial, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.text-circle.white {
+	background-color:#fff;
+	border-color:#666;
+	color:#666;
+}
+
+.text-circle.power {
+	background-color:#d9534f;
+	border-color:#d9534f;
+	color:#FFF;
 }
