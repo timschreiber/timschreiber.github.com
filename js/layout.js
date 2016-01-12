@@ -87,6 +87,7 @@ $(function(){
 	$("a[href^='http://'], a[href^='https://']").attr("target", "_blank");
 	handleTag();
 	
+    // Powerball
     $("#btnPbGenerate").click(function(){
         var url = "http://timschreiber.azurewebsites.net/api/powerball/" + $("#selPbPlays").val();
         $.get(url, function(data){
@@ -95,9 +96,9 @@ $(function(){
             {
                 var r = $("<div class=\"row\" style=\"margin-top:5px;margin-bottom:5px;\"></div>");
                 for(j = 0; j < data.data[i].white.length; j++) {
-                    r.append("<div class=\"col-xs-2 text-center\"><div class=\"text-circle\">" + data.data[i].white[j] + "</div></div>")
+                    r.append("<div class=\"col-xs-2 text-center\"><div class=\"text-circle white\">" + data.data[i].white[j] + "</div></div>")
                 }
-                r.append("<div class=\"col-xs-2 text-danger text-center\"><div class=\"text-circle\">" + data.data[i].power + "</div></div>");
+                r.append("<div class=\"col-xs-2 text-danger text-center\"><div class=\"text-circle power\">" + data.data[i].power + "</div></div>");
                 $("#pbResults").append(r);
             }
         });
