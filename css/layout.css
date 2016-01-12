@@ -299,13 +299,13 @@ article img {
 }
 
 .text-circle.white {
-	background-color:#fff;
-	border-color:#666;
+	background-color:#fff !important;
+	border-color:#666 !important;
 	color:#666;
 }
 
 .text-circle.power {
-	background-color:#d9534f;
-	border-color:#d9534f;
-	color:#FFF;
+	background-color:#d9534f !important;
+	border-color:#d9534f !important;
+	color:#FFF !important;
 }
