@@ -94,7 +94,7 @@ $(function(){
             $("#pbResults").empty();
             for(i = 0; i < data.plays; i++)
             {
-                var r = $("<div class=\"row\" style=\"margin-top:5px;margin-bottom:5px;\"></div>");
+                var r = $("<div class=\"row\" style=\"margin-top:12px;margin-bottom:12px;\"></div>");
                 for(j = 0; j < data.data[i].white.length; j++) {
                     r.append("<div class=\"col-xs-2 text-center\"><div class=\"text-circle white\">" + data.data[i].white[j] + "</div></div>")
                 }
