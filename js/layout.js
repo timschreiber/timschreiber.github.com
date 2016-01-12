@@ -95,7 +95,7 @@ $(function(){
             {
                 var r = $("<div class=\"row\" style=\"margin-top:5px;margin-bottom:5px;\"></div>");
                 for(j = 0; j < data.data[i].white.length; j++) {
-                    r.append("<div class=\"col-xs-2 text-center\">" + data.data[i].white[j] + "</div>")
+                    r.append("<div class=\"col-xs-2 text-center\"><div class=\"text-circle\">" + data.data[i].white[j] + "</div></div>")
                 }
                 r.append("<div class=\"col-xs-2 text-danger text-center\"><div class=\"text-circle\">" + data.data[i].power + "</div></div>");
                 $("#pbResults").append(r);
