@@ -89,6 +89,7 @@ $(function(){
 	
     // Powerball
     $("#btnPbGenerate").click(function(){
+        $("#pbResults").empty().append("<div class=\"col-xs-12 text-center\"><span class=\"fa fa-spinner fa-2x fa-pulse\"></span></div>");
         var url = "http://timschreiber.azurewebsites.net/api/powerball/" + $("#selPbPlays").val();
         $.get(url, function(data){
             $("#pbResults").empty();
