@@ -23,7 +23,7 @@ Having read about quantum random number generation in the past, I went looking f
 So with the next Powerball drawing just around the corner, I quickly created my own Quantum Powerball Quick Pick Generator based on random numbers from the QRNG <a href="https://qrng.anu.edu.au/API/api-demo.php" target="_blank">RESTful API</a>. I implemented it in Web API on my Azure site, with CORS enabled and configured to allow my blog to access it. The result is below. Play responsibly!
 
 <a name="pbForm"></a>
-**Quick Pick Generator**
+###Quick Pick Generator###
 
 <div class="col-xs-12" style="margin-top:20px;">
   <div class="form-group">
