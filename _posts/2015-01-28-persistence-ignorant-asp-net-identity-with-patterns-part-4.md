@@ -25,7 +25,7 @@ In Part 1, I identified some of the shortcomings in the default template for ASP
 
 <!--more-->
 
-###ASP.NET Identity Classes###
+### ASP.NET Identity Classes ###
 
 When we broke the coupling between our Presentation Layer and Entity Framework, we lost the references to the implementations of four classes that make ASP.NET Identity work (that’s a good thing). So now we have to replace them with classes that work with our Entities, Repositories, and Unit of Work. There are two model classes: `IdentityUser` and `IdentityRole`, and two data store classes: `UserStore` and `RoleStore`. You might remember `UserStore` from my rants in [Part 1][2].
 
