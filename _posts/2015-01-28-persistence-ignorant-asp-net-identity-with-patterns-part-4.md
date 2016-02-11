@@ -12,32 +12,30 @@ tags:
 - architecture
 ---
 
-<ul>
-    <li>[Part 1][2]</li>
-    <li>[Part 2][3]</li>
-    <li>[Part 3][4]</li>
-    <li><b>Part 4</b></li>
-</ul>
+* [Part 1][2]
+* [Part 2][3]
+* [Part 3][4]
+* __Part 4__
 
-<i>The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][6]</i>
+_The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][6]_
 
-<h6><i>This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].</i></h6>
+###### _This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1]._
 
 In Part 1, I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for “Individual User Accounts” authentication, and then laid out the requirements for a better implementation. In Part 2, we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In Part 3, we defined our entity mappings, coded the DbContext, and implemented the interfaces for the Repositories and Unit of Work that we defined in the Domain Layer. In this part, we’re going to switch our focus to the `Mvc5IdentityExample.Web` project and dive straight into the guts of ASP.NET Identity. Then, we’re going to hook everything up with Unity and finish with a fully functional MVC5 web application with ASP.NET Identity done the “right way.”
 
 <!--more-->
 
-### ASP.NET Identity Classes ###
+### ASP.NET Identity Classes
 
 When we broke the coupling between our Presentation Layer and Entity Framework, we lost the references to the implementations of four classes that make ASP.NET Identity work (that’s a good thing). So now we have to replace them with classes that work with our Entities, Repositories, and Unit of Work. There are two model classes: `IdentityUser` and `IdentityRole`, and two data store classes: `UserStore` and `RoleStore`. You might remember `UserStore` from my rants in [Part 1][2].
 
 To get started, let’s add project references to our `Mvc5IdentityExample.Domain` and `Mvc5IdentityExample.Data.EntityFramework` projects. Then, create a folder In the `MvcIdentityExample.Web` project and call it `Identity`. This is where we’re going to put our classes.
 
-####Model Classes####
+#### Model Classes
 
 First, we’re going to get started on our model classes:
 
-######IdentityUser.cs######
+###### IdentityUser.cs
 
     using Microsoft.AspNet.Identity;
     using System;
@@ -64,7 +62,7 @@ First, we’re going to get started on our model classes:
         }
     }
 
-######IdentityRole.cs######
+###### IdentityRole.cs
 
     using Microsoft.AspNet.Identity;
     using System;
@@ -95,13 +93,13 @@ First, we’re going to get started on our model classes:
         }
     }
 
-####Data Store Classes####
+#### Data Store Classes
 
 In the ASP.NET Identity [documentation][5], Microsoft author Tom FitzMacken acknowledges their data store classes are “closely coupled with the persistence mechanism,” which they then closely couple to their Presentation Layer in the default Entity Framework implementation. Done correctly in a persistence-ignorant kind of way, these classes take the `IdentityUser` and `IdentityRole` models that ASP.NET Identity likes, turn them into the Entities that our Repositories and Unit of Work like, and make sure everything gets written out to some persistence mechanism, whatever that may be.
 
 You might notice we have an empty `Dispose` method in our data store classes. That’s because ASP.NET Identity requires us to implement `IDisposable`, but we’re letting Unity manage the lifetime of our `IUnitOfWork`, which is the only injected dependency these classes have.
 
-######UserStore.cs######
+###### UserStore.cs
 
     ﻿using Microsoft.AspNet.Identity;
     using Mvc5IdentityExample.Domain;
@@ -450,7 +448,7 @@ You might notice we have an empty `Dispose` method in our data store classes. Th
         }
     }
 
-######RoleStore.cs######
+###### RoleStore.cs
 
     using Microsoft.AspNet.Identity;
     using Mvc5IdentityExample.Domain;
@@ -561,7 +559,7 @@ You might notice we have an empty `Dispose` method in our data store classes. Th
         }
     }
 
-###Account Controller###
+### Account Controller
 
 Next, we’re going to move on to the `AccountController` that got generated when we created the `MvcIdentityExample.Web` project. There are several changes that we’re going to have to make to get it to work with our new ASP.NET Identity classes. First of all, we need to change the way it gets its `UserManager` dependency. Since we’ll be letting Unity take care of all of that for us, we’ll just use some simple constructor injection:
 
@@ -589,7 +587,7 @@ Finally, we need to replace some not-working code with our new working code. Let
 
 In the end, your `AccountController` class should look like this:
 
-######AccountController.cs######
+###### AccountController.cs
 
     using Microsoft.AspNet.Identity;
     using Microsoft.Owin.Security;
@@ -998,7 +996,7 @@ In the end, your `AccountController` class should look like this:
         }
     }
 
-###Unity###
+### Unity
 
 I mentioned that we’ll be letting Unity handle the lifetimes for our dependencies. So we need to add Unity to the `MvcIdentityExample.Web` project. The easiest way to do this is to install the `Unity.MVC5` package by DevTrends. It adds all the code necessary to integrate Unity with MVC5. So, open up the Package Manager Console and run the following command:
 
@@ -1006,7 +1004,7 @@ I mentioned that we’ll be letting Unity handle the lifetimes for our dependenc
 
 After it’s done installing, you’ll notice it added a `UnityConfig.cs` file in your `App_Start` folder. This is where we are going to register the dependencies we want Unity to inject (and manage the lifetimes of). Open it up, and make sure it looks like this:
 
-######UnityConfig.cs######
+###### UnityConfig.cs
 
     using Microsoft.AspNet.Identity;
     using Microsoft.Practices.Unity;
@@ -1038,7 +1036,7 @@ Then, just add the following line to the `Application_Start` method in `Global.a
     
     UnityConfig.RegisterComponents();
 
-###Web.Config###
+### Web.Config
 
 The last thing we need to do is change our `web.config` so that it uses the connection string for the `Mvc5IdentityExample` database. Replace this line:
 
@@ -1048,13 +1046,13 @@ with this line:
 
     <add name="Mvc5IdentityExample" connectionString="Server=(local);Database=Mvc5IdentityExample;User Id=Mvc5IdentityExampleUser;Password=Password123" providerName="System.Data.SqlClient" />    
 
-###And Awaaaaaay We Go!###
+### And Awaaaaaay We Go!
 
 And now, if we’ve done everything right, we should be able to run it, and it should let you do everything that the out-of-the-box Entity Framework ASP.NET Identity would. Go ahead, register. Log in, change your password, etc. I’ll wait.
 
 If it worked right away, good for you. If not, well I understand that following along with tutorials has its difficulties. That’s why all my source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][6]
 
-###Putting It All Together###
+### Putting It All Together
 
 So here’s what we’ve accomplished throughout this series of posts:
 
@@ -1065,7 +1063,7 @@ So here’s what we’ve accomplished throughout this series of posts:
 
 I hope that, as you’ve taken this journey with me, you8’ve gained a deeper understanding of how ASP.NET Identity works and an appreciation for some of the principles and design patterns we’ve used.
 
-###What's Next?###
+### What's Next?
 
 Technically, we’re not *quite* done yet. I still have to prove this design is truly persistence-ignorant. In a future bonus part, I’ll show you how to write a new Data Layer using NHibernate instead of Entity Framework, and how easy it will be to plug in.
 
