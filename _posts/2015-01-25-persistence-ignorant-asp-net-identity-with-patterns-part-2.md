@@ -19,17 +19,17 @@ tags:
 
 **The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][gh]**
 
-######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
+###### *This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*
 
 In [Part 1][2], I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for &quot;Individual User Accounts&quot; authentication, and then laid out the requirements for a better implementation. In this part, we'll create the Visual Studio Solution, break the dependencies on Entity Framework, and start coding our Domain Layer.
 
-###Setting Up the Visual Studio Solution###
+### Setting Up the Visual Studio Solution
 
-######*Note: This tutorial assumes you have enough experience with Visual Studio to create projects, add projects to solutions, add project references, and manage NuGet packages.*######
+###### *Note: This tutorial assumes you have enough experience with Visual Studio to create projects, add projects to solutions, add project references, and manage NuGet packages.*
 
 The first thing to do is to launch Visual Studio 2013 and create a new ASP.NET Web Application, using the MVC template with &quot;Individual User Accounts&quot; authentication. I called mine `Mvc5IdentityExample.Web`, and I named the solution `Mvc5IdentityExample` (without the `.Web` part). Visual Studio will work on it for a few seconds, and then your new project will be ready. If you were to run it as it is, you would have a functional skeleton website with basic ASP.NET Identity functionality that includes the ability to register, login, etc. But all that out-of-the box functionality comes at the price all that tight coupling and code smell I mentioned in [Part 1][1].
 
-####Break the Coupling####
+#### Break the Coupling
 
 So instead of running it, let's go in and delete stuff. The first thing we need to get rid of is the reference to `Microsoft.AspNet.Identity.EntityFramework`. To do this, launch the Package Manager Console and run the following commands:
 
@@ -59,16 +59,16 @@ and
         </providers>
     </entityFramework>
 
-####The Domain Layer####
+#### The Domain Layer
 
 The next thing we need to do is create a class library for our Domain Layer. Our application domain is made up of our entity classes, interfaces for our repositories, and our Unit of Work interface. Our Data Layer (which we'll code in [Part 3][3]) will implement these interfaces to allow our entities to be persisted to a data store. The Domain Layer forms the core of our entire, well-layered, loosely-coupled application architecture.
 
 So let's add a Class Library project to the solution. I called mine `Mvc5IdentityExample.Domain`. Once the project has been created, let's add two folders: `Entities` and `Repositories`.
 
-#####**Entities**#####
+##### **Entities**
 With the project and folders created, we're ready to start coding. We'll start with the entity classes. In keeping with our persistence-ignorant design, these are just Plain Old CLR Objects (POCOs). In order to get the same ASP.NET Identity functionality from our application as we would from the out-of-the-box Entity Framework implementation, we'll create these four classes in our `Entities` folder:
 
-######User.cs######
+###### User.cs
 
     using System;
     using System.Collections.Generic;
@@ -116,7 +116,7 @@ With the project and folders created, we're ready to start coding. We'll start w
         }
     }
 
-######Role.cs######
+###### Role.cs
 
     using System;
     using System.Collections.Generic;
@@ -144,7 +144,7 @@ With the project and folders created, we're ready to start coding. We'll start w
         }
     }
 
-######ExternalLogin.cs######
+###### ExternalLogin.cs
 
     using System;
 
@@ -174,7 +174,7 @@ With the project and folders created, we're ready to start coding. We'll start w
         }
     }
 
-######Claim.cs######
+###### Claim.cs
 
     using System;
 
@@ -207,11 +207,11 @@ With the project and folders created, we're ready to start coding. We'll start w
         }
     }
 
-#####**Repositories**#####
+##### **Repositories**
 
 Next up are the repositories. We're not implementing anything here, just creating the interfaces that our future Data Layer will implement. One important pattern we'll follow is the generic repository pattern. Creating a repository for each entity type would mean we'd have to duplicate a lot of code later on. Using the generic repository pattern eliminates that wasted effort. Our generic repository interface includes all the usual CRUD operations. Create the following interface in the `Repositories` folder.
     
-######IRepository.cs######
+###### IRepository.cs
 
     using System.Collections.Generic;
     using System.Threading;
@@ -241,7 +241,7 @@ Next up are the repositories. We're not implementing anything here, just creatin
 
 You may have seen some generic repository examples that expose IQueryables, IEnumerables, and DbSets. Such designs violate the single responsibility principle by leaking persistence logic (like querying) to other layers where is doesn't belong. Our design keeps those concerns where they belong by returning only generic lists and our entities, so we need to abstract any special-case querying functionality behind entity-specific interfaces that extend `IRepository`. Our application has three:
     
-######IUserRepository.cs######
+###### IUserRepository.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using System.Threading;
@@ -261,7 +261,7 @@ You may have seen some generic repository examples that expose IQueryables, IEnu
         }
     }
 
-######IRoleRepository.cs######
+###### IRoleRepository.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using System.Threading;
@@ -277,7 +277,7 @@ You may have seen some generic repository examples that expose IQueryables, IEnu
         }
     }
 
-######IExternalLoginRepository.cs######
+###### IExternalLoginRepository.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using System.Threading;
@@ -293,7 +293,7 @@ You may have seen some generic repository examples that expose IQueryables, IEnu
         }
     }
     
-#####**Unit of Work**#####
+##### **Unit of Work**
 
 Another important design pattern we're following is the Unit of Work pattern, which does two important things:
 
@@ -304,7 +304,7 @@ Our `IUnitOfWork` interface defines the methods that we'll implement in the Data
 
 Once again, we're not including anything that might couple this interface to any specific persistence mechanism. Those are implementation details that we'll tackle in [Part 3][3].
 
-######IUnitOfWork.cs######
+###### IUnitOfWork.cs
 
     using Mvc5IdentityExample.Domain.Repositories;
     using System;
@@ -329,7 +329,7 @@ Once again, we're not including anything that might couple this interface to any
         }
     }
 
-###Next Steps###
+### Next Steps
 
 In this part, we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In [Part 3][3], we'll move on to the Data Layer, in which we'll code our implementation of the repository and Unit of Work interfaces.
 
