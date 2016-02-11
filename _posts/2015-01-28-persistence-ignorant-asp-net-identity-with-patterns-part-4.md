@@ -17,7 +17,7 @@ tags:
 * [Part 3][4]
 * __Part 4__
 
-_The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][6]_
+__The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][6]__
 
 ###### _This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1]._
 
