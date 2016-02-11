@@ -19,13 +19,13 @@ tags:
 
 **The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][gh]**
 
-######*This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*######
+###### *This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].*
 
 In [Part 1][2], I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for &quot;Individual User Accounts&quot; authentication, and then laid out the requirements for a better implementation. In [Part 2][3], we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In this part, we'll move on to the Data Layer, in which we'll code our implementation of the repository and Unit of Work interfaces.
 
 Let's jump right in.
 
-###The Data Layer###
+### The Data Layer
 
 For now, we'll be using Entity Framework as the persistence mechanism in our Data Layer. Since we're designing this with persistence-ignorant in mind, however, we could just as easily use NHibernate or plain SQL with little or no modification to our Domain and other layers. The first thing we need to do is add another class library to the solution. I called mine `Mvc5IdentityExample.Data.EntityFramework`. One the project has been created, let's add two folders: `Configuration` and `Repositories`.
 
@@ -33,15 +33,15 @@ Next we'll need to add a reference to the latest EntityFramework package. To do 
 
     Install-Package EntityFramework
 
-####Entity Framework####
+#### Entity Framework
 
-#####**Entity Configuration**#####
+##### **Entity Configuration**
 
 The first pieces of code this we're going to write in this layer are the mapping classes that tell Entity Framework which entities map to which database tables, which properties map to which columns, and how all the relationships work. A lot of people like to rely on configuration by convention, which is fine, but I prefer to see more of the mappings in my code &ndash; call it a sort of self-documentation, if you will. Since these configurations don't need to be visible outside the Data Layer, we can make them `internal`.
 
 We have four entities, so we'll need four configuration classes:
 
-######ClaimConfiguration.cs######
+###### ClaimConfiguration.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -86,7 +86,7 @@ We have four entities, so we'll need four configuration classes:
         }
     }
     
-######ExternalLoginConfiguration.cs######
+###### ExternalLoginConfiguration.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using System.Data.Entity.ModelConfiguration;
@@ -125,7 +125,7 @@ We have four entities, so we'll need four configuration classes:
         }
     }
 
-######RoleConfiguration.cs######
+###### RoleConfiguration.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using System.Data.Entity.ModelConfiguration;
@@ -162,7 +162,7 @@ We have four entities, so we'll need four configuration classes:
         }
     }
     
-######UserConfiguration.cs######
+###### UserConfiguration.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using System.Data.Entity.ModelConfiguration;
@@ -219,11 +219,11 @@ We have four entities, so we'll need four configuration classes:
         }
     }
 
-#####**DbContext**#####
+##### **DbContext**
 
 The next piece in our Entity Framework Data Layer is the DbContext. Nothing out of the ordinary here:
 
-######ApplicationDbContext.cs######
+###### ApplicationDbContext.cs
 
     using Mvc5IdentityExample.Data.EntityFramework.Configuration;
     using Mvc5IdentityExample.Domain.Entities;
@@ -252,7 +252,7 @@ The next piece in our Entity Framework Data Layer is the DbContext. Nothing out 
         }
     }
     
-####Repositories####
+#### Repositories
 
 With our Entity Framework entity configurations and DbContext out of the way, we move on to implementing the repository interfaces we defined in the Data Layer. As we dive into the code, I want you to notice a couple things about the classes:
  
@@ -262,7 +262,7 @@ With our Entity Framework entity configurations and DbContext out of the way, we
     
 You'll recall from [Part 2][3] that we're following the generic repository pattern. So, we'll code the generic repository implementation first, and then move on to the entity-specific repositories. So let's start by creating the following class in the `Repositories` folder:
 
-######Repository.cs######
+###### Repository.cs
 
     using Mvc5IdentityExample.Domain.Repositories;
     using System.Collections.Generic;
@@ -358,7 +358,7 @@ You'll recall from [Part 2][3] that we're following the generic repository patte
 
 The entity-specific repository classes extend the generic repository class and implement the entity-specific repository interfaces from the Domain Layer. Let's add the following three classes to the `Repositories` folder:
 
-######ExternalLoginRepository.cs######
+###### ExternalLoginRepository.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using Mvc5IdentityExample.Domain.Repositories;
@@ -393,7 +393,7 @@ The entity-specific repository classes extend the generic repository class and i
         }
     }
 
-######RoleRepository.cs######
+###### RoleRepository.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using Mvc5IdentityExample.Domain.Repositories;
@@ -427,7 +427,7 @@ The entity-specific repository classes extend the generic repository class and i
         }
     }
 
-######UserRepository.cs######
+###### UserRepository.cs
 
     using Mvc5IdentityExample.Domain.Entities;
     using Mvc5IdentityExample.Domain.Repositories;
@@ -461,7 +461,7 @@ The entity-specific repository classes extend the generic repository class and i
         }
     }    
 
-####Unit of Work####
+#### Unit of Work
 
 The last piece of our Data Layer is the Unit of Work implementation. As I pointed out in [Part 2][3], the Unit of Work pattern does two important things:
 
@@ -472,7 +472,7 @@ Because we're using Entity Framework, we can leverage the DbContext to manage th
 
 The Unit of Work class is really the only publicly available class in the Data Layer, because it's where all the Data Layer rubber meets the road:
 
-######UnitOfWork.cs######
+###### UnitOfWork.cs
 
     using Mvc5IdentityExample.Data.EntityFramework.Repositories;
     using Mvc5IdentityExample.Domain;
@@ -541,11 +541,11 @@ The Unit of Work class is really the only publicly available class in the Data L
         }
     }
 
-####The Database####
+#### The Database
 
 I guess I could spend the time to write the code to generate the database from Entity Framework, but that is not the focus of this tutorial. So in order to help things along, I've included a SQL script that will create the database, complete with all the tables, the login, the user, and permissions necessary to run the application.
 
-######CreateDatabase.sql######
+###### CreateDatabase.sql
 
     USE [master]
     GO
@@ -697,7 +697,7 @@ I guess I could spend the time to write the code to generate the database from E
     ALTER TABLE [dbo].[UserRole] CHECK CONSTRAINT [FK_dbo.AspNetUserRoles_dbo.AspNetUsers_UserId]
     GO
 
-###Next Steps###
+### Next Steps
 
 We are so close to having a working application that uses design patterns and better practices for ASP.NET Identity! In this part, we created our Data Layer using Entity Framework. We defined our entity mappings, coded the DbContext, and implemented the interfaces for the repositories and Unit of Work that we defined in the Domain Layer. In Part 4, we'll move on to the Presentation Layer, where we'll focus on getting our Domain and Data Layers to work with ASP.NET Identity with custom IdentityUser, IdentityRole, UserStore, and RoleStore classes.
 
