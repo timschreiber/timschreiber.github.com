@@ -30,7 +30,7 @@ Is it possible to strip away the cardboard and duct tape and return the car to i
 
 A recent [episode][4] of the Discovery Channel's Fast 'n Loud comes to mind. Richard Rawlings and Aaron Kaufman from Gas Monkey Garage bought a 1964 Dodge Sweptline pickup truck in pretty rough shape for $750, and turned it into something better than the original, but all did not go smoothly. They ripped out the original front end and were forced to make some major, expensive frame modifications to get a front end from a Ford Crown Victoria to fit. Similarly, they used an engine and transmission from a modern Chevrolet Tahoe, which caused all kinds of mounting difficulties and required the steering to be custom built. And whether by choice or by budget, they just sanded and clear coated the rather rough looking exterior instead of giving it a shiny new paint job. The price for the final result? Just shy of $50,000.
 
-![Dodge Hodge Podge][5]}
+![Dodge Hodge Podge][5]
 
 The performance of the &quot;Dodge Hodge Podge,&quot; as they call it, is quite impressive; but in my opinion, it still looks like a rusted out piece of crap. Lacking many of the features, comforts, and conveniences that have become expected &ndash; if not required &ndash; in today's market, it is nothing more than a very exciting novelty. And that brings me to my third and final point: the passage of time in the real world will eventually render even the best designed and implemented software systems obsolete.
 
