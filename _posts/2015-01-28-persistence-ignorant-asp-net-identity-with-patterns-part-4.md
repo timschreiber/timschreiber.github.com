@@ -12,14 +12,16 @@ tags:
 - architecture
 ---
 
-* [Part 1][2]
-* [Part 2][3]
-* [Part 3][4]
-* **Part 4**
+<ul>
+    <li>[Part 1][2]</li>
+    <li>[Part 2][3]</li>
+    <li>[Part 3][4]</li>
+    <li><b>Part 4</b></li>
+</ul>
 
-** The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][6] **
+<i>The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][6]</i>
 
-###### * This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1]. * ######
+<h6><i>This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: [http://www.asp.net/identity][1].</i></h6>
 
 In Part 1, I identified some of the shortcomings in the default template for ASP.NET MVC 5 web applications using ASP.NET Identity for “Individual User Accounts” authentication, and then laid out the requirements for a better implementation. In Part 2, we created the Visual Studio Solution for our ASP.NET Identity Example, broke the out-of-the-box dependencies on Entity Framework, and coded our Domain Layer. In Part 3, we defined our entity mappings, coded the DbContext, and implemented the interfaces for the Repositories and Unit of Work that we defined in the Domain Layer. In this part, we’re going to switch our focus to the `Mvc5IdentityExample.Web` project and dive straight into the guts of ASP.NET Identity. Then, we’re going to hook everything up with Unity and finish with a fully functional MVC5 web application with ASP.NET Identity done the “right way.”
 
