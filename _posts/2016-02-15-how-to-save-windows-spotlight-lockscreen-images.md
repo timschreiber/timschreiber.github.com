@@ -22,7 +22,7 @@ Sure enough, there is. It's not only a better way &mdash; it's kinda failproof. 
 
 2. Copy this `%localappdata%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets` and paste it into the Run dialog prompt. Click **OK**, and then a folder will open in File Explorer, with a bunch of cryptic filenames.
 
-![Path Pasted into Run Dialog Prompt][2]
+![Assets Folder][2]
 
 3. Copy all of those files to another folder (I created one on my Desktop called *Spotlight Images*. If you see a warning prompt when you try to copy the files, just click **OK**.
 
@@ -30,13 +30,22 @@ Sure enough, there is. It's not only a better way &mdash; it's kinda failproof. 
 
 5. Back to the files you just copied... Now you need to rename all those files with a JPG extension. You could do them one at a time, but I think it's easier to do them all at once. Just **Shift + Right-click** with your mouse in the directory you copied all the images to, and then select the **Open command window here** option from the menu.
 
-6. In the command prompt window, type `Ren *.* *.JPG` and hit **ENTER**.
+![Open Command Window][3]
+
+6. Now you need to rename all those weird files with a JPG file extension. So, in the command prompt window, type `ren *.* *.JPG` and hit **ENTER**.
+
+![Rename Files with a JPG extension][4]
 
 7. Close the command prompt window.
 
 8. Back in the window containing the files you copied over, make sure you're viewing them in thumbnail mode. It's pretty easy at this point to figure out which ones are Spotlight pictures and which ones aren't. You can hold down **CTRL** and left-click any files you don't want to keep and delete them all at once.
- 
+
+![Delete the Non Spotlight Images][5]
+
 Congratulations! Now you have usable copies of the Spotlight lockscreen images that you can use for your desktop background or any other purpose! Windows 10 downloads new Spotlight pictures regularly, so it wouldn't be a bad idea to repeat these steps every couple of weeks or so to make sure you get all the ones you like.
 
-[1]: /img/how-to-save-windows-spotlight-lockscreen-images/run-dialog.png
-[2]: /img/how-to-save-windows-spotlight-lockscreen-images/run-dialog-2.png
+[1]: /img/how-to-save-windows-spotlight-lockscreen-images/run-dialog-2.png
+[2]: /img/how-to-save-windows-spotlight-lockscreen-images/assets-folder.png
+[3]: /img/how-to-save-windows-spotlight-lockscreen-images/open-command-window.png
+[4]: /img/how-to-save-windows-spotlight-lockscreen-images/command-window-rename.png
+[5]: /img/how-to-save-windows-spotlight-lockscreen-images/delete-non-backgrounds.png
