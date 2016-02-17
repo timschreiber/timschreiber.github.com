@@ -17,9 +17,12 @@ I used to try to get the images by hitting `PrtScn` on the lockscreen, pasting i
 Sure enough, there is. It's not only a better way &mdash; it's kinda failproof. It just took a little digging around. So, let's get started:
 
 1. Open the Run dialog prompt by holding down your windows key plus R (<span class="fa fa-windows"></span> + R).
+
 ![Run Dialog Prompt][1]
 
-2. Copy this `%localappdata%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets` and paste it into the Run dialog prompt. A folder will open in File Explorer, with a bunch of cryptic filenames.
+2. Copy this `%localappdata%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets` and paste it into the Run dialog prompt. Click **OK**, and then a folder will open in File Explorer, with a bunch of cryptic filenames.
+
+![Path Pasted into Run Dialog Prompt][2]
 
 3. Copy all of those files to another folder (I created one on my Desktop called *Spotlight Images*. If you see a warning prompt when you try to copy the files, just click **OK**.
 
@@ -36,3 +39,4 @@ Sure enough, there is. It's not only a better way &mdash; it's kinda failproof. 
 Congratulations! Now you have usable copies of the Spotlight lockscreen images that you can use for your desktop background or any other purpose! Windows 10 downloads new Spotlight pictures regularly, so it wouldn't be a bad idea to repeat these steps every couple of weeks or so to make sure you get all the ones you like.
 
 [1]: /img/how-to-save-windows-spotlight-lockscreen-images/run-dialog.png
+[2]: /img/how-to-save-windows-spotlight-lockscreen-images/run-dialog-2.png
