@@ -4,14 +4,14 @@ canonical: "http://timschreiber.com/2016/07/19/profanity-and-professionalism/"
 date: 2016-07-19
 layout: post
 comments: true
-description: "I never really worried about profanity in the workplace until I worked for a company that didn't just allow it in the office, but actually seemed to embrace it as part of the culture. Then I began to seriously consider the topic and its relevance to professionalism and software craftsmanship."
+description: "I never really worried about profanity in the workplace until I worked for a company that didn't just allow profanity in the office, but actually seemed to embrace it as part of the culture. Then I began to seriously consider the topic and its relevance to professionalism and software craftsmanship."
 tags:
 - work
 - software-craftsmanship
 - professionalism
 - soft-skills
 ---
-Much has been said and written about profanity in the workplace, and for the most part, I never really worried about it much. It wasn't until I got a job with a company that didn't just allow profanity in the office, but seemed to embrace it as part of their culture, that I began to consider the topic more deeply.
+Much has been said and written about profanity in the workplace, but I never really worried about profanity in the workplace until I worked for a company that didn't just allow profanity in the office, but actually seemed to embrace it as part of the culture. Then I began to seriously consider the topic and its relevance to professionalism and software craftsmanship.
 
 I grew up in a "different" time when profanity was less accepted, when one could still raise more than a few eyebrows with a well-aimed f-bomb. But that doesn't mean I didn't embrace profanity at some point in my life. During my college years, even though I was living in Utah surrounded by conversationally-pure Mormons, profanity became so tightly integrated into my vernacular that a roommate once described me as having a "poetic" mastery of it.
 
