@@ -19,7 +19,7 @@ What interested me most in ZirMed is that it is, at its heart, a software compan
 
 As of 4-Jan-2015, I am now a Senior .NET Engineer at ZirMed -- a ZirMan as it were. I’m still getting through the onboarding process and training, but I am excited to see what the future holds.
 
-###About ZirMed
+### About ZirMed
 
 ZirMed's comprehensive end-to-end platform of cloud-based revenue cycle management solutions—including patient access, charge integrity, claims management, AR management, patient responsibility, and population health management–empowers healthcare organizations of all sizes and types to optimize value-driven and fee-for-service reimbursements. By combining breakthrough predictive analytics technology with innovative software development and the industry's most advanced transactional network, ZirMed solutions extract actionable insights that improve our clients' revenue cycles while streamlining workflows, increasing operating efficiencies, and driving bottom-line results. ZirMed's technology and client support continue to be honored with top industry awards, including KLAS&reg;, Healthcare Informatics, Best of SaaS Showplace (BoSS), and Black Book Rankings. To learn how ZirMed can help your healthcare organization boost its financial performance in an era of changing reimbursement models and rising operating costs, visit [www.ZirMed.com][1].
 
