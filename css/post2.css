@@ -85,6 +85,7 @@ article p {
 
 article img {
   max-width:100%;
+  text-align:center;
 }
 
 @media (min-width:992px) {
