@@ -65,11 +65,15 @@ div.post-heading button.btn-pill:hover {
   box-shadow:inset 0 0 15px rgba(0,0,0,.75);
 }
 
+#post-main {
+  background-color:#fff;
+  z-index:10;
+}
+
 article {
   padding-top:30px;
   padding-bottom:30px;
   background-color:#fff;
-  z-index:10;
 }
 
 article p {
