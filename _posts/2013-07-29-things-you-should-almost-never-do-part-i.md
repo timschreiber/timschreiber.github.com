@@ -20,19 +20,25 @@ I respect Mr. Spolsky a great deal, but one paragraph in his article is really c
 
 If there's one thing I'd like to say to Mr. Spolsky right now it's, &quot;Thank you, thank you for using the Dodge Dart analogy.&quot; Not only am I a huge Mopar fan, but it just so happens that Dodge resurrected the Dart as an all-new, redesigned &quot;from scratch&quot; model in 2013 (actually, they just did a custom implementation of a vehicle platform from Fiat). See where I'm going with this? Old vs. new, rusted vs. shiny...
 
-<div class="text-center">![Old and Busted / New Hotness][2]</div>
+<div class="text-center">
+  [Old and Busted / New Hotness][2]
+</div>
 
 I completely agree with Mr. Spolsky that software won't acquire bugs just sitting around on your hard drive, but then an old Dodge Dart won't &quot;rust just sitting in the garage&quot; if it's taken care of properly. Similarly, I've seen plenty of software fall apart because it was left out in the elements without proper maintenance.
 
 And that's the first point I want to make: Businesses cut budgets for software systems that appear to be functioning at an arbitrary minimum level of reliability. Competent, expensive senior-level developers are replaced by cheaper junior programmers. Invariably, things go wrong, enhancements are required; and whether through inexperience or apathy, their once beautiful, shiny software gradually becomes &ndash; well, this:
 
-<div class="text-center">![They're &quot;Features&quot;][3]</div>
+<div class="text-center">
+  [They're &quot;Features&quot;][3]
+</div>
 
 Is it possible to strip away the cardboard and duct tape and return the car to its pristine working condition? Of course! With enough time, money, and effort, I believe anything is possible; but therein lays my second point: it's impossible to remove the all the crap and rot, and refactor all the bad code without losing at least some of the features, fixes, and knowledge that have accumulated over time &ndash; at least on a budget and timeline the business is happy with.
 
 A recent [episode][4] of the Discovery Channel's Fast 'n Loud comes to mind. Richard Rawlings and Aaron Kaufman from Gas Monkey Garage bought a 1964 Dodge Sweptline pickup truck in pretty rough shape for $750, and turned it into something better than the original, but all did not go smoothly. They ripped out the original front end and were forced to make some major, expensive frame modifications to get a front end from a Ford Crown Victoria to fit. Similarly, they used an engine and transmission from a modern Chevrolet Tahoe, which caused all kinds of mounting difficulties and required the steering to be custom built. And whether by choice or by budget, they just sanded and clear coated the rather rough looking exterior instead of giving it a shiny new paint job. The price for the final result? Just shy of $50,000.
 
-<div class="text-center">![Dodge Hodge Podge][5]</div>
+<div class="text-center">
+  [Dodge Hodge Podge][5]
+</div>
 
 The performance of the &quot;Dodge Hodge Podge,&quot; as they call it, is quite impressive; but in my opinion, it still looks like a rusted out piece of crap. Lacking many of the features, comforts, and conveniences that have become expected &ndash; if not required &ndash; in today's market, it is nothing more than a very exciting novelty. And that brings me to my third and final point: the passage of time in the real world will eventually render even the best designed and implemented software systems obsolete.
 
