@@ -1,0 +1,105 @@
+body {
+  margin-top:100vh;
+}
+
+div.post-heading {
+  position:fixed;
+  top:50px;
+  width:100%;
+  display:flex;
+  height:calc(100vh - 50px);
+  color:#fff !important;
+  background-size:cover;
+  background-position:50% 50%;
+  background-repeat:no-repeat;
+  z-index:-1;
+}
+
+div.post-heading.vignette {
+  box-shadow: inset 0 0 400px rgba(0, 0, 0, .75);
+  text-shadow:0 0 20px rgba(0, 0, 0, .8);
+}
+
+div.vcenter {
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  width:100%;
+}
+
+div.post-heading h1,
+div.post-heading h2,
+div.post-heading p {
+  text-align:center;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+div.post-heading h1 {
+  font-size:calc(.875 * 64px);
+  font-weight:900;
+}
+
+div.post-heading h2 {
+  font-size:calc(.875 * 36px);
+  font-weight:700;
+  font-style:italic;
+}
+
+div.post-heading button.btn-pill {
+  border:2px solid #fff;
+  color:#fff;
+  text-transform:uppercase;
+  text-align:center;
+  padding:10px 20px;
+  box-shadow:0 0 15px rgba(0,0,0,.75);
+  text-shadow:0 0 15px rgba(0, 0, 0, .75);
+  outline:none;
+}
+
+div.post-heading button.btn-pill span.fa-arrow-down {
+  margin-left:7px;
+}
+
+div.post-heading button.btn-pill:hover {
+  box-shadow:inset 0 0 15px rgba(0,0,0,.75);
+}
+
+article {
+  padding-top:30px;
+  padding-bottom:30px;
+  background-color:#fff;
+  z-index:10;
+}
+
+article p {
+  font-size:18px;
+  margin-top:15px;
+  margin-bottom:15px;
+  line-height:30px;
+}
+
+@media (min-width:992px) {
+  div.post-heading {
+    top:90px;
+    height:calc(100vh - 90px);
+  }
+  
+  div.post-heading h1 {
+    font-size:calc(.875 * 64px);
+  }
+  
+  div.post-heading h2 {
+    font-size:calc(.875 * 36px);
+  }
+}
+
+@media (min-width:1200px) {
+  div.post-heading h1 {
+    font-size:64px;
+  }
+
+  div.post-heading h2 {
+    font-size:36px;
+  }
+}
