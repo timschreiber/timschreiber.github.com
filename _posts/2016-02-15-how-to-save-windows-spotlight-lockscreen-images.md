@@ -1,10 +1,12 @@
 --- 
-layout: post
+layout: post2
 title: "How to Save Windows Spotlight Lockscreen Images"
+description: "Have you ever seen a Spotlight image on your Windows 10 lockscreen and thought, I really want to make that my desktop background? Screen grabs and Google Images not doing it for you? There is a way..."
 canonical: "http://timschreiber.com/2016/02/15/how-to-save-windows-spotlight-lockscreen-images/"
 author: "Tim"
 comments: true
-description: ""
+image: "40d319f205eaf33d007a67944ed67c217e16da3a542063c65525a0e429567dff.jpg"
+color: "#3B2819"
 tags:
 - windows-10
 - tips
