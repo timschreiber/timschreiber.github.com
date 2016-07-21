@@ -2,9 +2,11 @@
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 4)"
 canonical: "http://timschreiber.com/2015/01/28/persistence-ignorant-asp-net-identity-with-patterns-part-4/"
 date: 2015-01-28
-layout: post
+layout: post2
 comments: true
-description: "In this part, we’re going to switch our focus to the Mvc5IdentityExample.Web project and dive straight into the guts of ASP.NET Identity. Then, we’re going to hook everything up in Unity and finish with a fully functional MVC5 web application with ASP.NET Identity..."
+description: "Switching focus to the Mvc5IdentityExample.Web project, we'll and dive straight into the guts of ASP.NET Identity. Then we'll hook everything up in Unity and finish with a fully functional site."
+image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
+color: "#063352"
 tags:
 - asp-net
 - mvc-5
