@@ -4,7 +4,7 @@ canonical: "http://timschreiber.com/2015/01/25/persistence-ignorant-asp-net-iden
 date: 2015-01-25
 layout: post2
 comments: true
-description: "Creating the Solution, breaking the dependencies on Entity Framework, and starting to code the Domain Layer which includes the Entities and Repository and Unit of Work interfaces."
+description: "Creating the Solution, breaking the EF dependencies, and coding the Domain Layer (Entities and Repository and Unit of Work interfaces)."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
 color: "#063352"
 tags:
