@@ -36,12 +36,12 @@ div.post-heading p {
 }
 
 div.post-heading h1 {
-  font-size:calc(.75 * 64px);
+  font-size:calc(.667 * 64px);
   font-weight:900;
 }
 
 div.post-heading h2 {
-  font-size:calc(.75 * 36px);
+  font-size:calc(.667 * 36px);
   font-weight:700;
   font-style:italic;
 }
