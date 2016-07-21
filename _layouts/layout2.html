@@ -128,14 +128,14 @@
   	<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/layout2.js"></script>
-    {% if layout.custom_scripts %}
-    	{% for script in layout.custom_scripts %}
-    	  <script type="text/javascript" src="/js/{{ script }}"></script>
+    {% if layout.custom_js %}
+    	{% for js in layout.custom_js %}
+    	  <script type="text/javascript" src="/js/{{ js }}"></script>
     	{% endfor %}
     {% endif %}
-    {% if page.custom_scripts %}
-    	{% for script in page.custom_scripts %}
-    	  <script type="text/javascript" src="/js/{{ script }}"></script>
+    {% if page.custom_js %}
+    	{% for js in page.custom_js %}
+    	  <script type="text/javascript" src="/js/{{ js }}"></script>
     	{% endfor %}
     {% endif %}
 		<script>
