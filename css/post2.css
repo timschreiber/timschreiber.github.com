@@ -83,6 +83,10 @@ article p {
   line-height:30px;
 }
 
+article img {
+  max-width:100%;
+}
+
 @media (min-width:992px) {
   div.post-heading {
     top:90px;
