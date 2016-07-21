@@ -1,11 +1,13 @@
 --- 
-layout: post
+layout: post2
 title: "Things You Should (Almost) Never Do, Part I"
 canonical: "http://timschreiber.com/2013/07/29/things-you-should-almost-never-do-part-i/"
 author: "Tim"
 image: "http://timschreiber.com/img/cardboard-tank.jpg"
 comments: true
-description: "As I mentioned before, I've been thinking a lot about the point , if it even exists, at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over. Of course..."
+description: "I've been thinking about whether there's at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over."
+image: "things-you-should-almost-never-do-part-i.jpg"
+color: "#898883"
 tags:
 - practices
 ---
