@@ -24,13 +24,13 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" />
     <link rel="stylesheet" type="text/css" href="/css/layout2.css" />
-    {% if page.page_css %}
-    	{% for css in page.page_css %}
+    {% if layout.custom_css %}
+    	{% for css in layout.custom_css %}
     	  <link rel="stylesheet" href="/css/{{ css }}" />
     	{% endfor %}
     {% endif %}
-    {% if page.post_css %}
-    	{% for css in page.post_css %}
+    {% if page.custom_css %}
+    	{% for css in page.custom_css %}
     	  <link rel="stylesheet" href="/css/{{ css }}" />
     	{% endfor %}
     {% endif %}
@@ -128,13 +128,13 @@
   	<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/layout2.js"></script>
-    {% if page.page_scripts %}
-    	{% for script in page.page_scripts %}
+    {% if layout.custom_scripts %}
+    	{% for script in layout.custom_scripts %}
     	  <script type="text/javascript" src="/js/{{ script }}"></script>
     	{% endfor %}
     {% endif %}
-    {% if page.post_scripts %}
-    	{% for script in page.post_scripts %}
+    {% if page.custom_scripts %}
+    	{% for script in page.custom_scripts %}
     	  <script type="text/javascript" src="/js/{{ script }}"></script>
     	{% endfor %}
     {% endif %}
