@@ -6,12 +6,12 @@ page_scripts:
 - post2.js
 ---
 
-<div class="post-heading vignette" {% if page.image_lg %}style="background-image:url({{ page.image_lg }});"{% endif %}>
+<div class="post-heading vignette" {% if page.image %}style="background-image:url({{ page.image }});"{% endif %}>
   <div class="vcenter">
     <div class="container">
       <h1>{{ page.title }}</h1>
       <h2>{{ page.description }}</h2>
-      <p><button id="btnContinueReading" class="btn btn-default btn-lg btn-pill" {% if page.button_bg_color %}style="background-color:{{ page.button_bg_color }};"{% endif %}>Continue Reading <span class="fa fa-arrow-down"></span></button></p>
+      <p><button id="btnContinueReading" class="btn btn-default btn-lg btn-pill" {% if page.color %}style="background-color:{{ page.color }};"{% endif %}>Continue Reading <span class="fa fa-arrow-down"></span></button></p>
     </div>
   </div>
 </div>
