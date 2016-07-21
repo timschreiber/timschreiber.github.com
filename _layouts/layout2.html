@@ -51,7 +51,7 @@
           <ul class="nav navbar-nav navbar-left">
             <li><a href="/about">About</a></li>
             <li><a href="/resume">R&eacute;sum&eacute;</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li {% if layout.active == 'blog' %}class="active"{% elsif page.active == 'blog' %}class="active"{% endif %}><a href="/blog">Blog</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li id="contact-nav">
