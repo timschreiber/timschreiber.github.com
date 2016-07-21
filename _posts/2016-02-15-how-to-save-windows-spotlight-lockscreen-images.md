@@ -5,7 +5,7 @@ description: "Have you ever seen a Spotlight image on your Windows 10 lockscreen
 canonical: "http://timschreiber.com/2016/02/15/how-to-save-windows-spotlight-lockscreen-images/"
 author: "Tim"
 comments: true
-image: "40d319f205eaf33d007a67944ed67c217e16da3a542063c65525a0e429567dff.jpg"
+image: "how-to-save-windows-spotlight-lockscreen-images.jpg"
 color: "#3B2819"
 tags:
 - windows-10
