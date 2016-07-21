@@ -2,7 +2,7 @@
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 3)"
 canonical: "http://timschreiber.com/2015/01/26/persistence-ignorant-asp-net-identity-with-patterns-part-3/"
 date: 2015-01-26
-layout: post
+layout: post2
 comments: true
 description: "Part 3 is all Data Layer. Coding the repository and Unit of Work implementations using Entity Framework for now..."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
