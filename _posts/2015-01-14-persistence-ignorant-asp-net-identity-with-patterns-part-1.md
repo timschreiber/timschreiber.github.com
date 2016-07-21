@@ -2,9 +2,11 @@
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 1)"
 canonical: "http://timschreiber.com/2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/"
 date: 2015-01-14
-layout: post
+layout: post2
 comments: true
-description: "This series of posts requires a functional understanding of ASP.NET Identity 2.x. If you haven't had at least some kind of exposure, this is a good place to start: http://www.asp.net/identity. ASP.NET Identity is the successor to ASP.NET Simple Membership, which..."
+description: "ASP.NET Identity the membership system for ASP.NET. Out of the box, it has quite a few shortcomings. Let's fix it."
+image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
+color: "#063352"
 tags:
 - asp-net
 - mvc-5
