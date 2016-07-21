@@ -4,7 +4,9 @@ canonical: "http://timschreiber.com/2015/01/26/persistence-ignorant-asp-net-iden
 date: 2015-01-26
 layout: post
 comments: true
-description: "In this part, we'll move on to the Data Layer, in which we'll code our implementation of the repository and Unit of Work interfaces. Let's jump right in. The Data Layer For now, we'll be using Entity Framework as the persistence mechanism in our Data Layer. Since..."
+description: "Part 3 is all Data Layer. Coding the repository and Unit of Work implementations using Entity Framework for now..."
+image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
+color: "#063352"
 tags:
 - asp-net
 - mvc-5
