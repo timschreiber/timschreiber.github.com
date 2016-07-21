@@ -3,9 +3,11 @@ title: "Original Music: Collide"
 canonical: "http://timschreiber.com/2014/05/08/original-music-collide/"
 date: 2014-05-08
 image: "https://img.youtube.com/vi/o34h-n7Rswk/0.jpg"
-layout: post
+layout: post2
 comments: true
-description: "You know on my homepage where I mention I'm an an amateur songwriter? Well, that's not just fluff. Here's how I spend some of my time when I'm not coding. I wrote the lyrics in 2009, wrote the music between 2010 and 2013, and recorded it in my home studio in April to May 2014."
+description: "I wrote the lyrics in 2009, wrote the music between 2010 and 2013, and recorded it in my home studio (if you can call it that) in April to May 2014."
+image: "original-music-collide.jpg"
+color: "#08050A"
 tags:
 - songwriting
 - music
