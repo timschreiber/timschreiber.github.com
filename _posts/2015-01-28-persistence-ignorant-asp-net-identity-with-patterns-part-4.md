@@ -4,7 +4,7 @@ canonical: "http://timschreiber.com/2015/01/28/persistence-ignorant-asp-net-iden
 date: 2015-01-28
 layout: post2
 comments: true
-description: "Switching focus to the Mvc5IdentityExample.Web project, we'll and dive straight into the guts of ASP.NET Identity. Then we'll hook everything up in Unity and finish with a fully functional site."
+description: "Diving straight into the guts of ASP.NET Identity, hooking everything up in Unity, and finishing with a fully functional site."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
 color: "#063352"
 tags:
