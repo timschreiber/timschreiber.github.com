@@ -2,9 +2,11 @@
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 2)"
 canonical: "http://timschreiber.com/2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/"
 date: 2015-01-25
-layout: post
+layout: post2
 comments: true
-description: "In this part, we'll create the Visual Studio Solution, break the dependencies on Entity Framework, and start coding our Domain Layer. Note: This tutorial assumes you have enough experience with Visual Studio to create projects, add projects to solutions, add project..."
+description: "Creating the Solution, breaking the dependencies on Entity Framework, and starting to code the Domain Layer which includes the Entities and Repository and Unit of Work interfaces."
+image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
+color: "#063352"
 tags:
 - asp-net
 - mvc-5
