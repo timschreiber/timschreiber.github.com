@@ -49,8 +49,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="/about">About</a></li>
-            <li><a href="/resume">R&eacute;sum&eacute;</a></li>
+            <li {% if page.active == "about" %}class="active"{% elsif layout.active == "about" %}class="active"{% endif %}><a href="/about">About</a></li>
+            <li {% if page.active == "resume" %}class="active"{% elsif layout.active == "resume" %}class="active"{% endif %}><a href="/resume">R&eacute;sum&eacute;</a></li>
             <li {% if page.active == "blog" %}class="active"{% elsif layout.active == "blog" %}class="active"{% endif %}><a href="/blog">Blog</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
