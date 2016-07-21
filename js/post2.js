@@ -2,7 +2,7 @@ $(function(){
 	$(window).on('scroll', handleScroll);
 	
 	$('#btnContinueReading').on('click', function(){
-		scrollTo('article');
+		scrollTo('#post-main');
 	});
 	
 	handleScroll();
