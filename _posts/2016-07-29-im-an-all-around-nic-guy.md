@@ -27,6 +27,6 @@ Kentucky Interactive LLC operates Kentucky.gov as a collaborative effort with th
 
 ### About NIC
 
-Founded in 1992, NIC (NASDAQ: EGOV) is the nation's leading provider of innovative digital government solutions and secure payment processing, which help make government more accessible to everyone through technology. The family of NIC companies provides digital government solutions for more than 4,500 federal, state, and local agencies in the United States. Forbes has named NIC as one of the "100 Best Small Companies in America" six times and the company has been included four times on the Barron's 400 Index. Additional information is available at [1][http://www.egov.com].
+Founded in 1992, NIC (NASDAQ: EGOV) is the nation's leading provider of innovative digital government solutions and secure payment processing, which help make government more accessible to everyone through technology. The family of NIC companies provides digital government solutions for more than 4,500 federal, state, and local agencies in the United States. Forbes has named NIC as one of the "100 Best Small Companies in America" six times and the company has been included four times on the Barron's 400 Index. Additional information is available at [http://www.egov.com][1].
 
 [1]: http://www.egov.com
