@@ -27,7 +27,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 					<h3>My Work</h3>
 					<h4>Day Job</h4>
 					<ul>
-						<li><b>Senior .NET Engineer</b> at <b><a href="http://public.zirmed.com/" target="_blank">ZirMed</a></b>.</li>
+						<li><b>Senior Software Developer</b> at <b><a href="http://www.egov.com/who-we-serve/partners/kentucky">Kentucky Interactive (NIC)</a></b>.</li>
 					</ul>
 					<h4>Side Projects</h4>
 					<ul>
@@ -36,7 +36,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 					</ul>
 					<h4>Community</h4>
 					<ul>
-						<li>Authored a <a href="http://timschreiber.com/2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/" target="_blank">popular series of posts</a> on implementing ASP.NET Identity with patterns.</li>
+						<li>Authored a <a href="/2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/">popular series of posts</a> on implementing ASP.NET Identity with patterns.</li>
 					</ul>
 				</div>
 			</div>
