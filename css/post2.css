@@ -87,6 +87,10 @@ article img {
   max-width:100%;
 }
 
+.post-ad-container {
+  margin-bottom:20px;
+}
+
 @media (min-width:992px) {
   div.post-heading {
     top:90px;
