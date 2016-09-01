@@ -27,7 +27,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 					<h3>My Work</h3>
 					<h4>Day Job</h4>
 					<ul>
-						<li><b>Senior Software Developer</b> at <b><a href="http://www.egov.com/who-we-serve/partners/kentucky">Kentucky Interactive (NIC)</a></b>.</li>
+						<li><b>Senior Software Developer</b> at <b><a href="http://www.egov.com/who-we-serve/partners/kentucky">NIC (Kentucky Interactive)</a></b>.</li>
 					</ul>
 					<h4>Side Projects</h4>
 					<ul>
