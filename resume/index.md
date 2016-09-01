@@ -437,6 +437,8 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 			<li>
 				<a href="#res-emp">Employment</a>
 				<ul>
+					<li><a href="#res-emp-nic">NIC (Kentucky Interactive)</a></li>
+					<li><a href="#res-emp-zirmed">ZirMed</a></li>
 					<li><a href="#res-emp-sis">Software Information Systems</a></li>
 					<li><a href="#res-emp-stg">Software Technology Group</a></li>
 					<li><a href="#res-emp-mccann">McCann Erickson</a></li>
