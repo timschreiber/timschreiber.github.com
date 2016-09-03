@@ -420,7 +420,7 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 		<h3>Education</h3>
 		<dl class="dl-horizontal">
 			<dt>University of Phoenix</dt>
-			<dd>Bachelor of Science, Information Technology (major coursework completed)</dd>
+			<dd>Information Technology Management</dd>
 			<dt>Utah Valley University</dt>
 			<dd>Information Systems</dd>
 			<dt>Brigham Young University</dt>
