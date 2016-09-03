@@ -81,6 +81,9 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 				<h4 class="pull-right">Jul 2016 to Present</h4>
 			</div>
 			<div><strong>Senior Software Developer</strong></div>
+			<ul>
+				<li>Developing a single sign-on and access control system for multiple applications and APIs.</li>
+			</ul>
 		</div>
 
 		<div id="res-emp-zirmed" class="employer">
@@ -89,6 +92,11 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 				<h4 class="pull-right">Jan 2016 to Jul 2016</h4>
 			</div>
 			<div><strong>Senior .NET Engineer &mdash; Specialist</strong></div>
+			<ul>
+				<li>Maintained and developed new features for a mature credit card/ACH payment application.</li>
+				<li>Provided technological leadership for development team. Conducted code reviews and oversaw production deployments.</li>
+				<li>Provided Agile process leadership. Helped team members make workload commitments based on more accurate estimates to reduce valocity variance and improve planning.</li>
+			</ul>
 		</div>
 		
 		<div id="res-emp-sis" class="employer">
