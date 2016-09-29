@@ -17,10 +17,9 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="pinstrap-item">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					{{% if post.image != null && post.image != '' %}}
+					{{% if post.image != blank %}}
 						<img src="/img/{{post.image}}" class="img-rounded" style="max-width:100%" />
 					{{% endif %}}
-					<p>{{post.image}}</p>
 					<h3><a href="{{post.url}}">{{post.title}}</a></h3>
 					{{% if post.description != null %}}
 						<p>{{post.description}}</p>
