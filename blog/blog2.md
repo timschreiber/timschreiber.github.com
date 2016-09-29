@@ -18,7 +18,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			<div class="panel panel-default">
 				<div class="panel-body">
 					{{% if post.image != null %}}
-						<img src="/img/{{post.image}}" class="img-rounded" />
+						<img src="/img/{{post.image}}" class="img-rounded" style="max-width:100%" />
 					{{% endif %}}
 					<h3><a href="{{post.url}}">{{post.title}}</a></h3>
 					{{% if post.description != null %}}
