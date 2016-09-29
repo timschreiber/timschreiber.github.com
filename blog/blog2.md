@@ -12,7 +12,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 
 
 
-<div id="pinstrap-container">
+<div id="pinstrap-container" class="row">
 	{% for post in site.posts %}
 		<div class="pinstrap-item">
 			<div class="panel panel-default">
