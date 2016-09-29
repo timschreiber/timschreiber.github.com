@@ -3,7 +3,6 @@ layout: post
 title: "Local/Web Font Conflict in Chrome"
 canonical: "http://timschreiber.com/2015/01/20/local-web-font-conflict-in-chrome/"
 author: "Tim"
-image: "http://timschreiber.com/img/bold-blog.png"
 comments: true
 description: "Well, you're reading this, which means you're looking at my newer, leaner, better personal site/blog. I spent a couple nights learning Pretzel/Jekyll, putting the layout together, and converting my old WordPress posts. So when..."
 tags:
