@@ -17,14 +17,13 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="pinstrap-item">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					{{% if post.image %}}
-						<p>{{post.image == blank}}</p>
+					{% if post.image %}
 						<img src="/img/{{post.image}}" class="img-rounded" style="max-width:100%" />
-					{{% endif %}}
+					{% endif %}
 					<h3><a href="{{post.url}}">{{post.title}}</a></h3>
-					{{% if post.description != "" %}}
+					{% if post.description != "" %}
 						<p>{{post.description}}</p>
-					{{% endif %}}
+					{% endif %}
 				</div>
 			</div>
 		</div>
