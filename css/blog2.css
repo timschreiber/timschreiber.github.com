@@ -1,1 +1,7 @@
-#pinstrap-container { display:none; }
+body {
+  margin-top:70px;
+}
+
+#pinstrap-container {
+	display:none;
+}
