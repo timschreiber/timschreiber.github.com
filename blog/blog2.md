@@ -1,5 +1,5 @@
 ---
-layout : blog
+layout : blog2
 title : "Blog"
 canonical : "http://timschreiber.com/blog/blog2"
 description : "Timothy P. Schreiber's personal blog, dealing primarily with software development, but also dabbling in songwriting, food, and gardening from time to time."
