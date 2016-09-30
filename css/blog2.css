@@ -1,7 +1,13 @@
 body {
-  margin-top:115px;
+  margin-top:70px;
 }
 
 #pinstrap-container {
 	display:none;
+}
+
+@media (min-width:992px) {
+	body {
+		margin-top:110px;
+	}
 }
