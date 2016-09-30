@@ -18,8 +18,8 @@ body {
 	margin-top:0;
 }
 
-.pinstrap-item h5 {
-	line-height:110%;
+.pinstrap-item h5 .badge {
+	margin:2px;
 }
 
 .pinstrap-item p {
