@@ -12,7 +12,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 
 <div class="row">
 	<div class="col-lg-9 col-md-8 col-sm-6 col-xs-12">
-		{% for post in site.posts limit 1 %}
+		{% for post in site.posts limit:1 %}
 			{% if post.image %}
 				<div style="height:300px;background-size:cover;background-repeat:no-repeat;background-position:50% 50%;background-image:url(/img/{{post.image}});"></div>
 			{% endif %}
