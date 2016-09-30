@@ -37,25 +37,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 				{% endcapture %}
 				{% assign sortedtags = tags | split:' ' | sort %}
 				{% for tag in sortedtags %}
-					<div id="{{ tag }}" class="tag-list-item">
-						<h2>{{ tag }}</h2>
-						<dl class="dl-horizontal tag-posts-list">
-							{% for post in site.tags[tag] %}
-								<div class="post-list-item">
-									<article>
-										<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-										<h5><strong>{{ post.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
-											{% for tag in post.tags %}
-												<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
-											{% endfor %}
-										</h5>
-										<p>{{ post.description }}</p>
-										<p><a href="{{ post.url }}">Read more &gt;</a></p>
-									</article>
-								</div>
-							{% endfor %}
-						</dl>
-					</div>
+					<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
 				{% endfor %}
 			</div>
 		</div>
