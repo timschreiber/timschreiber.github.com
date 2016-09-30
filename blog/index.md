@@ -14,7 +14,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
-				<h3 class="panel-title" class="pull-left">Tags</h3>
+				<h3 class="panel-title pull-left">Tags</h3>
 				<div class="pull-right">
 					<button id="btn-tags" class="btn btn-default btn-xs"><span class="fa fa-chevron-down"></span></button>
 				</div>
