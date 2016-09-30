@@ -23,7 +23,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					{% endcapture %}
 					{% assign sortedtags = tags | split:' ' | sort %}
 					{% for tag in sortedtags %}
-						<a href="/blog/tags/#{{ tag }}" class="badge alert-info" style="font-size:18px;">{{ tag }}</a>
+						<a href="/blog/tags/#{{ tag }}" class="badge alert-info" style="font-size:16px;">{{ tag }}</a>
 					{% endfor %}
 				</h4>
 			</div>
