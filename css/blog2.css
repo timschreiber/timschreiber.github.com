@@ -18,8 +18,8 @@ body {
 	margin-top:0;
 }
 
-.pinstrap-item h5 {
-	line-height:30px !important;
+.pinstrap-item h6 {
+	line-height:120%;
 }
 
 .pinstrap-item p {
