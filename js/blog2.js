@@ -4,9 +4,9 @@ $(function(){
 		pinstrap.handleResize();
 	});
 	
-	$("#btnTags").click(function(){
-		var tagsBtn = $("#btnTags");
-		var tagsBody = $("#tags-panel-body");
+	var tagsBtn = $("#btn-tags");
+	var tagsBody = $("#tags-panel-body");
+	tagsBtn.click(function(){
 		if(tagsBody.is(":visible")) {
 			tagsBody.slideUp();
 			tagsBtn.find(".fa").removeClass("fa-chevron-up").addClass("fa-chevron-down");
