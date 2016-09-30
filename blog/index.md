@@ -14,9 +14,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
-				<div class="pull-left">
-					<h3 class="panel-title">Tags</h3>
-				<div>
+				<h3 class="panel-title" class="pull-left">Tags</h3>
 				<div class="pull-right">
 					<button id="btn-tags" class="btn btn-default btn-xs"><span class="fa fa-chevron-down"></span></button>
 				</div>
@@ -36,30 +34,31 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 		</div>
 	</div>
-	<div id="pinstrap-container">
-		{% for post in site.posts | sort: date | reverse %}
-			<div class="pinstrap-item">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						{% if post.image %}
-							<img src="/img/{{post.image}}" class="img-rounded" style="max-width:100%" />
-							<h3><a href="{{post.url}}">{{post.title}}</a></h3>
-						{% else %}
-							<h3 class="top0"><a href="{{post.url}}">{{post.title}}</a></h3>
-						{% endif %}
-						
-						<h6><strong>{{ post.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
-							{% for tag in post.tags %}
-								<a href="/blog/tags/#{{ tag }}" class="badge alert-info post-tag" data-tag="{{tag}}">{{ tag }}</a>
-							{% endfor %}						
-						</h6>
-						
-						{% if post.description != "" %}
-							<p>{{post.description}}</p>
-						{% endif %}
-					</div>
+</div>
+
+<div id="pinstrap-container" class="row">
+	{% for post in site.posts | sort: date | reverse %}
+		<div class="pinstrap-item">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					{% if post.image %}
+						<img src="/img/{{post.image}}" class="img-rounded" style="max-width:100%" />
+						<h3><a href="{{post.url}}">{{post.title}}</a></h3>
+					{% else %}
+						<h3 class="top0"><a href="{{post.url}}">{{post.title}}</a></h3>
+					{% endif %}
+					
+					<h6><strong>{{ post.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
+						{% for tag in post.tags %}
+							<a href="/blog/tags/#{{ tag }}" class="badge alert-info post-tag" data-tag="{{tag}}">{{ tag }}</a>
+						{% endfor %}						
+					</h6>
+					
+					{% if post.description != "" %}
+						<p>{{post.description}}</p>
+					{% endif %}
 				</div>
 			</div>
-		{% endfor %}
-	</div>
+		</div>
+	{% endfor %}
 </div>
