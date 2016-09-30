@@ -16,5 +16,20 @@ $(function(){
 		}
 	});
 	
+	$(".blog-tag").click(function(){
+		var tag = $(this).attr("data-tag");
+		$(".pinstrap-item").each(function(){
+			var pinstrapItem = $(this);
+			pinstrapItem.find(".post-tag").each(function(){
+				if($(this).attr("data-tag") == tag) {
+					pinstrapItem.show();
+				} else {
+					pinstrapItem.hide();
+				}
+			});
+		});
+		pinstrap.handleResize();
+	});
+	
 	
 });
