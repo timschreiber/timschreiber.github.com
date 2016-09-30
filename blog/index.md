@@ -30,7 +30,6 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		</div>
 	</div>
 	<div class="col-lg-9 col-lg-pull-3 col-md-8 col-md-pull-4 col-sm-12 col-xs-12">
-		<h3>Current Post</h3>
 		{% for post in site.posts limit:1 %}
 			{% if post.image %}
 				<div style="height:300px;background-size:cover;background-repeat:no-repeat;background-position:50% 50%;background-image:url(/img/{{post.image}});"></div>
@@ -43,6 +42,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</h5>
 			{% if post.description != "" %}
 				<p>{{post.description}}</p>
+				<p><a href="{{post.url}}" class="btn btn-primary">Read More</a></p>
 			{% endif %}
 		{% endfor %}
 	</div>
