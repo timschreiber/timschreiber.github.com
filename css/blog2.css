@@ -10,7 +10,15 @@ body {
 	padding:10px;
 }
 
-.pinstrap-item h3, .pinstrap-item p {
+.pinstrap-item h3 {
+	margin-top:0;
+}
+
+.pinstrap-item h3.top0 {
+	margin-top:0;
+}
+
+.pinstrap-item p {
 	margin-top:10px;
 	margin-bottom:0;
 }
