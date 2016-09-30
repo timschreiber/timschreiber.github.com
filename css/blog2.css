@@ -6,6 +6,14 @@ body {
 	display:none;
 }
 
+.pinstrap-item .panel-body {
+	padding:5px;
+}
+
+.pinstrap-item h3 {
+	margin-top:0;
+}
+
 @media (min-width:992px) {
 	body {
 		margin-top:110px;
