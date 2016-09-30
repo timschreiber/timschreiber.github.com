@@ -11,7 +11,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 </ol>
 
 <div class="row" style="margin-bottom:20px;">
-	<div class="col-lg-3 col-lg-push-9 col-md-4 col-md-push-8 col-sm-6 col-sm-push-6 col-xs-12">
+	<div class="col-lg-3 col-lg-push-9 col-md-4 col-md-push-8 col-sm-12 col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<h3 style="margin-top:0;">Tags</h3>
@@ -29,7 +29,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 		</div>
 	</div>
-	<div class="col-lg-9 col-lg-pull-3 col-md-8 col-md-pull-4 col-sm-6 col-sm-pull-6 col-xs-12">
+	<div class="col-lg-9 col-lg-pull-3 col-md-8 col-md-pull-4 col-sm-12 col-xs-12">
 		{% for post in site.posts limit:1 %}
 			{% if post.image %}
 				<div style="height:300px;background-size:cover;background-repeat:no-repeat;background-position:50% 50%;background-image:url(/img/{{post.image}});"></div>
