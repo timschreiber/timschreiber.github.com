@@ -19,18 +19,22 @@ $(function(){
 	$(".blog-tag").click(function(e){
 		e.preventDefault();
 		var tag = $(this).attr("data-tag");
-		$(".pinstrap-item").each(function(){
+		$("#tag-name").html(tag);
+		$("#posts-tag-heading").show();
+		$(".pinstrap-item").hide().each(function(){
 			var pinstrapItem = $(this);
 			pinstrapItem.find(".post-tag").each(function(){
 				if($(this).attr("data-tag") == tag) {
 					pinstrapItem.show();
-				} else {
-					pinstrapItem.hide();
-				}
 			});
 		});
 		pinstrap.handleResize();
 	});
 	
+	$("#btn-show-all").click(function(e){
+		e.preventDefault();
+		$(".pinstrap-item").show();
+		pinstrap.handleResize();
+	});
 	
 });
