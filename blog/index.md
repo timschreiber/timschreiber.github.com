@@ -15,15 +15,17 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<h3 style="margin-top:0;">Tags</h3>
-				{% capture tags %}
-					{% for tag in site.tags %}
-						{{ tag[0] }}
+				<h4>
+					{% capture tags %}
+						{% for tag in site.tags %}
+							{{ tag[0] }}
+						{% endfor %}
+					{% endcapture %}
+					{% assign sortedtags = tags | split:' ' | sort %}
+					{% for tag in sortedtags %}
+						<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
 					{% endfor %}
-				{% endcapture %}
-				{% assign sortedtags = tags | split:' ' | sort %}
-				{% for tag in sortedtags %}
-					<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
-				{% endfor %}
+				</h4>
 			</div>
 		</div>
 	</div>
