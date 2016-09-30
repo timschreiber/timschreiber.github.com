@@ -14,12 +14,12 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
-				<h3 class="panel-title pull-left" style="margin-top:3px;">Tags</h3>
+				<h3 class="panel-title pull-left" style="margin-top:4px;">Tags</h3>
 				<div class="pull-right">
-					<button id="btn-tags" class="btn btn-default btn-xs"><span class="fa fa-chevron-down"></span></button>
+					<button id="btn-tags" class="btn btn-default btn-xs"><span class="fa fa-chevron-up"></span></button>
 				</div>
 			</div>
-			<div id="tags-panel-body" class="panel-body" style="display:none;">
+			<div id="tags-panel-body" class="panel-body">
 				<h4 style="line-height:150%;text-align:center;">
 					{% capture tags %}
 						{% for tag in site.tags %}
