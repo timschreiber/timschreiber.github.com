@@ -41,8 +41,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 				{% endfor %}						
 			</h5>
 			{% if post.description != "" %}
-				<p>{{post.description}}</p>
-				<p><a href="{{post.url}}" class="btn btn-primary">Read More</a></p>
+				<p>{{post.description}} <a href="{{post.url}}" class="btn btn-xs btn-default">Read More</a></p>
 			{% endif %}
 		{% endfor %}
 	</div>
