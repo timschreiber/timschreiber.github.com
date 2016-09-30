@@ -15,7 +15,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<h3 style="margin-top:0;">Tags</h3>
-				<h4 style="line-height:200%; font-size:16px;">
+				<h4 style="line-height:175%;">
 					{% capture tags %}
 						{% for tag in site.tags %}
 							{{ tag[0] }}
@@ -23,7 +23,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					{% endcapture %}
 					{% assign sortedtags = tags | split:' ' | sort %}
 					{% for tag in sortedtags %}
-						<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
+						<a href="/blog/tags/#{{ tag }}" class="badge alert-info" style="font-size:20px;">{{ tag }}</a>
 					{% endfor %}
 				</h4>
 			</div>
