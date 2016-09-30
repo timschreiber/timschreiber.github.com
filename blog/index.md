@@ -15,7 +15,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<h3 style="margin-top:0;">Tags</h3>
-				<h4 style="line-height:175%;">
+				<h4 style="line-height:150%;">
 					{% capture tags %}
 						{% for tag in site.tags %}
 							{{ tag[0] }}
