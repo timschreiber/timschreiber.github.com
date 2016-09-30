@@ -16,7 +16,8 @@ $(function(){
 		}
 	});
 	
-	$(".blog-tag").click(function(){
+	$(".blog-tag").click(function(e){
+		e.preventDefault();
 		var tag = $(this).attr("data-tag");
 		$(".pinstrap-item").each(function(){
 			var pinstrapItem = $(this);
