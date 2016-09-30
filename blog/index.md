@@ -12,8 +12,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 
 <div class="row">
 	<div class="col-xs-12">
-		<div class="panel panel-default clearfix">
-			<div class="panel-heading">
+		<div class="panel panel-default">
+			<div class="panel-heading clearfix">
 				<div class="pull-left">
 					<h3 class="panel-title">Tags</h3>
 				<div>
