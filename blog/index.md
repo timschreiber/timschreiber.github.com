@@ -10,7 +10,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<li>Blog</li>
 </ol>
 
-<div class="row" style="margin-bottom:20px;">
+<div class="row" style="padding-bottom:20px;border-bottom:1px solid #ddd;margin-bottom:20px;">
 	<div class="col-lg-3 col-lg-push-9 col-md-4 col-md-push-8 col-sm-12 col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-body">
