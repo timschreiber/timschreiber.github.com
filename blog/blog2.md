@@ -24,6 +24,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						<h3 class="top0"><a href="{{post.url}}">{{post.title}}</a></h3>
 					{% endif %}
 					
+					<h5><strong>{{ post.date | date : "%d-%b-%Y" }}</strong></h5>
+					
 					{% if post.description != "" %}
 						<p>{{post.description}}</p>
 					{% endif %}
