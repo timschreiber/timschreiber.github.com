@@ -14,9 +14,12 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Tags</h3>
+				<h3 class="panel-title" class="pull-left">Tags</h3>
+				<div class="pull-right">
+					<button id="btnTags" class="btn btn-default btn-xs"><span class="fa fa-chevron-down"></span></button>
+				</div>
 			</div>
-			<div class="panel-body">
+			<div class="panel-body" style="display:none;">
 				<h4 style="line-height:150%;text-align:center;">
 					{% capture tags %}
 						{% for tag in site.tags %}
@@ -25,7 +28,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					{% endcapture %}
 					{% assign sortedtags = tags | split:' ' | sort %}
 					{% for tag in sortedtags %}
-						<a href="/blog/tags/#{{ tag }}" class="badge alert-info" style="font-size:18px;" data-tag="{{ tag }}">{{ tag }}</a>
+						<a href="/blog/tags/#{{ tag }}" class="badge alert-info blog-tag" style="font-size:18px;" data-tag="{{ tag }}">{{ tag }}</a>
 					{% endfor %}
 				</h4>
 			</div>
@@ -45,7 +48,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						
 						<h6><strong>{{ post.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
 							{% for tag in post.tags %}
-								<a href="/blog/tags/#{{ tag }}" class="badge alert-info">{{ tag }}</a>
+								<a href="/blog/tags/#{{ tag }}" class="badge alert-info post-tag" data-tag="{{tag}}">{{ tag }}</a>
 							{% endfor %}						
 						</h6>
 						
