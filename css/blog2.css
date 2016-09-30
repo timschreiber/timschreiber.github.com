@@ -7,11 +7,12 @@ body {
 }
 
 .pinstrap-item .panel-body {
-	padding:5px;
+	padding:10px;
 }
 
-.pinstrap-item h3 {
-	margin-top:0;
+.pinstrap-item h3, .pinstrap-item p {
+	margin-top:10px;
+	margin-bottom:0;
 }
 
 @media (min-width:992px) {
