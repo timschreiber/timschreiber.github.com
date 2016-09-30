@@ -19,7 +19,7 @@ body {
 }
 
 .pinstrap-item h6 {
-	line-height:120%;
+	line-height:30px !important;
 }
 
 .pinstrap-item p {
