@@ -19,8 +19,11 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 				<div class="panel-body">
 					{% if post.image %}
 						<img src="/img/{{post.image}}" class="img-rounded" style="max-width:100%" />
+						<h3><a href="{{post.url}}">{{post.title}}</a></h3>
+					{% else %}
+						<h3 class="top0"><a href="{{post.url}}">{{post.title}}</a></h3>
 					{% endif %}
-					<h3><a href="{{post.url}}">{{post.title}}</a></h3>
+					
 					{% if post.description != "" %}
 						<p>{{post.description}}</p>
 					{% endif %}
