@@ -4,6 +4,7 @@ body {
 
 #pinstrap-container {
 	display:none;
+	margin-bottom:20px;
 }
 
 .pinstrap-item .panel-body {
