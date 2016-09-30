@@ -37,7 +37,10 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 </div>
 
 <div id="pinstrap-container" class="row">
-	<h3 id="posts-tag-heading">Posts with the <span id="tag-name"></span> Tag <small><a id="btn-show-all" href="#">Show All Posts</a></small></h3>
+	<div class="col-xs-12" id="posts-tag-heading">
+		<h3 class="pull-left">Tag: <span id="tag-name" style="font-weight:bold"></span></h3>
+		<h3 class="pull-right"><small><a id="btn-show-all" href="#">Show All Posts</a></small></h3>
+	</div>
 	{% for post in site.posts | sort: date | reverse %}
 		<div class="pinstrap-item">
 			<div class="panel panel-default">

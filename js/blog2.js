@@ -35,6 +35,7 @@ $(function(){
 	$("#btn-show-all").click(function(e){
 		e.preventDefault();
 		$(".pinstrap-item").show();
+		$("#posts-tag-heading").hide();
 		pinstrap.handleResize();
 	});
 	
