@@ -26,6 +26,7 @@ $(function(){
 			pinstrapItem.find(".post-tag").each(function(){
 				if($(this).attr("data-tag") == tag) {
 					pinstrapItem.show();
+				}
 			});
 		});
 		pinstrap.handleResize();
