@@ -39,10 +39,11 @@ ul.nav li.active a {
 	font-weight:700;
 }
 
-#contact-nav {
-  padding:14.5px 0;
+/* #contact-nav {
+  padding-top:14.5px;
+  padding-bottom:14.5px;
 }
-
+ */
 a.contact-nav-item {
   display:inline !important;
   padding:0 10.5px !important;
