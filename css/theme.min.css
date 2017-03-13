@@ -1006,7 +1006,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .navbar-right{float:right!important;margin-right:-15px}
 .navbar-right~.navbar-right{margin-right:0}
 }
-.navbar-default{background-color:rgba(255,255,255,.8);border-color:#eee}
+.navbar-default{background-color:rgba(255,255,255,.9);border-color:#eee}
 .navbar-default .navbar-brand{color:#842195}
 .navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#5f186b;background-color:transparent}
 .navbar-default .navbar-nav>li>a,.navbar-default .navbar-text{color:#9e9e9e}
