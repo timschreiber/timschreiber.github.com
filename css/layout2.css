@@ -39,6 +39,10 @@ ul.nav li.active a {
 	font-weight:700;
 }
 
+#contact-nav {
+	padding-top:14.5px;
+}
+
 .navbar-collapse.collapse.in #contact-nav {
   padding-left:5px;
   padding-bottom:10px;
