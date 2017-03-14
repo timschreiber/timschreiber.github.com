@@ -10,13 +10,17 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="row">
 			<div class="col-xs-12">
 				{% assign post1 = site.posts.first %}
-				{% if post1.image %}
-					<img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%" />
-				{% endif %}
-				<h1><a href="{{ post1.url }}">{{ post1.title }}</a></h1>
-				{% if post1.description != "" %}
-					<p>{{ post1.description }}</p>
-				{% endif %}
+				<div class="panel panel-default">
+					{% if post1.image %}
+						<img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%" />
+					{% endif %}
+					<div class="panel-body">
+						<h1><a href="{{ post1.url }}">{{ post1.title }}</a></h1>
+						{% if post1.description != "" %}
+							<p>{{ post1.description }}</p>
+						{% endif %}
+					</div>
+				</div>
 			</div>
 			{% for post2 in site.posts limit:3 offset:1 %}
 				<div class="col-xs-12 col-md-4">
