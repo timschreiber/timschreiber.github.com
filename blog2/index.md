@@ -23,8 +23,6 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					<p>{{ post1.description }}</p>
 				{% endif %}
 			</div>
-
-
 		</div>
 	</div>
 </div>
