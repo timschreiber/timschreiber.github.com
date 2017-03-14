@@ -25,9 +25,13 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 		</div>
 	</div>
-	{% for post2 in site.posts limit:3 offset:1 %}
-		<div class="col-xs-12 col-md-4">
-			<h3>{{ post2.title }}</h3>
+	<div class="col-xs-12 col-md-4">
+		<div class="row">
+			{% for post2 in site.posts limit:3 offset:1 %}
+				<div class="col-xs-12 col-md-4">
+					<h3>{{ post2.title }}</h3>
+				</div>
+			{% endfor %}
 		</div>
-	{% endfor %}
+	</div>
 </div>
