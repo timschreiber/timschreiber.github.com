@@ -23,17 +23,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					<p>{{ post1.description }}</p>
 				{% endif %}
 			</div>
-			{% for post2 in site.posts limit:3 offset:1 %}
-				<div class="col-xs-6 col-md-4">
-					{% if post2.image %}
-						<img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" />
-					{% endif %}
-					<h3><a href="{{ post2.url }}">{{ post2.title }}</a></h3>
-					{% if post2.description != "" %}
-						<p>{{ post2.description }}</p>
-					{% endif %}
-				</div>
-			{% end for %}
+
+
 		</div>
 	</div>
 </div>
