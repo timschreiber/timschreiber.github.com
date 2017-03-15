@@ -24,17 +24,13 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 			{% for post2 in site.posts limit:3 offset:1 %}
 				<div class="col-xs-12 col-md-4">
-					<div class="panel panel-default">
-						{% if post2.image %}
-							<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
-						{% endif %}
-						<div class="panel-body">
-							<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
-							{% if post2.description != "" %}
-								<p>{{ post2.description }}</p>
-							{% endif %}
-						</div>
-					</div>
+					{% if post2.image %}
+						<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
+					{% endif %}
+						<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
+						{% if post2.description != "" %}
+						<p><small>{{ post2.description }}</small></p>
+					{% endif %}
 				</div>
 			{% endfor %}
 		</div>
