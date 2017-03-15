@@ -12,10 +12,10 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 				{% assign post1 = site.posts.first %}
 				<div class="panel panel-default">
 					{% if post1.image %}
-						<img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%" />
+						<a href="{{ post1.url }}"><img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%" /></a>
 					{% endif %}
 					<div class="panel-body">
-						<h1><a href="{{ post1.url }}">{{ post1.title }}</a></h1>
+						<h2><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
 						{% if post1.description != "" %}
 							<p>{{ post1.description }}</p>
 						{% endif %}
@@ -26,10 +26,10 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 				<div class="col-xs-12 col-md-4">
 					<div class="panel panel-default">
 						{% if post2.image %}
-							<img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" />
+							<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
 						{% endif %}
 						<div class="panel-body">
-							<h3><a href="{{ post2.url }}">{{ post2.title }}</a></h3>
+							<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
 							{% if post2.description != "" %}
 								<p>{{ post2.description }}</p>
 							{% endif %}
