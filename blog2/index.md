@@ -17,7 +17,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					<div class="panel-body">
 						<h2 style="margin-top:0;"><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
 						<p><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:nowrap;">Read more...</a></p>
-						<div class="row hidden-xs hidden-sm" style="margin-top:20px;">
+						<div class="row hidden-xs hidden-sm" style="margin-top:30px;">
 						{% for post2 in site.posts limit:3 offset:1 %}
 							<div class="col-xs-12 col-md-4">
 								{% if post2.image %}
@@ -29,7 +29,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						{% endfor %}
 						</div>
 
-						<ul class="media-list hidden-md hidden-lg" style="margin-top:20px;">
+						<ul class="media-list hidden-md hidden-lg" style="margin-top:30px;">
 							{% for post4 in site.posts limit:3 offset:1 %}
 								<li class="media">
 									<div class="media-left">
