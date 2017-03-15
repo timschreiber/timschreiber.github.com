@@ -16,7 +16,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					{% endif %}
 					<div class="panel-body">
 						<h2><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
-						<p>{{ post1.description }} <a href="{{ post1.url }}">Read more...</a></p>
+						<p>{{ post1.description }} <a href="{{ post1.url }}" style="white-space:no-wrap;">Read more...</a></p>
 					</div>
 				</div>
 			</div>
@@ -26,7 +26,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
 					{% endif %}
 					<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
-					<p><small>{{ post2.description }} <a href="{{ post2.url }}">Read more...</a></small></p>
+					<p><small>{{ post2.description }} <a href="{{ post2.url }}" style="white-space:no-wrap;">Read more...</a></small></p>
 				</div>
 			{% endfor %}
 		</div>
@@ -42,9 +42,17 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-		<ul>
+		<ul class="media-list">
 			{% for post3 in site.posts offset:4 %}
-				<li><a href="{{ post3.url }}">{{ post3.title }}</a></li>
+				<li class="media">
+					<div class="media-left">
+						<a href="{{ post3.url }}"><img src="/img/{{ post3.image }}" /></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading"><a href="{{ post3.url }}">{{ post3.title }}</a></h4>
+						{{ post3.description }}
+					</div>
+				</li>
 			{% endfor %}
 		</ul>
 	</div>
