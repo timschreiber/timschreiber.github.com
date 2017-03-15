@@ -17,7 +17,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					<div class="panel-body">
 						<h2><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
 						<p><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:nowrap;">Read more...</a></p>
-						<div class="row">
+						<div class="row hidden-xs hidden-sm" style="margin-top:15px;">
 						{% for post2 in site.posts limit:3 offset:1 %}
 							<div class="col-xs-12 col-md-4">
 								{% if post2.image %}
@@ -28,6 +28,24 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 							</div>
 						{% endfor %}
 						</div>
+
+						<ul class="media-list hidden-md hidden-lg">
+							{% for post4 in site.posts limit:3 offset:1 %}
+								<li class="media">
+									<div class="media-left">
+										{% if post4.image %}
+											<div style="height:80px;width:80px;background-image:url(/img/{{ post4.image }});background-size:cover;background-position:50% 50%;"></div>
+										{% else %}
+											<div style="height:80px;width:80px;background-image:url(/img/post.jpg);background-size:cover;background-position:50% 50%;"></div>
+										{% endif %}
+									</div>
+									<div class="media-body">
+										<h4 class="media-heading"><small><a href="{{ post4.url }}">{{ post4.title }}</a></small></h4>
+										<small><strong>{{ post4.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post4.description }} <a href="{{ post4.url }}" style="white-space:nowrap;">Read more...</a></small>
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
 
 					</div>
 				</div>
