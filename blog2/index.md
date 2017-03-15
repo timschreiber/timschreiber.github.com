@@ -49,8 +49,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						<div style="height:64px;width:64px;background-image:url(/img/{{ post3.image }});background-size:cover;background-position:50% 50%;"></div>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading"><a href="{{ post3.url }}">{{ post3.title }}</a></h4>
-						{{ post3.description }}
+						<h4 class="media-heading"><small><a href="{{ post3.url }}">{{ post3.title }}</a></small></h4>
+						<small>{{ post3.description }}</small>
 					</div>
 				</li>
 			{% endfor %}
