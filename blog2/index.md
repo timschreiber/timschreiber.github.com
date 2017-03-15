@@ -45,8 +45,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<ul class="media-list">
 			{% for post3 in site.posts offset:4 %}
 				<li class="media">
-					<div class="media-left" style="width:64px;">
-						<div style="position:relative;overflow:hidden:padding-bottom:100%;">
+					<div class="media-left">
+						<div style="position:relative;width:64px;height:64px;">
 							<img src="/img/{{ post3.image }}" style="position:absolute;" />
 						</div>
 					</div>
