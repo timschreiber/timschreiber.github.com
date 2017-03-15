@@ -29,7 +29,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						{% endfor %}
 						</div>
 
-						<ul class="media-list hidden-md hidden-lg">
+						<ul class="media-list hidden-md hidden-lg" style="margin-top:15px;">
 							{% for post4 in site.posts limit:3 offset:1 %}
 								<li class="media">
 									<div class="media-left">
@@ -40,7 +40,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 										{% endif %}
 									</div>
 									<div class="media-body">
-										<h4 class="media-heading"><small><a href="{{ post4.url }}">{{ post4.title }}</a></small></h4>
+										<h4 class="media-heading"><a href="{{ post4.url }}">{{ post4.title }}</a></h4>
 										<small><strong>{{ post4.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post4.description }} <a href="{{ post4.url }}" style="white-space:nowrap;">Read more...</a></small>
 									</div>
 								</li>
