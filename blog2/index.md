@@ -16,7 +16,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					{% endif %}
 					<div class="panel-body">
 						<h2><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
-						<p>{{ post1.description }} <a href="{{ post1.url }}" style="white-space:no-wrap;">Read more...</a></p>
+						<p><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:no-wrap;">Read more...</a></p>
 					</div>
 				</div>
 			</div>
@@ -26,7 +26,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
 					{% endif %}
 					<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
-					<p><small>{{ post2.description }} <a href="{{ post2.url }}" style="white-space:no-wrap;">Read more...</a></small></p>
+					<p><small><strong>{{ post2.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post2.description }} <a href="{{ post2.url }}" style="white-space:no-wrap;">Read more...</a></small></p>
 				</div>
 			{% endfor %}
 		</div>
@@ -54,7 +54,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading"><small><a href="{{ post3.url }}">{{ post3.title }}</a></small></h4>
-						<small>{{ post3.description }}</small>
+						<small><strong>{{ post3.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post3.description }}</small>
 					</div>
 				</li>
 			{% endfor %}
