@@ -46,7 +46,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			{% for post3 in site.posts offset:4 %}
 				<li class="media">
 					<div class="media-left">
-						<div style="height:64px;width:64px;background-image:url(/img/{{ post3.image }});background-size:cover;background-position:50% 50%;"></div>
+						<div style="height:80px;width:80px;background-image:url(/img/{{ post3.image }});background-size:cover;background-position:50% 50%;"></div>
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading"><small><a href="{{ post3.url }}">{{ post3.title }}</a></small></h4>
