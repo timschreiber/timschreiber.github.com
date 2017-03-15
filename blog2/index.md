@@ -16,9 +16,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					{% endif %}
 					<div class="panel-body">
 						<h2><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
-						{% if post1.description != "" %}
-							<p>{{ post1.description }}</p>
-						{% endif %}
+						<p>{{ post1.description }} <a href="{{ post1.url }}">Read more...</a></p>
 					</div>
 				</div>
 			</div>
@@ -27,10 +25,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					{% if post2.image %}
 						<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
 					{% endif %}
-						<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
-						{% if post2.description != "" %}
-						<p><small>{{ post2.description }}</small></p>
-					{% endif %}
+					<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
+					<p><small>{{ post2.description }} <a href="{{ post2.url }}">Read more...</a></small></p>
 				</div>
 			{% endfor %}
 		</div>
