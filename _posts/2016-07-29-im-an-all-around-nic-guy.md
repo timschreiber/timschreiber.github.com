@@ -5,7 +5,7 @@ date: 2016-07-29
 layout: post2
 comments: true
 description: "After only seven short months, I am saying farewell to ZirMed and moving on to Kentucky Interactive, a wholly owned subsidiary of NIC. Kentucky Interactive operates Kentucky.gov as a collaborative effort with the Commonwealth of Kentucky."
-image: "im-an-all-around-nic-guy.jpg"
+image: "nic-view.jpg"
 color: "#C6B29B"
 tags:
 - work
