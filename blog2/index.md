@@ -17,7 +17,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					<div class="panel-body">
 						<h2><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
 						<p><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:nowrap;">Read more...</a></p>
-
+						<div class="row">
 						{% for post2 in site.posts limit:3 offset:1 %}
 							<div class="col-xs-12 col-md-4">
 								{% if post2.image %}
@@ -27,7 +27,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 								<p><small><strong>{{ post2.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post2.description }} <a href="{{ post2.url }}" style="white-space:nowrap;">Read more...</a></small></p>
 							</div>
 						{% endfor %}
-
+						</div>
 
 					</div>
 				</div>
