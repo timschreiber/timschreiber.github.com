@@ -17,18 +17,21 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					<div class="panel-body">
 						<h2><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
 						<p><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:nowrap;">Read more...</a></p>
+
+						{% for post2 in site.posts limit:3 offset:1 %}
+							<div class="col-xs-12 col-md-4">
+								{% if post2.image %}
+									<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
+								{% endif %}
+								<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
+								<p><small><strong>{{ post2.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post2.description }} <a href="{{ post2.url }}" style="white-space:nowrap;">Read more...</a></small></p>
+							</div>
+						{% endfor %}
+
+
 					</div>
 				</div>
 			</div>
-			{% for post2 in site.posts limit:3 offset:1 %}
-				<div class="col-xs-12 col-md-4">
-					{% if post2.image %}
-						<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
-					{% endif %}
-					<h4><a href="{{ post2.url }}">{{ post2.title }}</a></h4>
-					<p><small><strong>{{ post2.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post2.description }} <a href="{{ post2.url }}" style="white-space:nowrap;">Read more...</a></small></p>
-				</div>
-			{% endfor %}
 		</div>
 	</div>
 	<div class="col-xs-12 col-md-4">
