@@ -55,8 +55,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12 col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<h3 class="text-center"><img src="/img/timothy-p-schreiber-2.jpg" class="img-circle" width="33.33333%"/><br/>About Me</h3>
-				
+				<h3 class="text-center" style="margin-top:0;"><img src="/img/timothy-p-schreiber-2.jpg" class="img-circle" width="33.33333%"/><br/>Hi, I'm Tim.<br/><small>And I love to write code.</small></h3>
+				<p><small>Seriously, I can't believe they pay me to do it. I started programming at age eight and sold my first program when I was 13. Nowadays, I'm a Senior Full-Stack Developer at <a href="http://www.egov.com/who-we-serve/partners/kentucky" target="_blank">NIC (Kentucky Interactive)</a>. <a href="/about">Read more...</a></p>
 			</div>
 		</div>
 		<ul class="media-list">
