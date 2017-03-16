@@ -67,8 +67,8 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="clearfix">
-				<div class="pull-left"><h4 class="panel-title">Recent Articles</h4></div>
-				<div class="pull-right"><small><a href="/blog">View All</a></small></div>
+					<div class="pull-left"><h4 class="panel-title"><small>Recent Articles</small></h4></div>
+					<div class="pull-right"><small><a href="/blog">View All</a></small></div>
 				</div>
 			</div>
 			<div class="panel-body">
