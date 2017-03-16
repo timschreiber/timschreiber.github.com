@@ -10,22 +10,22 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="row">
 			<div class="col-xs-12">
 				{% assign post1 = site.posts.first %}
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h4 class="panel-title">Featured Article</h4>
 					</div>
 					{% if post1.image %}
-						<a href="{{ post1.url }}"><img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%" /></a>
+						<a href="{{ post1.url }}"><img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%;border-left:1px solid rgb(224,224,224);border-right:1px solid rgb(224,224,224);" /></a>
 					{% endif %}
 					<div class="panel-body">
 						<h2 style="margin-top:0;"><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
 						<p><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:nowrap;">Read more...</a></p>
 					</div>
-					<div class="panel-heading">
-						<h4 class="panel-title"><small>Related</small></h4>
+					<div class="panel-heading" style="margin-top:0;border-top:1px solid rgb(224,224,224);">
+					<h4 class="panel-title"><small><strong>Related</strong></small></h4>
 					</div>
 					<div class="panel-body">
-						<div class="row hidden-xs hidden-sm" style="margin-top:30px;">
+						<div class="row hidden-xs hidden-sm">
 						{% for post2 in site.posts limit:3 offset:1 %}
 							<div class="col-xs-12 col-md-4">
 								{% if post2.image %}
