@@ -6,15 +6,15 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 ---
 
 <div class="row">
-	<div class="col-xs-12 col-md-4 col-md-push-8">
-		<div class="panel panel-default">
+	<div class="col-xs-12 hidden-md hidden-lg">
+		<div class="panel panel-default hidden-xs hidden-sm">
 			<div class="panel-body" style="padding-bottom:5px;">
 				<h3 class="text-center" style="margin-top:0;"><img src="/img/timothy-p-schreiber-2.jpg" class="img-circle" width="33.33333%"/><br/>Hi, I'm Tim.<br/><small>And I love to write code.</small></h3>
 				<p><small>Seriously, I can't believe they pay me to do it. I started programming at age eight and sold my first program when I was 13. Nowadays, I work for <a href="http://www.egov.com/who-we-serve/partners/kentucky" target="_blank">NIC (Kentucky Interactive)</a> as a Senior Full-Stack Developer. <a href="/about">Read more...</a></small></p>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-md-8 col-md-pull-4">
+	<div class="col-xs-12 col-md-8">
 		<div class="row">
 			<div class="col-xs-12">
 				{% assign post1 = site.posts.first %}
@@ -65,7 +65,13 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-md-4">	
+	<div class="col-xs-12 col-md-4">
+		<div class="panel panel-default hidden-xs hidden-sm">
+			<div class="panel-body" style="padding-bottom:5px;">
+				<h3 class="text-center" style="margin-top:0;"><img src="/img/timothy-p-schreiber-2.jpg" class="img-circle" width="33.33333%"/><br/>Hi, I'm Tim.<br/><small>And I love to write code.</small></h3>
+				<p><small>Seriously, I can't believe they pay me to do it. I started programming at age eight and sold my first program when I was 13. Nowadays, I work for <a href="http://www.egov.com/who-we-serve/partners/kentucky" target="_blank">NIC (Kentucky Interactive)</a> as a Senior Full-Stack Developer. <a href="/about">Read more...</a></small></p>
+			</div>
+		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="clearfix">
