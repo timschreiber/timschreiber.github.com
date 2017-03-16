@@ -7,6 +7,7 @@ comments: true
 description: "I used to think StackOverflow was awesome &mdash; until I realized it's ruled by self-important overlords who ruthlessly wield their elevated privileges against newbie scum who dare enter their Q&amp;A empire."
 image: "beware-the-stackoverlords-2.jpg"
 color: "#5B1F04"
+featured: 0
 tags:
 - stack-overflow
 - rants
