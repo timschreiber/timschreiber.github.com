@@ -5,6 +5,7 @@ date: 2016-01-11
 layout: post
 comments: true
 description: "Powerball quick picks: are they truly random? Mine and others' observations say no. But thanks to the science of Quantum mechanics, it's now possible to generate truly random picks."
+featured: 0
 tags:
 - code
 - fun
