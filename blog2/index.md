@@ -4,10 +4,6 @@ title : "Blog"
 canonical : "http://timschreiber.com/blog2"
 description : "Timothy P. Schreiber's personal blog, dealing primarily with software development, but also dabbling in songwriting, food, and gardening from time to time."
 ---
-
-{% assign featuredPosts = site.posts | where_exp:"item", "item.featured > 0" %}
-{% assign regularPosts = site.Posts | where_exp:"item", "item.featured == 0" %}
-
 <div class="row">
 	<div class="col-xs-12 hidden-md hidden-lg">
 		<div class="panel panel-default">
@@ -20,6 +16,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12 col-md-8">
 		<div class="row">
 			<div class="col-xs-12">
+				{% assign featuredPosts = site.posts | where_exp:"item", "item.featured > 0" %}
 				{% assign post1 = featuredPosts.first %}
 				<div class="panel panel-default">
 					{% if post1.image %}
@@ -84,6 +81,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 			<div class="panel-body">
 				<ul class="media-list" style="margin-bottom:0;">
+					{% assign regularPosts = site.Posts | where_exp:"item", "item.featured == 0" %}
 					{% for post3 in regularPosts limit:4 %}
 						<li class="media">
 							<div class="media-left">
