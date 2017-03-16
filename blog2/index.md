@@ -53,18 +53,14 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		</div>
 	</div>
 	<div class="col-xs-12 col-md-4">
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- tsc-blog -->
-		<ins class="adsbygoogle"
-		     style="display:block"
-		     data-ad-client="ca-pub-5400005152506663"
-		     data-ad-slot="3867421392"
-		     data-ad-format="auto"></ins>
-		<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3 class="text-center"><img src="/img/timothy-p-schreiber-2.jpg" class="img-circle" width="33.33333%"/><br/>About Me</h3>
+				
+			</div>
+		</div>
 		<ul class="media-list">
-			{% for post3 in site.posts limit:5 offset:4 %}
+			{% for post3 in site.posts limit:4 offset:4 %}
 				<li class="media">
 					<div class="media-left">
 						{% if post3.image %}
