@@ -17,7 +17,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12 col-md-8">
 		<div class="row">
 			<div class="col-xs-12">
-				{% assign featuredPosts = site.posts | where featured > 0 %}
+				{% assign featuredPosts = site.posts | where_exp:"featured > 0" %}
 				
 				{% assign post1 = featuredPosts.first %}
 				<div class="panel panel-default">
