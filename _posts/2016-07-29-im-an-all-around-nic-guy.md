@@ -4,7 +4,7 @@ canonical: "http://timschreiber.com/2016/07/29/im-an-all-around-nic-guy/"
 date: 2016-07-29
 layout: post2
 comments: true
-description: "I just started working for Kentucky Interactive, a wholly owned subsidiary of NIC. Kentucky Interactive operates Kentucky.gov as a collaborative effort with the Commonwealth of Kentucky."
+description: "I'm now working for Kentucky Interactive, a wholly owned subsidiary of NIC. Kentucky Interactive operates Kentucky.gov as a collaborative effort with the Commonwealth of Kentucky."
 image: "nic-view.jpg"
 color: "#C6B29B"
 featured: 0
