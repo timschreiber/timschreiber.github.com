@@ -7,6 +7,7 @@ comments: true
 description: "Randori is a term borrowed from Japanese martial arts that describes freestyle, team-oriented coding practice; as opposed to the structured, individual exercise of kata."
 image: "randori-group-practice.svg"
 color: "#2196f3"
+featured: 0
 tags:
 - code-practice
 - software-craftsmanship
