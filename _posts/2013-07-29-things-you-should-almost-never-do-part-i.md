@@ -8,6 +8,7 @@ comments: true
 description: "I've been thinking about whether there's at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over."
 image: "things-you-should-almost-never-do-part-i.jpg"
 color: "#898883"
+featured: 0
 tags:
 - practices
 ---
