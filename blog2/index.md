@@ -80,7 +80,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 			<div class="panel-body">
 				<ul class="media-list" style="margin-bottom:0;">
-					{% for post3 in site.Posts limit:4 %}
+					{% for post3 in site.posts limit:4 %}
 						<li class="media">
 							<div class="media-left">
 								{% if post3.image %}
