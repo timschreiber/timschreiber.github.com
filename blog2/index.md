@@ -17,7 +17,9 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	<div class="col-xs-12 col-md-8">
 		<div class="row">
 			<div class="col-xs-12">
-				{% assign post1 = site.posts.first %}
+				{% assign featuredPosts = site.posts | where featured > 0 %}
+				
+				{% assign post1 = featuredPosts.first %}
 				<div class="panel panel-default">
 					{% if post1.image %}
 						<a href="{{ post1.url }}"><img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%;" /></a>
@@ -31,7 +33,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					</div>
 					<div class="panel-body">
 						<div class="row hidden-xs hidden-sm">
-						{% for post2 in site.posts limit:3 offset:1 %}
+						{% for post2 in featuredPosts limit:3 offset:1 %}
 							<div class="col-xs-12 col-md-4">
 								{% if post2.image %}
 									<a href="{{ post2.url }}"><img src="/img/{{ post2.image }}" class="img-rounded" style="max-width:100%" /></a>
@@ -43,7 +45,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						</div>
 
 						<ul class="media-list hidden-md hidden-lg" style="margin-bottom:0;">
-							{% for post4 in site.posts limit:3 offset:1 %}
+							{% for post4 in featuredPosts limit:3 offset:1 %}
 								<li class="media">
 									<div class="media-left">
 										{% if post4.image %}
