@@ -6,7 +6,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 ---
 
 <div class="row">
-	<div class="col-xs-12 col-md-4 div-md-push-8">
+	<div class="col-xs-12 col-md-4 col-md-push-8">
 		<div class="panel panel-default">
 			<div class="panel-body" style="padding-bottom:5px;">
 				<h3 class="text-center" style="margin-top:0;"><img src="/img/timothy-p-schreiber-2.jpg" class="img-circle" width="33.33333%"/><br/>Hi, I'm Tim.<br/><small>And I love to write code.</small></h3>
