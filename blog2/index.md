@@ -10,7 +10,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		<div class="row">
 			<div class="col-xs-12">
 				{% assign post1 = site.posts.first %}
-				<div class="panel panel-primary">
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">Featured Article</h4>
 					</div>
