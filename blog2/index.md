@@ -11,9 +11,6 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			<div class="col-xs-12">
 				{% assign post1 = site.posts.first %}
 				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">Featured Article</h4>
-					</div>
 					{% if post1.image %}
 						<a href="{{ post1.url }}"><img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%;" /></a>
 					{% endif %}
@@ -69,7 +66,10 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h4 class="panel-title">Recent Articles</h4>
+				<div class="clearfix">
+				<div class="pull-left"><h4 class="panel-title">Recent Articles</h4></div>
+				<div class="pull-right"><small><a href="/blog">View All</a></small></div>
+				</div>
 			</div>
 			<div class="panel-body">
 				<ul class="media-list">
@@ -89,9 +89,6 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						</li>
 					{% endfor %}
 				</ul>
-			</div>
-			<div class="panel-footer text-center">
-				<a href="/blog" class="btn btn-default btn-xs">View All</a>
 			</div>
 		</div>
 	</div>
