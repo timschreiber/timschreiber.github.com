@@ -81,7 +81,6 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			</div>
 			<div class="panel-body">
 				<ul class="media-list" style="margin-bottom:0;">
-					{% assign regularPosts = site.Posts | where_exp:"item", "item.featured == 0" %}
 					{% for post3 in site.Posts limit:4 %}
 						<li class="media">
 							<div class="media-left">
