@@ -4,7 +4,7 @@ canonical: "http://timschreiber.com/2016/07/19/profanity-and-professionalism/"
 date: 2016-07-19
 layout: post2
 comments: true
-description: "I never really worried about profanity in the workplace until I worked for a company that didn't just allow profanity in the office, but actually seemed to embrace it as part of the culture. Then I began to seriously consider the topic and its relevance to professionalism and software craftsmanship."
+description: "I never really worried about profanity in the workplace until I worked for a company that didn't just allow profanity in the office, but actually seemed to embrace it as part of the culture."
 image: "profanity-and-professionalism.jpg"
 color: "#C6B29B"
 featured: 0
