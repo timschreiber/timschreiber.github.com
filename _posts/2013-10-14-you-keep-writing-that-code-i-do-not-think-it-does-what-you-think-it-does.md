@@ -5,6 +5,7 @@ canonical: "http://timschreiber.com/2013/10/14/you-keep-writing-that-code-i-do-n
 author: "Tim"
 comments: true
 description: "Good for you that you used a StringBuilder. But you completely missed the point of using a StringBuilder. Even worse that you're concatenating SQL like this..."
+featured: 0
 tags:
 - code
 - c-sharp
