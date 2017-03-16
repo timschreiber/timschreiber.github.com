@@ -59,22 +59,29 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 				<p><small>Seriously, I can't believe they pay me to do it. I started programming at age eight and sold my first program when I was 13. Nowadays, I work for <a href="http://www.egov.com/who-we-serve/partners/kentucky" target="_blank">NIC (Kentucky Interactive)</a> as a Senior Full-Stack Developer. <a href="/about">Read more...</a></small></p>
 			</div>
 		</div>
-		<ul class="media-list">
-			{% for post3 in site.posts limit:4 offset:4 %}
-				<li class="media">
-					<div class="media-left">
-						{% if post3.image %}
-							<div style="height:80px;width:80px;background-image:url(/img/{{ post3.image }});background-size:cover;background-position:50% 50%;"></div>
-						{% else %}
-							<div style="height:80px;width:80px;background-image:url(/img/post.jpg);background-size:cover;background-position:50% 50%;"></div>
-						{% endif %}
-					</div>
-					<div class="media-body">
-						<h4 class="media-heading"><small><a href="{{ post3.url }}">{{ post3.title }}</a></small></h4>
-						<small><strong>{{ post3.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post3.description }} <a href="{{ post3.url }}" style="white-space:nowrap;">Read more...</a></small>
-					</div>
-				</li>
-			{% endfor %}
-		</ul>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">More Articles</h4>
+			</div>
+			<div class="panel-body">
+				<ul class="media-list">
+					{% for post3 in site.posts limit:4 offset:4 %}
+						<li class="media">
+							<div class="media-left">
+								{% if post3.image %}
+									<div style="height:80px;width:80px;background-image:url(/img/{{ post3.image }});background-size:cover;background-position:50% 50%;"></div>
+								{% else %}
+									<div style="height:80px;width:80px;background-image:url(/img/post.jpg);background-size:cover;background-position:50% 50%;"></div>
+								{% endif %}
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading"><small><a href="{{ post3.url }}">{{ post3.title }}</a></small></h4>
+								<small><strong>{{ post3.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post3.description }} <a href="{{ post3.url }}" style="white-space:nowrap;">Read more...</a></small>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
