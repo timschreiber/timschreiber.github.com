@@ -5,6 +5,7 @@ canonical: "http://timschreiber.com/2013/07/28/welcome-to-my-new-improved-whatev
 author: "Tim"
 comments: true
 description: "Welcome to the brand spankin' new timschreiber.com. I've been using WordPress for some side projects lately and decided it was a great time to consolidate my blog and r&eacute;sum&eacute; sites into one. Not a lot has changed in terms of..."
+featured: 0
 tags:
 - this-site
 ---
