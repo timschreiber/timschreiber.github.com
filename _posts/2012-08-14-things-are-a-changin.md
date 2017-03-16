@@ -5,6 +5,7 @@ canonical: "http://timschreiber.com/2012/08/14/things-are-a-changin/"
 author: "Tim"
 comments: true
 description: "Holy crap, I found my blog again. A lot has been going on the past couple of months that have detracted me from my side projects and blog posting. First and foremost has been my job hunt. &quot;Wait, what?&quot; some..."
+featured: 0
 ---
 
 Holy crap, I found my blog again. A lot has been going on the past couple of months that have detracted me from my side projects and blog posting. First and foremost has been my job hunt.
