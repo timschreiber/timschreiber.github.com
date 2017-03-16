@@ -6,7 +6,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 ---
 
 {% assign featuredPosts = site.posts | where_exp:"item", "item.featured > 0" %}
-{% assign regularPosts = site.Posts | where_exp:"item", "item.featured < 1" %}
+{% assign regularPosts = site.Posts | where:"featured", "" %}
 
 <div class="row">
 	<div class="col-xs-12 hidden-md hidden-lg">
