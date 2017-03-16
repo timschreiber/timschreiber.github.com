@@ -42,7 +42,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						{% endfor %}
 						</div>
 
-						<ul class="media-list hidden-md hidden-lg" style="margin-top:30px;">
+						<ul class="media-list hidden-md hidden-lg" style="margin-bottom:0;">
 							{% for post4 in site.posts limit:3 offset:1 %}
 								<li class="media">
 									<div class="media-left">
@@ -80,7 +80,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 				</div>
 			</div>
 			<div class="panel-body">
-				<ul class="media-list">
+				<ul class="media-list" style="margin-bottom:0;">
 					{% for post3 in site.posts limit:4 offset:4 %}
 						<li class="media">
 							<div class="media-left">
