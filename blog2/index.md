@@ -15,11 +15,11 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 						<h4 class="panel-title">Featured Article</h4>
 					</div>
 					{% if post1.image %}
-						<a href="{{ post1.url }}"><img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%;border-left:1px solid rgb(224,224,224);border-right:1px solid rgb(224,224,224);" /></a>
+						<a href="{{ post1.url }}"><img src="/img/{{ post1.image }}" class="img-rounded" style="max-width:100%;" /></a>
 					{% endif %}
 					<div class="panel-body">
 						<h2 style="margin-top:0;"><a href="{{ post1.url }}">{{ post1.title }}</a></h2>
-						<p><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:nowrap;">Read more...</a></p>
+						<p style="margin-bottom:0;"><strong>{{ post1.date | date : "%d-%b-%Y" }}</strong> &mdash; {{ post1.description }} <a href="{{ post1.url }}" style="white-space:nowrap;">Read more...</a></p>
 					</div>
 					<div class="panel-heading" style="margin-top:0;border-top:1px solid rgb(224,224,224);">
 					<h4 class="panel-title"><small><strong>Related</strong></small></h4>
