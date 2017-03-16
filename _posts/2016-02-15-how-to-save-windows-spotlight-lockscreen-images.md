@@ -7,6 +7,7 @@ author: "Tim"
 comments: true
 image: "how-to-save-windows-spotlight-lockscreen-images.jpg"
 color: "#3B2819"
+featured: 0
 tags:
 - windows-10
 - tips
