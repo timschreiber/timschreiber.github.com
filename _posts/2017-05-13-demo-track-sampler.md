@@ -4,7 +4,7 @@ canonical: "http://timschreiber.com/2017/05/13/demo-track-sampler/"
 date: 2017-05-13
 layout: post2
 comments: true
-description: "One of my earlist bucket list items is to release an album. I'm checking that one off my list."
+description: "One of my earlist bucket list items is to release an album. I'm checking that one off my list. Have a listen to the first five demo tracks!"
 image: "ts-ep-cover-1.jpg"
 color: "#FEAD8F"
 featured: 0
