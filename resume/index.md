@@ -82,7 +82,9 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 			</div>
 			<div><strong>Senior Software Developer</strong></div>
 			<ul>
-				<li>Developing a single sign-on and access control system for multiple applications and APIs.</li>
+				<li>Architect and lead developer on a single sign-on and access control system for multiple applications and APIs.</li>
+				<li>Maintenance and new feature development for a payment processing framework.</li>
+				<li>Maintenance of other applications as required.</li>
 			</ul>
 		</div>
 
