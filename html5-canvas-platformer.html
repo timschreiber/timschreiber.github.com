@@ -20,190 +20,239 @@
         </style>
     </head>
     <body>
-    <h1>HTML5 Canvas Platformer<br/><small>(a work in progress)</small></h1>
-    <h3>Move: <span class="mono">[<-] [->]</span></h3>
-    <h3>Jump: <span class="mono">[SPACE]</span></h3>
-    <div id="canvas-container">
-        <canvas id="canvas"></canvas>
-    </div>
-    <script>
-        var CANVAS_WIDTH = 768;
-        var CANVAS_HEIGHT = 432;
-        var DEFAULT_PLAYER_WIDTH = 16;
-        var DEFAULT_PLAYER_HEIGHT = 16;
-        var DEFAULT_PLAYER_SPEED = 4;
-        var DEFAULT_PLAYER_FRICTION = 0.8;
-        var DEFAULT_PLAYER_GRAVITY = 0.4;
-        var DEFAULT_BOX_THICKNESS = 16;
-    
-        (function(){
-            var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-            window.requestAnimationFrame = requestAnimationFrame;
-
-            var canvas;
-            var context;
-            var player;
-            var keys = [];
-            var boxes = [];
-            var gradient;
-            
-            window.addEventListener("load", function(){
-                start();
-            });
-            
-            document.body.addEventListener("keydown", function(e){
-                keys[e.keyCode] = true;
-            });
-            
-            document.body.addEventListener("keyup", function(e){
-                keys[e.keyCode] = false;
-            });
-            
-            function start(){
-                canvas = document.getElementById("canvas");
-                context = canvas.getContext("2d");
-                canvas.width = CANVAS_WIDTH;
-                canvas.height = CANVAS_HEIGHT;
-                gradient = context.createLinearGradient(CANVAS_WIDTH / 2, 0, CANVAS_WIDTH / 2, CANVAS_HEIGHT);
-                gradient.addColorStop(0, "#29b6f6");
-                gradient.addColorStop(1, "#b3e5fc");
-
-                player = {
-                    x: 32,
-                    y: CANVAS_HEIGHT * 0.75,
-                    width: DEFAULT_PLAYER_WIDTH,
-                    height: DEFAULT_PLAYER_HEIGHT,
-                    speed: DEFAULT_PLAYER_SPEED,
-                    velX: 0,
-                    velY: 0,
-                    friction: DEFAULT_PLAYER_FRICTION,
-                    gravity: DEFAULT_PLAYER_GRAVITY,
-                    jumping: false,
-                    grounded: false,
-                    color: "#e53935"
-                };
-                
-                boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS * 2, color:"#795548"});
-                boxes.push({x:DEFAULT_BOX_THICKNESS * 23, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS * 2, color:"#795548"});
-
-                boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS, color:"#4caf50"});
-                boxes.push({x:DEFAULT_BOX_THICKNESS * 23, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS, color:"#4caf50"});
-
-                boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11 , width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS * 8, color:"#f57f17"});
-                boxes.push({x:DEFAULT_BOX_THICKNESS * 4, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7, width:DEFAULT_BOX_THICKNESS * 10, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
-                boxes.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 4, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7, width:DEFAULT_BOX_THICKNESS * 2, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
-                boxes.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11, width:DEFAULT_BOX_THICKNESS * 1, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
-
-                update();
-            }
-            
-            function update(){
-                if(keys[32] === true){
-                    // space
-                    if(!player.jumping && player.grounded){
-                        player.jumping = true;
-                        player.grounded = false;
-                        player.velY = -player.speed * 2;
-                    }
-                }
-                
-                player.velX = 0;
-                
-                if(keys[39] === true){
-                    // right arrow
-                    if(player.velX < player.speed){
-                        player.velX++;
-                    }
-                }
-                
-                if(keys[37] === true){
-                    // left arrow
-                    if(player.velX > -player.speed){
-                        player.velX--;
-                    }
-                }
-
-                player.velX *= (player.friction * player.speed);
-                player.velY += player.gravity;
-                
-                context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-                context.fillStyle = gradient;
-                context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-                
-                player.grounded = false;
-                for(var i = 0; i < boxes.length; i++) {
-                    context.fillStyle = boxes[i].color;
-                    context.fillRect(boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
-                    var dir = colCheck(player, boxes[i]);
-                    if(dir === "l" || dir === "r"){
-                        player.velX = 0;
-                        player.jumping = false;
-                    } else if(dir === "b"){
-                        player.grounded = true;
-                        player.jumping = false;
-                    } else if(dir === "t"){
-                        player.velY *= -1;
-                    }
-                }
-                
-                if(player.grounded) {
-                    player.velY = 0;
-                }
-                
-                player.x += player.velX;
-                player.y += player.velY;
-                
-                if(player.x >= CANVAS_WIDTH || player.x <= -player.width || player.y >= CANVAS_HEIGHT){
-                    die();
-                } else {
-                    context.fillStyle = player.color;
-                    context.fillRect(player.x, player.y, player.width, player.height);
-                    
-                    requestAnimationFrame(update);
-                }
-            }
-            
-            function die(){
-                start();
-            }
-
-            function colCheck(shapeA, shapeB) {
-                // get the vectors to check against
-                var vX = (shapeA.x + (shapeA.width / 2)) - (shapeB.x + (shapeB.width / 2));
-                var vY = (shapeA.y + (shapeA.height / 2)) - (shapeB.y + (shapeB.height / 2));
-                    // add the half widths and half heights of the objects
-                var hWidths = (shapeA.width / 2) + (shapeB.width / 2);
-                var hHeights = (shapeA.height / 2) + (shapeB.height / 2);
-                var colDir = null;
-             
-                // if the x and y vector are less than the half width or half height, they we must be inside the object, causing a collision
-                if (Math.abs(vX) < hWidths && Math.abs(vY) < hHeights) {
-                    // figures out on which side we are colliding (top, bottom, left, or right)
-                    var oX = hWidths - Math.abs(vX);
-                    var oY = hHeights - Math.abs(vY);
-                    if (oX >= oY) {
-                        if (vY > 0) {
-                            colDir = "t";
-                            shapeA.y += oY;
-                        } else {
-                            colDir = "b";
-                            shapeA.y -= oY;
-                        }
-                    } else {
-                        if (vX > 0) {
-                            colDir = "l";
-                            shapeA.x += oX;
-                        } else {
-                            colDir = "r";
-                            shapeA.x -= oX;
-                        }
-                    }
-                }
-                return colDir;
-            }
-            
-        })();
+        <h1>HTML5 Canvas Platformer<br/><small>(a work in progress)</small></h1>
+        <h3>Move: <span class="mono">[<-] [->]</span></h3>
+        <h3>Jump: <span class="mono">[SPACE]</span></h3>
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <script>
+            var CANVAS_WIDTH = 768;
+            var CANVAS_HEIGHT = 432;
+            var DEFAULT_PLAYER_WIDTH = 16;
+            var DEFAULT_PLAYER_HEIGHT = 16;
+            var DEFAULT_PLAYER_SPEED = 4;
+            var DEFAULT_PLAYER_FRICTION = 0.8;
+            var DEFAULT_PLAYER_GRAVITY = 0.4;
+            var DEFAULT_BOX_THICKNESS = 16;
         
-    </script>
+            (function(){
+                var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+                window.requestAnimationFrame = requestAnimationFrame;
+
+                var canvas;
+                var context;
+                var player;
+                var keys = [];
+                var boxes = [];
+                var enemies = [];
+                var coins = [];
+                var gradient;
+                
+                window.addEventListener("load", function(){
+                    start();
+                });
+                
+                document.body.addEventListener("keydown", function(e){
+                    keys[e.keyCode] = true;
+                });
+                
+                document.body.addEventListener("keyup", function(e){
+                    keys[e.keyCode] = false;
+                });
+                
+                function start(){
+                    canvas = document.getElementById("canvas");
+                    context = canvas.getContext("2d");
+                    canvas.width = CANVAS_WIDTH;
+                    canvas.height = CANVAS_HEIGHT;
+                    gradient = context.createLinearGradient(CANVAS_WIDTH / 2, 0, CANVAS_WIDTH / 2, CANVAS_HEIGHT);
+                    gradient.addColorStop(0, "#29b6f6");
+                    gradient.addColorStop(1, "#b3e5fc");
+
+                    player = {
+                        x: 32,
+                        y: CANVAS_HEIGHT * 0.75,
+                        width: DEFAULT_PLAYER_WIDTH,
+                        height: DEFAULT_PLAYER_HEIGHT,
+                        speed: 4,
+                        velX: 0,
+                        velY: 0,
+                        friction: DEFAULT_PLAYER_FRICTION,
+                        gravity: DEFAULT_PLAYER_GRAVITY,
+                        jumping: false,
+                        grounded: false,
+                        color: "#fff"
+                    };
+                    
+                    // dirt blocks
+                    boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS * 2, color:"#795548"});
+                    boxes.push({x:DEFAULT_BOX_THICKNESS * 23, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS * 2, color:"#795548"});
+                    
+                    // grass blocks
+                    boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS, color:"#4caf50"});
+                    boxes.push({x:DEFAULT_BOX_THICKNESS * 23, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS, color:"#4caf50"});
+                    
+                    // brick blocks
+                    boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11 , width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS * 8, color:"#f57f17"});
+                    boxes.push({x:DEFAULT_BOX_THICKNESS * 4, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7, width:DEFAULT_BOX_THICKNESS * 10, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
+                    boxes.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 4, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7, width:DEFAULT_BOX_THICKNESS * 2, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
+                    boxes.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11, width:DEFAULT_BOX_THICKNESS * 1, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
+                    
+                    // enemies
+                    enemies.push({x:DEFAULT_BOX_THICKNESS * 9, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#e53935", alive: true});
+                    enemies.push({x:DEFAULT_BOX_THICKNESS * 30, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 4, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#e53935", alive: true});
+
+                    // coins
+                    coins.push({x: DEFAULT_BOX_THICKNESS * 20, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#ffeb3b", alive: true});
+                    coins.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 3, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#ffeb3b", alive: true});
+                    coins.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 15, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#ffeb3b", alive: true});
+                    
+                    update();
+                }
+                
+                function update(){
+                    var isDying = false;
+                
+                    if(keys[32] === true){
+                        // space
+                        if(!player.jumping && player.grounded){
+                            player.jumping = true;
+                            player.grounded = false;
+                            player.velY = -player.speed * 2;
+                        }
+                    }
+                    
+                    player.velX = 0;
+                    
+                    if(keys[39] === true){
+                        // right arrow
+                        if(player.velX < player.speed){
+                            player.velX++;
+                        }
+                    }
+                    
+                    if(keys[37] === true){
+                        // left arrow
+                        if(player.velX > -player.speed){
+                            player.velX--;
+                        }
+                    }
+
+                    player.velX *= (player.friction);
+                    player.velY += player.gravity;
+                    
+                    context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+                    context.fillStyle = gradient;
+                    context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+                    
+                    player.grounded = false;
+                    for(var i = 0; i < boxes.length; i++) {
+                        context.fillStyle = boxes[i].color;
+                        context.fillRect(boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
+                        var dir = colCheck(player, boxes[i]);
+                        if(dir === "l" || dir === "r"){
+                            player.velX = 0;
+                            player.jumping = false;
+                        } else if(dir === "b"){
+                            player.grounded = true;
+                            player.jumping = false;
+                        } else if(dir === "t"){
+                            player.velY *= -1;
+                        }
+                    }
+                    
+                    for(var i = enemies.length - 1; i >= 0; i--) {
+                        if(enemies[i].alive === true){
+                            var dir = colCheck(player, enemies[i]);
+                            if(dir != null){
+                                if(dir === "b"){
+                                    enemies[i].alive = false;
+                                } else {
+                                    isDying = true;
+                                }
+                            }
+                        }
+                        if(enemies[i].alive === true){
+                            context.fillStyle = enemies[i].color;
+                            context.fillRect(enemies[i].x, enemies[i].y, enemies[i].width, enemies[i].height);
+                        }
+                    }
+                    
+                    for(var i = coins.length - 1; i >= 0; i--){
+                        if(coins[i].alive === true){
+                            var dir = colCheck(player, coins[i]);
+                            if(dir != null) {
+                                coins[i].alive = false;
+                            }
+                        }
+                        if(coins[i].alive === true){
+                            context.fillStyle = coins[i].color;
+                            context.fillRect(coins[i].x, coins[i].y, coins[i].width, coins[i].height);
+                        }
+                    }
+                    
+                    if(player.grounded) {
+                        player.velY = 0;
+                    }
+                    
+                    player.x += player.velX * player.speed;
+                    player.y += player.velY;
+                    
+                    if(player.x >= CANVAS_WIDTH || player.x <= -player.width || player.y >= CANVAS_HEIGHT){
+                        isDying = true;
+                    }
+
+                    if(isDying) {
+                        die();
+                    } else {
+                        context.fillStyle = player.color;
+                        context.fillRect(player.x, player.y, player.width, player.height);
+                        
+                        requestAnimationFrame(update);
+                    }
+                }
+                
+                function die(){
+                    start();
+                }
+
+                function colCheck(shapeA, shapeB) {
+                    // get the vectors to check against
+                    var vX = (shapeA.x + (shapeA.width / 2)) - (shapeB.x + (shapeB.width / 2));
+                    var vY = (shapeA.y + (shapeA.height / 2)) - (shapeB.y + (shapeB.height / 2));
+                        // add the half widths and half heights of the objects
+                    var hWidths = (shapeA.width / 2) + (shapeB.width / 2);
+                    var hHeights = (shapeA.height / 2) + (shapeB.height / 2);
+                    var colDir = null;
+                 
+                    // if the x and y vector are less than the half width or half height, they we must be inside the object, causing a collision
+                    if (Math.abs(vX) < hWidths && Math.abs(vY) < hHeights) {
+                        // figures out on which side we are colliding (top, bottom, left, or right)
+                        var oX = hWidths - Math.abs(vX);
+                        var oY = hHeights - Math.abs(vY);
+                        if (oX >= oY) {
+                            if (vY > 0) {
+                                colDir = "t";
+                                shapeA.y += oY;
+                            } else {
+                                colDir = "b";
+                                shapeA.y -= oY;
+                            }
+                        } else {
+                            if (vX > 0) {
+                                colDir = "l";
+                                shapeA.x += oX;
+                            } else {
+                                colDir = "r";
+                                shapeA.x -= oX;
+                            }
+                        }
+                    }
+                    return colDir;
+                }
+                
+            })();
+        </script>
     </body>
 </html>
