@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,8 +30,8 @@
         <script>
             var CANVAS_WIDTH = 768;
             var CANVAS_HEIGHT = 432;
-            var DEFAULT_PLAYER_WIDTH = 16;
-            var DEFAULT_PLAYER_HEIGHT = 16;
+            var DEFAULT_PLAYER_WIDTH = 32;
+            var DEFAULT_PLAYER_HEIGHT = 32;
             var DEFAULT_PLAYER_SPEED = 4;
             var DEFAULT_PLAYER_FRICTION = 0.8;
             var DEFAULT_PLAYER_GRAVITY = 0.4;
@@ -48,6 +49,11 @@
                 var enemies;
                 var coins;
                 var gradient;
+
+                var playerSprites;
+                var enemySprites16;
+                var enemySprites32;
+                var coinSprites;
                 
                 window.addEventListener("load", function(){
                     start();
@@ -72,8 +78,11 @@
 					keys = [];
 					boxes = [];
 					enemies = [];
-					coins = [];
+                    coins = [];
 
+                    playerSprites = new Image();
+                    playerSprites.src = "player-sprites.png";
+                    
                     player = {
                         x: 32,
                         y: CANVAS_HEIGHT * 0.75,
@@ -86,7 +95,12 @@
                         gravity: DEFAULT_PLAYER_GRAVITY,
                         jumping: false,
                         grounded: false,
-                        color: "#fff"
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 64,
+                        negSpriteY: 0,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0
                     };
                     
                     // dirt blocks
@@ -126,9 +140,9 @@
                     // brick blocks
                     boxes.push({
 						x: 0,
-						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 14,
 						width: DEFAULT_BOX_THICKNESS,
-						height: DEFAULT_BOX_THICKNESS * 8,
+						height: DEFAULT_BOX_THICKNESS * 11,
 						color: "#f57f17"
 					});
 					
@@ -149,21 +163,39 @@
 					});
 					
                     boxes.push({
-						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10,
+						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 11,
 						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
-						width: DEFAULT_BOX_THICKNESS * 1,
+						width: DEFAULT_BOX_THICKNESS * 2,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#f57f17"
+					});
+
+                    boxes.push({
+						x: 0,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 15,
+						width: DEFAULT_BOX_THICKNESS * 32,
 						height: DEFAULT_BOX_THICKNESS,
 						color: "#f57f17"
 					});
                     
                     // enemies
+                    enemySprites16 = new Image();
+                    enemySprites16.src = "enemy-sprites-16.png";
+                    enemySprites32 = new Image();
+                    enemySprites32.src = "enemy-sprites-32.png";
+                    
                     enemies.push({
 						x: DEFAULT_BOX_THICKNESS * 9,
-						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8,
-						width: DEFAULT_BOX_THICKNESS,
-						height: DEFAULT_BOX_THICKNESS,
-						color: "#e53935",
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 9,
+						width: 16,
+						height: 16,
 						alive: true,
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 16,
+                        negSpriteY: 0,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0,
 						animate: true,
 						minX: DEFAULT_BOX_THICKNESS * 4,
 						maxX: DEFAULT_BOX_THICKNESS * 13,
@@ -171,44 +203,239 @@
 					});
 					
                     enemies.push({
-						x: DEFAULT_BOX_THICKNESS * 30,
-						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 4,
-						width: DEFAULT_BOX_THICKNESS,
-						height: DEFAULT_BOX_THICKNESS,
-						color: "#e53935",
+						x: DEFAULT_BOX_THICKNESS * 35,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 5,
+						width: 16,
+						height: 16,
 						alive: true,
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 16,
+                        negSpriteY: 0,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0,
 						animate: true,
 						minX: DEFAULT_BOX_THICKNESS * 23,
 						maxX: DEFAULT_BOX_THICKNESS * 39,
 						velX: 1
 					});
 
+                    enemies.push({
+						x: DEFAULT_BOX_THICKNESS * 31,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 5,
+						width: 16,
+						height: 16,
+						alive: true,
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 16,
+                        negSpriteY: 0,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0,
+						animate: true,
+						minX: DEFAULT_BOX_THICKNESS * 29,
+						maxX: DEFAULT_BOX_THICKNESS * 33,
+						velX: -.66667
+					});
+                    
+                    enemies.push({
+                        x: DEFAULT_BOX_THICKNESS,
+                        y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 17,
+                        width: 32,
+                        height: 32,
+                        alive: true,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0,
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 64,
+                        negSpriteY: 0,
+                        animate: true,
+                        minX: 0,
+                        maxX: DEFAULT_BOX_THICKNESS * 3,
+                        velX: -.43
+                    });
+                    
+                    enemies.push({
+                        x: DEFAULT_BOX_THICKNESS * 5,
+                        y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 17,
+                        width: 32,
+                        height: 32,
+                        alive: true,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 32,
+                        posSpriteX: 32,
+                        posSpriteY: 32,
+                        negSpriteX: 64,
+                        negSpriteY: 32,
+                        animate: true,
+                        minX: DEFAULT_BOX_THICKNESS * 4,
+                        maxX: DEFAULT_BOX_THICKNESS * 7,
+                        velX: .57
+                    });
+
+                    enemies.push({
+                        x: DEFAULT_BOX_THICKNESS * 9,
+                        y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 17,
+                        width: 32,
+                        height: 32,
+                        alive: true,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0,
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 64,
+                        negSpriteY: 0,
+                        animate: true,
+                        minX: DEFAULT_BOX_THICKNESS * 8,
+                        maxX: DEFAULT_BOX_THICKNESS * 11,
+                        velX: -.61
+                    });
+
+                    enemies.push({
+                        x: DEFAULT_BOX_THICKNESS * 13,
+                        y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 17,
+                        width: 32,
+                        height: 32,
+                        alive: true,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 32,
+                        posSpriteX: 32,
+                        posSpriteY: 32,
+                        negSpriteX: 64,
+                        negSpriteY: 32,
+                        animate: true,
+                        minX: DEFAULT_BOX_THICKNESS * 12,
+                        maxX: DEFAULT_BOX_THICKNESS * 15,
+                        velX: .41
+                    });
+
+                    enemies.push({
+                        x: DEFAULT_BOX_THICKNESS * 17,
+                        y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 17,
+                        width: 32,
+                        height: 32,
+                        alive: true,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0,
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 64,
+                        negSpriteY: 0,
+                        animate: true,
+                        minX: DEFAULT_BOX_THICKNESS * 16,
+                        maxX: DEFAULT_BOX_THICKNESS * 19,
+                        velX: -.67
+                    });
+
+                    enemies.push({
+                        x: DEFAULT_BOX_THICKNESS * 21,
+                        y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 17,
+                        width: 32,
+                        height: 32,
+                        alive: true,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 32,
+                        posSpriteX: 32,
+                        posSpriteY: 32,
+                        negSpriteX: 64,
+                        negSpriteY: 32,
+                        animate: true,
+                        minX: DEFAULT_BOX_THICKNESS * 20,
+                        maxX: DEFAULT_BOX_THICKNESS * 23,
+                        velX: .73
+                    });
+
+                    enemies.push({
+                        x: DEFAULT_BOX_THICKNESS * 25,
+                        y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 17,
+                        width: 32,
+                        height: 32,
+                        alive: true,
+                        zeroSpriteX: 0,
+                        zeroSpriteY: 0,
+                        posSpriteX: 32,
+                        posSpriteY: 0,
+                        negSpriteX: 64,
+                        negSpriteY: 0,
+                        animate: true,
+                        minX: DEFAULT_BOX_THICKNESS * 24,
+                        maxX: DEFAULT_BOX_THICKNESS * 27,
+                        velX: -.37
+                    });
+                    
                     // coins
+                    coinSprites = new Image();
+                    coinSprites.src = "coin-sprites.png"
+                    
                     coins.push({
-						x: DEFAULT_BOX_THICKNESS * 20,
-						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8,
-						width: DEFAULT_BOX_THICKNESS,
-						height: DEFAULT_BOX_THICKNESS,
-						color: "#ffeb3b",
-						alive: true
+						x: DEFAULT_BOX_THICKNESS * 8,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 13,
+						width: 32,
+						height: 32,
+						alive: true,
+                        spriteX: 0,
+                        spriteY: 0
+					});
+
+                    coins.push({
+						x: DEFAULT_BOX_THICKNESS * 19,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 10,
+						width: 32,
+						height: 32,
+						alive: true,
+                        spriteX: 16,
+                        spriteY: 0
 					});
 					
                     coins.push({
-						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 3,
-						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
-						width: DEFAULT_BOX_THICKNESS,
-						height: DEFAULT_BOX_THICKNESS,
-						color: "#ffeb3b",
-						alive: true
+						x: DEFAULT_BOX_THICKNESS * 27,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 10,
+						width: 32,
+						height: 32,
+						alive: true,
+                        spriteX: 32,
+                        spriteY: 0
+					});
+
+                    coins.push({
+						x: DEFAULT_BOX_THICKNESS * 35,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 10,
+						width: 32,
+						height: 32,
+						alive: true,
+                        spriteX: 48,
+                        spriteY: 0
+					});
+
+                    coins.push({
+						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 7,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 14,
+						width: 32,
+						height: 32,
+						alive: true,
+                        spriteX: 0,
+                        spriteY: 16
 					});
 					
                     coins.push({
-						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10,
-						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 15,
-						width: DEFAULT_BOX_THICKNESS,
-						height: DEFAULT_BOX_THICKNESS,
-						color: "#ffeb3b",
-						alive: true
+						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 14,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 18,
+						width: 32,
+						height: 32,
+						alive: true,
+                        spriteX: 16,
+                        spriteY: 16
+					});
+
+                    coins.push({
+						x: DEFAULT_BOX_THICKNESS,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 22,
+						width: 32,
+						height: 32,
+						alive: true,
+                        spriteX: 32,
+                        spriteY: 16
 					});
                     
                     update();
@@ -284,8 +511,18 @@
                             }
                         }
                         if(enemies[i].alive === true){
-                            context.fillStyle = enemies[i].color;
-                            context.fillRect(enemies[i].x, enemies[i].y, enemies[i].width, enemies[i].height);
+                            var sprites = enemySprites32;
+                            if(enemies[i].width == 16){
+                                sprites = enemySprites16;
+                            }
+                            var spriteX = enemies[i].posSpriteX;
+                            var spriteY = enemies[i].posSpriteY;
+                            if(enemies[i].animate === true && enemies[i].velX < 0){
+                                spriteX = enemies[i].negSpriteX;
+                                spriteY = enemies[i].negSpriteY;
+                            }
+                        
+                            context.drawImage(sprites, spriteX, spriteY, enemies[i].width, enemies[i].height, enemies[i].x, enemies[i].y, enemies[i].width, enemies[i].height);
                         }
                     }
                     
@@ -297,8 +534,9 @@
                             }
                         }
                         if(coins[i].alive === true){
-                            context.fillStyle = coins[i].color;
-                            context.fillRect(coins[i].x, coins[i].y, coins[i].width, coins[i].height);
+                            context.drawImage(coinSprites, coins[i].spriteX, coins[i].spriteY, 16, 16, coins[i].x, coins[i].y, coins[i].width, coins[i].height);
+                            //context.fillStyle = coins[i].color;
+                            //context.fillRect(coins[i].x, coins[i].y, coins[i].width, coins[i].height);
                         }
                     }
                     
@@ -316,8 +554,16 @@
                     if(isDying) {
                         die();
                     } else {
-                        context.fillStyle = player.color;
-                        context.fillRect(player.x, player.y, player.width, player.height);
+                        var spriteX = player.zeroSpriteX;
+                        var spriteY = player.zeroSpriteY;
+                        if(player.velX > 0){
+                            spriteX = player.posSpriteX;
+                            spriteY = player.posSpriteY;
+                        } else if(player.velX < 0){
+                            spriteX = player.negSpriteX;
+                            spriteY = player.negSpriteY;
+                        }
+                        context.drawImage(playerSprites, spriteX, spriteY, player.width, player.height, player.x, player.y, player.width, player.height);
                         
                         requestAnimationFrame(update);
                     }
