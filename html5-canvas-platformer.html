@@ -43,10 +43,10 @@
                 var canvas;
                 var context;
                 var player;
-                var keys = [];
-                var boxes = [];
-                var enemies = [];
-                var coins = [];
+                var keys;
+                var boxes;
+                var enemies;
+                var coins;
                 var gradient;
                 
                 window.addEventListener("load", function(){
@@ -69,6 +69,10 @@
                     gradient = context.createLinearGradient(CANVAS_WIDTH / 2, 0, CANVAS_WIDTH / 2, CANVAS_HEIGHT);
                     gradient.addColorStop(0, "#29b6f6");
                     gradient.addColorStop(1, "#b3e5fc");
+					keys = [];
+					boxes = [];
+					enemies = [];
+					coins = [];
 
                     player = {
                         x: 32,
@@ -86,27 +90,126 @@
                     };
                     
                     // dirt blocks
-                    boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS * 2, color:"#795548"});
-                    boxes.push({x:DEFAULT_BOX_THICKNESS * 23, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS * 2, color:"#795548"});
+                    boxes.push({
+						x: 0,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2,
+						width: DEFAULT_BOX_THICKNESS * 17,
+						height: DEFAULT_BOX_THICKNESS * 2,
+						color: "#795548"
+					});
+					
+                    boxes.push({
+						x: DEFAULT_BOX_THICKNESS * 23,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 2,
+						width: DEFAULT_BOX_THICKNESS * 17,
+						height: DEFAULT_BOX_THICKNESS * 2,
+						color: "#795548"
+					});
                     
                     // grass blocks
-                    boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS, color:"#4caf50"});
-                    boxes.push({x:DEFAULT_BOX_THICKNESS * 23, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3, width:DEFAULT_BOX_THICKNESS * 17, height:DEFAULT_BOX_THICKNESS, color:"#4caf50"});
+                    boxes.push({
+						x: 0,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3,
+						width: DEFAULT_BOX_THICKNESS * 17,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#4caf50"
+					});
+					
+                    boxes.push({
+						x: DEFAULT_BOX_THICKNESS * 23,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 3,
+						width: DEFAULT_BOX_THICKNESS * 17,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#4caf50"
+					});
                     
                     // brick blocks
-                    boxes.push({x:0, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11 , width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS * 8, color:"#f57f17"});
-                    boxes.push({x:DEFAULT_BOX_THICKNESS * 4, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7, width:DEFAULT_BOX_THICKNESS * 10, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
-                    boxes.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 4, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7, width:DEFAULT_BOX_THICKNESS * 2, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
-                    boxes.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11, width:DEFAULT_BOX_THICKNESS * 1, height:DEFAULT_BOX_THICKNESS, color:"#f57f17"});
+                    boxes.push({
+						x: 0,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
+						width: DEFAULT_BOX_THICKNESS,
+						height: DEFAULT_BOX_THICKNESS * 8,
+						color: "#f57f17"
+					});
+					
+                    boxes.push({
+						x: DEFAULT_BOX_THICKNESS * 4,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7,
+						width: DEFAULT_BOX_THICKNESS * 10,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#f57f17"
+					});
+					
+                    boxes.push({
+						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 4,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 7,
+						width: DEFAULT_BOX_THICKNESS * 2,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#f57f17"
+					});
+					
+                    boxes.push({
+						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
+						width: DEFAULT_BOX_THICKNESS * 1,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#f57f17"
+					});
                     
                     // enemies
-                    enemies.push({x:DEFAULT_BOX_THICKNESS * 9, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#e53935", alive: true});
-                    enemies.push({x:DEFAULT_BOX_THICKNESS * 30, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 4, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#e53935", alive: true});
+                    enemies.push({
+						x: DEFAULT_BOX_THICKNESS * 9,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8,
+						width: DEFAULT_BOX_THICKNESS,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#e53935",
+						alive: true,
+						animate: true,
+						minX: DEFAULT_BOX_THICKNESS * 4,
+						maxX: DEFAULT_BOX_THICKNESS * 13,
+						velX: 1
+					});
+					
+                    enemies.push({
+						x: DEFAULT_BOX_THICKNESS * 30,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 4,
+						width: DEFAULT_BOX_THICKNESS,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#e53935",
+						alive: true,
+						animate: true,
+						minX: DEFAULT_BOX_THICKNESS * 23,
+						maxX: DEFAULT_BOX_THICKNESS * 39,
+						velX: 1
+					});
 
                     // coins
-                    coins.push({x: DEFAULT_BOX_THICKNESS * 20, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#ffeb3b", alive: true});
-                    coins.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 3, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#ffeb3b", alive: true});
-                    coins.push({x:CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10, y:CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 15, width:DEFAULT_BOX_THICKNESS, height:DEFAULT_BOX_THICKNESS, color:"#ffeb3b", alive: true});
+                    coins.push({
+						x: DEFAULT_BOX_THICKNESS * 20,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 8,
+						width: DEFAULT_BOX_THICKNESS,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#ffeb3b",
+						alive: true
+					});
+					
+                    coins.push({
+						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 3,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
+						width: DEFAULT_BOX_THICKNESS,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#ffeb3b",
+						alive: true
+					});
+					
+                    coins.push({
+						x: CANVAS_WIDTH - DEFAULT_BOX_THICKNESS * 10,
+						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 15,
+						width: DEFAULT_BOX_THICKNESS,
+						height: DEFAULT_BOX_THICKNESS,
+						color: "#ffeb3b",
+						alive: true
+					});
                     
                     update();
                 }
@@ -164,7 +267,14 @@
                     
                     for(var i = enemies.length - 1; i >= 0; i--) {
                         if(enemies[i].alive === true){
-                            var dir = colCheck(player, enemies[i]);
+                            if(enemies[i].animate === true){
+								enemies[i].x += enemies[i].velX;
+								if(enemies[i].x <= enemies[i].minX || enemies[i].x >= enemies[i].maxX){
+									enemies[i].velX = -enemies[i].velX;
+								}
+							}
+							
+							var dir = colCheck(player, enemies[i]);
                             if(dir != null){
                                 if(dir === "b"){
                                     enemies[i].alive = false;
@@ -226,7 +336,7 @@
                     var hHeights = (shapeA.height / 2) + (shapeB.height / 2);
                     var colDir = null;
                  
-                    // if the x and y vector are less than the half width or half height, they we must be inside the object, causing a collision
+                    // if the x and y vector are less than the half width or half height, then we must be inside the object, causing a collision
                     if (Math.abs(vX) < hWidths && Math.abs(vY) < hHeights) {
                         // figures out on which side we are colliding (top, bottom, left, or right)
                         var oX = hWidths - Math.abs(vX);
@@ -251,7 +361,6 @@
                     }
                     return colDir;
                 }
-                
             })();
         </script>
     </body>
