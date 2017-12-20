@@ -1,32 +1,34 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HTML5 Canvas Platformer</title>
-        <meta name="description" content="A work in progress. I'm using this HTML5 Canvas Platformer game to learn game development." />
-        <meta property="og:title" content="HTML5 Canvas Platformer"/>
+        <title>The Aquabits! Pizza Day! | TimSchreiber.com</title>
+        <meta name="description" content="Help MCBitC get to Pizza Day while defeating the big red ball and all the kids lining up super early just to eat. Hooray!" />
+        <meta property="og:title" content="The Aquabits! Pizza Day! | TimSchreiber.com"/>
         <meta property="og:site_name" content="Timothy P. Schreiber"/>
-        <meta property="og:url" content="http://timschreiber.com/html5-canvas-platformer.html"/>
-        <meta property="og:description" content="A work in progress. I'm using this HTML5 Canvas Platformer game to learn game development."/>
-        <meta property="og:image" content="http://timschreiber.com/img/html5-canvas-platformer.png"/>
+        <meta property="og:url" content="http://timschreiber.com/aquabits-pizza-day.html"/>
+        <meta property="og:description" content="Help MCBitC get to Pizza Day while defeating the big red ball and all the kids lining up super early just to eat. Hooray!"/>
+        <meta property="og:image" content="http://timschreiber.com/img/aquabits-pizza-day.png"/>
         <meta property="fb:app_id" content="1550694455192768"/>
-        <link rel="canonical" href="http://timschreiber.com/html5-canvas-platformer.html"/>
+        <link rel="canonical" href="http://timschreiber.com/aquabits-pizza-day.html"/>
         <style>
             body { background-color:#546e7a; font-family:sans-serif; }
-            h1, h3 { color:#fff; text-align:center; line-height:.8em; }
+            h1, h2, h3, p { color:#fff; text-align:center; width:768px; margin-left:auto; margin-right:auto; }
+            h1 { line-height:.8em; }
             h1 small { font-weight:normal; font-size:66.66667%; }
-            span.mono { font-weight:normal; font-family:monospace; }
+            .italic { font-style:italic; }
+            .mono { font-weight:normal; font-family:monospace; }
             #canvas-container { text-align:center; }
             #canvas { border:1px solid #000; }
         </style>
     </head>
     <body>
-        <h1>HTML5 Canvas Platformer<br/><small>(a work in progress)</small></h1>
-        <h3>Move: <span class="mono">[<-] [->]</span></h3>
-        <h3>Jump: <span class="mono">[SPACE]</span></h3>
+        <h1>The Aquabits! Pizza Day!<br/><small>(a work in progress)</small></h1>
+        <h2>Help MCBitC get to Pizza Day while defeating the big red ball and all the kids lining up super early just to eat. Hooray!</h2>
+        <h3>Move: <span class="mono">[<-] [->]</span><br/>Jump: <span class="mono">[SPACE]</span></h3>
         <div id="canvas-container">
             <canvas id="canvas"></canvas>
         </div>
+        <p class="italic">NOTE: My daughter (with lots of help from me) is writing this game to learn how to program using HTML5 <span class="mono">&lt;canvas&gt;</span> and plain JavaScript. She loves Mario Brothers, and her favorite band is The Aquabats!, so this seemed like the perfect fit.</p>
         <script>
             var CANVAS_WIDTH = 768;
             var CANVAS_HEIGHT = 432;
@@ -80,8 +82,15 @@
 					enemies = [];
                     coins = [];
 
+                    // Initialize Sprites
                     playerSprites = new Image();
                     playerSprites.src = "player-sprites.png";
+                    enemySprites16 = new Image();
+                    enemySprites16.src = "enemy-sprites-16.png";
+                    enemySprites32 = new Image();
+                    enemySprites32.src = "enemy-sprites-32.png";
+                    coinSprites = new Image();
+                    coinSprites.src = "coin-sprites.png"
                     
                     player = {
                         x: 32,
@@ -179,11 +188,6 @@
 					});
                     
                     // enemies
-                    enemySprites16 = new Image();
-                    enemySprites16.src = "enemy-sprites-16.png";
-                    enemySprites32 = new Image();
-                    enemySprites32.src = "enemy-sprites-32.png";
-                    
                     enemies.push({
 						x: DEFAULT_BOX_THICKNESS * 9,
 						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 9,
@@ -365,9 +369,6 @@
                     });
                     
                     // coins
-                    coinSprites = new Image();
-                    coinSprites.src = "coin-sprites.png"
-                    
                     coins.push({
 						x: DEFAULT_BOX_THICKNESS * 8,
 						y: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 13,
@@ -375,7 +376,11 @@
 						height: 32,
 						alive: true,
                         spriteX: 0,
-                        spriteY: 0
+                        spriteY: 0,
+                        move: true,
+                        minY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 14,
+                        maxY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 13,
+                        velY: -.43
 					});
 
                     coins.push({
@@ -384,8 +389,12 @@
 						width: 32,
 						height: 32,
 						alive: true,
-                        spriteX: 16,
-                        spriteY: 0
+                        spriteX: 32,
+                        spriteY: 0,
+                        move: true,
+                        minY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
+                        maxY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 10,
+                        velY: -.40
 					});
 					
                     coins.push({
@@ -394,8 +403,12 @@
 						width: 32,
 						height: 32,
 						alive: true,
-                        spriteX: 32,
-                        spriteY: 0
+                        spriteX: 64,
+                        spriteY: 0,
+                        move: true,
+                        minY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
+                        maxY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 10,
+                        velY: -.46
 					});
 
                     coins.push({
@@ -404,8 +417,12 @@
 						width: 32,
 						height: 32,
 						alive: true,
-                        spriteX: 48,
-                        spriteY: 0
+                        spriteX: 96,
+                        spriteY: 0,
+                        move: true,
+                        minY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 11,
+                        maxY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 10,
+                        velY: -.37
 					});
 
                     coins.push({
@@ -415,7 +432,11 @@
 						height: 32,
 						alive: true,
                         spriteX: 0,
-                        spriteY: 16
+                        spriteY: 32,
+                        move: true,
+                        minY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 15,
+                        maxY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 14,
+                        velY: -.49
 					});
 					
                     coins.push({
@@ -424,8 +445,12 @@
 						width: 32,
 						height: 32,
 						alive: true,
-                        spriteX: 16,
-                        spriteY: 16
+                        spriteX: 32,
+                        spriteY: 32,
+                        move: true,
+                        minY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 19,
+                        maxY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 18,
+                        velY: -.34
 					});
 
                     coins.push({
@@ -434,8 +459,12 @@
 						width: 32,
 						height: 32,
 						alive: true,
-                        spriteX: 32,
-                        spriteY: 16
+                        spriteX: 64,
+                        spriteY: 32,
+                        move: true,
+                        minY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 23,
+                        maxY: CANVAS_HEIGHT - DEFAULT_BOX_THICKNESS * 22,
+                        velY: -.52
 					});
                     
                     update();
@@ -528,15 +557,20 @@
                     
                     for(var i = coins.length - 1; i >= 0; i--){
                         if(coins[i].alive === true){
+                            if(coins[i].move === true){
+                                coins[i].y += coins[i].velY;
+                                if(coins[i].y <= coins[i].minY || coins[i].y >= coins[i].maxY){
+                                    coins[i].velY = -coins[i].velY;
+                                }
+                            }
+                            
                             var dir = colCheck(player, coins[i]);
                             if(dir != null) {
                                 coins[i].alive = false;
                             }
                         }
                         if(coins[i].alive === true){
-                            context.drawImage(coinSprites, coins[i].spriteX, coins[i].spriteY, 16, 16, coins[i].x, coins[i].y, coins[i].width, coins[i].height);
-                            //context.fillStyle = coins[i].color;
-                            //context.fillRect(coins[i].x, coins[i].y, coins[i].width, coins[i].height);
+                            context.drawImage(coinSprites, coins[i].spriteX, coins[i].spriteY, coins[i].width, coins[i].height, coins[i].x, coins[i].y, coins[i].width, coins[i].height);
                         }
                     }
                     
