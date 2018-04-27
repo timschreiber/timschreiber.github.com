@@ -1,5 +1,5 @@
 --- 
-layout: post2
+layout: post3
 title: "Randori: Group Practice"
 canonical: "http://timschreiber.com/2012/04/07/my-first-randori/"
 author: "Tim"
