@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: post3
 title: "You Keep Writing That Code. I Do Not Think It Does What You Think It Does."
 canonical: "http://timschreiber.com/2013/10/14/you-keep-writing-that-code-i-do-not-think-it-does-what-you-think-it-does/"
 author: "Tim"
