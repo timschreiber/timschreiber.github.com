@@ -2,7 +2,7 @@
 title: "A Quantum Powerball Quick Pick Generator"
 canonical: "http://timschreiber.com/2016/01/11/a-quantum-powerball-quick-pick-generator.md/"
 date: 2016-01-11
-layout: post
+layout: post3
 comments: true
 description: "Powerball quick picks: are they truly random? Mine and others' observations say no. But thanks to the science of Quantum mechanics, it's now possible to generate truly random picks."
 featured: 0
