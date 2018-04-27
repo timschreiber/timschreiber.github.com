@@ -4,7 +4,7 @@ title: "Randori: Group Practice"
 canonical: "http://timschreiber.com/2012/04/07/my-first-randori/"
 author: "Tim"
 comments: true
-description: "Randori is a term borrowed from Japanese martial arts that describes freestyle, team-oriented coding practice; as opposed to the structured, individual exercise of kata."
+description: "Randori is a term used in Japanese martial arts to describe free-style practice. The term literally means &quot;chaos taking&quot; or &quot;grasping freedom,&quot; implying a freedom from the structured practice of kata."
 image: "randori-group-practice.svg"
 color: "#2196f3"
 featured: 0
@@ -13,7 +13,7 @@ tags:
 - software-craftsmanship
 ---
 
-In the second meeting of the Utah Software Craftsmanship group that I attended, [Mike Clement][1] presented on Randori: Group Practice. Randori is a term used in Japanese martial arts to describe free-style practice. The term literally means “chaos taking” or “grasping freedom,” implying a freedom from the structured practice of kata. Randori may be contrasted with kata, as two potentially complementary types of training.
+In the second meeting of the Utah Software Craftsmanship group that I attended, [Mike Clement][1] presented on Randori: Group Practice. Randori may be contrasted with kata, as two potentially complementary types of training.
 
 Kata is a Japanese word describing detailed choreographed patterns of movements practiced either solo or in pairs. A code kata is an exercise in programming which helps a programmer hone their skills through practice and repetition. Dave Thomas has published many katas at [http://codekata.pragprog.com/codekata][2].
 
