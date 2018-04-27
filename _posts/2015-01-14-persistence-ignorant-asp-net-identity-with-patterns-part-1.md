@@ -2,7 +2,7 @@
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 1)"
 canonical: "http://timschreiber.com/2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/"
 date: 2015-01-14
-layout: post2
+layout: post3
 comments: true
 description: "ASP.NET Identity the membership system for ASP.NET. Out of the box, it has quite a few shortcomings. Let's fix it."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
