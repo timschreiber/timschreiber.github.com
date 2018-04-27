@@ -4,13 +4,11 @@ canonical: "http://timschreiber.com/2016/01/06/und-zen-i-vas-a-zirman/"
 date: 2016-01-06
 layout: post3
 comments: true
-description: "As you may already know, my last day with Software Information Systems (SIS) was 31-Dec-2015. It was a big decision for me, and a number of factors went into it...."
+description: "My last day with Software Information Systems (SIS) was 31-Dec-2015. It was a big decision for me, and a number of factors went into it."
 featured: 0
 tags:
 - work
 ---
-
-As you may already know, my last day with Software Information Systems (SIS) was 31-Dec-2015. It was a big decision for me, and a number of factors went into it.
 
 My job with SIS is what enabled me to move my wife and kids closer to our extended family, and for that, I will forever be grateful. But at some point after I was hired, business priorities changed, and I found myself continually wondering what my future in the company would be. I never lacked for work, but I didn’t have the variety or degree of career growth I had hoped for. Then, when my compensation was flat for too long, I knew it was time to move on. There were other reasons as well, but those are the big ones.
 
