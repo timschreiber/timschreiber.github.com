@@ -16,7 +16,7 @@ tags:
 - opinion
 ---
 
-Back in October 2013, I wrote a blog post titled, "Beware the StackOverlords!" that expressed my frustration with the culture of assholery in the StackOverflow community. Since then, it's become one of my most popular posts &mdash; certainly the most commented. Many agreed with my thoughts, and many denied there was a problem.
+Back in October 2013, I wrote a blog post titled, [Beware the StackOverlords!][2] that expressed my frustration with the culture of assholery in the StackOverflow community. Since then, it's become one of my most popular posts &mdash; certainly the most commented. Many agreed with my thoughts, and many denied there was a problem.
 
 As it turns out, there is a problem, and StackOverflow is finally ready to talk about it. So, stop now and read: [Stack Overflow Isn't Very Welcoming. It's Time for That to Change][1], on the official StackOverflow blog if you haven't already. I'll wait. Also if you haven't read [my original StackOverlords post][2], I'd suggest you read it, too.
 
@@ -36,7 +36,7 @@ It's good to know that I wasn't completely off-base with my original analysis, a
 
 Over the years, StackOverflow has made some half-assed attempts at making their community kinder and more inclusive:
 
-> Initiatives like the Summer of Love, the closing overhaul, revising the "Be Nice" Policy, and our coaching experiment all came from our desire to build a place where everyone feels welcome. But we never felt comfortable acknowledging that we had a serious problem, and we under-resourced it. Badly. &hellip; Inclusion efforts (and other public Q&amp;A work) have consistently been 'fairly important, like… roughly #3 on our list of priorities?' Which meant they got allocated roughly zero resources.
+> Initiatives like the Summer of Love, the closing overhaul, revising the "Be Nice" Policy, and our coaching experiment all came from our desire to build a place where everyone feels welcome. But we never felt comfortable acknowledging that we had a serious problem, and we under-resourced it. Badly. &hellip; Inclusion efforts (and other public Q&amp;A work) have consistently been "fairly important, like… roughly #3 on our list of priorities?" Which meant they got allocated roughly zero resources.
 
 But now they say all of that is changing. They're prioritizing the issue and staffing it with talent from across the company. They're paying more attention to the community, conducting user research, and revisiting old policies. Some of the specific areas on which they plan to focus first include:
 
