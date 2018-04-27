@@ -13,7 +13,7 @@ tags:
 - rants
 ---
 
-UPDATE: StackOverflow has acknowledged they have an asshole problem, and I blogged about it [here][7].
+*UPDATE: StackOverflow has acknowledged they have an asshole problem, and I blogged about it [here][7].*
 
 I used to think StackOverflow was awesome. Used to. But now, not so much. No, now it's pretty much ruled by the early adopters, many of whom don't bother asking or answering questions anymore, but rather sit on their asses and rack up massive reputation from remedial questions they answered five years ago. And with that massive reputation comes elevated privileges, which they ruthlessly wield against newbie scum to protect their standing as the StackOverlords of the Q&A empire.
 
