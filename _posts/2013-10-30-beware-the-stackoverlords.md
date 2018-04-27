@@ -1,5 +1,5 @@
 --- 
-layout: post2
+layout: post3
 title: "Beware the StackOverlords!"
 canonical: "http://timschreiber.com/2013/10/30/beware-the-stackoverlords/"
 author: "Tim"
