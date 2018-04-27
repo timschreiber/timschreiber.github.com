@@ -2,7 +2,7 @@
 title: "Farewell WordPress, Hello Pretzel!"
 canonical: "http://timschreiber.com/2015/01/19/farewell-wordpress-hello-pretzel/"
 date: 2015-01-19
-layout: post
+layout: post3
 comments: true
 description: "For the past couple years, I've been running this website using WordPress on GoDaddy hosting. But since it's such a simplistic site, I've begun questioning why. Is dealing with the plug-ins and updates really worth the few pages and handful of posts I have up..."
 featured: 0
