@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: post3
 title: "Local/Web Font Conflict in Chrome"
 canonical: "http://timschreiber.com/2015/01/20/local-web-font-conflict-in-chrome/"
 author: "Tim"
