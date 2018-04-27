@@ -1,5 +1,5 @@
 --- 
-layout: post2
+layout: post3
 title: "Things You Should (Almost) Never Do, Part I"
 canonical: "http://timschreiber.com/2013/07/29/things-you-should-almost-never-do-part-i/"
 author: "Tim"
