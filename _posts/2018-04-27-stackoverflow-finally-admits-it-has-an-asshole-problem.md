@@ -5,7 +5,7 @@ canonical: "http://timschreiber.com/2018/04/27/stackoverflow-finally-admits-it-h
 author: "Tim"
 comments: true
 description: "I don't mean to say, &quot;I told you so,&quot; but I told you so: an official StackOverflow blog post acknowledges what I wrote about their community culture nearly five years ago."
-image: "cat-butt.jpg"
+image: "cat-butt-2.jpg"
 color: "#4C3F32"
 featured: 0
 tags:
