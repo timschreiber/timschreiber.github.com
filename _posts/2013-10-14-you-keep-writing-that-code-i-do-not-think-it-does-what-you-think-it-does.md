@@ -4,7 +4,7 @@ title: "You Keep Writing That Code. I Do Not Think It Does What You Think It Doe
 canonical: "http://timschreiber.com/2013/10/14/you-keep-writing-that-code-i-do-not-think-it-does-what-you-think-it-does/"
 author: "Tim"
 comments: true
-description: "Good for you that you used a StringBuilder. But you completely missed the point of using a StringBuilder. Even worse that you're concatenating SQL like this..."
+description: "Concatenating SQL is the bigger sin here, but this misuse of StringBuilder is mind-boggling."
 featured: 0
 tags:
 - code
