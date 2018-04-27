@@ -2,7 +2,7 @@
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 2)"
 canonical: "http://timschreiber.com/2015/01/25/persistence-ignorant-asp-net-identity-with-patterns-part-2/"
 date: 2015-01-25
-layout: post2
+layout: post3
 comments: true
 description: "Creating the Solution, breaking the EF dependencies, and coding the Domain Layer (Entities and Repository and Unit of Work interfaces)."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
