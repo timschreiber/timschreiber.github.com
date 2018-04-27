@@ -3,7 +3,7 @@ title: "Original Music: Collide"
 canonical: "http://timschreiber.com/2014/05/08/original-music-collide/"
 date: 2014-05-08
 image: "https://img.youtube.com/vi/o34h-n7Rswk/0.jpg"
-layout: post2
+layout: post3
 comments: true
 description: "I wrote the lyrics in 2009, wrote the music between 2010 and 2013, and recorded it in my home studio (if you can call it that) in April to May 2014."
 image: "original-music-collide.jpg"
