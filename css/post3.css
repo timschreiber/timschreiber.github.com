@@ -1,0 +1,12 @@
+.page-header {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.page-header .breadcrumb {
+  margin-top:0;
+  margin-bottom:10px;
+}
+.page-header h1 {
+  margin-top:10px;
+  margin-bottom:0;
+}
