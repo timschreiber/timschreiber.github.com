@@ -5,7 +5,7 @@ canonical: "http://timschreiber.com/2013/07/29/things-you-should-almost-never-do
 author: "Tim"
 image: "http://timschreiber.com/img/cardboard-tank.jpg"
 comments: true
-description: "I've been thinking about whether there's at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over."
+description: "I've been thinking a lot about the point, if it even exists, at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over."
 image: "things-you-should-almost-never-do-part-i.jpg"
 color: "#898883"
 featured: 0
@@ -13,7 +13,7 @@ tags:
 - practices
 ---
 
-As I mentioned before, I've been thinking a lot about the point , if it even exists, at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over. Of course, required reading for anyone considering refactor vs. rewrite is Joel Spolsky's &quot;[Things You Should Never Do, Part I][1]&quot; article, in which he posits the single worst strategic mistake you can make on a software project is to rewrite the code from scratch. If you haven't read the article, stop and read it now. You'll be glad you did.
+Of course, required reading for anyone considering refactor vs. rewrite is Joel Spolsky's &quot;[Things You Should Never Do, Part I][1]&quot; article, in which he posits the single worst strategic mistake you can make on a software project is to rewrite the code from scratch. If you haven't read the article, stop and read it now. You'll be glad you did.
 
 I respect Mr. Spolsky a great deal, but one paragraph in his article is really causing me a little heartburn, because I think it oversimplifies a situation that my project at work is currently facing:
 
