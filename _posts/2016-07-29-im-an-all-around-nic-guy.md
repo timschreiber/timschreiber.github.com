@@ -12,7 +12,7 @@ tags:
 - work
 ---
 
-I was with ZirMed for only seven short months, so was not actively seeking other employment, but this opportunity with Kentucky Interactive just kind of fell in my lap, and I would have been crazy not to pursue it.
+I was with ZirMed for only seven short months and was not actively seeking other employment, but this opportunity with Kentucky Interactive just kind of fell in my lap, and I would have been crazy not to pursue it.
 
 The Kentucky Interactive office is only 20 minutes from my house. Compared to my horrendous 80 to 90 minute commute each way to ZirMed, I’m getting the equivalent of more than an entire workday back each week. What to do, what to do?
 
