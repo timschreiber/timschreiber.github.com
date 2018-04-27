@@ -4,7 +4,7 @@ canonical: "http://timschreiber.com/2016/07/29/im-an-all-around-nic-guy/"
 date: 2016-07-29
 layout: post3
 comments: true
-description: "I'm now working for Kentucky Interactive, a wholly owned subsidiary of NIC. Kentucky Interactive operates Kentucky.gov as a collaborative effort with the Commonwealth of Kentucky."
+description: "I've bid farewell to ZirMed and moved on to Kentucky Interactive, a wholly owned subsidiary of NIC that operates Kentucky.gov as a collaborative effort with the Commonwealth of Kentucky."
 image: "nic-view.jpg"
 color: "#C6B29B"
 featured: 0
@@ -12,7 +12,7 @@ tags:
 - work
 ---
 
-After only seven short months, I am saying farewell to ZirMed and moving on to Kentucky Interactive, a wholly owned subsidiary of NIC. I was not actively seeking employment; it just kind of fell in my lap. But it’s one of those opportunities that I would be crazy not to pursue.
+I was with ZirMed for only seven short months, so was not actively seeking other employment, but this opportunity with Kentucky Interactive just kind of fell in my lap, and I would have been crazy not to pursue it.
 
 The Kentucky Interactive office is only 20 minutes from my house. Compared to my horrendous 80 to 90 minute commute each way to ZirMed, I’m getting the equivalent of more than an entire workday back each week. What to do, what to do?
 
