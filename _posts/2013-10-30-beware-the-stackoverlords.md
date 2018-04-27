@@ -13,7 +13,7 @@ tags:
 - rants
 ---
 
-### UPDATE: StackOverflow has acknowledged they have an asshole problem, and I blogged about it here: [http://timschreiber.com/2018/04/27/stackoverflow-finally-admits-it-has-an-asshole-problem/].
+### UPDATE: StackOverflow has acknowledged they have an asshole problem, and I blogged about it [here][7].
 
 ### or, Why StackOverflow Sucks
 
@@ -55,3 +55,4 @@ I guess I'm just more interested in becoming a better programmer and helping oth
 [4]: http://meta.stackoverflow.com/search?q=rude
 [5]: http://sergworks.wordpress.com/2012/09/26/why-stackoverflow-sucks/
 [6]: http://programmers.stackexchange.com/questions/20369/career-advice-stay-with-php-or-start-a-new-career-in-something-else-net/20373#20373
+[7]: http://timschreiber.com/2018/04/27/stackoverflow-finally-admits-it-has-an-asshole-problem/
