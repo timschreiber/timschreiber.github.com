@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: post3
 title: "Welcome to my New, Improved Whatever-This-Is"
 canonical: "http://timschreiber.com/2013/07/28/welcome-to-my-new-improved-whatever-this-is/"
 author: "Tim"
