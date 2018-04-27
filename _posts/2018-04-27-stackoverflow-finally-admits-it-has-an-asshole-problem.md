@@ -16,7 +16,7 @@ tags:
 
 Back in October 2013, I wrote a blog post titled, "Beware the StackOverlords!" that expressed my frustration with the culture of assholery in the StackOverflow community. Since then, it's become one of my most popular posts &mdash; certainly the most commented. Many agreed with my thoughts, and many denied there was a problem.
 
-As it turns out, there is a problem, and StackOverflow is finally ready to talk about it. So, stop now and read: "Stack Overflow Isn't Very Welcoming. It's Time for That to Change," on the official StackOverflow blog if you haven't already. I'll wait. Also if you haven't read my StackOverlords post, I'd suggest you read it, too.
+As it turns out, there is a problem, and StackOverflow is finally ready to talk about it. So, stop now and read: [Stack Overflow Isn't Very Welcoming. It's Time for That to Change][1], on the official StackOverflow blog if you haven't already. I'll wait. Also if you haven't read [my original StackOverlords post][2], I'd suggest you read it, too.
 
 #### All good? Let's proceed&hellip;
 
@@ -63,3 +63,6 @@ Here's how I think that applies to StackOverflow: in the very next paragraph aft
 I don't want to read too much into it, but I do think that word choice is interesting, to say the least. I really do hope it's nothing and that there aren't any unaddressed cultural skeletons still lurking in their closet. Believe it or not, I really do want StackOverflow to implement and continuously improve these new initiatives over the long term. I want them to be kind, inclusive, and successful.
 
 So for now, I'm cautiously optimistic about what the future holds for the StackOverflow community; and who knows, maybe I'll even start participating there again.
+
+[1]: https://stackoverflow.blog/2018/04/26/stack-overflow-isnt-very-welcoming-its-time-for-that-to-change/
+[2]: http://timschreiber.com/2013/10/30/beware-the-stackoverlords/
