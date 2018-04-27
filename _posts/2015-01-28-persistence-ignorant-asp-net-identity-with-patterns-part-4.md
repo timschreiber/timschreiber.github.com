@@ -2,7 +2,7 @@
 title: "Persistence-Ignorant ASP.NET Identity with Patterns (Part 4)"
 canonical: "http://timschreiber.com/2015/01/28/persistence-ignorant-asp-net-identity-with-patterns-part-4/"
 date: 2015-01-28
-layout: post2
+layout: post3
 comments: true
 description: "Diving straight into the guts of ASP.NET Identity, hooking everything up in Unity, and finishing with a fully functional site."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
