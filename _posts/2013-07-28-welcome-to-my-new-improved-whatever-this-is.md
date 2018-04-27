@@ -4,13 +4,13 @@ title: "Welcome to my New, Improved Whatever-This-Is"
 canonical: "http://timschreiber.com/2013/07/28/welcome-to-my-new-improved-whatever-this-is/"
 author: "Tim"
 comments: true
-description: "Welcome to the brand spankin' new timschreiber.com. I've been using WordPress for some side projects lately and decided it was a great time to consolidate my blog and r&eacute;sum&eacute; sites into one. Not a lot has changed in terms of..."
+description: "Welcome to the brand spankin' new TimSchreiber.com"
 featured: 0
 tags:
 - this-site
 ---
 
-Welcome to the brand spankin' new timschreiber.com. I've been using WordPress for some side projects lately and decided it was a great time to consolidate my blog and r&eacute;sum&eacute; sites into one. Not a lot has changed in terms of content, except for my new homepage. You should go check it out if you haven't already. Other than that, there's my blog and my r&eacute;sum&eacute;, and that's pretty much it.
+I've been using WordPress for some side projects lately and decided it was a great time to consolidate my blog and r&eacute;sum&eacute; sites into one. Not a lot has changed in terms of content, except for my new homepage. You should go check it out if you haven't already. Other than that, there's my blog and my r&eacute;sum&eacute;, and that's pretty much it.
 
 I know I promised last year to start posting again once things calmed down, and now I intend to do just that. Nine months after I picked my family up and moved us halfway across the United States from Utah to Kentucky, we are finally settling into what I believe has become our new normal. Okay, maybe we might have been settled for a while, but... whatever.
 
