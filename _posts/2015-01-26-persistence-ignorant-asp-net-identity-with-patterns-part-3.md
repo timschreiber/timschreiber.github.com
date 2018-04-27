@@ -4,7 +4,7 @@ canonical: "http://timschreiber.com/2015/01/26/persistence-ignorant-asp-net-iden
 date: 2015-01-26
 layout: post3
 comments: true
-description: "In this part, we'll move on to the Data Layer, in which we'll code our implementations for our Repositories and Unit of Work."
+description: "Coding the Data Layer (implementations for our Repositories and Unit of Work)."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
 color: "#063352"
 featured: 2
