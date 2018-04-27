@@ -1,5 +1,5 @@
 --- 
-layout: post2
+layout: post3
 title: "How to Save Windows Spotlight Lockscreen Images"
 description: "Ever seen a Spotlight image on your Windows 10 lockscreen and thought, I really want to make that my desktop background? There is a way..."
 canonical: "http://timschreiber.com/2016/02/15/how-to-save-windows-spotlight-lockscreen-images/"
