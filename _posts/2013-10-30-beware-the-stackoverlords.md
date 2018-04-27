@@ -13,6 +13,8 @@ tags:
 - rants
 ---
 
+### UPDATE: StackOverflow has acknowledged they have an asshole problem, and I blogged about it here: [http://timschreiber.com/2018/04/27/stackoverflow-finally-admits-it-has-an-asshole-problem/].
+
 ### or, Why StackOverflow Sucks
 
 ###### This probably isn't the best written post I've ever done, but it's what's been on my mind. Also darnit Jim, I'm a coder &ndash; not a writer.
