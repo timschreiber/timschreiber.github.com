@@ -1,5 +1,5 @@
 --- 
-layout: post2
+layout: post3
 title: "StackOverlow Finally Admits It Has an Asshole Problem"
 canonical: "http://timschreiber.com/2018/04/27/stackoverflow-finally-admits-it-has-an-asshole-problem/"
 author: "Tim"
