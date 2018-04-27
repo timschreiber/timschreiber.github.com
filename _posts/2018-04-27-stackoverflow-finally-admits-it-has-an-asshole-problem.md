@@ -58,7 +58,7 @@ Of these, I am most excited to see their plans for helping new users succeed:
 
 In the game of poker, there's a thing called a tell, which is a subtle, involuntary difference in a player's behavior that can disclose when they are bluffing. It can manifest as behaviors, changes in breathing, tone of voice, facial expressions, etc. But the important thing to know is that players don't realize they're doing it. Tells aren't just for poker, either. Sometimes, when someone tries to craft a message that doesn't really match their culture and values, the resulting cognitive dissonance can be manifest in subtle, odd word choices.
 
-Here's how I think that applies to StackOverflow: in the very next paragraph after they admit they are perceived to be hostile or elitist, "especially newer coders, women, people of color, and others in marginalized groups," they refer to those groups as "outsiders."
+Here's how I think that applies to StackOverflow: right after they admit they are perceived to be hostile or elitist toward, "newer coders, women, people of color, and others in marginalized groups," they refer to those groups as "outsiders" in the very next paragraph.
 
 I don't want to read too much into it, but I do think that word choice is interesting, to say the least. I really do hope it's nothing and that there aren't any unaddressed cultural skeletons still lurking in their closet. Believe it or not, I really do want StackOverflow to implement and continuously improve these new initiatives over the long term. I want them to be kind, inclusive, and successful.
 
