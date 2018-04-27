@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: post3
 title: "Things Are A-Changin'"
 canonical: "http://timschreiber.com/2012/08/14/things-are-a-changin/"
 author: "Tim"
