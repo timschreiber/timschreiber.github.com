@@ -1,5 +1,5 @@
 --- 
-layout: post
+layout: post3
 title: "Dear Recruiters"
 canonical: "http://timschreiber.com/2012/08/12/dear-recruiters/"
 author: "Tim"
