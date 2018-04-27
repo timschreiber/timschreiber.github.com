@@ -4,7 +4,7 @@ title: "Beware the StackOverlords!"
 canonical: "http://timschreiber.com/2013/10/30/beware-the-stackoverlords/"
 author: "Tim"
 comments: true
-description: "I used to think StackOverflow was awesome &mdash; until I realized it's ruled by self-important overlords who ruthlessly wield their elevated privileges against newbie scum who dare enter their Q&amp;A empire."
+description: "Or, Why StackOverflow Sucks"
 image: "beware-the-stackoverlords-2.jpg"
 color: "#5B1F04"
 featured: 0
@@ -14,10 +14,6 @@ tags:
 ---
 
 UPDATE: StackOverflow has acknowledged they have an asshole problem, and I blogged about it [here][7].
-
-### or, Why StackOverflow Sucks
-
-###### This probably isn't the best written post I've ever done, but it's what's been on my mind. Also darnit Jim, I'm a coder &ndash; not a writer.
 
 I used to think StackOverflow was awesome. Used to. But now, not so much. No, now it's pretty much ruled by the early adopters, many of whom don't bother asking or answering questions anymore, but rather sit on their asses and rack up massive reputation from remedial questions they answered five years ago. And with that massive reputation comes elevated privileges, which they ruthlessly wield against newbie scum to protect their standing as the StackOverlords of the Q&A empire.
 
