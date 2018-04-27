@@ -47,7 +47,6 @@ But now they say all of that is changing. They're prioritizing the issue and sta
 Of these, I am most excited to see their plans for helping new users succeed:
 
 > We're planning to test a new "beginner" ask page that breaks the question box into multiple fields – one for each of the key things answerers need to help:
-
 > * "What did you want to happen?"
 > * "What actually happened?" (Include any error details)
 > * "Paste the shortest block of code that reproduces the problem." (We'll format it!)
