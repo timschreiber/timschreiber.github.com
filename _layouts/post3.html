@@ -1,0 +1,70 @@
+---
+layout: layout2
+active: blog
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+  	    <ol class="breadcrumb">
+  	    	<li><a href="/">Home</a></li>
+  	    	<li><a href="/blog/">Blog</a></li>
+  	    	<li>{{page.title}}</li>
+  	    </ol>
+        <h1>{{ page.title }}</h1>
+    </div>
+    <div class="col-xs-12 col-md-8 col-lg-9">
+      {% if page.image %}
+        <img class="img img-responsive" src="/img/{{ page.image }}" />
+        <h5><strong>{{ page.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
+          {% for tag in page.tags %}
+            <a href="/blog/tags/#{{ tag }}" class="badge">{{ tag }}</a>
+          {% endfor %}
+        </h5>
+        <article>
+          <p class="lead">{{ page.description }}</p>
+          {{ content }}
+        </article>
+  			<div id="page-navigation" class="well clearfix"> 
+  				<div class="pull-left"> {% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><span class="fa fa-arrow-circle-left"></span> {{page.previous.title}}</a> {% endif %} </div> 
+  				<div class="pull-right"> {% if page.next.url %} <a href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} <span class="fa fa-arrow-circle-right"></span></a> {% endif %} </div> 
+  			</div> 
+  			{% if page.comments == true %}
+  				<div id="disqus_thread"></div>
+  				<script type="text/javascript">
+  					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  					var disqus_shortname = 'timschreiber'; // required: replace example with your forum shortname
+  	
+  					/* * * DON'T EDIT BELOW THIS LINE * * */
+  					(function() {
+  						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  					})();
+  				</script>
+  				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  			{% endif %}
+    </div>
+    <div class="col-xs-12 col-md-4 col-lg-3">
+        <div class="post-ad-container">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- tsc-blog -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5400005152506663" data-ad-slot="3867421392" data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Meta</h3>
+            </div>
+            <div class="panel-body">
+                <dl>
+                    <dt>Feed</dt>
+                    <dd><a href="/blog/rss.xml">RSS</a> | <a href="/blog/atom.xml">Atom</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
