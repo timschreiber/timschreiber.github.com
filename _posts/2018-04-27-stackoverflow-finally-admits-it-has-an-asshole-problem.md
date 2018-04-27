@@ -52,9 +52,7 @@ Of these, I am most excited to see their plans for helping new users succeed:
 > * "Paste the shortest block of code that reproduces the problem." (We'll format it!)
 > * "Describe what you've tried so far" (including searches, etc.)
 
-#### Is it enough?
-
-I hope so, but&hellip;
+#### Is it enough? I hope so, but&hellip;
 
 In the game of poker, there's a thing called a tell, which is a subtle, involuntary difference in a player's behavior that can disclose when they are bluffing. It can manifest as behaviors, changes in breathing, tone of voice, facial expressions, etc. But the important thing to know is that players don't realize they're doing it. Tells aren't just for poker, either. Sometimes, when someone tries to craft a message that doesn't really match their culture and values, the resulting cognitive dissonance can be manifest in subtle, odd word choices.
 
