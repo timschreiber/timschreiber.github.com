@@ -65,4 +65,4 @@ I don't want to read too much into it, but I do think that word choice is intere
 So for now, I'm cautiously optimistic about what the future holds for the StackOverflow community; and who knows, maybe I'll even start participating there again.
 
 [1]: https://stackoverflow.blog/2018/04/26/stack-overflow-isnt-very-welcoming-its-time-for-that-to-change/
-[2]: http://timschreiber.com/2013/10/30/beware-the-stackoverlords/
+[2]: /2013/10/30/beware-the-stackoverlords/
