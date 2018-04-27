@@ -2,7 +2,7 @@
 title: "Und Zen I Vas a ZirMan"
 canonical: "http://timschreiber.com/2016/01/06/und-zen-i-vas-a-zirman/"
 date: 2016-01-06
-layout: post
+layout: post3
 comments: true
 description: "As you may already know, my last day with Software Information Systems (SIS) was 31-Dec-2015. It was a big decision for me, and a number of factors went into it...."
 featured: 0
