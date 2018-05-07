@@ -1,12 +1,11 @@
 --- 
-layout: post3
-title: "ASP.NET Core Identity with Patterns"
+title: "ASP.NET Core Identity with Patterns (Part 1 of 3)"
 canonical: "http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns/"
-author: "Tim"
+date: 2018-05-07
+layout: post3
 comments: true
 description: "A few years ago, I wrote a series of posts about how to implement of ASP.NET Identity 2.0 with a focus on persistence ignorance and design patterns. I have since received received a lot of requests to do update it for .NET Core."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
-featured: 0
 tags:
 - dotnet-core
 - asp-net-core
@@ -15,7 +14,7 @@ tags:
 - architecture
 ---
 
-*NOTE: If you haven’t read my previous posts, I’d suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
+*NOTE: If you haven't read my previous posts, I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
 
 ## Still Has Problems, but not as Many
 
