@@ -6,6 +6,7 @@ layout: post3
 comments: true
 description: "In this step, we'll leave the Web Project on the back burner while we focus on the Domain and Data Layers."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
+featured: 0
 tags:
 - dotnet-core
 - asp-net-core
