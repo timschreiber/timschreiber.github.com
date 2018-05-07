@@ -40,7 +40,7 @@ For this tutorial, we're going to be building a **.NET Core 2.0**, **ASP.NET Cor
 
 ### Persistence Ignorance
 
-Fundamentally, persistence ignorance means that your entities shouldn't care about how they're stored, created, retrieved, updated, or deleted. Instead you just focus on modeling the business domain. The purpose of this post is not to explain persistence ignorance or Domain-Driven Design or try to convince you why you should use them, but if you'd like to know more, this is a good article: [Domain Driven Design – Clear Your Concepts Before You Start][1].
+Fundamentally, persistence ignorance means that your entities shouldn't care about how they're stored, created, retrieved, updated, or deleted. Instead you just focus on modeling the business domain. The purpose of this post is not to explain persistence ignorance or Domain-Driven Design or try to convince you why you should use them, but if you'd like to know more, this is a good article: [Domain Driven Design &mdash; Clear Your Concepts Before You Start][1].
 
 
 
