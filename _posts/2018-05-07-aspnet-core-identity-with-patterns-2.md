@@ -1,7 +1,7 @@
 --- 
 title: "ASP.NET Core Identity with Patterns (Part 2 of 3)"
 canonical: "http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns-2/"
-date: 2018-05-07
+date: "2018-05-07 12:56 PM"
 layout: post3
 comments: true
 description: "In this step, we'll leave the Web Project on the back burner while we focus on the Domain and Data Layers."

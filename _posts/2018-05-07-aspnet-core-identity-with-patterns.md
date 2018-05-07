@@ -1,7 +1,7 @@
 --- 
 title: "ASP.NET Core Identity with Patterns (Part 1 of 3)"
 canonical: "http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns/"
-date: 2018-05-07
+date: "2018-05-07 12:01 PM"
 layout: post3
 comments: true
 description: "A few years ago, I wrote a series of posts about how to implement of ASP.NET Identity 2.0 with a focus on persistence ignorance and design patterns. I have since received received a lot of requests to do update it for .NET Core."
