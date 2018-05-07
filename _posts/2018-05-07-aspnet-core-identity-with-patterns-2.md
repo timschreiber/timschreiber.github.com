@@ -284,7 +284,793 @@ Once again, we're not including anything that might couple this interface to any
         }
     }
 
+## The Data Layer
 
+Whereas ASP.NET Core Identity uses Entity Framework out-of-the-box, for this tutorial, I've chosen to use Dapper, which is a fast, lightweight object mapper for SQL queries. Since we're using a persistence-ignorant approach, we could just as easily use another ORM or even plain SQL with little or no modification to our Domain layer.
+
+The first thing we need to do is to add another class library to the solution. I called mine `AspNetCoreIdentityExample.Data`. Once, the project has been created, we'll need to add a folder called `Repositories` and add a project reference to the `AspNetCoreIdentityExample.Domain` project.
+
+Next, we'll need to add a reference to Dapper. To do this, launch the Package Manager Console and run the following command:
+
+    PM> Install-Package Dapper
+
+### Repositories
+
+With Dapper installed, now we can move on to implementing our repositories. As we dive into the code, I want you to notice a couple of things about the classes:
+
+ 1. There is no default constructor. That's because we're following the Dependency Injection pattern by providing the repository with the IDbTransaction it needs in the constructor. This ensures that all of our repositories will use the same transaction, which is a main objective of the Unit of Work pattern.
+
+ 2. The repository implementations are marked with the internal access modifier. That's because these repository classes are implementation details of the Data Layer that don't need to be exposed beyond the Unit of Work. Making them public could allow you to couple them to other layers, which is exactly what we're trying to avoid.
+
+All of our repositories have some common boilerplate code that we can abstract into a base class. So let's start by creating the following class in the Repositories folder:
+
+#### RepositoryBase.cs
+
+    using System.Collections.Generic;
+    using System.Data;
+    using Dapper;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal abstract class RepositoryBase
+        {
+            private IDbTransaction _transaction;
+            private IDbConnection Connection { get { return _transaction.Connection; } }
+
+            public RepositoryBase(IDbTransaction transaction)
+            {
+                _transaction = transaction;
+            }
+
+            protected T ExecuteScalar<T>(string sql, object param)
+            {
+                return Connection.ExecuteScalar<T>(sql, param, _transaction);
+            }
+
+            protected T QuerySingleOrDefault<T>(string sql, object param)
+            {
+                return Connection.QuerySingleOrDefault<T>(sql, param, _transaction);
+            }
+
+            protected IEnumerable<T> Query<T>(string sql, object param = null)
+            {
+                return Connection.Query<T>(sql, param, _transaction);
+            }
+
+            protected void Execute(string sql, object param)
+            {
+                Connection.Execute(sql, param, _transaction);
+            }
+        }
+    }
+
+The entity-specific repository classes extend the base repository class and implement the applicable interfaces from the Domain Layer. Let's add the following classes to the Repositories folder:
+
+#### RoleClaimRepository.cs
+
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System.Collections.Generic;
+    using System.Data;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal class RoleClaimRepository : RepositoryBase, IRoleClaimRepository
+        {
+            public RoleClaimRepository(IDbTransaction transaction)
+                : base(transaction)
+            { }
+
+            public void Add(RoleClaim entity)
+            {
+                entity.Id = ExecuteScalar<int>(
+                    sql: @"
+                        INSERT INTO AspNetRoleClaims(ClaimType, ClaimValue, RoldId)
+                        VALUES(@ClaimType, @ClaimValue, @RoldId);
+                        SELECT SCOPE_IDENTITY()",
+                    param: entity
+                );
+            }
+
+            public RoleClaim Find(int key)
+            {
+                return QuerySingleOrDefault<RoleClaim>(
+                    sql: "SELECT * FROM AspNetRoleClaims WHERE Id = @key",
+                    param: new { key }
+                );
+            }
+
+            public IEnumerable<RoleClaim> FindByRoleId(string roleId)
+            {
+                return Query<RoleClaim>(
+                    sql: "SELECT * FROM AspNetRoleClaims WHERE RoleId = @roleId",
+                    param: new { roleId }
+                );
+            }
+
+            public IEnumerable<RoleClaim> All()
+            {
+                return Query<RoleClaim>(
+                    sql: "SELECT * FROM AspNetRoleClaims"
+                );
+            }
+
+            public void Remove(int key)
+            {
+                Execute(
+                    sql: "DELETE FROM AspNetRoleClaims WHERE Id = @key",
+                    param: new { key } 
+                );
+            }
+
+            public void Update(RoleClaim entity)
+            {
+                Execute(
+                    sql: @"
+                        UPDATE AspNetRoleClaims SET ClaimType = @ClaimType,
+                            ClaimValue = @ClaimValue, RoleId = @RoleId
+                        WHERE Id = @Id",
+                    param: entity
+                );
+            }
+        }
+    }
+
+#### RoleRepository.cs
+
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal class RoleRepository : RepositoryBase, IRoleRepository
+        {
+            public RoleRepository(IDbTransaction transaction)
+                : base(transaction)
+            { }
+
+            public void Add(Role entity)
+            {
+                Execute(
+                    sql: @"
+                        INSERT INTO AspNetRoles(Id, ConcurrencyStamp, [Name], NormalizedName)
+                        VALUES(@Id, @ConcurrencyStamp, @Name, @NormalizedName)",
+                    param: entity
+                );
+            }
+
+            public IEnumerable<Role> All()
+            {
+                return Query<Role>(
+                    sql: "SELECT * FROM AspNetRoles"
+                );
+            }
+
+            public Role Find(string key)
+            {
+                return QuerySingleOrDefault<Role>(
+                    sql: "SELECT * FROM AspNetRoles WHERE Id = @key",
+                    param: new { key }
+                );
+            }
+
+            public Role FindByName(string roleName)
+            {
+                return QuerySingleOrDefault<Role>(
+                    sql: "SELECT * FROM AspNetRoles WHERE [Name] = @roleName",
+                    param: new { roleName }
+                );
+            }
+
+
+            public void Remove(string key)
+            {
+                Execute(
+                    sql: "DELETE FROM AspNetRoles WHERE Id = @key",
+                    param: new { key }
+                );
+
+                throw new NotImplementedException();
+            }
+
+            public void Update(Role entity)
+            {
+                Execute(
+                    sql: @"
+                        UPDATE AspNetRoles SET ConcurrencyStamp = @ConcurrencyStamp,
+                            [Name] = @Name, NormalizedName = @NormalizedName
+                        WHERE Id = @Id",
+                    param: entity
+                );
+            }
+        }
+    }
+
+#### UserClaimRepository.cs
+
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Text;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal class UserClaimRepository : RepositoryBase, IUserClaimRepository
+        {
+            public UserClaimRepository(IDbTransaction transaction)
+                : base(transaction)
+            {
+            }
+
+            public void Add(UserClaim entity)
+            {
+                entity.Id = ExecuteScalar<int>(
+                    sql: @"
+                        INSERT INTO AspNetUserClaims(ClaimType, ClaimValue, UserId)
+                        VALUES(@ClaimType, @ClaimValue, @UserId);
+                        SELECT SCOPE_IDENTITY()",
+                    param: entity
+                );
+            }
+
+            public IEnumerable<UserClaim> All()
+            {
+                return Query<UserClaim>(
+                    sql: @"
+                        SELECT Id, ClaimType, ClaimValue, UserId
+                        FROM AspNetUserClaims"
+                );
+            }
+
+            public UserClaim Find(int key)
+            {
+                return QuerySingleOrDefault<UserClaim>(
+                    sql: @"
+                        SELECT Id, ClaimType, ClaimValue, UserId
+                        FROM AspNetUserClaims WHERE Id = @key",
+                    param: new { key }
+                );
+            }
+
+            public IEnumerable<UserClaim> GetByUserId(string userId)
+            {
+                return Query<UserClaim>(
+                    sql: @"
+                        SELECT Id, ClaimType, ClaimValue, UserId
+                        FROM AspNetUserClaims
+                        WHERE UserId = @userId",
+                    param: new { userId }
+                );
+            }
+
+            public IEnumerable<User> GetUsersForClaim(string claimType, string claimValue)
+            {
+                return Query<User>(
+                    sql: @"
+                        SELECT
+	                        u.Id, u.AccessFailedCount, u.ConcurrencyStamp, u.Email,
+                            u.EmailConfirmed, u.LockoutEnabled, u.LockoutEnd,
+                            u.NormalizedEmail, u.NormalizedUserName, u.PasswordHash,
+                            u.PhoneNumber, u.PhoneNumberConfirmed, u.SecurityStamp,
+	                        u.TwoFactorEnabled, u.UserName
+                        FROM
+	                        AspNetUserClaims c INNER JOIN
+                            AspNetUsers u ON c.UserId = u.Id
+                        WHERE
+	                        c.ClaimType = @claimType AND
+                            c.ClaimValue = @claimValue
+                    ",
+                    param: new { claimType, claimValue }
+                );
+            }
+
+            public void Remove(int key)
+            {
+                Execute(
+                    sql: @"
+                        DELETE FROM AspNetUserClaims
+                        WHERE Id = @key",
+                    param: new { key }
+                );
+            }
+
+            public void Update(UserClaim entity)
+            {
+                Execute(
+                    sql: @"
+                        UPDATE AspNetUserClaims SET ClaimType = @ClaimType,
+                            ClaimValue = @ClaimValue, UserId = @UserId
+                        WHERE Id = @Id",
+                    param: entity
+                );
+            }
+        }
+    }
+
+#### UserLoginRepository.cs
+
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Text;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal class UserLoginRepository : RepositoryBase, IUserLoginRepository
+        {
+            public UserLoginRepository(IDbTransaction transaction)
+                : base(transaction)
+            { }
+
+            public void Add(UserLogin entity)
+            {
+                Execute(
+                    sql: @"
+                        INSERT INTO AspNetUserLogins(LoginProvider, ProviderKey, ProviderDisplayName, UserId)
+                        VALUES(@LoginProvider, @ProviderKey, @ProviderDisplayName, @UserId)",
+                    param: entity
+                );
+            }
+
+            public IEnumerable<UserLogin> All()
+            {
+                return Query<UserLogin>(
+                    sql: "SELECT * FROM AspNetUserLogins"
+                );
+            }
+
+            public UserLogin Find(UserLoginKey id)
+            {
+                return QuerySingleOrDefault<UserLogin>(
+                    sql: @"
+                        SELECT * FROM AspNetUserLogins
+                        WHERE LoginProvider = @LoginProvider AND ProviderKey = @ProviderKey",
+                    param: id
+                );
+            }
+
+            public IEnumerable<UserLogin> FindByUserId(string userId)
+            {
+                return Query<UserLogin>(
+                    sql: "SELECT * FROM AspNetUserLogins WHERE UserId = @userId",
+                    param: new { userId }
+                );
+            }
+
+            public void Remove(UserLoginKey key)
+            {
+                Execute(
+                    sql: @"
+                        DELETE FROM AspNetUserLogins
+                        WHERE LoginProvider = @LoginProvider AND ProviderKey = @ProviderKey",
+                    param: key
+                );
+            }
+
+            public void Update(UserLogin entity)
+            {
+                Execute(
+                    sql: @"
+                        UPDATE AspNetUserLogins SET ProviderDisplayName = @ProviderDisplayName,
+                            UserId = @UserId
+                        WHERE LoginProvider = @LoginProvider AND ProviderKey = @ProviderKey",
+                    param: entity
+                );
+            }
+        }
+    }
+
+#### UserRepository.cs
+
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Text;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal class UserRepository : RepositoryBase, IUserRepository
+        {
+            public UserRepository(IDbTransaction transaction)
+                : base(transaction)
+            { }
+
+            public void Add(User entity)
+            {
+                Execute(
+                    sql: @"
+                        INSERT INTO AspNetUsers(Id, AccessFailedCount, ConcurrencyStamp, Email,
+	                        EmailConfirmed, LockoutEnabled, LockoutEnd, NormalizedEmail,
+	                        NormalizedUserName, PasswordHash, PhoneNumber, PhoneNumberConfirmed,
+	                        SecurityStamp, TwoFactorEnabled, UserName)
+                        VALUES(@Id, @AccessFailedCount, @ConcurrencyStamp, @Email, @EmailConfirmed,
+	                        @LockoutEnabled, @LockoutEnd, @NormalizedEmail, @NormalizedUserName,
+	                        @PasswordHash, @PhoneNumber, @PhoneNumberConfirmed, @SecurityStamp,
+	                        @TwoFactorEnabled, @UserName)",
+                    param: entity
+                );
+            }
+
+            public IEnumerable<User> All()
+            {
+                return Query<User>(
+                    sql: "SELECT * FROM AspNetUsers"
+                );
+            }
+
+            public User Find(string key)
+            {
+                return QuerySingleOrDefault<User>(
+                    sql: "SELECT * FROM AspNetUsers WHERE Id = @key",
+                    param: new { key }
+                );
+            }
+
+            public User FindByNormalizedEmail(string normalizedEmail)
+            {
+                return QuerySingleOrDefault<User>(
+                    sql: "SELECT * FROM AspNetUsers WHERE NormalizedEmail = @normalizedEmail",
+                    param: new { normalizedEmail }
+                );
+            }
+
+            public User FindByNormalizedUserName(string normalizedUserName)
+            {
+                return QuerySingleOrDefault<User>(
+                    sql: "SELECT * FROM AspNetUsers WHERE NormalizedUserName = @normalizedUserName",
+                    param: new { normalizedUserName }
+                );
+            }
+
+            public void Remove(string key)
+            {
+                Execute(
+                    sql: "DELETE FROM AspNetUsers WHERE Id = @key",
+                    param: new { key }
+                );
+            }
+
+            public void Update(User entity)
+            {
+                Execute(
+                    sql: @"
+                        UPDATE AspNetUsers SET AccessFailedCount = @AccessFailedCount,
+	                        ConcurrencyStamp = @ConcurrencyStamp, Email = @Email,
+	                        EmailConfirmed = @EmailConfirmed, LockoutEnabled = @LockoutEnabled,
+	                        LockoutEnd = @LockoutEnd, NormalizedEmail = @NormalizedEmail,
+	                        NormalizedUserName = @NormalizedUserName, PasswordHash = @PasswordHash,
+	                        PhoneNumber = @PhoneNumber, PhoneNumberConfirmed = @PhoneNumberConfirmed,
+	                        SecurityStamp = @SecurityStamp, TwoFactorEnabled = @TwoFactorEnabled,
+	                        UserName = @UserName
+                        WHERE Id = @Id",
+                    param: entity);
+            }
+        }
+    }
+
+#### UserRoleRepository.cs
+
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Text;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal class UserRoleRepository : RepositoryBase, IUserRoleRepository
+        {
+            public UserRoleRepository(IDbTransaction transaction) : base(transaction)
+            {
+            }
+
+            public void Add(string userId, string roleName)
+            {
+                Execute(
+                    sql: @"
+                        INSERT INTO AspNetUserRoles(UserId, RoleId)
+                        SELECT TOP 1 @userId, Id FROM AspNetRoles
+                        WHERE NormalizedName = @roleName",
+                    param: new { userId, roleName }
+                );
+            }
+
+            public IEnumerable<string> GetRoleNamesByUserId(string userId)
+            {
+                return Query<string>(
+                    sql: @"
+                        SELECT r.[Name]
+                        FROM AspNetUserRoles ur INNER JOIN
+                            AspNetRoles r ON ur.RoleId = r.Id
+                        WHERE ur.UserId = @userId
+                    ",
+                    param: new { userId }
+                );
+            }
+
+            public IEnumerable<User> GetUsersByRoleName(string roleName)
+            {
+                return Query<User>(
+                    sql: @"
+                        SELECT u.*
+                        FROM AspNetUserRoles ur INNER JOIN
+	                        AspNetRoles r ON ur.RoleId = r.Id INNER JOIN
+	                        AspNetUsers u ON ur.UserId = u.Id
+                        WHERE r.NormalizedName = @roleName
+                    ",
+                    param: new { roleName });
+            }
+
+            public void Remove(string userId, string roleName)
+            {
+                Execute(
+                    sql: @"
+                        DELETE ur
+                        FROM AspNetUserRoles ur INNER JOIN
+                            AspNetRoles r ON ur.RoleId = r.Id
+                        WHERE r.NormalizedName = @roleName
+                    ",
+                    param: new { userId, roleName }
+                );
+            }
+        }
+    }
+
+#### UserTokenRepository.cs
+
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Text;
+
+    namespace AspNetCoreIdentityExample.Data.Repositories
+    {
+        internal class UserTokenRepository : RepositoryBase, IRepository<UserToken, UserTokenKey>
+        {
+            public UserTokenRepository(IDbTransaction transaction)
+                : base(transaction)
+            { }
+
+            public void Add(UserToken entity)
+            {
+                Execute(
+                    sql: @"
+                        INSERT INTO AspNetUserTokens(UserId, LoginProvider, [Name], Value)
+                        VALUES(@UserId, @LoginProvider, @Name, @Value)",
+                    param: entity
+                );
+            }
+
+            public IEnumerable<UserToken> All()
+            {
+                return Query<UserToken>(
+                    sql: "SELECT * FROM AspNetUserTokens"
+                );
+            }
+
+            public UserToken Find(UserTokenKey key)
+            {
+                return QuerySingleOrDefault<UserToken>(
+                    sql: @"
+                        SELECT * FROM AspNetUserTokens
+                        WHERE UserId = @UserId AND LoginProvider = @LoginProvider
+                            AND [Name] = @Name",
+                    param: key
+                );
+            }
+
+            public void Remove(UserTokenKey key)
+            {
+                Execute(
+                    sql: @"
+                        DELETE FROM AspNetUserTokens
+                        WHERE UserId = @UserId AND LoginProvider = @LoginProvider
+                            AND [Name] = @Name",
+                    param: key
+                );
+            }
+
+            public void Update(UserToken entity)
+            {
+                Execute(
+                    sql: @"
+                        UPDATE AspNetUserTokens SET Value = @Value
+                        WHERE UserId = @UserId
+                            AND LoginProvider = @LoginProvider
+                            AND [Name] = @Name",
+                    param: entity
+                );
+            }
+        }
+    }
+
+### Unit of Work
+
+The last piece of the Data Layer is the Unit of Work implementation. As I pointed out before, the Unit of Work pattern ensures that all changes are sent as a single transaction to the data store where they will either all succeed or all fail and get rolled back.
+
+The Unit of Work implementation I've chosen to use for this tutorial comes from my popular Dapper Unit of Work repository on GitHub.
+
+#### DapperUnitOfWork.cs
+
+    using AspNetCoreIdentityExample.Data.Repositories;
+    using AspNetCoreIdentityExample.Domain;
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Domain.Repositories;
+    using System;
+    using System.Data;
+    using System.Data.SqlClient;
+
+    namespace AspNetCoreIdentityExample.Data
+    {
+        public class DapperUnitOfWork : IUnitOfWork
+        {
+            #region Fields
+            private IDbConnection _connection;
+            private IDbTransaction _transaction;
+            private IRoleRepository _roleRepository;
+            private IRoleClaimRepository _roleClaimRepository;
+            private IUserRepository _userRepository;
+            private IUserClaimRepository _userClaimRepository;
+            private IUserLoginRepository _userLoginRepository;
+            private IRepository<UserToken, UserTokenKey> _userTokenRepository;
+            private IUserRoleRepository _userRoleRepository;
+            private bool _disposed;
+            #endregion
+
+            public DapperUnitOfWork(string connectionString)
+            {
+                _connection = new SqlConnection(connectionString);
+                _connection.Open();
+                _transaction = _connection.BeginTransaction();
+            }
+
+            #region IUnitOfWork Members
+            public IRoleRepository RoleRepository
+            {
+                get
+                {
+                    return _roleRepository
+                        ?? (_roleRepository = new RoleRepository(_transaction));
+                }
+            }
+
+            public IRoleClaimRepository RoleClaimRepository
+            {
+                get
+                {
+                    return _roleClaimRepository
+                        ?? (_roleClaimRepository = new RoleClaimRepository(_transaction));
+                }
+            }
+
+            public IUserRepository UserRepository
+            {
+                get
+                {
+                    return _userRepository
+                        ?? (_userRepository = new UserRepository(_transaction));
+                }
+            }
+
+            public IUserClaimRepository UserClaimRepository
+            {
+                get
+                {
+                    return _userClaimRepository
+                        ?? (_userClaimRepository = new UserClaimRepository(_transaction));
+                }
+            }
+        
+            public IUserLoginRepository UserLoginRepository
+            {
+                get
+                {
+                    return _userLoginRepository
+                        ?? (_userLoginRepository = new UserLoginRepository(_transaction));
+                }
+            }
+
+            public IRepository<UserToken, UserTokenKey> UserTokenRepository
+            {
+                get
+                {
+                    return _userTokenRepository
+                        ?? (_userTokenRepository = new UserTokenRepository(_transaction));
+                }
+            }
+
+            public IUserRoleRepository UserRoleRepository
+            {
+                get
+                {
+                    return _userRoleRepository
+                        ?? (_userRoleRepository = new UserRoleRepository(_transaction));
+                }
+            }
+
+            public void Commit()
+            {
+                try
+                {
+                    _transaction.Commit();
+                }
+                catch
+                {
+                    _transaction.Rollback();
+                }
+                finally
+                {
+                    _transaction.Dispose();
+                    resetRepositories();
+                    _transaction = _connection.BeginTransaction();
+                }
+            }
+
+            public void Dispose()
+            {
+                dispose(true);
+                GC.SuppressFinalize(this);
+            }
+            #endregion
+
+            #region Private Methods
+            private void resetRepositories()
+            {
+                _roleRepository = null;
+                _roleClaimRepository = null;
+                _userRepository = null;
+                _userClaimRepository = null;
+                _userLoginRepository = null;
+                _userTokenRepository = null;
+                _userRoleRepository = null;
+            }
+
+            private void dispose(bool disposing)
+            {
+                if(!_disposed)
+                {
+                    if(disposing)
+                    {
+                        if(_transaction != null)
+                        {
+                            _transaction.Dispose();
+                            _transaction = null;
+                        }
+                        if(_connection != null)
+                        {
+                            _connection.Dispose();
+                            _connection = null;
+                        }
+                    }
+                    _disposed = true;
+                }
+            }
+
+            ~DapperUnitOfWork()
+            {
+                dispose(false);
+            }
+            #endregion
+        }
+    }
+
+## Next Steps
+    
+And that's the Data Layer. We are *SO* close to having a working application again! All we have left to do in Part 3 is to revisit the Web Layer so we can finish coding the `CustomUserStore` and `CustomRoleStore` classes and do the last couple of steps to wire everything together.
+
+Until next time, happy coding!
    
 [1]: http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns
 [2]: https://github.com/timschreiber/ASP.NET-Core-Identity-Example
