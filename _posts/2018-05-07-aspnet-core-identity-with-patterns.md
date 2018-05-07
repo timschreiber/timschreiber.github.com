@@ -81,15 +81,120 @@ This step will create the database and tables and allows us to avoid scripting o
 
 ![Using SQL Server Management Studio (SSMS) to verify that the ASP.NET Core Identity Tables have been created.][2]
 
+### Run the Project
 
+At this point, you should have a bare bones ASP.NET Core Identity website. You should be able to register, login, etc. at this point. Go ahead, give it a shot: register a user, logout, login, change the password, etc.
+    
+### Now Let's Break It
 
+Now that we have a working application, let's break it. Let's do the following:
 
+ * Delete the `Data` folder and everything in it.
+ 
+ * Remove the dependency on Entity Framework from the NuGet packages and the project file.
 
+Congratulations! Your application is now broken. Now, because I hate lieaving an application in an uncompilable state, let's at least get it compiling (although not actually working at runtime).
 
+#### Stub out the UserStore and RoleStore classes
 
+Like ASP.NET Identity 2.0, ASP.NET Core Identity uses two Store classes to persist Identity data: the UserStore and the Role Store. Because we're doing a custom implementation of ASP.NET Core Identity, we need to roll our own. So create a new folder called `Identity` and add two classes:
 
+##### CustomRoleStore.cs
 
+We'll start with the easy one. Edit the class so it implements two interfaces: `IRoleStore<IdentityRole>` and `IRoleClaimStore<IdentityRole>`.
 
+    using System.Security.Claims;
+    using System.Threading;
+    using System.Threading.Tasks;
+
+    namespace AspNetCoreIdentityExample.Web.Identity
+    {
+        public class CustomRoleStore :
+            IRoleStore<IdentityRole>,
+            IRoleClaimStore<IdentityRole>
+        {
+            // Implementations will go here
+        }
+    }
+
+Notice the red squiggly lines under the interfaces. Visual Studio can stub out the implementation for you. All you have to do is put your cursor over the interface with the squiggly red underline, press [CTRL]-[.] (period), and select **Implement Interface** from the context menu.    
+
+![Let Visual Studio stub out your interface implementation for you][3]
+    
+Visual Studio will automatically generate your methods. They'll all throw a NotImplementedException, but they'll be there, and your code will compile. Repeat for each interface that needs to be implemented.
+
+*NOTE: I honestly don't know if Visual Studio Code will do this for you. If not, then I'm sorry, but you will have to stub out the methods yourself. It's really going to suck for the CustomUserStore.cs class. Sorry.*
+
+##### CustomUserStore.cs
+
+The CustomUserStore is a little more complicated. To get the same functionality as we would with the out-of-the-box EntityFramework implementation, we need to implement a lot of interfaces. More information on these interfaces can be found [here][4].
+
+    using AspNetCoreIdentityExample.Domain;
+    using AspNetCoreIdentityExample.Domain.Entities;
+    using AspNetCoreIdentityExample.Web.Models;
+    using Microsoft.AspNetCore.Identity;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Security.Claims;
+    using System.Threading;
+    using System.Threading.Tasks;
+
+    namespace AspNetCoreIdentityExample.Web.Identity
+    {
+        public class CustomUserStore :
+            IUserStore<ApplicationUser>,
+            IUserPasswordStore<ApplicationUser>,
+            IUserEmailStore<ApplicationUser>,
+            IUserLoginStore<ApplicationUser>,
+            IUserRoleStore<ApplicationUser>,
+            IUserSecurityStampStore<ApplicationUser>,
+            IUserClaimStore<ApplicationUser>,
+            IUserAuthenticationTokenStore<ApplicationUser>,
+            IUserTwoFactorStore<ApplicationUser>,
+            IUserPhoneNumberStore<ApplicationUser>,
+            IUserLockoutStore<ApplicationUser>,
+            IQueryableUserStore<ApplicationUser>
+        {
+            // Implementations will go here
+        }
+    }
+    
+Again, you will need to have Visual Studio generate the implementations of each of those interfaces. Tedious, I know.   
+
+#### Edit Startup.cs
+
+The last thing we need to do to get the project to compile is to remove all references to Entity Framework and `ApplicationDbContext `from the `ConfigureServices` method of the `Startup.cs` class.
+
+Delete the following line from `Startup.cs`:
+
+    using Microsoft.EntityFrameworkCore;
+
+Delete the following line from the `ConfigureServices` method in `Startup.cs`:
+
+    services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+Then, change the following line in the `ConfigureServices` method in `Startup.cs`:    
+
+    services.AddIdentity<ApplicationUser, IdentityRole>()
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultTokenProviders();
+
+to this:
+
+    services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddDefaultTokenProviders();
+
+Your application should now compile. If you tried to run it, it will throw exceptions everywhere, but if it doesn't at least compile, then go back over the steps and make sure you did everything correctly.
+
+## Next Steps
+
+This is where we will leave it for now. So far, so good. In Part 2, we'll put the Web Project on the back burner and focus on the Domain and Data layers; and then in Part 3, we'll come back to the Web Project to flesh out the `CustomRoleStore` and `CustomUserStore` classes, and tie everything together into a working application.
+
+Until next time, happy coding!
 
 [1]: http://www.codeproject.com/Articles/339725/Domain-Driven-Design-Clear-Your-Concepts-Before-Yo
 [2]: /img/aspnet-core-identity-with-patterns/ssms-1.png
+[3]: /img/aspnet-core-identity-with-patterns/visual-studio-implement-interface.png
+[4]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers?view=aspnetcore-2.1
