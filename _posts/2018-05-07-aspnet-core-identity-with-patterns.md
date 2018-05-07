@@ -17,7 +17,7 @@ tags:
  * **Part 1**
  * [Part 2][5]
  
-**The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][2]**
+**The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/ASP.NET-Core-Identity-Example][2]**
 
 *NOTES:*
  * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][3].*
