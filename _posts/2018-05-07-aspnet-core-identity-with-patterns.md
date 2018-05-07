@@ -17,7 +17,7 @@ tags:
  * **Part 1**
  * [Part 2][5]
  
-**The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/ASP.NET-Core-Identity-Example][2]**
+**The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/ASP.NET-Core-Identity-Example][6]**
 
 *NOTES:*
  * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][3].*
@@ -206,3 +206,4 @@ Until next time, happy coding!
 [3]: /img/aspnet-core-identity-with-patterns/visual-studio-implement-interface.png
 [4]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers?view=aspnetcore-2.1
 [5]: http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns-2/
+[6]: https://github.com/timschreiber/ASP.NET-Core-Identity-Example
