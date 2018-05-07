@@ -14,7 +14,14 @@ tags:
 - architecture
 ---
 
-*NOTE: If you haven't read my previous posts, I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
+ * **Part 1**
+ * [Part 2][5]
+ 
+**The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/Mvc5IdentityExample][2]**
+
+*NOTES:*
+ * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][3].*
+ * *If you haven't read my previous posts, I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
 
 ## Still Has Problems, but not as Many
 
@@ -198,3 +205,4 @@ Until next time, happy coding!
 [2]: /img/aspnet-core-identity-with-patterns/ssms-1.png
 [3]: /img/aspnet-core-identity-with-patterns/visual-studio-implement-interface.png
 [4]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers?view=aspnetcore-2.1
+[5]: http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns-2/
