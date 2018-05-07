@@ -37,3 +37,19 @@ As I started putting an example project together, I realized that there are stil
 ## How We're Going to Fix It
 
 For this tutorial, we're going to be building a **.NET Core 2.0**, **ASP.NET Core Web Application (Model View Controller)** with the **Individual User Accounts** authentication option. Like before, we will focus on **persistence ignorance** and design patterns.
+
+### Persistence Ignorance
+
+Fundamentally, persistence ignorance means that your entities shouldn't care about how they're stored, created, retrieved, updated, or deleted. Instead you just focus on modeling the business domain. The purpose of this post is not to explain persistence ignorance or Domain-Driven Design or try to convince you why you should use them, but if you'd like to know more, this is a good article: [Domain Driven Design – Clear Your Concepts Before You Start][1].
+
+
+
+
+
+
+
+
+
+
+
+[1]: http://www.codeproject.com/Articles/339725/Domain-Driven-Design-Clear-Your-Concepts-Before-Yo
