@@ -6,6 +6,8 @@ layout: post3
 comments: true
 description: "In this final step, we revisit the Web Layer so we can finish coding the `CustomUserStore` and `CustomRoleStore` classes and do the last couple of steps to wire everything together. For the end result, we should have a fully functional application again."
 image: "asp-net-core-identity-with-patterns.jpg"
+imagewidth: 1024
+imageheight: 576
 featured: 2
 tags:
 - dotnet-core

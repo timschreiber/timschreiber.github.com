@@ -6,6 +6,8 @@ layout: post3
 comments: true
 description: "In this step, we'll leave the Web Project on the back burner while we focus on the Domain and Data Layers."
 image: "asp-net-core-identity-with-patterns.jpg"
+imagewidth: 1024
+imageheight: 576
 featured: 3
 tags:
 - dotnet-core
