@@ -16,3 +16,8 @@ article {
 .post-ad-container {
   margin-bottom:20px;
 }
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
