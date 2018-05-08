@@ -15,7 +15,7 @@ tags:
 - architecture
 ---
 
-<h4 style="color:#FFF;font-style:italic;">See my updated tutorial for ASP.NET Core Identity [here][core]</h4>
+<h4 style="color:#e53935;font-style:italic;">See my updated tutorial for ASP.NET Core Identity [here][core]</h4>
 
 * [Part 1][2]
 * **Part 2**
