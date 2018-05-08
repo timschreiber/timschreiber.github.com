@@ -209,5 +209,5 @@ Until next time, happy coding!
 [4]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers?view=aspnetcore-2.1
 [5]: /2018/05/07/aspnet-core-identity-with-patterns-2/
 [6]: https://github.com/timschreiber/ASP.NET-Core-Identity-Example
-[7]: /2018/05/07/aspnet-core-identity-with-patterns-3/
+[7]: /2018/05/08/aspnet-core-identity-with-patterns-3/
 [8]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/

@@ -1093,5 +1093,5 @@ Until next time, happy coding!
 [1]: /2018/05/07/aspnet-core-identity-with-patterns/
 [2]: https://github.com/timschreiber/ASP.NET-Core-Identity-Example
 [3]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-2.1&tabs=visual-studio%2Caspnetcore2x
-[4]: /2018/05/07/aspnet-core-identity-with-patterns-3/
+[4]: /2018/05/08/aspnet-core-identity-with-patterns-3/
 [5]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/
