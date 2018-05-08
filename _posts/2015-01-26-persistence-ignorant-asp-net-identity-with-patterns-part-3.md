@@ -7,7 +7,7 @@ comments: true
 description: "Coding the Data Layer (implementations for our Repositories and Unit of Work)."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
 color: "#063352"
-featured: 2
+featured: 0
 tags:
 - asp-net
 - mvc-5

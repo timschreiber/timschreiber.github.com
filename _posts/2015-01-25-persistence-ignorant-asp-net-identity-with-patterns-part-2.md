@@ -7,7 +7,7 @@ comments: true
 description: "Creating the Solution, breaking the EF dependencies, and coding the Domain Layer (Entities and Repository and Unit of Work interfaces)."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
 color: "#063352"
-featured: 3
+featured: 0
 tags:
 - asp-net
 - mvc-5
