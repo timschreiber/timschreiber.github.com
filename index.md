@@ -6,7 +6,7 @@ description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Arc
 ---
 
 {% assign tempPosts = site.posts | where_exp:"item", "item.featured > 0 %}
-{% assign featuredPosts = tempPosts | sort: "featured" | reverse %}
+{% assign featuredPosts = (tempPosts | sort: "featured") | reverse %}
 {% assign regularPosts = site.posts | where_exp:"item", "item.featured < 1" %}
 
 <div class="row">
