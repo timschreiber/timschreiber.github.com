@@ -5,8 +5,7 @@ canonical : "http://timschreiber.com"
 description : "Timothy P. Schreiber (call me Tim) is a Senior .NET Developer/Architect in the Lexington, KY area. Enterprise applications, websites, open source - you name it. C#, ASP.NET MVC, WCF, Entity Framework, SQL Server, Agile, Object-Oriented Design, SOLID, Design Patterns."
 ---
 
-{% assign tempPosts = site.posts | where_exp:"item", "item.featured > 0" %}
-{% assign featuredPosts = (tempPosts | sort: "featured") | reverse %}
+{% assign featuredPosts = ((site.posts | where_exp:"item", "item.featured > 0") | sort: "featured") | reverse %}
 {% assign regularPosts = site.posts | where_exp:"item", "item.featured < 1" %}
 
 <div class="row">
