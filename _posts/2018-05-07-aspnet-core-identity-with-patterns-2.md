@@ -17,12 +17,13 @@ tags:
 
  * [Part 1][1]
  * **Part 2**
+ * [Part 3][4]
  
 **The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/ASP.NET-Core-Identity-Example][2]**
 
 *NOTES:*
  * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][3].*
- * *If you haven't read my previous posts, I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
+ * *If you haven't read my [my previous posts][5], I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
 
 In Part 1, we started building our `AspNetCoreIdentityExample` solution, beginning with the `AspNetCoreIdentityExample.Web project`. First we got it running with the out-of-the-box Entity Framework implementation, then we broke it in preparation for our custom, persistence-ignorant version. In this step, we'll be adding the Domain and Data Layers.
 
@@ -35,6 +36,91 @@ So let's add a class library project to the solution. I called mine `AspNetCoreI
 ### Entities
 
 In keeping with our persistence ignorant design, our entities are just Plain Old CLR Objects (POCOs), and in order to get the same ASP.NET Identity functionality from our application as we would from the out-of-the-box Entity Framework implementation, we'll create the following classes in the Entities folder:
+
+Because `RoleClaim` and `UserClaim` are essentially the same class, differing only in the objects they're related to, I've chosen to define a `ClaimBase` class that the other two classes will inherit from:
+
+#### ClaimBase.cs
+
+    namespace AspNetCoreIdentityExample.Domain.Entities
+    {
+        public abstract class ClaimBase
+        {
+            public int Id { get; set; }
+            public string ClaimType { get; set; }
+            public string ClaimValue { get; set; }
+        }
+    }
+    
+#### RoleClaim.cs
+
+    namespace AspNetCoreIdentityExample.Domain.Entities
+    {
+        public class RoleClaim : ClaimBase
+        {
+            public string RoleId { get; set; }
+        }
+    }
+
+#### UserClaim.cs
+
+    namespace AspNetCoreIdentityExample.Domain.Entities
+    {
+        public class UserClaim : ClaimBase
+        {
+            public string UserId { get; set; }
+        }
+    }
+
+The `UserLogin` and `UserToken` entities use composite keys, and it's difficult to use a generic repsotitory interface without representing those keys as a class that can be used in a generic type parameter. So, another OO design decision I made was to make composite keys their own classes, from which the corresponding entities would inherit. This also simplifies things in the data layer (when we get there).
+
+#### UserLogin.cs
+
+    namespace AspNetCoreIdentityExample.Domain.Entities
+    {
+        public class UserLogin : UserLoginKey
+        {
+            public string ProviderDisplayName { get; set; }
+            public string UserId { get; set; }
+        }
+
+        public class UserLoginKey
+        {
+            public string LoginProvider;
+            public string ProviderKey;
+        }
+    }
+
+#### UserToken.cs
+
+    namespace AspNetCoreIdentityExample.Domain.Entities
+    {
+        public class UserToken : UserTokenKey
+        {
+            public string Value { get; set; }
+        }
+
+        public class UserTokenKey
+        {
+            public string UserId { get; set; }
+            public string LoginProvider { get; set; }
+            public string Name { get; set; }
+        }
+    }    
+
+The remaining `Role` and `User` entities are just plain old classes:
+    
+#### Role.cs
+
+    namespace AspNetCoreIdentityExample.Domain.Entities
+    {
+        public class Role
+        {
+            public string Id { get; set; }
+            public string ConcurrencyStamp { get; set; }
+            public string Name { get; set; }
+            public string NormalizedName { get; set; }
+        }
+    }
 
 #### User.cs
 
@@ -59,77 +145,6 @@ In keeping with our persistence ignorant design, our entities are just Plain Old
             public string SecurityStamp { get; set; }
             public bool TwoFactorEnabled { get; set; }
             public string UserName { get; set; }
-        }
-    }
-
-#### Role.cs
-
-    namespace AspNetCoreIdentityExample.Domain.Entities
-    {
-        public class Role
-        {
-            public string Id { get; set; }
-            public string ConcurrencyStamp { get; set; }
-            public string Name { get; set; }
-            public string NormalizedName { get; set; }
-        }
-    }
-
-#### UserLogin.cs
-
-    namespace AspNetCoreIdentityExample.Domain.Entities
-    {
-        public class UserLogin
-        {
-            public string LoginProvider { get; set; }
-            public string ProviderKey { get; set; }
-            public string ProviderDisplayName { get; set; }
-            public string UserId { get; set; }
-        }
-    }
-
-#### ClaimBase.cs
-
-    namespace AspNetCoreIdentityExample.Domain.Entities
-    {
-        public abstract class ClaimBase
-        {
-            public int Id { get; set; }
-            public string ClaimType { get; set; }
-            public string ClaimValue { get; set; }
-        }
-    }
-
-#### UserClaim.cs
-
-    namespace AspNetCoreIdentityExample.Domain.Entities
-    {
-        public class UserClaim : ClaimBase
-        {
-            public string UserId { get; set; }
-        }
-    }
-
-#### RoleClaim.cs
-
-    namespace AspNetCoreIdentityExample.Domain.Entities
-    {
-        public class RoleClaim : ClaimBase
-        {
-            public string RoleId { get; set; }
-        }
-    }
-
-#### UserToken.cs
-
-    namespace AspNetCoreIdentityExample.Domain.Entities
-    {
-        public class UserToken
-        {
-            public string UserId { get; set; }
-            public string LoginProvider { get; set; }
-            public string Name { get; set; }
-            public string Value { get; set; }
         }
     }
 
@@ -254,6 +269,8 @@ The one specialized repository interface that won't inherit from the base reposi
             IEnumerable<User> GetUsersByRoleName(string roleName);
         }
     }
+
+You might notice we don't have an `IUserTokenRepository` interface. That's simply because we don't have a need beyond that which the generic repository interface already provides.
 
 ### Unit of Work
 
@@ -1073,7 +1090,8 @@ And that's the Data Layer. We are *SO* close to having a working application aga
 
 Until next time, happy coding!
    
-[1]: http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns
+[1]: /2018/05/07/aspnet-core-identity-with-patterns/
 [2]: https://github.com/timschreiber/ASP.NET-Core-Identity-Example
 [3]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-2.1&tabs=visual-studio%2Caspnetcore2x
-
+[4]: /2018/05/07/aspnet-core-identity-with-patterns-3/
+[5]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/

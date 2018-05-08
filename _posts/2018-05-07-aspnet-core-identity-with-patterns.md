@@ -17,12 +17,13 @@ tags:
 
  * **Part 1**
  * [Part 2][5]
+ * [Part 3][7]
  
 **The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/ASP.NET-Core-Identity-Example][6]**
 
 *NOTES:*
  * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][3].*
- * *If you haven't read my previous posts, I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
+ * *If you haven't read my [my previous posts][8], I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
 
 ## Still Has Problems, but not as Many
 
@@ -206,5 +207,7 @@ Until next time, happy coding!
 [2]: /img/aspnet-core-identity-with-patterns/ssms-1.png
 [3]: /img/aspnet-core-identity-with-patterns/visual-studio-implement-interface.png
 [4]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers?view=aspnetcore-2.1
-[5]: http://timschreiber.com/2018/05/07/aspnet-core-identity-with-patterns-2/
+[5]: /2018/05/07/aspnet-core-identity-with-patterns-2/
 [6]: https://github.com/timschreiber/ASP.NET-Core-Identity-Example
+[7]: /2018/05/07/aspnet-core-identity-with-patterns-3/
+[8]: /2015/01/14/persistence-ignorant-asp-net-identity-with-patterns-part-1/
