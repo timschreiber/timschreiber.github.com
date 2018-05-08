@@ -1290,9 +1290,7 @@ Add the following `using` statements:
     using WebApplication1.Domain;
     using WebApplication1.Data;
  
-##### In the `ConfigureServices` method
- 
-Change this line:
+Then, in the `ConfigureServices` method, change this line:
 
     services.AddIdentity<ApplicationUser, IdentityRole>()
         .AddDefaultTokenProviders();
@@ -1303,7 +1301,7 @@ to this:
         .AddCustomStores()
         .AddDefaultTokenProviders();
 
-And then add the following line right after `// Add application services.`:
+And add the following line right after `// Add application services.`:
 
     services.AddScoped<IUnitOfWork, DapperUnitOfWork>(provider => new DapperUnitOfWork(Configuration.GetConnectionString("DefaultConnection")));
 
