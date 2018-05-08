@@ -15,7 +15,7 @@ tags:
 - architecture
 ---
 
-<h4 style="color:#e53935;font-style:italic;">See my updated tutorial for ASP.NET Core Identity [here](/2018/05/07/aspnet-core-identity-with-patterns/)</h4>
+<h4 style="color:#e53935;font-style:italic;">See my updated tutorial for ASP.NET Core Identity <a href="/2018/05/07/aspnet-core-identity-with-patterns/">here</a>.</h4>
 
 * [Part 1][2]
 * [Part 2][3]
