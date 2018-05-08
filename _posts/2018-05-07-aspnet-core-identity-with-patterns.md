@@ -22,7 +22,7 @@ tags:
 **The source code for this series of posts is available at on my GitHub: [https://github.com/timschreiber/ASP.NET-Core-Identity-Example][6]**
 
 *NOTES:*
- * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][3].*
+ * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][4].*
  * *If you haven't read my [my previous posts][8], I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
 
 ## Still Has Problems, but not as Many
