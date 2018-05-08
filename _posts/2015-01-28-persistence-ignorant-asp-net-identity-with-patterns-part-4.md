@@ -15,6 +15,8 @@ tags:
 - architecture
 ---
 
+<h4 style="color:#FFF;font-style:italic;">See my updated tutorial for ASP.NET Core Identity [here][core]</h4>
+
 * [Part 1][2]
 * [Part 2][3]
 * [Part 3][4]
@@ -1079,3 +1081,4 @@ Until then, happy coding!
 [4]: /2015/01/26/persistence-ignorant-asp-net-identity-with-patterns-part-3/
 [5]: http://www.asp.net/identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity#architecture
 [6]: https://github.com/timschreiber/Mvc5IdentityExample
+[core]: /2018/05/07/aspnet-core-identity-with-patterns/
