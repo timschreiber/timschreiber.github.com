@@ -920,7 +920,7 @@ The entity-specific repository classes extend the base repository class and impl
 
 The last piece of the Data Layer is the Unit of Work implementation. As I pointed out before, the Unit of Work pattern ensures that all changes are sent as a single transaction to the data store where they will either all succeed or all fail and get rolled back.
 
-The Unit of Work implementation I've chosen to use for this tutorial comes from my popular Dapper Unit of Work repository on GitHub.
+The Unit of Work implementation I've chosen to use for this tutorial comes from my popular [Dapper Unit of Work](https://github.com/timschreiber/DapperUnitOfWork) repository on GitHub.
 
 #### DapperUnitOfWork.cs
 
