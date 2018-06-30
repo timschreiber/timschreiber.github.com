@@ -6,8 +6,9 @@ layout: post3
 comments: true
 description: "A few years ago, I wrote a series of posts about how to implement of ASP.NET Identity 2.0 with a focus on persistence ignorance and design patterns. I have since received received a lot of requests to do update it for .NET Core."
 image: "asp-net-core-identity-with-patterns.jpg"
-imagewidth: 1024
-imageheight: 576
+image_width: 1280
+image_height: 683
+thumbnail: "asp-net-core-identity-with-patterns-th.jpg"
 featured: 4
 tags:
 - dotnet-core

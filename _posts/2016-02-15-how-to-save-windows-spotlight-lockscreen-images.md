@@ -6,7 +6,9 @@ canonical: "http://timschreiber.com/2016/02/15/how-to-save-windows-spotlight-loc
 author: "Tim"
 comments: true
 image: "how-to-save-windows-spotlight-lockscreen-images.jpg"
-color: "#3B2819"
+thumbnail: "how-to-save-windows-spotlight-lockscreen-images-th.jpg"
+image_width: 1280
+image_height: 683
 featured: 0
 tags:
 - windows-10

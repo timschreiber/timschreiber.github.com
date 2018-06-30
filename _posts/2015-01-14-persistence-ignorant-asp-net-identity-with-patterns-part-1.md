@@ -6,7 +6,9 @@ layout: post3
 comments: true
 description: "ASP.NET Identity the membership system for ASP.NET. Out of the box, it has quite a few shortcomings. Let's fix it."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
-color: "#063352"
+thumbnail: "persistence-ignorant-asp-net-identity-with-patterns-th.jpg"
+image_width: 1280
+image_height: 683
 featured: 1
 tags:
 - asp-net

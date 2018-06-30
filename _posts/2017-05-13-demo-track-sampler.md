@@ -6,7 +6,9 @@ layout: post3
 comments: true
 description: "One of my hobbies since childhood has been songwriting, and one of my earliest bucket list items is to release an album."
 image: "ts-ep-cover-1.jpg"
-color: "#FEAD8F"
+image_width: 1280
+image_height: 683
+thumbnail: "ts-ep-cover-1-th.jpg"
 featured: 0
 tags:
 - music

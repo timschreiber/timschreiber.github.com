@@ -7,7 +7,9 @@ image: "http://timschreiber.com/img/cardboard-tank.jpg"
 comments: true
 description: "I've been thinking a lot about the point, if it even exists, at which a project has accrued enough technical debt that it just makes sense to cut your losses and start over."
 image: "things-you-should-almost-never-do-part-i.jpg"
-color: "#898883"
+image_width: 1280
+image_height: 683
+thumbnail: "things-you-should-almost-never-do-part-i-th.jpg"
 featured: 0
 tags:
 - practices

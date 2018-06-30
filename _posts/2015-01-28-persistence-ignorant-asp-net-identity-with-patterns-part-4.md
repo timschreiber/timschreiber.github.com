@@ -6,7 +6,9 @@ layout: post3
 comments: true
 description: "Diving straight into the guts of ASP.NET Identity, hooking everything up in Unity, and finishing with a fully functional site."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
-color: "#063352"
+thumbnail: "persistence-ignorant-asp-net-identity-with-patterns-th.jpg"
+image_width: 1280
+image_height: 683
 featured: 0
 tags:
 - asp-net

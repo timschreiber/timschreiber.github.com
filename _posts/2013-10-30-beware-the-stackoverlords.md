@@ -6,7 +6,9 @@ author: "Tim"
 comments: true
 description: "Or, Why StackOverflow Sucks"
 image: "beware-the-stackoverlords-2.jpg"
-color: "#5B1F04"
+image_width: 1280
+image_height: 683
+thumbnail: "beware-the-stackoverlords-2-th.jpg"
 featured: 0
 tags:
 - stack-overflow

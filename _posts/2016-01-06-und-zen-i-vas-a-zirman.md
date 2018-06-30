@@ -5,6 +5,7 @@ date: 2016-01-06
 layout: post3
 comments: true
 description: "My last day with Software Information Systems (SIS) was 31-Dec-2015. It was a big decision for me, and a number of factors went into it."
+thumbnail: "post.png"
 featured: 0
 tags:
 - work

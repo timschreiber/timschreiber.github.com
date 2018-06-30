@@ -6,9 +6,9 @@ author: "Tim"
 comments: true
 description: "I don't mean to say, &quot;I told you so,&quot; but I told you so: an official StackOverflow blog post acknowledges what I wrote about their community culture nearly five years ago."
 image: "cat-butt-2.jpg"
-imagewidth: 1920
-imageheight: 1080
-color: "#4C3F32"
+image_width: 1280
+image_height: 683
+thumbnail: "cat-butt-2-th.jpg"
 featured: 0
 tags:
 - stack-overflow

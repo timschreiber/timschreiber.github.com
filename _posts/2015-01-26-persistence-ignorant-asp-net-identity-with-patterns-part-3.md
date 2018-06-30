@@ -6,7 +6,9 @@ layout: post3
 comments: true
 description: "Coding the Data Layer (implementations for our Repositories and Unit of Work)."
 image: "persistence-ignorant-asp-net-identity-with-patterns.jpg"
-color: "#063352"
+thumbnail: "persistence-ignorant-asp-net-identity-with-patterns-th.jpg"
+image_width: 1280
+image_height: 683
 featured: 0
 tags:
 - asp-net

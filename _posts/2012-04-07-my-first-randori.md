@@ -5,8 +5,10 @@ canonical: "http://timschreiber.com/2012/04/07/my-first-randori/"
 author: "Tim"
 comments: true
 description: "Randori is a term used in Japanese martial arts to describe free-style practice. The term literally means &quot;chaos taking&quot; or &quot;grasping freedom,&quot; implying a freedom from the structured practice of kata."
-image: "randori-group-practice.svg"
-color: "#2196f3"
+image: "randori-group-practice.png"
+image_width: 1280
+image_height: 683
+thumbnail: "randori-group-practice-th.png"
 featured: 0
 tags:
 - code-practice

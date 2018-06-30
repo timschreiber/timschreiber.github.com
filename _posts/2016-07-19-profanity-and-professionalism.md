@@ -6,7 +6,9 @@ layout: post3
 comments: true
 description: "I never really worried about profanity in the workplace until I worked for a company that didn't just allow profanity in the office, but actually seemed to embrace it as part of the culture."
 image: "profanity-and-professionalism.jpg"
-color: "#C6B29B"
+image_width: 1280
+image_height: 683
+thumbnail: "profanity-and-professionalism-th.jpg"
 featured: 0
 tags:
 - work

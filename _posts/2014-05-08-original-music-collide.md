@@ -7,7 +7,9 @@ layout: post3
 comments: true
 description: "I wrote the lyrics in 2009, wrote the music between 2010 and 2013, and recorded it in my home studio (if you can call it that) in April to May 2014."
 image: "original-music-collide.jpg"
-color: "#08050A"
+thumbnail: "original-music-collide-th.jpg"
+image_width: 1280
+image_height: 683
 featured: 0
 tags:
 - songwriting
