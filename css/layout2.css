@@ -77,12 +77,12 @@ h4.sidebar-title {
 }
 
 @media (min-width:992px) {
-	body {
-		margin-top:110px;
-	}
-/*	.media-object.post-thumbnail {
+	/* body { */
+		/* margin-top:110px; */
+	/* } */
+	.media-object.post-thumbnail {
 		width:120px;
-	}*/
+	}
 }
 
 @media (min-width:992px) {
