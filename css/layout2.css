@@ -53,6 +53,38 @@ a.contact-nav-item {
   padding:0 10.5px !important;
 }
 
+.media-object.post-thumbnail {
+	width:80px;
+}
+
+a.media-heading {
+	color:rgb(97, 97, 97);
+}
+
+a.read-more-link {
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+h4.sidebar-title {
+	text-transform:uppercase;
+}
+
+@media (min-width:768px) {
+	.media-object.post-thumbnail {
+		width:100px;
+	}
+}
+
+@media (min-width:992px) {
+	body {
+		margin-top:110px;
+	}
+/*	.media-object.post-thumbnail {
+		width:120px;
+	}*/
+}
+
 @media (min-width:992px) {
   body {
     margin-top:90px;

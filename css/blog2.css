@@ -27,9 +27,3 @@ body {
 	margin-top:10px;
 	margin-bottom:0;
 }
-
-@media (min-width:992px) {
-	body {
-		margin-top:110px;
-	}
-}
