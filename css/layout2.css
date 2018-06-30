@@ -78,7 +78,7 @@ h4.sidebar-title {
 
 @media (min-width:992px) {
   body {
-    margin-top:110px;
+    margin-top:110px !important;
   }
   
   nav.navbar {
