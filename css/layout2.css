@@ -71,7 +71,7 @@ h4.sidebar-title {
 }
 
 .page-header {
-	color: #e0e0e0;
+	border-color: #e0e0e0;
 }
 
 @media (min-width:768px) {
