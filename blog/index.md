@@ -24,11 +24,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-						<h6><strong>{{ post.date | date : "%d-%b-%Y" }}</strong> &nbsp;|&nbsp;
-							{% for tag in post.tags %}
-								<a href="/blog/tags/#{{ tag }}" class="badge post-tag" data-tag="{{ tag }}">{{ tag }}</a>
-							{% endfor %}
-						</h6>
+						<h6><strong>{{ post.date | date : "%d-%b-%Y" }}</strong></h6>
 						{% if post.description != "" %}
 							<p>{{ post.description }}</p>
 						{% else %}
@@ -42,7 +38,6 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 	</div>
 	<div class="col-xs-12 col-md-4 col-lg-3">
 		{% include google_ads.html %}
-		{% include blog_tags.html %}
 		{% include blog_archive.html %}
 		{% include blog_subscribe.html %}
 	</div>
