@@ -441,7 +441,7 @@ custom_js:
 
 		<div class="hidden-xs hidden-sm col-md-4">
 			<div id="res-nav">
-				<ul id="res-nav-list" class="nav">
+				<ul id="res-nav-list">
 					<li><a href="#res-summary">Summary</a></li>
 					<li>
 						<a href="#res-skills">Skills</a>
