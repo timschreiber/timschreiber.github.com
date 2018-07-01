@@ -24,8 +24,8 @@ description : "I love to write code. Seriously, I can't believe they pay me to d
 			<p>I would not be where I am today were it not for some amazing teachers and mentors along the way. Today, I strive to be a teacher and mentor for the next generation of programmers. Most of my effort along those lines occurs directly within my development teams and personal network. But occasionally, I find time to write a blog article that other developers find helpful. I also enjoy presenting topics at user groups.</p>
 			<p>Aside from code, I'm a husband, father, backyard barbeque pitmaster, amateur songwriter, and novice gardener.</p>
 		</div>
-		<div class="col-xs-12 col-md-4">
-			<img class="img-circle" style="width:100%; max-width:200px; margin-left:auto; margin-right:auto;" src="/img/timothy-p-schreiber-2.jpg" alt="Timothy P. Schreiber" />
+		<div class="col-xs-12 col-md-4 text-center">
+			<img class="img-circle" style="max-width:200px;" src="/img/timothy-p-schreiber-2.jpg" alt="Timothy P. Schreiber" />
 		</div>
 	</div>
 
