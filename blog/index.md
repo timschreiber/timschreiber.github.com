@@ -11,7 +11,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 </ol>
 
 <div class="row">
-	<div class="col-xs-12 col-md-8 col-lg-9">
+	<div class="col-xs-12 col-md-8">
 		<div id="posts-tag-heading" style="display:none;">
 			<h3 class="pull-left">Tag: <span id="tag-name" style="font-weight:bold"></span></h3>
 			<h3 class="pull-right"><small><a id="btn-show-all" href="#">Show All Posts</a></small></h3>
@@ -36,7 +36,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 			{% endfor %}
 		</div>
 	</div>
-	<div class="col-xs-12 col-md-4 col-lg-3">
+	<div class="col-xs-12 col-md-4">
 		{% include google_ads.html %}
 		{% include blog_archive.html %}
 		{% include blog_subscribe.html %}
