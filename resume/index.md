@@ -14,7 +14,7 @@ custom_js:
 		<li class="active">{{ page.title }}</li>
 	</ol>
 
-	<div id="res-content" class="col-xs-12 col-md-9">
+	<div id="res-content" class="col-xs-12 col-md-8">
 		<h1 class="collapse-top-margin">R&eacute;sum&eacute;</h1>
 
 		<div id="res-summary" class="res-section">
@@ -435,7 +435,7 @@ custom_js:
 		</div>
 	</div>
 
-	<div class="hidden-xs hidden-sm col-md-3">
+	<div class="hidden-xs hidden-sm col-md-4">
 		<div id="res-nav">
 			<ul id="res-nav-list" class="nav">
 				<li><a href="#res-summary">Summary</a></li>
