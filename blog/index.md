@@ -12,7 +12,7 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 
 <div class="row">
 	<div class="col-xs-12">
-		<div class="page-heading">
+		<div class="page-header">
 			<h1>Blog</h1>
 		</div>
 	</div>
