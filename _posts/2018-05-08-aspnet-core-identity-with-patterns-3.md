@@ -1,10 +1,9 @@
 --- 
 title: "ASP.NET Core Identity with Patterns (Part 3 of 3)"
-canonical: "http://timschreiber.com/2018/05/08/aspnet-core-identity-with-patterns-3/"
 date: "2018-05-08 16:04 PM"
-layout: post3
+layout: post_layout
 comments: true
-description: "In this final step, we revisit the Web Layer so we can finish coding the `CustomUserStore` and `CustomRoleStore` classes and do the last couple of steps to wire everything together. For the end result, we should have a fully functional application again."
+description: "In this final step, we revisit the Web Layer so we can finish coding the CustomUserStore and CustomRoleStore classes and do the last couple of steps to wire everything together."
 image: "asp-net-core-identity-with-patterns.jpg"
 image_width: 1280
 image_height: 683
