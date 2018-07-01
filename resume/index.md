@@ -3,8 +3,6 @@ layout : layout2
 title : R&eacute;sum&eacute;
 canonical : "{{ page.url }}"
 description : "Senior .NET Developer/Architect with expertise in enterprise application development using C#, ASP.NET (MVC & Web Forms), WCF, Entity Framework, SQL Server, Agile, and more. Proficient in object-oriented design and application architecture. Excellent direct-hire or contract candidate for organizations seeking a technically proficient, team-oriented, creative software professional with strong interpersonal skills."
-custom_js:
- - "resume.js"
 ---
 
 <div id="main-container" class="container">
@@ -20,7 +18,7 @@ custom_js:
 				<h1>R&eacute;sum&eacute;</h1>
 			</div>
 		</div>
-		<div id="res-content" class="col-xs-12 col-md-8">
+		<div id="res-content" class="col-xs-12">
 			<div id="res-summary" class="res-section">
 				<h3>Summary</h3>
 				<p>Senior .NET Developer/Architect with expertise in enterprise application development using C#, ASP.NET (MVC &amp; Web Forms), WCF, Entity Framework, SQL Server, Agile, and more. Proficient in object-oriented design and application architecture. Excellent direct-hire or contract candidate for organizations seeking a technically proficient, team-oriented, creative software professional with strong interpersonal skills.</p>
@@ -436,42 +434,6 @@ custom_js:
 					<dt>Brigham Young University</dt>
 					<dd>General Education</dd>
 				</dl>
-			</div>
-		</div>
-
-		<div class="hidden-xs hidden-sm col-md-4">
-			<div id="res-nav">
-				<ul id="res-nav-list">
-					<li><a href="#res-summary">Summary</a></li>
-					<li>
-						<a href="#res-skills">Skills</a>
-						<ul>
-							<li><a href="#res-skills-lang">Launguages &amp; Tools</a></li>
-							<li><a href="#res-skills-data">Databases &amp; Tools</a></li>
-							<li><a href="#res-skills-method">Methodologies &amp; Practices</a></li>
-						</ul>
-					</li>
-					<li><a href="#res-highlights">Highlights</a></li>
-					<li>
-						<a href="#res-emp">Employment</a>
-						<ul>
-							<li><a href="#res-emp-nic">NIC (Kentucky Interactive)</a></li>
-							<li><a href="#res-emp-zirmed">ZirMed</a></li>
-							<li><a href="#res-emp-sis">Software Information Systems</a></li>
-							<li><a href="#res-emp-stg">Software Technology Group</a></li>
-							<li><a href="#res-emp-mccann">McCann Erickson</a></li>
-							<li><a href="#res-emp-equis">Equis International</a></li>
-							<li><a href="#res-emp-lf">Learnframe</a></li>
-							<li><a href="#res-emp-portal">Portal Communities Inc.</a></li>
-							<li><a href="#res-emp-vp">Viewpoint Digital</a></li>
-							<li><a href="#res-emp-bfh">Blatter, Fielding &amp; Hansen</a></li>
-							<li><a href="#res-emp-netpub">Network Publishing</a></li>
-						</ul>
-					</li>
-					<li><a href="#res-community">Professional Community</a></li>
-					<li><a href="#res-edu">Education</a></li>
-					<li class="no-change small"><a href="#top">Back to top</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
