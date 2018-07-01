@@ -151,7 +151,9 @@ ol.breadcrumb {
     font-weight:bold;
 }
 
-
+footer {
+	margin-top:40px;
+}
 
 @media (min-width:768px) {
 	.media-object.post-thumbnail {
