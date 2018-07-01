@@ -6,11 +6,16 @@ description : "Timothy P. Schreiber's personal blog, dealing primarily with soft
 ---
 
 <ol class="breadcrumb">
-	<li><a href="/">Home</a></li>
+	<li><a href="/"><span class="fa fa-home"></span><span class="sr-only">Home</span></a></li>
 	<li class="active">Blog</li>
 </ol>
 
 <div class="row">
+	<div class="col-xs-12">
+		<div class="page-heading">
+			<h1>Blog</h1>
+		</div>
+	</div>
 	<div class="col-xs-12 col-md-8">
 		<div id="posts-tag-heading" style="display:none;">
 			<h3 class="pull-left">Tag: <span id="tag-name" style="font-weight:bold"></span></h3>
