@@ -25,7 +25,7 @@ description : "I love to write code. Seriously, I can't believe they pay me to d
 			<p>Aside from code, I'm a husband, father, backyard barbeque pitmaster, amateur songwriter, and novice gardener.</p>
 		</div>
 		<div class="col-xs-12 col-md-4">
-			<img class="img-responsive img-circle src="/img/timothy-p-schreiber-2.jpg" alt="Timothy P. Schreiber" />
+			<img class="img-responsive img-circle" src="/img/timothy-p-schreiber-2.jpg" alt="Timothy P. Schreiber" />
 		</div>
 	</div>
 
