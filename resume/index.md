@@ -1,13 +1,13 @@
 ---
-layout : page
+layout : layout2
 title : R&eacute;sum&eacute;
-canonical : "http://timschreiber.com/resume/"
+canonical : "{{ page.url }}"
 description : "Senior .NET Developer/Architect with expertise in enterprise application development using C#, ASP.NET (MVC & Web Forms), WCF, Entity Framework, SQL Server, Agile, and more. Proficient in object-oriented design and application architecture. Excellent direct-hire or contract candidate for organizations seeking a technically proficient, team-oriented, creative software professional with strong interpersonal skills."
 ---
 
 <ol class="breadcrumb">
-	<li><a href="/">Home</a></li>
-	<li>{{page.title}}</li>
+	<li><a href="/"><span class="fa fa-home"></span><span class="sr-only">Home</span></a></li>
+	<li class="active">{{ page.title }}</li>
 </ol>
 
 <div id="res-content" class="col-xs-12 col-md-9">
