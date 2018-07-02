@@ -82,7 +82,7 @@ description : "Senior .NET Developer/Architect with expertise in enterprise appl
 
 				<div id="res-emp-nic" class="employer">
 					<div class="clearfix">
-						<h4 class="pull-left">NIC (Kentucky Interactive)</h4>
+						<h4 class="pull-left">Kentucky.gov (NIC)</h4>
 						<h4 class="pull-right">Jul 2016 to Present</h4>
 					</div>
 					<div><strong>Senior Software Developer</strong></div>
