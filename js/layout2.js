@@ -52,7 +52,7 @@ $(function(){
 			};
 
 			$.ajax({
-				url: "http://localhost:54126/api/email/tim-schreiber-com",
+				url: "https://bizinixemailservice.azurewebsites.net/api/email/tim-schreiber-com",
 				type: "POST",
 				dataType: "json",
 				jsonp: false,
