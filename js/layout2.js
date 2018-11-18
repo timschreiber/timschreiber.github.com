@@ -36,7 +36,7 @@ $(function(){
 			$("#btnSubmit span.fa").removeClass("fa-paper-plane").addClass("fa-spinner").addClass("fa-pulse");
 			$("#btnSubmit").prop("disabled", true);
 			var data = {
-				sender: $("#sender").val(),
+				senderEmailAddress: $("#sender").val(),
 				subject: $("#subject").val(),
 				message: $("#message").val(),
 				copySender: $("#copySender").is(":checked"),
