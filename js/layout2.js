@@ -39,6 +39,9 @@ $(function(){
 		submitHandler: function(form) { 
 			$("#btnSubmit span.fa").removeClass("fa-paper-plane").addClass("fa-spinner").addClass("fa-pulse");
 			$("#btnSubmit").prop("disabled", true);
+			$("#contactErrMsgs ul").children("li").remove();
+			$("#contactErrMsgs").hide();
+			
 			var data = {
 				senderEmailAddress: $("#sender").val(),
 				senderDisplayName: $("#senderName").val(),
@@ -47,6 +50,7 @@ $(function(){
 				copySender: $("#copySender").is(":checked"),
 				reCaptchaResponse: $("#g-recaptcha-response").val()
 			};
+
 			$.ajax({
 				url: "http://localhost:54126/api/email/tim-schreiber-com",
 				type: "POST",
