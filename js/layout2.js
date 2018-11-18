@@ -7,6 +7,9 @@ $(function(){
 				required: true,
 				email: true
 			},
+			senderName: {
+				required: true
+			},
 			subject: {
 				required: true
 			},
@@ -19,6 +22,7 @@ $(function(){
 				required: "Your email address is required.",
 				email: "Your email address is invalid."
 			},
+			senderName: "Your name is required",
 			subject: "Subject is required.",
 			message: "Message is required."
 		},
@@ -37,13 +41,14 @@ $(function(){
 			$("#btnSubmit").prop("disabled", true);
 			var data = {
 				senderEmailAddress: $("#sender").val(),
+				senderDisplayName: $("#senderName").val(),
 				subject: $("#subject").val(),
 				message: $("#message").val(),
 				copySender: $("#copySender").is(":checked"),
 				reCaptchaResponse: $("#g-recaptcha-response").val()
 			};
 			$.ajax({
-				url: "http://timschreiber.azurewebsites.net/api/contact",
+				url: "https://bizinixemailservice.azurewebsites.net/api/email/tim-schreiber-com",
 				type: "POST",
 				dataType: "json",
 				jsonp: false,
