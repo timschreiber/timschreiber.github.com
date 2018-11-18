@@ -48,7 +48,7 @@ $(function(){
 				reCaptchaResponse: $("#g-recaptcha-response").val()
 			};
 			$.ajax({
-				url: "https://bizinixemailservice.azurewebsites.net/api/email/tim-schreiber-com",
+				url: "http://localhost:54126/api/email/tim-schreiber-com",
 				type: "POST",
 				dataType: "json",
 				jsonp: false,
