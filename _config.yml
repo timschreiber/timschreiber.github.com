@@ -1,4 +1,4 @@
-name: timschreiber
+name: "TimSchreiber.com"
 baseurl: "https://timschreiber.com"
 permalink: /:year/:month/:day/:title/
 title: "Timothy P. Schreiber"
