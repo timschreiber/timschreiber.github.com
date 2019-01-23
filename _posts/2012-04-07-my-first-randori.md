@@ -25,6 +25,8 @@ The 11 or 12 of us in attendance performed the Numbers to LCD kata from Mike’s
 
 It was yet another example of how we as software developers tend to overcomplicate the problem upon first analysis, and even though I strive for simplicity in software, my Dictionary solution was unnecessarily complex in comparison to the final result. But the value we gained from the exercise had nothing to do with what ended up producing. Instead, it was the activity of producing it that proved to be of most value. And seeing how my peers approached the problem provided a ton of insight that I would otherwise have missed on my own. Last night’s exercise was not only my first introduction to Randori, but also to Code Kata in general. I intend to learn more and start applying the principles of code practice in my individual professional development. I’m also thinking about conducting a couple of STG brown bags on Code Kata and Randori.
 
+===
+
 [1]: http://blog.softwareontheside.com
 [2]: http://codekata.pragprog.com/codekata
 [3]: http://blog.softwareontheside.com/2012/03/utah-code-camp-spring-2012-slide-decks.html
