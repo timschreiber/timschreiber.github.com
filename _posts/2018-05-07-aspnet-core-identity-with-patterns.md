@@ -27,6 +27,8 @@ tags:
 *NOTES:*
  * *This series of posts requires a functional understanding of ASP.NET Core Identity If you haven't had at least some kind of exposure, this you should probably start [here][4].*
  * *If you haven't read my [my previous posts][8], I'd suggest you stop here and read at least the first one to understand the problems I had with ASP.NET Identity 2.0 and how I solved them.*
+ * *This article was written for .NET Core 2.0. The current version is 2.2, and there have been a number of changes to ASP.NET Core Identity. While implementation details may have changed, the concepts are largely the same.*
+ * *Even though I authored this blog post, I have a demanding day job as well, and as such may not be able to address individual questions or concerns about this article or its associated GitHub repository.*
 
 ## Still Has Problems, but not as Many
 
