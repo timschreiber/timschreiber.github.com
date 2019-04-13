@@ -57,7 +57,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li {% if page.active == "about" %}class="active"{% elsif layout.active == "about" %}class="active"{% endif %}><a href="/about">About</a></li>
-            <li class="dropdown{% if page.active == "work" %}class=" active"{% elsif layout.active == "work" %}class=" active"{% endif %}">
+            <li class="dropdown{% if page.active == "work" %} active{% elsif layout.active == "work" %} active{% endif %}">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopups="true" aria-expanded="false">Work <span class="caret"></a>
 				<ul class="dropdown-menu">
 					<li><a href="/work/blog">Blog</a></li>
