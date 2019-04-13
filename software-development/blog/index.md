@@ -3,7 +3,7 @@ layout : blog2
 title : "Blog"
 canonical : "{{ page.url }}"
 description : "Timothy P. Schreiber's personal blog, dealing primarily with software development, but also dabbling in songwriting, food, and gardening from time to time."
-active : "work"
+active : work
 ---
 <ol class="breadcrumb">
 	<li><a href="/"><span class="fa fa-home"></span><span class="sr-only">Home</span></a></li>

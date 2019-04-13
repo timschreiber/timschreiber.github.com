@@ -56,12 +56,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li {% if page.active == "about" %}class="active"{% elsif layout.active == "about" %}class="active"{% endif %}><a href="/about">About</a></li>
-            <li {% if page.active == "work" %}class="dropdown active"{% elsif layout.active == "work" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopups="true" aria-expanded="false">Work <span class="caret"></a>
+            <li {% if page.active == "software-development" %}class="dropdown active"{% elsif layout.active == "software-development" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopups="true" aria-expanded="false">Software Development <span class="caret"></a>
 				<ul class="dropdown-menu">
-					<li><a href="/work/blog">Blog</a></li>
-					<li><a href="/work/resume">R&eacute;sum&eacute;</a></li>
+					<li><a href="/software-development/blog">Blog</a></li>
+					<li><a href="/software-development/resume">R&eacute;sum&eacute;</a></li>
 				</ul>
 			</li>
 			<li {% if page.active == "health" %}class="active"{% elsif layout.active == "health" %}class="active"{% endif %}><a href="/health">Health</a></li>
@@ -69,6 +68,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li id="contact-nav">
+			  <a href="/about" class="contact-nav-item" data-toggle="tooltip" data-placement="bottom" title="About Me"><span class="fa fa-info-circle"></span></a>
               <a href="javascript:showContactModal();" class="contact-nav-item" data-toggle="tooltip" data-placement="bottom" title="Email"><span class="fa fa-envelope-o"></span></a>
               <a href="https://twitter.com/tim_schreiber" class="contact-nav-item" data-toggle="tooltip" data-placement="bottom" title="Twitter"><span class="fa fa-twitter"></span></a>
               <a href="https://www.linkedin.com/profile/view?id=12496208" class="contact-nav-item" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><span class="fa fa-linkedin"></span></a>
