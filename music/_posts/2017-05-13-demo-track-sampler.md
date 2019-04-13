@@ -18,7 +18,7 @@ I came close in 1999 when I recorded a couple of tracks with a Provo, UT band ca
 
 About a year ago, I started devoting more time to music, and about six months ago, I started writing songs and envisioning an album. Recently, I decided to get it all done by the end of the year.
 
-Today, I reached the milestone of having half the album written and demos recorded. There's still a lot to do, but I wanted to get it out there and give the world a sneak peak.
+Today, I reached the milestone of having half the album written and demos recorded. There's still a lot to do, but I wanted to get it out there and give the world a sneak peak!
 
 So have a listen:
 
