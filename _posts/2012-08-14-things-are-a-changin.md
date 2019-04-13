@@ -7,6 +7,7 @@ comments: true
 description: "A lot has been going on the past couple of months that have detracted me from my side projects and blog posting. First and foremost has been my job hunt."
 featured: 0
 thumbnail: "post.png"
+active: software-development
 ---
 
 &quot;Wait, what?&quot; some might be thinking, &quot;I thought you were pleased as punch to be an STG company man.&quot;

@@ -10,6 +10,7 @@ thumbnail: "persistence-ignorant-asp-net-identity-with-patterns-th.jpg"
 image_width: 1280
 image_height: 683
 featured: 0
+active: software-development
 tags:
 - asp-net
 - mvc-5

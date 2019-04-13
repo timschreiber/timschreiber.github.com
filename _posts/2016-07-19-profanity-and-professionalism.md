@@ -10,6 +10,7 @@ image_width: 1280
 image_height: 683
 thumbnail: "profanity-and-professionalism-th.jpg"
 featured: 0
+active: software-development
 tags:
 - work
 - software-craftsmanship

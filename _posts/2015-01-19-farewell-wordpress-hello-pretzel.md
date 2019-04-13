@@ -7,6 +7,7 @@ comments: true
 description: "For the past couple years, I've been running this website using WordPress on GoDaddy hosting. But since it's such a simplistic site, I've begun questioning why."
 thumbnail: "post.png"
 featured: 0
+active: software-development
 tags:
 - this-site
 - pretzel

@@ -9,6 +9,7 @@ image_width: 1280
 image_height: 683
 thumbnail: "asp-net-core-identity-with-patterns-th.jpg"
 featured: 2
+active: software-development
 tags:
 - dotnet-core
 - asp-net-core

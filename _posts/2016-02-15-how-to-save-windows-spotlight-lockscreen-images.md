@@ -10,6 +10,7 @@ thumbnail: "how-to-save-windows-spotlight-lockscreen-images-th.jpg"
 image_width: 1280
 image_height: 683
 featured: 0
+active: software-development
 tags:
 - windows-10
 - tips

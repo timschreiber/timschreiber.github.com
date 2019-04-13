@@ -10,6 +10,7 @@ image_width: 1280
 image_height: 683
 thumbnail: "beware-the-stackoverlords-2-th.jpg"
 featured: 0
+active: software-development
 tags:
 - stack-overflow
 - rants

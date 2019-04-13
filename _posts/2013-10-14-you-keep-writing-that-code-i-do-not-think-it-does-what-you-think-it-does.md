@@ -7,6 +7,7 @@ comments: true
 description: "Concatenating SQL is the bigger sin here, but this misuse of StringBuilder is mind-boggling."
 featured: 0
 thumbnail: "post.png"
+active: software-development
 tags:
 - code
 - c-sharp

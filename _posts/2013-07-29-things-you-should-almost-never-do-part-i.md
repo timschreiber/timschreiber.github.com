@@ -11,6 +11,7 @@ image_width: 1280
 image_height: 683
 thumbnail: "things-you-should-almost-never-do-part-i-th.jpg"
 featured: 0
+active: software-development
 tags:
 - practices
 ---

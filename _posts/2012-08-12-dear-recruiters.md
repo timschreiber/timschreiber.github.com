@@ -7,6 +7,7 @@ comments: true
 description: "You will be much more successful if you simply put a little effort into your job and stop pissing people off. Here are some ideas:"
 featured: 0
 thumbnail: "post.png"
+active: software-development
 tags:
 - rants
 ---

@@ -7,6 +7,7 @@ comments: true
 description: "Welcome to the brand spankin' new TimSchreiber.com"
 featured: 0
 thumbnail: "post.png"
+active: software-development
 tags:
 - this-site
 ---

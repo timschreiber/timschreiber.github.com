@@ -10,6 +10,7 @@ image_width: 1280
 image_height: 683
 thumbnail: "nic-view-th.jpg"
 featured: 0
+active: software-development
 tags:
 - work
 ---

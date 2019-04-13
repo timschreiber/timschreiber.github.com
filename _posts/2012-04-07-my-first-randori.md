@@ -10,6 +10,7 @@ image_width: 1280
 image_height: 683
 thumbnail: "randori-group-practice-th.png"
 featured: 0
+active: software-development
 tags:
 - code-practice
 - software-craftsmanship
