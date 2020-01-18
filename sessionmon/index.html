@@ -17,11 +17,7 @@
 		</li>
 	</ul>
 	<p>If users have multiple windows or tabs of the same website open, SessionMon synchronizes the coundown among all windows/tabs. Keyboard or mouse interaction on any of the open windows or tabs resets the counter for all of them. Dismissing the modal button dismisses the modal in all of them. To test this functionality, open this test page in multiple browser windows.</p>
-	<p>For the purposes of this demonstration:</p>
-	<ul>
-		<li>Extending the session is simulated with a control.log()<br/>&nbsp;</li>
-		<li>Logout is simulated by redirecting to Google.</li>
-	</ul>
+	<p>For the purposes of this demonstration, session extension and logout redirect are simulated in the console.log().</p>
 
 	<!-- BEGIN SessionMon Modal-->
 	<div class="modal" id="sessionmon-modal">
@@ -32,7 +28,6 @@
 					<p>Your session is about to expire. You will be automatically signed out in:</p>
 					<p class="sessionmon-counter"></p>
 					<p>To prevent any unsaved work from being lost, click the button below to stay signed in.</p>
-					<p id="logoutNotification"><strong>USER LOGGED OUT</strong><small>(or at least they would be if this wasn't just a test).</small></p>
 				</div>
 				<div class="modal-footer">
 					<button class="sessionmon-button">Stay Signed In</button>

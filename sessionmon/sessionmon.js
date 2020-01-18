@@ -12,7 +12,7 @@ var SessionMon = /** @class */ (function () {
         this.extendSession = function () {
             _this.reset();
             _this.hideModal();
-            console.log("session extended at " + new Date().getTime());
+            console.log("Session extended at " + new Date().getTime());
         };
         this.intervalHandler = function () {
             _this.intervalCount++;
@@ -31,7 +31,7 @@ var SessionMon = /** @class */ (function () {
             }
             else if (_this.intervalCount >= _this._options.logoutAfterSeconds) {
                 window.clearInterval(_this._interval);
-                document.querySelector('#logoutNotification').style.display = 'block';
+                console.log("User logged out at " + new Date().getTime());
             }
         };
         this._options = options;
@@ -61,7 +61,6 @@ var SessionMon = /** @class */ (function () {
         }
     };
     SessionMon.prototype.hideModal = function () {
-        document.querySelector('#logoutNotification').style.display = 'none';
         if (this._options.modalElement.classList.contains('open')) {
             this._options.modalElement.classList.remove('open');
             this.enableScroll();
