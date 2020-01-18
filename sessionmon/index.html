@@ -43,7 +43,8 @@
 			KI.JSLib.Session.start({
 				modalElement: document.getElementById('session-modal'),
 				logoutAfterSeconds: 30,
-				modalDurationSeconds: 20
+				modalDurationSeconds: 20,
+				keepAliveEndpoint: 'keepalive.json'
 			});
 		});
 	</script>

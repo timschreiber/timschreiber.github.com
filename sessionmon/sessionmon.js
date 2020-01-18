@@ -10,13 +10,20 @@ var KI;
                         if (_this._timeout) {
                             clearTimeout(_this._timeout);
                         }
-                        _this._timeout = setTimeout(_this.extendSession, 1000);
+                        _this._timeout = setTimeout(_this.keepAlive, 1000);
                     }
                 };
-                this.extendSession = function () {
-                    _this.reset();
-                    _this.hideModal();
-                    console.log("Session extended at " + new Date().getTime());
+                this.keepAlive = function () {
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            _this.reset();
+                            _this.hideModal();
+                            console.log("Session extended at " + new Date().getTime());
+                        }
+                    };
+                    xhr.open("GET", "this._options.keepAliveEndpoint?" + new Date().getTime());
+                    xhr.send(null);
                 };
                 this.intervalHandler = function () {
                     _this.intervalCount++;
@@ -39,7 +46,7 @@ var KI;
                     }
                 };
                 this._options = options;
-                EventHandlers.add('click', this._options.modalElement.querySelector('.session-button'), this.extendSession);
+                EventHandlers.add('click', this._options.modalElement.querySelector('.session-button'), this.keepAlive);
                 EventHandlers.add('mouseup', window, this.handleInteraction);
                 EventHandlers.add('keyup', window, this.handleInteraction);
                 this.reset();
