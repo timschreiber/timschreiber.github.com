@@ -32,6 +32,7 @@
 					<p>Your session is about to expire. You will be automatically signed out in:</p>
 					<p class="sessionmon-counter"></p>
 					<p>To prevent any unsaved work from being lost, click the button below to stay signed in.</p>
+					<p id="logoutNotification"><strong>USER LOGGED OUT</strong><small>(or at least they would be if this wasn't just a test).</small></p>
 				</div>
 				<div class="modal-footer">
 					<button class="sessionmon-button">Stay Signed In</button>
@@ -43,7 +44,7 @@
 
 	<script src="sessionmon.js"></script>
 	<script>
-		window.addEventListener('load', function() {
+		EventHandlers.add('load', window, function() {
 			var sessionMon = SessionMon.start({
 				modalElement: document.getElementById('sessionmon-modal'),
 				logoutAfterSeconds: 30,

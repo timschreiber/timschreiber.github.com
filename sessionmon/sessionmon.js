@@ -16,6 +16,7 @@ var SessionMon = /** @class */ (function () {
         };
         this.intervalHandler = function () {
             _this.intervalCount++;
+            console.log(_this.intervalCount);
             var remaining = _this._options.logoutAfterSeconds - _this.intervalCount;
             var counterElement = _this._options.modalElement.querySelector('.sessionmon-counter');
             var mins = _this.padZeroes(Math.max(Math.floor(remaining / 60), 0), 2);
@@ -30,13 +31,13 @@ var SessionMon = /** @class */ (function () {
             }
             else if (_this.intervalCount >= _this._options.logoutAfterSeconds) {
                 window.clearInterval(_this._interval);
-                location.href = "https://google.com";
+                document.querySelector('#logoutNotification').style.display = 'block';
             }
         };
         this._options = options;
-        this._options.modalElement.querySelector('.sessionmon-button').addEventListener('click', this.extendSession);
-        window.addEventListener('mouseup', this.handleInteraction);
-        window.addEventListener('keyup', this.handleInteraction);
+        EventHandlers.add('click', this._options.modalElement.querySelector('.sessionmon-button'), this.extendSession);
+        EventHandlers.add('mouseup', window, this.handleInteraction);
+        EventHandlers.add('keyup', window, this.handleInteraction);
         this.reset();
         this._interval = window.setInterval(this.intervalHandler, 1000);
     }
@@ -60,6 +61,7 @@ var SessionMon = /** @class */ (function () {
         }
     };
     SessionMon.prototype.hideModal = function () {
+        document.querySelector('#logoutNotification').style.display = 'none';
         if (this._options.modalElement.classList.contains('open')) {
             this._options.modalElement.classList.remove('open');
             this.enableScroll();
@@ -67,11 +69,11 @@ var SessionMon = /** @class */ (function () {
     };
     SessionMon.prototype.disableScroll = function () {
         document.querySelector('body').classList.add('stop-scrolling');
-        window.addEventListener('touchmove', this.preventDefault);
+        EventHandlers.add('touchmove', window, this.preventDefault);
     };
     SessionMon.prototype.enableScroll = function () {
         document.querySelector('body').classList.remove('stop-scrolling');
-        window.removeEventListener('touchmove', this.preventDefault);
+        EventHandlers.remove('touchmove', window, this.preventDefault);
     };
     SessionMon.prototype.preventDefault = function (e) {
         e = e || window.event;
@@ -91,24 +93,67 @@ var SessionMon = /** @class */ (function () {
     });
     Object.defineProperty(SessionMon.prototype, "intervalCount", {
         get: function () {
-            var nameEq = 'sessionmon_intervalCount=';
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) === ' ') {
-                    c = c.substring(1, c.length);
-                }
-                if (c.indexOf(nameEq) == 0) {
-                    return parseInt(c.substring(nameEq.length, c.length));
-                }
-            }
-            return 0;
+            return parseInt(Cookies.getCookie('sessionmon_intervalCount')) || 0;
         },
         set: function (value) {
-            document.cookie = "sessionmon_intervalCount=" + value + ";expires=0;path=/";
+            Cookies.setCookie('sessionmon_intervalCount', (value || 0).toString());
         },
         enumerable: true,
         configurable: true
     });
     return SessionMon;
+}());
+var EventHandlers = /** @class */ (function () {
+    function EventHandlers() {
+    }
+    EventHandlers.add = function (eventName, element, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(eventName, handler, false);
+        }
+        else if (element.attachEvent) {
+            element.attachEvent("on" + eventName, handler);
+        }
+        else {
+            element["on" + eventName] = handler;
+        }
+    };
+    EventHandlers.remove = function (eventName, element, handler) {
+        if (element.removeEventListener) {
+            element.removeEventListener(eventName, handler, false);
+        }
+        else if (element.detachEvent) {
+            element.detachEvent("on" + eventName, handler);
+        }
+        else {
+            element["on" + eventName] = undefined;
+        }
+    };
+    return EventHandlers;
+}());
+var Cookies = /** @class */ (function () {
+    function Cookies() {
+    }
+    Cookies.setCookie = function (name, value, expires, path, domain, secure) {
+        value = escape(value);
+        var cookie = name + '=' + value +
+            (expires ? '; expires=' + expires.toUTCString() : '') +
+            (path ? '; path=' + path : '') +
+            (domain ? '; domain=' + domain : '') +
+            (secure ? '; secure' : '');
+        document.cookie = cookie;
+    };
+    Cookies.getCookie = function (name) {
+        var search = name + '=';
+        if (document.cookie.length > 0) {
+            var offset = document.cookie.indexOf(search);
+            if (offset != -1) {
+                offset += search.length;
+                var end = document.cookie.indexOf(';', offset);
+                if (end == -1)
+                    end = document.cookie.length;
+                return unescape(document.cookie.substring(offset, end));
+            }
+        }
+    };
+    return Cookies;
 }());
