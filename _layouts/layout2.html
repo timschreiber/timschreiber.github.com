@@ -56,15 +56,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li {% if page.active == "software-development" %}class="dropdown active"{% elsif layout.active == "software-development" %}class="dropdown active"{% else %}class="dropdown"{% endif %}>
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopups="true" aria-expanded="false">Software Development <span class="caret"></a>
-				<ul class="dropdown-menu">
-					<li{% if page.url contains "blog" %} class="active"{% endif %}><a href="/software-development/blog">Blog</a></li>
-					<li{% if page.url contains "resume" %} class="active"{%endif%}><a href="/software-development/resume">R&eacute;sum&eacute;</a></li>
-				</ul>
-			</li>
-			<li {% if page.active == "health" %}class="active"{% elsif layout.active == "health" %}class="active"{% endif %}><a href="/health">Health</a></li>
-			<li {% if page.active == "music" %}class="active"{% elsif layout.active == "music" %}class="active"{% endif %}><a href="/music">Music</a></li>
+		<li {% if page.url contains "blog" %}class="active"{% endif %}><a href="/software-development/blog">Blog</a></li>
+		<li {% if page.url contains "resume" %}class="active"{%endif%}><a href="/software-development/resume">R&eacute;sum&eacute;</a></li>
+		<li><a href="https://covid-19.timschreiber.com">COVID-19</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li id="contact-nav">
