@@ -117,12 +117,12 @@ active: software-development
 				</div>
 				
 				<div id="res-emp-sis" class="employer">
-					<h4>Software Information Systems (SIS, LLC)</h4>
+					<h4>Software Information Systems</h4>
 					<div><strong>Senior Software Consultant</strong></div>
 					<div class="ml-3">
 						<div class="text-underline">Kentucky Administrative Office of the Courts</div>
 						<div class="clearfix">
-							<div class="pull-left">Lead Developer</div>
+							<div class="pull-left">Lead Software Developer</div>
 							<div class="pull-right">Feb 2015 to Dec 2015</div>
 						</div>
 						<ul>
@@ -137,15 +137,15 @@ active: software-development
 						<div class="pull-right">Feb 2014 to Feb 2015</div>
 					</div>
 					<ul>
-						<li>Defined the technology stack and designed the cloud network and application architectures for the project.</li>
 						<li>Developed a custom application to integrate Microsoft Dynamics CRM with Visual Business Suite back office.</li>
+						<li>Defined the technology stack and designed the cloud network and application architectures for the project.</li>
 						<li>Gathered requirements, created and prioritized user stories, developed the product, and reported progress to product owners.</li>
 					</ul>
 					<div><strong>Senior Software Consultant</strong></div>
 					<div class="ml-3">
 						<div class="text-underline">Kentucky Community and Technical College System (KCTCS)</div>
 						<div class="clearfix">
-							<div class="pull-left">Lead Developer</div>
+							<div class="pull-left">Lead Software Developer</div>
 							<div class="pull-right">Nov 2013 to Feb 2014</div>
 						</div>
 						<ul>
@@ -155,7 +155,7 @@ active: software-development
 						</ul>
 						<div class="text-underline">Kentucky Cabinet for Health and Family Services</div>
 						<div class="clearfix">
-							<div class="pull-left">Lead Developer</div>
+							<div class="pull-left">Lead Software Developer</div>
 							<div class="pull-right">Oct 2012 to Nov 2013</div>
 						</div>
 						<ul>
@@ -169,176 +169,91 @@ active: software-development
 				
 				<div id="res-emp-stg" class="employer">
 					<h4>Software Technology Group</h4>
-					<div class="clearfix">
-						<div class="pull-left"><strong>Senior Software Consultant</strong></div>
-						<div class="pull-right">Jul 2006 to Oct 2012</div>
-					</div>
-					<ul>
-						<li>Performed software development consulting for the following clients:</li>
-					</ul>
-					<div class="clients">
-						<div><u>Rio Tinto Group</u></div>
-						<div>Senior Developer/Architect &mdash; Aug 2012 to Oct 2012</div>
-						<div>
-							<span class="badge alert-info">.NET 4</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">ASP.NET MVC</span>
-							<span class="badge alert-info">JQuery</span>
-							<span class="badge alert-info">SQL Server 2008 R2</span>
-							<span class="badge alert-info">Entity Framework</span>
-							<span class="badge alert-info">MS Unity</span>
-							<span class="badge alert-info">TFS</span>
+					<div><strong>Senior Software Consultant</strong></div>
+					<div class="ml-3">
+						<div class="text-underline">Rio Tinto Group</div>
+						<div class="clearfix">
+							<div class="pull-left">Senior Software Developer/Architect</div>
+							<div class="pull-right">Aug 2012 to Oct 2012</div>
 						</div>
 						<ul>
-							<li>Developed in-house business software for multinational corporation in the natural resources industry.</li>
-							<li>Introduced the team to design patterns and created a reference architecture for new projects.</li>
+							<li>Developed in-house business process applications for multinational natural resources corporation.</li>
+							<li>Mentored team members in design patterns and created a reference architecture for new projects.</li>
 						</ul>
-
-						<div><u>Confidential Nonprofit Client</u></div>
-						<div>Senior Developer/Architect &mdash; Aug 2011 to Aug 2012</div>
-						<div>
-							<span class="badge alert-info">.NET 4</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">WCF</span>
-							<span class="badge alert-info">SQL Server 2008 R2</span>
-							<span class="badge alert-info">Entity Framework</span>
-							<span class="badge alert-info">MS Unity</span>
-							<span class="badge alert-info">Java</span>
-							<span class="badge alert-info">TFS</span>
+						<div class="text-underline">The Church of Jesus Christ of Latter-Day Saints</div>
+						<div class="clearfix">
+							<div class="pull-left">Senior Software Developer/Architect</div>
+							<div class="pull-right">Aug 2011 to Aug 2012</div>
 						</div>
 						<ul>
-							<li>Developed key parts of a large, service-oriented enterprise business workflow solution with multiple UI components, including ASP.NET, Silverlight, and Java applications.</li>
-							<li>Led a major re-architecture effort focusing on separation of concerns, design patterns (primarily Repository, Unit of Work, and Inversion of Control), and proper layering/solution structure; which resulted in better performance, improved testability, increased stability, and easier development and maintenance.</li>
-							<li>Mentored team members on principles, patterns, and technologies used in the application.</li>
+							<li>Led a re-architecture effort of a crowdsourced translation software project and introduced SOLID principles and design patterns, which resulted in better performence, increased test coverage, improved stability, and easier maintenance and enhancement.</li>
+							<li>Mentored team members on principles, patterns, practices, and technologies used in the application.</li>
 						</ul>
-
-						<div><u>Law Offices of Kirk A. Cullimore</u></div>
-						<div>Senior Developer/Architect &mdash; Dec 2010 to Aug 2011</div>
-						<div>
-							<span class="badge alert-info">.NET 4</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">ASP.NET MVC</span>
-							<span class="badge alert-info">JQuery</span>
-							<span class="badge alert-info">SQL Server 2008 R2</span>
-							<span class="badge alert-info">NHibernate</span>
-							<span class="badge alert-info">Castle Windsor</span>
-							<span class="badge alert-info">SVN</span>
+						<div class="text-underline">Law Offices of Kirk A. Cullimore</div>
+						<div class="clearfix">
+							<div class="pull-left">Lead Software Developer/Architect</div>
+							<div class="pull-right">Dec 2010 to Aug 2011</div>
 						</div>
 						<ul>
-							<li>Performed business analysis, project management, architecture, and lead developer duties for an enterprise web application for legal workflow/process management.</li>
-							<li>Analyzed business processes, gathered requirements, wrote specifications and user stories, planned deliverables, conducted Agile meetings, and tracked and reported progress.</li>
-							<li>Architected the application, applying enterprise application design patterns and principles of Domain Driven Design, ORM, Repository Pattern, Unit of Work Pattern, and Inversion of Control to maximize development productivity and unit test coverage.</li>
-							<li>Led development team from design through deployment and mentored team members on patterns, practices, and technologies used in the application.</li>
+							<li>Performed business analysis, project management, architecture, and lead developer duties for a legal workflow/process management application.</li>
+							<li>Delivered the project ahead of schedule and under budget.</li>
 						</ul>
-
-						<div><u>HealthCare Insight</u></div>
-						<div>Application Architect &mdash; Oct 2010 to Dec 2010</div>
-						<div>
-							<span class="badge alert-info">.NET 3.5</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">ASP.NET Web Forms</span>
-							<span class="badge alert-info">JQuery</span>
-							<span class="badge alert-info">WCF</span>
-							<span class="badge alert-info">SQL Server 2008</span>
-							<span class="badge alert-info">Entity Framework</span>
-							<span class="badge alert-info">MS Unity</span>
-							<span class="badge alert-info">TFS</span>
+						<div class="text-underline">Healthcare Insight</div>
+						<div class="clearfix">
+							<div class="pull-left">Software Architect</div>
+							<div class="pull-right">Oct 2010 to Dec 2010</div>
 						</div>
 						<ul>
-							<li>Evaluated existing applications and recommended changes to solve development and performance problems by applying enterprise design principles including Domain Driven Design, ORM, Repository Pattern, Inversion of Control, Service-Oriented Architecture, and Model-View-Presenter.</li>
-							<li>Led the development team in modeling the business domain into classes, responsibilities, and collaborators (CRC), and helped them turn the design into a working domain object model.</li>
-							<li>Mentored team members in Agile principles, practices, and design patterns.</li>
+							<li>Evaluated existing applications and recommended changes to solve development and performance problems.</li>
+							<li>Mentored the development team in Agile principles, best practices, design patterns, and specific technologies used in the application improvements.</li>
 						</ul>
-
-						<div><u>Confidential Nonprofit Client</u></div>
-						<div>Lead Developer &mdash; July 2008 to Oct 2010</div>
-						<div>
-							<span class="badge alert-info">.NET 3.5</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">ASP.NET Web Forms</span>
-							<span class="badge alert-info">JQuery</span>
-							<span class="badge alert-info">WCF</span>
-							<span class="badge alert-info">Entity Framework</span>
-							<span class="badge alert-info">SQL Server 2008</span>
-							<span class="badge alert-info">MS Unity</span>
-							<span class="badge alert-info">TFS</span>
+						<div class="text-underline">The Church of Jesus Christ of Latter-Day Saints</div>
+						<div class="clearfix">
+							<div class="pull-left">Lead Software Developer</div>
+							<div class="pull-right">Jul 2008 to Oct 2010</div>
 						</div>
 						<ul>
-							<li>Designed and developed key parts of a large enterprise business process/workflow management application for Finance, Treasury, and Legal Counsel users.</li>
-							<li>Participated in re-architecture design and development efforts to utilize Entity Framework, WCF Services, and Microsoft Unity IoC container.</li>
-							<li>Led one of three concurrent development teams and collaborated with other team leads on project management duties.</li>
+							<li>Developed kep parts of a large enterprise business process/workflow management application for finance, treasurey, and legal counsel users.</li>
+							<li>Led one of three development teams and collaborated with other team leads over project management concerns.</li>
 						</ul>
-
-						<div><u>Utah Department of Health</u></div>
-						<div>Lead Developer/Architect &mdash; Mar 2008 to Jul 2008</div>
-						<div>
-							<span class="badge alert-info">.NET 2</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">Windows Forms</span>
-							<span class="badge alert-info">.NET Remoting</span>
-							<span class="badge alert-info">SQL Server 2005</span>
-							<span class="badge alert-info">SVN</span>
-							<span class="badge alert-info">NUnit</span>
-							<span class="badge alert-info">CruiseControl.NET</span>
+						<div class="text-underline">Utah Department of Health</div>
+						<div class="clearfix">
+							<div class="pull-left">Lead Software Developer</div>
+							<div class="pull-right">Mar 2008 to Jul 2008</div>
 						</div>
 						<ul>
-							<li>Wrote data conversion utilities to facilitate transition to federal government CAREWare application for HIV/AIDS treatment and care program mandated by the Ryan White CARE Act.</li>
-							<li>Performed in-depth analysis of the undocumented CAREWare API to discover how to interact with the system programmatically.</li>
-							<li>Architected and led development of client-server application to bridge the gap between the needs of program administrators and the inbuilt functionality of CAREWare.</li>
-							<li>Created a continuous integration environment and automatically published the latest builds to an internal web server to better engage the client in the development and testing process.</li>
+							<li>Developed an application to synchronize data between the federal government CAREWare application and in-house applications for the HIV/AIDS Treatment and Care Program.</li>
+							<li>Analyzed the undocumented CAREWare API and reverse engineered client tools to determine how to interact with the system programmatically.</li>
 						</ul>
-
-						<div><u>Obeo</u></div>
-						<div>Senior Developer &mdash; Jul 2007 to Feb 2008</div>
-						<div>
-							<span class="badge alert-info">.NET 2</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">ASP.NET Web Forms</span>
-							<span class="badge alert-info">JQuery</span>
-							<span class="badge alert-info">SQL Server 2005</span>
-							<span class="badge alert-info">NHibernate</span>
-							<span class="badge alert-info">SVN</span>
-							<span class="badge alert-info">NUnit</span>
-							<span class="badge alert-info">CruiseControl.NET</span>
+						<div class="text-underline">Obeo</div>
+						<div class="clearfix">
+							<div class="pull-left">Senior Software Developer</div>
+							<div class="pull-right">Jul 2007 to Feb 2008</div>
 						</div>
 						<ul>
-							<li>Led development of two high-visibility real estate marketing products.</li>
-							<li>Leveraged technologies including NHibernate and JQuery to accelerate development, which enabled the team to complete both projects ahead of schedule and to exceed the expectation of the business managers.</li>
-							<li>Introduced the team to Model-View-Presenter for ASP.NET Web Forms, which allowed for greater unit test coverage during development.</li>
-							<li>Refined the build-deploy process to handle automated configuration, tests, builds, and deployment to development servers.</li>
+							<li>Improved team development of custom applications for real estate marketing by introducing design patterns, unit testing, and CI/CD.</li>
 						</ul>
-
-						<div><u>A La Mode</u></div>
-						<div>Senior Developer &mdash; Jan 2007 to Jul 2007</div>
-						<div>
-							<span class="badge alert-info">.NET 2</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">Windows Forms</span>
-							<span class="badge alert-info">XML</span>
-							<span class="badge alert-info">SVN</span>
+						<div class="text-underline">A La Mode</div>
+						<div class="clearfix">
+							<div class="pull-left">Senior Software Developer</div>
+							<div class="pull-right">Jan 2007 to Jul 2007</div>
 						</div>
 						<ul>
-							<li>Developed key pieces of a Windows Forms real estate appraisal application which replaced the company's flagship product.</li>
-							<li>Implemented parts of a custom, declarative XML scripting language used by the application engine to define visual elements, perform calculations, and handle interactive functionality.</li>
-							<li>Wrote data conversion utilities to convert legacy form script and data files into the new format.</li>
+							<li>Developed key pieces of a Windoews Forms real estate appraisal application.</li>
+							<li>Built out a declarative XML-based scripting language to define visual elements, perform calculations, and handle interactive functionality.</li>
+							<li>Wrote data conversion utilities to migrate legacy form script to the new format.</li>
 						</ul>
-
-						<div><u>StayWell Interactive</u></div>
-						<div>Senior Developer &mdash; Jul 2006 to Jan 2007</div>
-						<div>
-							<span class="badge alert-info">.NET 1.1</span>
-							<span class="badge alert-info">.NET 2</span>
-							<span class="badge alert-info">C#</span>
-							<span class="badge alert-info">ASP.NET Web Forms</span>
-							<span class="badge alert-info">JavaScript</span>
-							<span class="badge alert-info">SQL Server 2005</span>
+						<div class="text-underline">StayWell Interactive</div>
+						<div class="clearfix">
+							<div class="pull-left">Senior Software Developer</div>
+							<div class="pull-right">Jul 2006 - Jan 2007</div>
 						</div>
 						<ul>
-							<li>Implemented multiple health risk assessment websites built upon a proprietary framework, for Fortune 500 companies.</li>
-							<li>Enhanced and maintained the health risk assessment framework and performed other custom development for clients as needed.</li>
-							<li>Managed up to 40 concurrent implementation projects at various stages of planning, development, and maintenance.</li>
+							<li>Implemented multiple health risk assessment portals built on a propriety framework, with up to 40 concurrent implementation projects at any given time.</li>
+							<li>Enhanced and maintened the health risk assessment framework and provided custom development for clients as required.</li>
 						</ul>
 					</div>
+
 				</div>
 				
 				<div id="res-emp-mccann" class="employer">
