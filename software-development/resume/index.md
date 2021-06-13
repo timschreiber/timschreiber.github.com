@@ -257,120 +257,58 @@ active: software-development
 				</div>
 				
 				<div id="res-emp-mccann" class="employer">
+					<h4>McCann Erickson</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">McCann Erickson</h4>
-						<h4 class="pull-right">Jul 2005 to Jul 2006</h4>
+						<div class="pull-left"><strong>Senior Developer/Team Lead</strong></div>
+						<div class="pull-right">Jul 2005 to Jul 2006</div>
 					</div>
-					<div><strong>Senior Developer/Team Lead</strong></div>
-					<div>
-						<span class="badge alert-info">.NET 1.1</span>
-						<span class="badge alert-info">.NET 2</span>
-						<span class="badge alert-info">C#</span>
-						<span class="badge alert-info">ASP.NET Web Forms</span>
-						<span class="badge alert-info">Javascript</span>
-						<span class="badge alert-info">SQL Server 2000</span>
-						<span class="badge alert-info">SQL Server 2005</span>
-						<span class="badge alert-info">SVN</span>
-					</div>
-					<ul>
-						<li>Built and led a team of programmers developing multiple high-visibility relationship marketing web sites for Microsoft, McAffee, Verisign, and others.</li>
-						<li>Led development of the Microsoft Trial Activation Assistant which was deployed on over 100 million OEM installations of Microsoft Vista worldwide.</li>
-					</ul>
 				</div>
 				
 				<div id="res-emp-equis" class="employer">
+					<h4>Equis International</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Equis International</h4>
-						<h4 class="pull-right">Oct 2001 to Dec 2004</h4>
+						<div class="pull-left"><strong>Web Developer</strong></div>
+						<div class="pull-right">Oct 2001 to Dec 2004</div>
 					</div>
-					<div><strong>Web Developer</strong></div>
-					<div>
-						<span class="badge alert-info">.NET 1.0</span>
-						<span class="badge alert-info">.NET 1.1</span>
-						<span class="badge alert-info">ASP.NET Web Forms</span>
-						<span class="badge alert-info">ASMX Web Services</span>
-						<span class="badge alert-info">Javascript</span>
-						<span class="badge alert-info">ADO.NET</span>
-						<span class="badge alert-info">SQL Server 2000</span>
-						<span class="badge alert-info">XML</span>
-						<span class="badge alert-info">XSLT</span>
-						<span class="badge alert-info">VSS</span>
-					</div>
-					<ul>
-						<li>Developed and maintained multiple websites, including external corporate and e-commerce sites and intranet and extranet sites for employees and partners.</li>
-						<li>Gathered requirements, wrote specifications, and tracked and reported progress on multiple projects.</li>
-					</ul>
 				</div>
 				
 				<div id="res-emp-lf" class="employer">
+					<h4>Learnframe</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Learnframe</h4>
-						<h4 class="pull-right">Nov 2000 to Sep 2001</h4>
+						<div class="pull-left"><strong>Software Engineer</strong></div>
+						<div class="pull-right">Nov 2000 to Sep 2001</div>
 					</div>
-					<div><strong>Software Engineer</strong></div>
-					<div>
-						<span class="badge alert-info">Java</span>
-						<span class="badge alert-info">JSP</span>
-						<span class="badge alert-info">Javascript</span>
-						<span class="badge alert-info">.NET Beta</span>
-					</div>
-					<ul>
-						<li>Developed web user interface for key parts of an enterprise learning management application and led a team of junior developers coding web pages from graphical prototypes.</li>
-						<li>Researched and evaluated the Microsoft .NET Framework for other business projects.</li>
-					</ul>
 				</div>
 				
 				<div id="res-emp-portal" class="employer">
+					<h4>Portal Communities Inc.</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Portal Communities Inc.</h4>
-						<h4 class="pull-right">Sep 1999 to Oct 2000</h4>
-					</div>
-					<div><strong>Co-Founder, Developer</strong></div>
-					<div>
-						<span class="badge alert-info">Classic ASP</span>
-						<span class="badge alert-info">Javascript</span>
-						<span class="badge alert-info">Visual Basic</span>
-						<span class="badge alert-info">COM</span>
+						<div class="pull-left"><strong>Co-Founder, Developer</strong></div>
+						<div class="pull-right">Sep 1999 to Oct 2000</div>
 					</div>
 				</div>
 				
 				<div id="res-emp-vp" class="employer">
+					<h4>Viewpoint Digital</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Viewpoint Digital</h4>
-						<h4 class="pull-right">Feb 1999 to Sep 1999</h4>
-					</div>
-					<div><strong>Web Developer</strong></div>
-					<div>
-						<span class="badge alert-info">Classic ASP</span>
-						<span class="badge alert-info">Javascript</span>
-						<span class="badge alert-info">Java</span>
-						<span class="badge alert-info">SQL Server</span>
-						<span class="badge alert-info">Oracle</span>
+						<div class="pull-left"><strong>Web Developer</strong></div>
+						<div class="pull-right">Feb 1999 to Sep 1999</div>
 					</div>
 				</div>
 				
 				<div id="res-emp-bfh" class="employer">
+					<h4>Blatter, Fielding &amp; Hansen</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Blatter, Fielding &amp; Hansen</h4>
-						<h4 class="pull-right">Sep 1997 to Feb 1999</h4>
-					</div>
-					<div><strong>Webmaster/Network Administrator</strong></div>
-					<div>
-						<span class="badge alert-info">Classic ASP</span>
-						<span class="badge alert-info">Javascript</span>
-						<span class="badge alert-info">Windows NT 4</span>
+						<div class="pull-left"><strong>Webmaster/Network Administrator</strong></div>
+						<div class="pull-right">Sep 1997 to Feb 1999</div>
 					</div>
 				</div>
 
 				<div id="res-emp-netpub" class="employer">
+					<h4>Network Publishing</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Network Publishing</h4>
-						<h4 class="pull-right">May 1997 to Sep 1997</h4>
-					</div>
-					<div><strong>HTML Developer</strong></div>
-					<div>
-						<span class="badge alert-info">HTML</span>
-						<span class="badge alert-info">Javascript</span>
+						<div class="pull-left"><strong>HTML Developer</strong></div>
+						<div class="pull-right">May 1997 to Sep 1997</div>
 					</div>
 				</div>
 			</div>
