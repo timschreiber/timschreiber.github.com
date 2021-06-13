@@ -86,8 +86,14 @@ active: software-development
 						<h4 class="pull-left">NIC Kentucy (Tyler Technologies)</h4>
 						<h4 class="pull-right">Jul 2016 to Present</h4>
 					</div>
-					<div><strong>Software Architect</strong></div>
-					<div><strong>Senior Software Developer</strong></div>
+					<div class="clearfix">
+						<div class="pull-left"><strong>Software Architect</strong></div>
+						<div class="pull-right">Jun 2021 to Present</div>
+					<div class="clearfix">
+						<div class="pull-left"><strong>Senior Software Developer</strong></div>
+						<div class="pull-right">Jul 2016 to Jun 2021</div>
+					</div>
+					</div>
 					<ul>
 						<li>Architect and lead developer on a single sign-on and access control system for multiple applications and APIs.</li>
 						<li>Maintenance and new feature development for a payment processing framework.</li>
