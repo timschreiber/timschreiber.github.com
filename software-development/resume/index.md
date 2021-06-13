@@ -82,10 +82,7 @@ active: software-development
 				<h3>Employment</h3>
 
 				<div id="res-emp-nic" class="employer">
-					<div class="clearfix">
-						<h4 class="pull-left">NIC Kentucy (Tyler Technologies)</h4>
-						<h4 class="pull-right">Jul 2016 to Present</h4>
-					</div>
+					<h4>NIC Kentucky (Tyler Technologies)</h4>
 					<div class="clearfix">
 						<div class="pull-left"><strong>Software Architect</strong></div>
 						<div class="pull-right">Jun 2021 to Present</div>
@@ -107,24 +104,24 @@ active: software-development
 				</div>
 
 				<div id="res-emp-zirmed" class="employer">
+					<h4>ZirMed</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">ZirMed</h4>
-						<h4 class="pull-right">Jan 2016 to Jul 2016</h4>
+						<div class="pull-left"><strong>Senior .NET Engineer &mdash; Specialist</strong></div>
+						<div class="pull-right">Jan 2016 to Jul 2016</div>
 					</div>
-					<div><strong>Senior .NET Engineer &mdash; Specialist</strong></div>
 					<ul>
 						<li>Maintained and developed new features for a mature credit card/ACH payment application.</li>
 						<li>Provided technological leadership for development team. Conducted code reviews and oversaw production deployments.</li>
-						<li>Provided Agile process leadership. Helped team members make workload commitments based on more accurate estimates to reduce valocity variance and improve planning.</li>
+						<li>Provided Agile process leadership. Helped team members make workload commitments based on more accurate estimates to reduce velocity variance and improve planning.</li>
 					</ul>
 				</div>
 				
 				<div id="res-emp-sis" class="employer">
+					<h4>Software Information Systems (SIS, LLC)</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Software Information Systems (SIS, LLC)</h4>
-						<h4 class="pull-right">Oct 2012 to Dec 2015</h4>
+						<div class="pull-left"><strong>Senior Software Consultant</strong></div>
+						<div class="pull-right">Oct 2012 to Dec 2015</div>
 					</div>
-					<div><strong>Senior Software Consultant</strong></div>
 					<ul>
 						<li>Developed in-house projects and performed software development consulting for several clients.</li>
 						<li><a href="javascript:showContactModal();">Contact for Details</a></li>
@@ -132,11 +129,11 @@ active: software-development
 				</div>
 				
 				<div id="res-emp-stg" class="employer">
+					<h4>Software Technology Group</h4>
 					<div class="clearfix">
-						<h4 class="pull-left">Software Technology Group</h4>
-						<h4 class="pull-right">Jul 2006 to Oct 2012</h4>
+						<div class="pull-left"><strong>Senior Software Consultant</strong></div>
+						<div class="pull-right">Jul 2006 to Oct 2012</div>
 					</div>
-					<div><strong>Senior Software Consultant</strong></div>
 					<ul>
 						<li>Performed software development consulting for the following clients:</li>
 					</ul>
