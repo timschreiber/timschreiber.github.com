@@ -83,9 +83,10 @@ active: software-development
 
 				<div id="res-emp-nic" class="employer">
 					<div class="clearfix">
-						<h4 class="pull-left">Kentucky.gov (NIC)</h4>
+						<h4 class="pull-left">NIC Kentucy (Tyler Technologies)</h4>
 						<h4 class="pull-right">Jul 2016 to Present</h4>
 					</div>
+					<div><strong>Software Architect</strong></div>
 					<div><strong>Senior Software Developer</strong></div>
 					<ul>
 						<li>Architect and lead developer on a single sign-on and access control system for multiple applications and APIs.</li>
