@@ -118,14 +118,53 @@ active: software-development
 				
 				<div id="res-emp-sis" class="employer">
 					<h4>Software Information Systems (SIS, LLC)</h4>
+					<div><strong>Senior Software Consultant</strong></div>
+					<div class="ml-3">
+						<div class="text-underline">Kentucky Administrative Office of the Courts</div>
+						<div class="clearfix">
+							<div class="pull-left">Lead Developer</div>
+							<div class="pull-right">Feb 2015 to Dec 2015</div>
+						</div>
+						<ul>
+							<li>Led a team of 9 developers developing the eCourts suite of applications for electronic filing, workflow, and public access of all court cases in the Commonwealth of Kentucky.</li>
+							<li>Collaborated with product owners and business analysts to gather requirements and to create and prioritize user stories.</li>
+							<li>Conducted Agile ceremonies including iteration planning, daily stand-ups, and retrospective meetings. Reported iteration status to management and product owners.</li>
+							<li>Mentored development team members and assisted them with development tasks as needed.</li>
+						</ul>
+					</div>
 					<div class="clearfix">
-						<div class="pull-left"><strong>Senior Software Consultant</strong></div>
-						<div class="pull-right">Oct 2012 to Dec 2015</div>
+						<div class="pull-left"><strong>Senior Software Developer/Architect</strong></div>
+						<div class="pull-right">Feb 2014 to Feb 2015</div>
 					</div>
 					<ul>
-						<li>Developed in-house projects and performed software development consulting for several clients.</li>
-						<li><a href="javascript:showContactModal();">Contact for Details</a></li>
+						<li>Defined the technology stack and designed the cloud network and application architectures for the project.</li>
+						<li>Developed a custom application to integrate Microsoft Dynamics CRM with Visual Business Suite back office.</li>
+						<li>Gathered requirements, created and prioritized user stories, developed the product, and reported progress to product owners.</li>
 					</ul>
+					<div><strong>Senior Software Consultant</strong></div>
+					<div class="ml-3">
+						<div class="text-underline">Kentucky Community and Technical College System (KCTCS)</div>
+						<div class="clearfix">
+							<div class="pull-left">Lead Developer</div>
+							<div class="pull-right">Nov 2013 to Feb 2014</div>
+						</div>
+						<ul>
+							<li>Led the adoption of Visual Studio Team Servcies for source control and work item tracking, and provided training to the development team.</li>
+							<li>Configured SharePoint to crawl all KCTCS sites and used SharePoint search XML to power search functionality for all KCTCS websites.</li>
+							<li>Worked through a large backlog of long neglected bugs and deficiencies across all KCTCS websites.</li>
+						</ul>
+						<div class="text-underline">Kentucky Cabinet for Health and Family Services</div>
+						<div class="clearfix">
+							<div class="pull-left">Lead Developer</div>
+							<div class="pull-right">Oct 2012 to Nov 2013</div>
+						</div>
+						<ul>
+							<li>Led a team of 5 developers maintaining and enhancing the Kentucky All Schedule Prescription Electronic Reporting (KASPER) prescription monitoring program.</li>
+							<li>Planned and oversaw database migration from Oracle to SQL Server and coordinated the efforts of the development team, in house DBAs, and multiple third party contractors.</li>
+							<li>Designed and led development of enhancements resulting in an order of magnitude performance improvement required for increased load mandated by legislation.</li>
+							<li>Improved collaboration between the development team and product owner by improving communication, formalized requirements gathering and issue tracking, and engaging the stakeholders.</li>
+						</ul>
+					</div>
 				</div>
 				
 				<div id="res-emp-stg" class="employer">
