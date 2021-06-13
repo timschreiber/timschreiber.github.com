@@ -259,7 +259,7 @@ active: software-development
 				<div id="res-emp-mccann" class="employer">
 					<h4>McCann Erickson</h4>
 					<div class="clearfix">
-						<div class="pull-left"><strong>Senior Developer/Team Lead</strong></div>
+						<div class="pull-left"><strong>Senior Software Developer</strong></div>
 						<div class="pull-right">Jul 2005 to Jul 2006</div>
 					</div>
 				</div>
@@ -283,7 +283,7 @@ active: software-development
 				<div id="res-emp-portal" class="employer">
 					<h4>Portal Communities Inc.</h4>
 					<div class="clearfix">
-						<div class="pull-left"><strong>Co-Founder, Developer</strong></div>
+						<div class="pull-left"><strong>Co-Founder, Software Developer</strong></div>
 						<div class="pull-right">Sep 1999 to Oct 2000</div>
 					</div>
 				</div>
@@ -299,7 +299,7 @@ active: software-development
 				<div id="res-emp-bfh" class="employer">
 					<h4>Blatter, Fielding &amp; Hansen</h4>
 					<div class="clearfix">
-						<div class="pull-left"><strong>Webmaster/Network Administrator</strong></div>
+						<div class="pull-left"><strong>Webmaster &amp; Network Administrator</strong></div>
 						<div class="pull-right">Sep 1997 to Feb 1999</div>
 					</div>
 				</div>
