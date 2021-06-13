@@ -90,6 +90,11 @@ active: software-development
 						<div class="pull-left"><strong>Software Architect</strong></div>
 						<div class="pull-right">Jun 2021 to Present</div>
 					</div>
+					<ul>
+						<li>Defined the development technology stack and best practices, including design patterns and coding standards.</li>
+						<li>Mentored all developers on Agile principles and practices, design patterns, and development technologies.</li>
+						<li>Explored technologies, built proof-of-concept applications, and created reference application architectures.</li>
+					</ul>
 					<div class="clearfix">
 						<div class="pull-left"><strong>Senior Software Developer</strong></div>
 						<div class="pull-right">Jul 2016 to Jun 2021</div>
