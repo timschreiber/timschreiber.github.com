@@ -1,4 +1,4 @@
----
+﻿---
 layout: nil
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -8,24 +8,22 @@ layout: nil
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
   http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Generated with pretzel -->
-  
   {% for post in site.posts %}
   <url>
-    <loc>http://timschreiber.com{{ post.url }}</loc>
+    <loc>http://domain{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   {% endfor %}
-  
+
   {% for page in site.pages %}
-	{% if page.url %}
-	<url>
-		<loc>http://timschreiber.com{{ page.url }}</loc>
-		<changefreq>daily</changefreq>
-		<priority>1.00</priority>
-	</url>
-	{% endif %}
+  {% if page.url %}
+  <url>
+    <loc>http://domain{{ page.url }}</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  {% endif %}
   {% endfor %}
-  
 </urlset>

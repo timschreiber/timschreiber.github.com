@@ -1,4 +1,0 @@
-Sitemap: http://timschreiber.com/sitemap.xml
-
-User-agent: *
-Disallow:
