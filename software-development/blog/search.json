@@ -6,7 +6,7 @@ layout: null
 [
 {% for post in site.posts %}
     {% assign newArray = '' | split: '' %}
-    {% assign words = post.content | downcase | strip_html | replace: newline, " " | replace: '"', " " | replace: "\", " " | split: " " %}
+    {% assign words = post.content | downcase | strip_html | replace: newline, " " | replace: '"', " " | replace: "\", " " | replace: "…", " " | replace: ":", " " | replace: ";", " " | replace: ",", " " | replace: ".", " " | replace: "-", " " | replace: "“": " " | replace: "”", " " | split: " " %}
     {% for word in words %}
         {% assign newItem = word | strip %}
         {% if newItem != '' %}
